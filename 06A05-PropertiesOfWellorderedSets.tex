@@ -1,0 +1,238 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfWellorderedSets}
+\pmcreated{2013-03-22 15:23:42}
+\pmmodified{2013-03-22 15:23:42}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{properties of well-ordered sets}
+\pmrecord{10}{37231}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A05}
+\pmsynonym{initial segment}{PropertiesOfWellorderedSets}
+\pmdefines{section}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Bigcup}{\bigcup\limits}
+\newcommand{\DirectSum}{\bigoplus\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\h}{\widehat}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mmm}[9]{\left(\begin{array}{rrr}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right)}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+\begin{document}
+\PMlinkescapeword{induced}
+\newtheorem{thm}{Theorem}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+The purpose of this entry is to collect properties of well-ordered
+sets. We denote all orderings uniformly by $\leq$. If you are
+interested in history, have a look at~\cite{C}.
+
+The following properties are easy to see:
+\begin{itemize}
+\item If $A$ is a totally ordered set such that for every subset
+  $B\subseteq A$ the set of all elements of $A$ strictly greater than
+  the elements of $B$,
+\begin{equation*}
+B_>:=\{a\in A\setminus B\mid b\leq a\text{ for all }b\in B\},
+\end{equation*}
+is either empty or has a least element, then $A$ is well-ordered.
+\item Every subset of a well-ordered set is well-ordered.
+\item If $A$ is well-ordered and $B$ is a poset such that there is a
+  bijective order morphism $\varphi\colon A\to B$, then $B$ is
+  well-ordered.
+\end{itemize}
+
+Now we define an important ingredient for understanding the structure
+of well-ordered sets.
+
+\begin{defn}[section]
+Let $A$ be well-ordered. Then for every $a\in A$ we define the
+\emph{section} of $a$:
+\begin{equation*}
+\h{a}:=\{b\in A\mid b\leq a\}.
+\end{equation*}
+A section is also known as an \emph{initial segment}.  We denote the set of all sections of $A$ by $\h{A}$. This set is
+ordered by inclusion.
+\end{defn}
+
+\begin{thm}
+\label{thm:AtosectionsofA}
+Let $A$ be a well-ordered set.  Then the mapping $\h{\cdot}\colon
+A\to\h{A}$ defined by $a\mapsto\h{a}$ is a bijective order morphism.
+In particular, $\h{A}$ is well-ordered.
+\end{thm}
+\begin{proof}
+Let $a,b\in A$ with $a\leq b$. Then $\h{a}\subseteq\h{b}$, so
+$\h{\cdot}$ is an order morphism. Now assume that $\h{a}=\h{b}$. If
+$a$ didn't equal $b$, we would have $b\notin\h{a}$, leading to a
+contradiction. Therefore $\h{\cdot}$ is injective. Now let
+$C\in\h{A}$, then there exists a $c\in A$ such that $\h{c}=C$, so
+$\h{\cdot}$ is surjective.
+\end{proof}
+
+\begin{thm}
+Let $A$ and $B$ be well-ordered sets and $\varphi\colon A\to B$ a
+bijective order morphism. Then there exists a bijective order morphism
+$\h{\varphi}\colon\h{A}\to\h{B}$ such that for all $a\in A$
+\begin{equation*}
+\h{\varphi}(\h{a})=\h{\varphi(a)}.
+\end{equation*}
+\end{thm}
+\begin{proof}
+Setting $\h{\varphi}(\h{a}):=\h{\varphi(a)}$ is well-defined by
+Theorem~\ref{thm:AtosectionsofA}. The rest of the theorem follows
+since $\h{\cdot}$ and $\varphi$ are bijective order morphisms.
+\end{proof}
+
+\begin{thm}
+\label{thm:similarsection}
+Let $A$ be a well-ordered set and $a\in A$ such that there is an
+injective order morphism $\varphi\colon A\to\h{a}$. Then $A=\h{a}$.
+\end{thm}
+\begin{proof}
+The image of a section of $A$ under $\varphi$ has a maximal element
+which in turn defines a smaller section of $A$. We may therefore
+define the following two monotonically decreasing sequences of sets:
+\begin{align*}
+B_0&:=\varphi(\h{a}),&A_0&:=\text{section defined by maximal element of
+}B_0,\\
+B_n&:=\varphi(A_{n-1}),&A_n&:=\text{section defined by maximal element
+of }B_n.
+\end{align*}
+Now $\h{A}$ is well-ordered, so the set defined by the elements of the
+sequence $(A_n)$ has a minimal element, that is $A_N=A_{N+1}$ and
+hence $B_N=B_{N+1}$ for some sufficiently large $N$. Applying
+$\varphi^{-1}$ $N+1$ times to the latter equation yields $\h{a}=A_0$,
+that is $a$ is the maximal element of $B$, and thus of $A$.
+\end{proof}
+
+\begin{thm}
+\label{thm:uniquemorphism}
+Let $A$ and $B$ be well-ordered sets. Then there exists at most one
+bijective order morphism $\varphi\colon A\to B$.
+\end{thm}
+\begin{proof}
+Let $\varphi,\psi\colon A\to B$ be two bijective order morphisms. Let
+$a\in A$ and set $b:=\varphi(a)$ and $c:=\psi(a)$. Then the
+restrictions $\left.\varphi\right|_{\h{a}}\colon\h{a}\to\h{b}$ and
+$\left.\psi\right|_{\h{a}}\colon\h{a}\to\h{c}$ are bijective order
+morphisms, so the restriction of $\psi\varphi^{-1}$ to $\h{b}$ is a
+bijective order morphism to $\h{c}$. Now either $\h{b}\subseteq\h{c}$
+or $\h{c}\subseteq\h{b}$, so by Theorem~\ref{thm:similarsection}
+$\h{b}=\h{c}$, hence $b=c$ and thus $\varphi=\psi$.
+\end{proof}
+
+\begin{thm}
+\label{thm:sectiontosection}
+Let $A$ and $B$ be well-ordered sets such that for every section
+$\h{a}\in\h{A}$ there is a bijective order morphism to a section
+$\h{b}\in\h{B}$ and vice-versa, then there is a bijective order
+morphism $\varphi\colon A\to B$.
+\end{thm}
+\begin{proof}
+Let $a\in A$ and let $\h{b}\in\h{B}$ be a section such that there is a
+bijective order morphism $\psi_a\colon\h{a}\to\h{b}$. By
+Theorem~\ref{thm:similarsection}, $\h{b}$ is unique, and so is
+$\psi_a$ by Theorem~\ref{thm:uniquemorphism}. Defining
+$\varphi\colon A\to B$ by setting $\varphi(a)=b$ gives therefore a
+well-defined (by Theorem~\ref{thm:AtosectionsofA}) and injective order
+morphism. But $\varphi$ is also surjective, since any $b\in B$ maps
+uniquely to $A$ via $\h{b}\to\h{a}$, and back again by $\varphi$.
+\end{proof}
+
+\begin{thm}
+\label{thm:comparable}
+Let $A$ and $B$ be well-ordered sets. Then there is an injective order
+morphism $\iota\colon A\to B$ or $\iota\colon B\to A$. If $\iota$
+cannot be chosen bijective, then it can at least be chosen such that
+its image is a section.
+\end{thm}
+\begin{proof}
+Let $\h{A}_0$ be the set of sections of $A$ from which there is an
+injective order morphism to $B$. If $\h{A}_0$ is the empty set, then
+$B$ must be empty, since otherwise we could map the least element of
+$A$ to $B$. If $\h{A}_0$ is not empty, we may consider the set
+$A_0:=\cap\h{A}_0$. If $A_0=A$, nothing remains to be shown. Otherwise
+the set $A\setminus A_0$ is nonempty an hence has a least element
+$a_0\in A$. By construction, there is no injective order morphism from
+$\h{a}_0$ to $B$, but there is an injective order morphism from
+$\varphi_a\colon\h{a}\to B$ for every element $a\in A$ which is
+strictly smaller than $a_0$. Now assume there is an element $b\in B$
+such that there is no injective order morphism from $\h{b}\to
+A$. Then we can similarly construct a least element $b_0\in B$ for
+which there is no injective order morphism $\h{b}_0\to A$. Surely,
+$b_0$ is greater than all the elements from the images of the
+functions $\varphi_a$, but then there is a bijective order
+morphism from $\h{a}_0$ to $\h{b}_0$ by
+Theorem~\ref{thm:sectiontosection} which is a
+contradiction. Therefore, all sections of $B$ and $B$ itself
+map injectively and order-preserving to $A$.
+\end{proof}
+
+\begin{thm}
+Let $A$ be a well-ordered set and $B\subseteq A$ a nonempty
+subset. Then there is a bijective order morphism from $B$ to one of
+the sets in $\h{A}\cup\{A\}$.
+\end{thm}
+\begin{proof}
+The set $B$ is well-ordered with respect to the order induced by
+$A$. Assume a bijective order morphism as stated by the theorem does
+not exist. Then, by virtue of Theorem~\ref{thm:comparable}, there is
+an injective but not surjective order morphism $\iota\colon A\to B$ whose
+image is a section $\h{b}\in\h{B}$. The element $b$ defines a section
+in $\h{A}$ which is identical to $A$ by
+Theorem~\ref{thm:similarsection}. Thus $\iota$ is surjective which is
+a contradiction. 
+\end{proof}
+
+\begin{thebibliography}{C}
+
+\bibitem[C]{C} \textsc{G.~Cantor}, Beitr\"{a}ge zur Begr\"{u}ndung der
+  transfiniten Mengenlehre (Zweiter Artikel), \emph{Math.\ Ann.}\ 49,
+  207--246 (1897).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RationalRankOfAGroup}
+\pmcreated{2013-03-22 16:53:25}
+\pmmodified{2013-03-22 16:53:25}
+\pmowner{polarbear}{3475}
+\pmmodifier{polarbear}{3475}
+\pmtitle{rational rank of a group}
+\pmrecord{9}{39146}
+\pmprivacy{1}
+\pmauthor{polarbear}{3475}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{20K20}
+\pmclassification{msc}{20K15}
+\pmclassification{msc}{20K99}
+\pmdefines{rationally independent}
+\pmdefines{rational rank}
+\pmdefines{divisible hull}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+ In the following, $G$ is an abelian group.
+\begin{defn} The group $\mathbb{Q} \otimes_{\mathbb{Z}} G$ is called the divisible hull of $G$. \end{defn} It is a $\mathbb{Q}$-vector space such that the scalar $\mathbb{Z}$-multiplication of $G$ is extended to $\mathbb{Q}$.
+\begin{defn} The elements $g_1, g_2, ... , g_r \in G$ are called rationally independent if they are linearly independent over $\mathbb{Z}$, i.e. for all $n_1, ... , n_r \in Z$:\begin{equation*}
+n_1 g_1 + ... + n_r g_r = 0 \Rightarrow n_1 = ... = n_r = 0. \end{equation*}\end{defn} 
+\begin{defn} The dimension of  $\mathbb{Q} \otimes_{\mathbb{Z}} G$ over $\mathbb{Q}$ is called the rational rank of $G$.\end{defn} We denote the rational rank of $G$ by $r(G)$.\newline
+\textbf{Example}:\newline
+$r(\mathbb{Z} \times \mathbb{Z}) = 2$ because $\mathbb{Q} \otimes_\mathbb{Z} (\mathbb{Z} \times \mathbb{Z}) = (\mathbb{Q} \otimes_{\mathbb{Z}} \mathbb{Z}) \times (\mathbb{Q} \otimes_{\mathbb{Z}} \mathbb{Z}) = \mathbb{Q} \times \mathbb{Q}$.\newline
+\textbf{Properties}:
+\begin{itemize}
+\item If $H$ is a subgroup of $G$ then we have:\begin{equation*}
+r(G) = r(H) + r(G/H). \end{equation*} It results from the fact that $_\mathbb{Z}\mathbb{Q}$ is a flat module.
+\item The rational rank of the group $G$ can be defined as the least upper bound (finite or infinite) of the cardinals $r$ such that there exist $r$ rationally independent elements in $G$.
+\end{itemize}
+  
+
+%%%%%
+%%%%%
+\end{document}

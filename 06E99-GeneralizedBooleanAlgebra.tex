@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedBooleanAlgebra}
+\pmcreated{2013-03-22 17:08:37}
+\pmmodified{2013-03-22 17:08:37}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{generalized Boolean algebra}
+\pmrecord{6}{39451}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E99}
+\pmclassification{msc}{06D99}
+\pmsynonym{generalized Boolean lattice}{GeneralizedBooleanAlgebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A lattice $L$ is called a \emph{generalized Boolean algebra} if 
+\begin{itemize}
+\item $L$ is distributive,
+\item $L$ is relatively complemented, and
+\item $L$ has $0$ as the bottom.
+\end{itemize}
+
+Clearly, a Boolean algebra is a generalized Boolean algebra.  Conversely, a generalized Boolean algebra $L$ with a top $1$ is a Boolean algebra, since $L=[0,1]$ is a bounded distributive complemented lattice, so each element $a\in L$ has a unique complement $a'$ by distributivity.  So $'$ is a unary operator on $L$ which makes $L$ into a de Morgan algebra.  A complemented de Morgan algebra is, as a result, a Boolean algebra.
+
+As an example of a generalized Boolean algebra that is not Boolean, let $A$ be an infinite set and let $B$ be the set of all finite subsets of $A$.  Then $B$ is generalized Boolean: order $B$ by inclusion, then $B$ is a distributive as the operation is inherited from $P(A)$, the powerset of $A$.  It is also relatively complemented: if $C\in [X,Y]$ where $C,X,Y\in B$, then $(Y-C)\cup X$ is the relative complement of $C$ in $[X,Y]$.  Finally, $\varnothing$ is, as usual, the bottom element in $B$.  $B$ is not a Boolean algebra, because the union of all the singletons (all in $B$) is $A$, which is infinite, thus not in $B$.
+
+One property of a generalized Boolean algebra $L$ is the following: if $y$ and $z$ are complements of $x\in [a,b]$, then $y=z$; in other words, relative complements are uniquely determined.  This is true because in any distributive lattice, complents are uniquely determined.  As $L$ is distributive, so is each lattice interval $[a,b]$ in $L$.  
+
+In fact, because of the existence of $0$, we can actually construct the relative complement.  Let $b-x$ denote the unique complement of $x$ in $[0,b]$.  Then $(b-x)\vee a$ is the unique complement of $x\in [a,b]$: $x\wedge ((b-x)\vee a)=(x\wedge (b-x))vee (x\wedge a)=0\vee a=a$ and $x\vee ((b-x)\vee a)=(x\vee (b-x))\vee a=b\vee a=b$.
+
+Conversely, if $L$ is a distributive lattice with $0$ such that any lattice interval $[0,a]$ is complemented, then $L$ is a generalized Boolean algebra.  Again, $(b-x)\vee a$ provides the necessary complement of $x$ in $[a,b]$.
+%%%%%
+%%%%%
+\end{document}

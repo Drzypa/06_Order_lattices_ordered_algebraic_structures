@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Latticoid}
+\pmcreated{2013-03-22 16:31:02}
+\pmmodified{2013-03-22 16:31:02}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{latticoid}
+\pmrecord{8}{38695}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A \emph{latticoid} is a set $L$ with two binary operations, the meet $\wedge$ and the join $\vee$ on $L$ satisfying the following conditions:
+\begin{enumerate}
+\item (idempotence) $x\wedge x=x\vee x=x$ for any $x\in L$,
+\item (commutativity) $x\wedge y=y\wedge x$ and $x\vee y=y\vee x$ for any $x,y\in L$, and
+\item (absorption) $x\vee (y\wedge x)=x\wedge (y\vee x)=x$ for any $x,y\in L$.
+\end{enumerate}
+
+A latticoid is like a lattice without the associativity assumption, i.e., a lattice is a latticoid that is both meet associative and join associative.
+
+If one of the binary operations is associative, say $\wedge$ is associative, we may define a latticoid as a poset as follows: $$x\le y\mbox{ iff }x\wedge y=x.$$
+Clearly, $\le$ is reflexive, as $x\wedge x=x$.  If $x\le y$ and $y\le x$, then $x=x\wedge y=y\wedge x=y$, so $\le$ is anti-symmetric.  Finally, suppose $x\le y$ and $y\le z$, then $x\wedge z=(x\wedge y)\wedge z=x\wedge (y\wedge z)=x\wedge y=x$, or $x\le z$, $\le$ is transitive.
+
+Once a latticoid is a poset, we may easily visualize it by a diagram (Hasse diagram), much like that of a lattice.  Position $y$ above $x$ if $x\le y$ and connect a line segment between $x$ and $y$.  The following is the diagram of a latticoid that is meet associative but not join associative:
+\begin{equation*}
+\xymatrix{
+& {a\vee b} \ar@{-}[d] & \\
+& c \ar@{-}[ld] \ar@{-}[rd] & \\
+a \ar@{-}[rd] & & b \ar@{-}[ld] \\
+& {a\wedge b} &
+}
+\end{equation*}
+It is not join associative because $(a\vee b)\vee c= a\vee b$, whereas $a\vee (b\vee c)=a\vee c=c\ne a\vee b$.
+
+Given a latticoid $L$, we can define a dual $L^*$ of $L$ by using the same underlying set, and define the meet of $a$ and $b$ in $L^*$ as the join of $a$ and $b$ in $L$, and the join of $a$ and $b$ (in $L^*$) as the meet of $a$ and $b$ in $L$.  $L$ is a meet-associative latticoid iff $L^*$ is join-associative.
+%%%%%
+%%%%%
+\end{document}

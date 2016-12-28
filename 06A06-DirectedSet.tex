@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectedSet}
+\pmcreated{2013-03-22 12:54:00}
+\pmmodified{2013-03-22 12:54:00}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{directed set}
+\pmrecord{11}{33249}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmsynonym{upward-directed set}{DirectedSet}
+\pmsynonym{upward directed set}{DirectedSet}
+\pmrelated{Cofinality}
+\pmrelated{AccumulationPointsAndConvergentSubnets}
+\pmdefines{residual}
+\pmdefines{cofinal}
+\pmdefines{downward-directed set}
+\pmdefines{downward directed set}
+\pmdefines{filtered set}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+\PMlinkescapeword{property}
+
+A \emph{directed set} is a partially ordered set $(A, \leq)$ such that whenever $a,b\in A$ there is an $x\in A$ such that $a\leq x$ and $b\leq x$.
+
+A subset $B\subseteq A$ is said to be \emph{residual} if there is $a\in A$ such that $b\in B$ whenever $a\leq b$, and \emph{cofinal} if for each $a\in A$ there is $b\in B$ such that $a\leq b$.
+
+A directed set is sometimes called an \emph{upward-directed set}.
+We may also define the dual notion:
+a \emph{downward-directed set} (or \emph{filtered set}) is a partially ordered set $(A, \leq)$ such that whenever $a,b\in A$ there is an $x\in A$ such that $x\leq a$ and $x\leq b$.
+
+Note: Many authors do not require $\leq$ to be antisymmetric,
+so that it is only a pre-order (rather than a partial order)
+with the given property.
+Also, it is common to require $A$ to be non-empty.
+
+
+%%%%%
+%%%%%
+\end{document}

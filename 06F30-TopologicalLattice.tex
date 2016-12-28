@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalLattice}
+\pmcreated{2013-03-22 15:47:26}
+\pmmodified{2013-03-22 15:47:26}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{topological lattice}
+\pmrecord{19}{37751}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F30}
+\pmclassification{msc}{06B30}
+\pmclassification{msc}{54H12}
+\pmrelated{OrderedVectorSpace}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A \emph{topological lattice} is a lattice $L$ equipped with a topology $\mathcal{T}$ such that the meet and join operations from $L\times L$ (with the product topology) to $L$ are continuous.
+
+Let $(x_i)_{i\in I}$ be a net in $L$.  We say that $(x_i)$ converges to $x\in L$ if $(x_i)$ is eventually in any open neighborhood of $x$, and we write $x_i\to x$.  
+
+\textbf{Remarks}
+\begin{itemize}
+\item If $(x_i)$ and $(y_j)$ are nets, indexed by $I,J$ respectively, then $(x_i\wedge y_j)$ and $(x_i\vee y_j)$ are nets, both indexed by $I\times J$.  This is clear, and is stated in preparation for the proposition below.
+\item If $x_i\to x$ and $y_j\to y$, then $x_i\wedge y_j\to x\wedge y$ and $x_i \vee y_j\to x\vee y$.
+\begin{proof}  Let's show the first convergence, and the other one follows similarly.  The function $f:x\mapsto (x,y) \mapsto x\wedge y$ is a continuous function, being the composition of two continuous functions.  If $x\wedge y\in U$ is open, then $x\in f^{-1}(U)$ is open.  As $x_i\to x$, there is an $i_0 \in I$ such that $x_i\in f^{-1}(U)$ for all $i\ge i_0$, which means that $x_i\wedge y=f(x_i)\in U$.  By the same token, for each $i\in I$, the function $g_i: y\mapsto (x_i,y)\mapsto x_i\wedge y$ is a continuous function.  Since $x_i\wedge y\in U$ is open, $y\in g^{-1}(U)$ is open.  As $y_j\to y$, there is a $j_0\in J$ such that $y_j\in g^{-1}(U)$ for all $j\ge j_0$, or $x_i\wedge y_j=g_i(y_j) \in U$, for all $i\ge i_0$ and $j\ge j_0$.  Hence $x_i\wedge y_j\to x\wedge y$.
+\end{proof}
+\item For any net $(x_i)$, the set $A=\lbrace a\in L \mid x_i\to a\rbrace$ is a sublattice of $L$.
+\begin{proof}
+If $a,b\in A$, then $x_i=x_i\wedge x_i\to a\wedge b$.  So $a\wedge b\in A$.  Similarly $a\vee b\in A$.
+\end{proof}
+% \item If $L$ is Hausdorff, then $A$ is at most a singleton.
+% \begin{proof}
+% Suppose $x_i\to a$ and $x_i\to b$ and $a\ne b$.  There are open sets $a\in U$ and $b\in V$ such that $U\cap V=\varnothing$.  But then $(x_i)$ is eventually in both $U$ and $V$, and this is a contradiction.  So $a=b$.
+% \end{proof}
+% \item Suppose $L$ is a complete lattice.  If $x_i\to x$ where $x=\bigvee x_i$, then $y_j:=\bigvee_{i\le j}x_i\to x$.
+% \begin{proof}
+% Let's show first that $x=\bigvee y_j$.  $x$ is an upper bound of the $y_j$.  If $t$ is an upper bound of the $y_j$, then it is an upper bound of the $x_i$, and hence $x\le t$.  So $\bigvee y_j=x$.  Second, note that $x_j\vee y_j=y_j$ for any $j\in I$.  Therefore, $y_j=x_j\vee y_j\to x\vee y_j = x$.
+% \end{proof}
+% \item Again, suppose $L$ is complete.  If $x_i\to \bigvee x_i$, then $a\wedge x_i\to \bigvee (a\wedge x_i)$ for any $a\in L$.
+%\item if $L$ is a complete Hausdorff topological lattice, then $L$ is meet continuous and join continuous.
+\end{itemize}
+
+There are two approaches to finding examples of topological lattices.  One way is to start with a topological space $X$ such that $X$ is partially ordered, then find two continuous binary operations on $X$ to form the meet and join operations of a lattice.  The real numbers $\mathbb{R}$, with operations defined by $a\wedge b= \operatorname{inf}\lbrace a,b\rbrace$ and $a\vee b =\operatorname{sup}\lbrace a,b\rbrace$, is one such an example.  This can be easily generalized to the space of real-valued continuous functions, since, given any two real-valued continuous functions $f$ and $g$, 
+$$f\vee g:=\max(f,g)\mbox{ and }f\wedge g:=\min(f,g)$$ 
+are well-defined real-valued continuous functions as well (in fact, it is enough to say that for any continuous function $f$, its absolute value $|f|$ is also continuous, so that $$\max(f,0)=\frac{1}{2}(f+|f|),$$ and thus $$\max(f,g)= \max(f-g,0)+g\mbox{ and }\min(f,g)=f+g-\max(f,g)$$ are both continuous as well).
+
+The second approach is to start with a general lattice $L$ and define a topology $\mathcal{T}$ on the subsets of the underlying set of $L$, with the hope that both $\vee$ and $\wedge$ are continuous under $\mathcal{T}$.  The obvious example using this second approach is to take the discrete topology of the underlying set.  Another way is to impose conditions, such as requiring that the lattice be meet and join continuous.  Of course, finding a topology on the underlying set of a lattice may not guarantee a topological lattice.
+%%%%%
+%%%%%
+\end{document}

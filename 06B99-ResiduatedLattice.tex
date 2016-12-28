@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResiduatedLattice}
+\pmcreated{2013-03-22 18:53:41}
+\pmmodified{2013-03-22 18:53:41}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{residuated lattice}
+\pmrecord{9}{41741}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmdefines{left residual}
+\pmdefines{right residual}
+\pmdefines{commutative residuated lattice}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A \emph{residuated lattice} is a lattice $L$ with an additional binary operation $\cdot$ called \emph{multiplication}, with a multiplicative identity $e\in L$, such that
+\begin{itemize}
+\item $(L,\cdot, e)$ is a monoid, and
+\item for each $x\in L$, the left and right multiplications by $x$ are residuated.  
+\end{itemize}
+The second condition says: for every $x,z\in L$, each of the sets $$L(x,z):=\lbrace y \in L \mid x\cdot y \le z \rbrace$$ and $$R(x,z):=\lbrace y \in L \mid y\cdot x \le z\rbrace$$ is a down set, and has a maximum.
+
+Clearly, $\max L(x,z)$ and $\max R(x,z)$ are both unique.  $\max L(x,z)$ is called the \emph{right residual} of $z$ by $x$, and is commonly denoted by $x \backslash z$, while $\max R(x,z)$ is called the \emph{left residual} of $z$ by $x$, denoted by $x/z$.
+
+Residuated lattices are mostly found in algebraic structures associated with a variety of logical systems.  For examples, Boolean algebras associated with classical propositional logic, and more generally Heyting algebras associated with the intuitionistic propositional logic are both residuated, with multiplication the same as the lattice meet operation.  MV-algebras and BL-algebras associated with many-valued logics are further examples of residuated lattices.
+
+\textbf{Remark}.  A residuated lattice is said to be \emph{commutative} if $\cdot$ is commutative.  All of the examples cited above are commutative.
+
+\begin{thebibliography}{6}
+\bibitem{tsb} T.S. Blyth, {\em Lattices and Ordered Algebraic Structures}, Springer, New York (2005)
+\bibitem{mb} M. Bergmann, {\it An Introduction to Many-Valued and Fuzzy Logic: Semantic, Algebras, and Derivation Systems}, Cambridge University Press (2008)
+\bibitem{rdmw} R. P. Dilworth, M. Ward {\it Residuated Lattices}, Transaction of the American Mathematical Society 45, pp.335-354 (1939)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

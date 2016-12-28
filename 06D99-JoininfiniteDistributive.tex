@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JoininfiniteDistributive}
+\pmcreated{2013-03-22 19:13:48}
+\pmmodified{2013-03-22 19:13:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{join-infinite distributive}
+\pmrecord{6}{42153}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D99}
+\pmsynonym{JID}{JoininfiniteDistributive}
+\pmsynonym{MID}{JoininfiniteDistributive}
+\pmrelated{MeetContinuous}
+\pmrelated{CompleteDistributivity}
+\pmdefines{meet-infinite distributive}
+\pmdefines{join-infinite identity}
+\pmdefines{meet-infinite identity}
+\pmdefines{infinite distributive}
+\pmdefines{countably distributive}
+\pmdefines{join-countable distributive}
+\pmdefines{meet-countable distributive}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A lattice $L$ is said to be \emph{join-infinite distributive} if it is complete, and for any element $x \in L$ and any subset $M$ of $L$, we have
+\begin{equation}
+x\wedge \bigvee M =\bigvee \lbrace x\wedge y \mid y \in M\rbrace.
+\end{equation}
+Equation (1) is called the \emph{join-infinite identity}, or \emph{JID} for short.  We also call $L$ a JID lattice.
+
+If $M$ is any two-element set, then we see that the equation above is just one of the distributive laws, and hence any JID lattice is distributive.  The converse of this statement is false.  For example, take the set $N$ of non-negative integers ordered by division, that is, $a\le b$ iff $a\mid b$.  Then $N$ is a distributive lattice.  However, $N$ fails JID, for if $M$ is the set of all odd primes, then $\bigvee M=0$, so $2\wedge (\bigvee M) = 2$, where as $\bigvee \lbrace 2\wedge p \mid p\in M\rbrace = \bigvee \lbrace 1\rbrace  = 1\ne 2$.
+
+Also any completely distributive lattice is JID.  The converse of this is also false.  For an example of a JID lattice that is not completely distributive, see the last paragraph below before the remarks.
+
+Dually, a lattice $L$ is said to be \emph{meet-infinite distributive} if it is complete, and for any element $x \in L$ and any subset $M$ of $L$, we have
+\begin{equation}
+x\vee \bigwedge M =\bigwedge \lbrace x\vee y \mid y \in M\rbrace.
+\end{equation}
+Equation (2) is called the \emph{meet-infinite identity}, or \emph{MID} for short.  $L$ is also called a MID lattice.
+
+Now, unlike the case with a distributive lattice, where one distributive law implies its dual, JID does not necessarily imply MID, and vice versa.  An example of a lattice satisfying MID but not JID can be found \PMlinkname{here}{CompleteDistributivity}.  The dual of this lattice then satisfies JID but not MID, and therefore is an example of a JID lattice that is not completely distributive.  When a lattice is both join-infinite and meet-infinite distributive, it is said to be \emph{infinite distributive}.
+
+\textbf{Remarks}
+
+\begin{itemize}
+
+\item It can be shown that any complete Boolean lattice is infinite distributive.
+
+\item An intermediate concept between distributivity and infinite-distributivity is that of countable-distributivity: a lattice is \emph{join-countable distributive} if JID holds for all countable subsets $M$ of $L$, and \emph{meet-countable distributive} if MID holds for all countable $M\subseteq L$.
+
+\item When the sets $M$ in JID are restricted to filtered sets, then the lattice $L$ is join continuous.  When $M$ are directed sets in MID, then $L$ is meet continuous.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

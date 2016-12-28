@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtensionOfAPoset}
+\pmcreated{2013-03-22 16:31:57}
+\pmmodified{2013-03-22 16:31:57}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{extension of a poset}
+\pmrecord{15}{38713}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmsynonym{linear extension}{ExtensionOfAPoset}
+\pmdefines{maximal poset}
+\pmdefines{linear extension of a poset}
+\pmdefines{realizer}
+\pmdefines{ordering principle}
+\pmdefines{order extension principle}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $(P,\le_P)$ be a poset.  An \emph{extension} of $(P,\le_P)$ is a poset $(Q,\le_Q)$ such that
+\begin{itemize}
+\item $Q=P$, and
+\item if $a\le_P b$, then $a\le_Q b$.
+\end{itemize}
+
+From the definition, the underlying set of an extension of a poset does not change.  We may therefore, when there is no ambiguity, say that $Q$ is an extension of a poset $P$ and use $\le_Q$ and $\le_P$ to distinguish the partial ordering on $Q$ and $P$ respectively.
+
+Every poset has a trivial extension, namely itself.  A poset is \emph{maximal} if the only extension is the trivial one.  Given a poset that is not maximal, can we find a non-trivial extension?  Suppose $P$ is a poset and $(a,b)\notin \le_P$ ($a,b$ not comparable).  Then $\le_Q:=\le_P\cup A$, where $A=\lbrace (r,s)\mid r\le a\mbox{ and }b\le s\rbrace$, is a non-trivial partial order extending $\le_P$, non-trivial since $(a,b)\in \le_Q-\le_P$.  So a maximal poset is just a linearly ordered set, as any pair of elements is comparable.
+
+An extension $Q$ of $P$ is said to be \emph{linear} if $Q$ is a linearly ordered set.  By Zorn's lemma, and the construction above, every poset $P$ has a linear extension: take $\mathcal{P}$ to be the poset of all extension of $P$ (ordered by inclusion), given a chain $\mathcal{C}$ of elements in $\mathcal{P}$, the union $\bigcup \mathcal{C}$ is an element of $\mathcal{P}$, so that $\mathcal{P}$ has a maximal element, which can easily be seen to be linear.  Thus we have just proved what is known as the \emph{order extension principle}:
+\begin{prop}[order extension principle] Every partial ordering on a set can be extended to a linear ordering. \end{prop}
+And since every set is trivially a poset, where $a\le b$ iff $a=b$, we record the following corollary, known as the \emph{ordering principle}:
+\begin{cor}[ordering principle] Every set can be linearly ordered. \end{cor}
+
+In fact, every poset is the intersection of all of its linear extensions
+$$P=\bigcap \lbrace L \mid L \mbox{ is a linear extension of } P\rbrace,$$
+for if $(a,b)$ is not in the intersection, a linear extension $M$ of $P$ can be constructed via above containing $(a,b)$, which is a contradiction.  A set $\mathcal{S}$ of linear extensions of a poset $P$ is said to be a \emph{realizer} of $P$ if $\displaystyle{\bigcap \mathcal{S}=P}$.  Every poset has a realizer.
+
+\textbf{Remark}.  Instead of the stronger axiom of choice, the order extension principle can be proved using the weaker Boolean prime ideal theorem.  Furthermore, the ordering principle implies the axiom of choice for finite sets.
+
+\begin{thebibliography}{8}
+\bibitem{wt} W. T. Trotter, {\em Combinatorics and Partially Ordered Sets}, Johns-Hopkins University Press, Baltimore (1992).
+\bibitem{tjj} T. J. Jech, \emph{The Axiom of Choice}, North-Holland Pub. Co., Amsterdam, (1973).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

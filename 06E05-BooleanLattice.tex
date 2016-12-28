@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BooleanLattice}
+\pmcreated{2013-03-22 12:27:20}
+\pmmodified{2013-03-22 12:27:20}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Boolean lattice}
+\pmrecord{19}{32594}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E05}
+\pmclassification{msc}{03G05}
+\pmclassification{msc}{06B20}
+\pmclassification{msc}{03G10}
+\pmclassification{msc}{06E20}
+\pmsynonym{Boolean algebra}{BooleanLattice}
+\pmrelated{BooleanRing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In this entry, the notions of a Boolean lattice, a Boolean algebra, and a Boolean ring are defined, compared and contrasted.
+
+\subsubsection*{Boolean Lattices}
+
+A \emph{Boolean lattice} $B$ is a distributive lattice in which for each element $x\in B$ there exists a complement $x'\in B$ such that
+\begin{align*}
+x \land x'&=0\\
+x \lor x'&=1 \\
+(x')'&=x \\
+(x \land y)'&=x'\lor y'\\
+(x \lor y)'&=x'\land y'
+\end{align*}
+In other words, a Boolean lattice is the same as a complemented distributive lattice.  A morphism between two Boolean lattices is just a lattice homomorphism (so that $0,1$ and $'$ may not be preserved).
+
+\subsubsection*{Boolean Algebras}
+
+A Boolean algebra is a Boolean lattice such that $'$ and $0$ are considered as operators (unary and nullary respectively) on the algebraic system.  In other words, a morphism (or a Boolean algebra homomorphism) between two Boolean algebras must preserve $0,1$ and $'$.  As a result, the category of Boolean algebras and the category of Boolean lattices are not the same (and the former is a subcategory of the latter).
+
+\subsubsection*{Boolean Rings}
+
+A \emph{Boolean ring} is an (associative) unital ring $R$ such that for any $r\in R$, $r^2=r$.  It is easy to see that 
+\begin{itemize}
+\item any Boolean ring has characteristic $2$, for $2r=(2r)^2=4r^2=4r$,
+\item and hence a commutative ring, for $a+b=(a+b)^2=a^2+ab+ba+b^2=a+ab+ba+b$, so $0=ab+ba$, and therefore $ab=ab+ab+ba=ba$.
+\end{itemize}
+
+Boolean rings (with identity, but allowing 0=1) are equivalent to Boolean lattices. To view a Boolean ring as a Boolean lattice, define $$x \land y = xy,\qquad x \lor y = x + y + xy,\qquad\mbox{and}\qquad x'=1+x.$$ To view a Boolean lattice as a Boolean ring, define $$xy = x \land y\qquad\mbox{ and }\qquad x + y = (x' \land y) \lor (x \land y').$$
+
+The category of Boolean algebras is naturally equivalent to the category of Boolean rings.
+
+\begin{thebibliography}{8}
+\bibitem{gg} G. Gr\"{a}tzer, {\em General Lattice Theory}, 2nd Edition, Birkh\"{a}user (1998).
+\bibitem{rs} R. Sikorski, {\em Boolean Algebras}, 2nd Edition, Springer-Verlag, New York (1964).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

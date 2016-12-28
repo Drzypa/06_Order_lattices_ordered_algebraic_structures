@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfOrderedGroupsOfRankOne}
+\pmcreated{2013-03-22 14:55:15}
+\pmmodified{2013-03-22 14:55:15}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{characterization of ordered groups of rank one}
+\pmrecord{11}{36607}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A05}
+\pmclassification{msc}{20F60}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For an ordered group, having \PMlinkname{rank}{IsolatedSubgroup} one is \PMlinkescapetext{equivalent} to an Archimedean property.  In this entry, we use multiplicative notation for groups.
+
+\textbf{Lemma} An ordered group has rank one if and only if, for every two elements $x$ and $y$ such that $x < y < 1$, there exists an integer $n > 1$ such that $y^n < x$.
+
+{\it Proof}  Suppose that the Archimedean property is satisfied and that $F$ is an isolated subgroup of $G$.  We shall show that if $F$ contains any element other than the identity, then $F = G$.  First note that there must exist an $x \in F$ such that $x < 1$.  By assumption, there must exist an element $x' \in F$ such that $x' \neq 1$.  By conclusion 1 of the basic theorem on ordered groups, either $x' < 1$, or $x' > 1$ (since we assumed that the case $x' = 1$ is excluded).  If $x' < 1$, set $x = x'$.  If not, by conclusion 5, if $x' > 1$, then we will have $x'^{-1} < 0$ and therefore will set $x = x'^{-1}$ when $x > 1$.
+
+Let $y$ be any element of $G$.  There are five possibilities:
+\begin{enumerate}
+\item $y = 1$
+\item $x = y$
+\item $x < y < 1$
+\item $y < x < 1$
+\item $1 < y$
+\end{enumerate}
+We shall show that in each of these cases, $y \in F$.  
+\begin{enumerate}
+\item Trivial --- 1 is an element of every group.
+\item Trivial --- $x$ is assumed to belong to $F$
+\item Since $F$ is an isolated subgroup, $y \in G$.
+\item By the Archimedean property,there exists an integer $n$ such that $x^n < y < 1$.  Since $x^n \in F$ and $F$ is \PMlinkname{isolated}{IsolatedSubgroup}, it follows that $y \in F$.
+\item $1 < y$ By conclusion 5 of the basic theorem on ordered groups, $y^{-1} < 1$.  By conclusion 1 of the same theorem, either $y^{-1} < x$ or $y^{-1} = 1$ or $x < y$.  In each of these three cases, it follows that $y^{-1} \in F$ from what we have already shown.  Since $F$ is a group, $y^{-1} \in F$ implies $y \in F$.
+\end{enumerate}
+This shows that the only isolated subgroups of $G$ are the two trivial subgroups (i.e. the group $\{1\}$ and $G$ itself), and hence $G$ has rank one.
+
+Next, suppose that $G$ does not enjoy the Archimedean property.  Then there must exist $x \in G$ and $y \in G$ such that $x < y^n < 1$ for all integers $n > 0$.  Define the sets $F_n$ as
+ $$F_n = \{ z \in G \mid y^n \leqq z \leqq y^{-n} \}$$
+and define $F = \bigcup_{n=1}^\infty F_n$.
+
+We shall show that $F$ is a subgroup of $G$.  First, note that, by a corollary of the basic theorem on ordered groups, $y^n < 1 < y$, so $1 \in F_n$ for all $n$, hence $1 \in F$.  Second, suppose that $z \in F_n$.  Then $y^n \leqq z \leqq y^{-n}$.  By conclusion 5 of the basic theorem, $y^n \leqq z$ implies $z^{-1} \leqq y^{-n}$ and $z \leqq y^{-n}$ implies $y^n \leqq z^{-1}$.  Thus, $y^n \leqq z^{-1} \leqq y^{-n}$, so $z^{-1} \in F_n$.  Hence, if $z \in F$, then $z^{-1} \in F$.  Third, suppose that $z \in F$ and $w \in F$.  Then there must exist integers $m$ and $n$ such that $z \in F_n$ and $w \in F_m$, so
+ $$y^n \leqq z \leqq y^{-n}$$
+and
+ $$y^m \leqq w \leqq y^{-m}.$$
+Using conclusion 4 of the main theorem repeatedly, we conclude that
+ $$y^{m+n} \leqq z w \leqq y^{-m-n}$$
+so $z w \in F_{m+n}$.  Hence, if $z \in F$ and $w \in F$, then $zw \in F$.  this \PMlinkescapetext{completes} the proof that $F$ is a subgroup of $G$.
+
+Not only is $F$ a subgroup of $G$, it is an isolated subgroup.  Suppose that $f \in F$ and $g \in G$ and $f \leqq g \leqq 1$.  Since $f \in F$, there must exist an $n$ such that $f \in F_n$, hence $y^n \leqq f$.  By conclusion 2 of the basic theorem on ordered groups, $y^n \leqq f$ and $f \leqq g$ imply $y^n \leqq g$.  Combining this with the facts that $g \leqq 1$ and $1 \leqq y^{-n}$, we conclude that $y^n \leqq g \leqq y^{-n}$, so $g \in F_n$.  Hence $g \in F$.
+
+Note that $F$ is not trivial since $y \notin F$.  The reason for this is that $x \notin F_n$ for any $n$ because we assumed that $x < y^n$ for all $n$.  Hence, the order of the group $G$ must be at least 2 because $F$ and $\{ 1 \}$ are two examples of isolated subgroups of $F$.
+\rightline{Q.E.D.}
+%%%%%
+%%%%%
+\end{document}

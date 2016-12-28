@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LatticeHomomorphism}
+\pmcreated{2013-03-22 15:41:31}
+\pmmodified{2013-03-22 15:41:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{lattice homomorphism}
+\pmrecord{13}{37635}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B05}
+\pmclassification{msc}{06B99}
+\pmrelated{OrderPreservingMap}
+\pmrelated{RepresentingABooleanLatticeByFieldOfSets}
+\pmdefines{lattice isomorphism}
+\pmdefines{lattice endomorphism}
+\pmdefines{lattice automorphism}
+\pmdefines{$\lbrace 0}
+\pmdefines{1\rbrace$-lattice homomorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $L$ and $M$ be lattices.  A map $\phi$ from $L$ to $M$ is called a \emph{lattice homomorphism} if $\phi$ respects meet and join.  That is, for $a,b\in L$,
+
+\begin{itemize}
+\item $\phi(a\land b)=\phi(a)\land\phi(b)$, and
+\item $\phi(a\lor b)=\phi(a)\lor\phi(b)$.
+\end{itemize}
+
+From this definition, one also defines \emph{lattice isomorphism}, \emph{lattice endomorphism}, \emph{lattice automorphism} respectively, as a bijective lattice homomorphism, a lattice homomorphism into itself, and a lattice isomorphism onto itself.
+
+If in addition $L$ is a bounded lattice with top $1$ and bottom $0$, with $\phi$ and $M$ defined as above, then $\phi(a)=\phi(1\wedge a)=\phi(1)\wedge\phi(a)$, and $\phi(a)=\phi(0\vee a)=\phi(0)\vee\phi(a)$ for all $a\in L$.  Thus $L$ is mapped onto a bounded sublattice $\phi(L)$ of $M$, with top $\phi(1)$ and bottom $\phi(0)$.
+
+If both $L$ and $M$ are bounded with lattice homomorphism $\phi:L\to M$, then $\phi$ is said to be a $\lbrace 0,1\rbrace$-\emph{lattice homomorphism} if $\phi(1)$ and $\phi(0)$ are top and bottom of $M$.  In other words, 
+
+$$\phi(1_L)=1_M\qquad\mbox{ and }\qquad\phi(0_L)=0_M,$$
+
+where $1_L,1_M,0_L,0_M$ are top and bottom elements of $L$ and $M$ respectively.  
+
+\textbf{Remarks.}  
+\begin{itemize}
+\item
+The idea behind these definitions comes from the idea of a homomorphism between two algebraic systems of the same type.    We require the the homomorphism to preserve all finitary operations, including the nullary ones.  This means that if the algebraic system contains constants, they need to be preserved under the homomorphism.  Thus, if $L$ and $M$ are both bounded lattices, a homomorphism between $L$ and $M$ must preserve $0$ and $1$.  Similarly, if $L$ only has $0$ and $M$ is bounded, then a homomorphism between them should preserve $0$ alone.
+\item
+In the case of complete lattices, there are operations that are infinitary, so the homomorphism between two complete lattices should preserve the infinitary operations as well.  The resulting lattice homomorphism is a complete lattice homomorphism.
+\item
+One can show that every Boolean algebra $B$ can be embedded into the power set of some set $S$.  That is, there is a one-to-one lattice homomorphism $\phi$ from $B$ into a Boolean subalgebra of $2^S$ (under the usual set union and set intersection operations) (see link below).  If $B$ is in addition a complete lattice and an atomic lattice, then $B$ is lattice isomorphic to $2^S$ for some set $S$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

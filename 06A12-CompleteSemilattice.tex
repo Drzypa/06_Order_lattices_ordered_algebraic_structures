@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteSemilattice}
+\pmcreated{2013-03-22 17:44:49}
+\pmmodified{2013-03-22 17:44:49}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{complete semilattice}
+\pmrecord{13}{40197}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A12}
+\pmclassification{msc}{06B23}
+\pmsynonym{countably complete upper-semilattice}{CompleteSemilattice}
+\pmsynonym{countably complete lower-semilattice}{CompleteSemilattice}
+\pmsynonym{complete upper-semilattice homomorphism}{CompleteSemilattice}
+\pmsynonym{complete lower-semilattice homomorphism}{CompleteSemilattice}
+\pmrelated{CompleteLattice}
+\pmrelated{Semilattice}
+\pmrelated{ArbitraryJoin}
+\pmdefines{countably complete join-semilattice}
+\pmdefines{countably complete meet-semilattice}
+\pmdefines{complete join-semilattice homomorphism}
+\pmdefines{complete meet-semilattice homomorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A complete join-semilattice is a join-semilattice $L$ such that for any subset $A\subseteq L$, $\bigvee A$, the arbitrary join operation on $A$, exists.  Dually, a complete meet-semilattice is a meet-semilattice such that $\bigwedge A$ exists for any $A\subseteq L$.  Because there are no restrictions placed on the subset $A$, it turns out that a 
+complete join-semilattice is a complete meet-semilattice, and therefore a complete lattice.  In other words, by dropping the arbitrary join (meet) operation from a complete lattice, we end up with nothing new.  For a proof of this, see \PMlinkname{here}{CriteriaForAPosetToBeACompleteLattice}.  The crux of the matter lies in the fact that $\bigvee$ ($\bigwedge$) applies to \emph{any} set, including $L$ itself, and the empty set $\varnothing$, so that $L$ always contains has a top and a bottom.
+
+\textbf{Variations}.  To obtain new objects, one looks for variations in the definition of ``complete''.  For example, if we require that any $A\subseteq L$ to be countable, we get what is a called a \emph{countably complete join-semilattice} (or dually, a \emph{countably complete meet-semilattice}).  More generally, if $\kappa$ is any cardinal, then a $\kappa$-complete join-semilattice is a semilattice $L$ such that for any set $A\subseteq L$ such that $|A|\le \kappa$, $\bigvee A$ exists.  If $\kappa$ is finite, then $L$ is just a join-semilattice.  When $\kappa=\infty$,  the only requirement on $A\subseteq L$ is that it be non-empty.  In [1], a complete semilattice is defined to be a poset $L$ such that for any non-empty $A\subseteq L$, $\bigwedge A$ exists, and any directed set $D\subseteq L$, $\bigvee D$ exists.
+
+\textbf{Example}.  Let $A$ and $B$ be two isomorphic complete chains (a chain that is a complete lattice) whose cardinality is $\kappa$.  Combine the two chains to form a lattice $L$ by joining the top of $A$ with the top of $B$, and the bottom of $A$ with the bottom of $B$, so that 
+\begin{itemize}
+\item if $a\le b$ in $A$, then $a\le b$ in $L$
+\item if $c\le d$ in $B$, then $c\le d$ in $L$
+\item if $a\in A$, $c\in B$, then $a\le c$ iff $a$ is the bottom of $A$ and $c$ is the top of $B$
+\item if $a\in A$, $c\in B$, then $c\le a$ iff $a$ is the top of $A$ and $c$ is the bottom of $B$
+\end{itemize}
+Now, $L$ can be easily seen to be a $\kappa$-complete lattice.  Next, remove the bottom element of $L$ to obtain $L'$.  Since, the meet operation no longer works on all pairs of elements of $L'$ while $\vee$ still works, $L'$ is a join-semilattice that is not a lattice.  In fact, $\bigvee$ works on all subsets of $L'$.  Since $|L'|=\kappa$, we see that $L'$ is a $\kappa$-complete join-semilattice.
+
+\textbf{Remark}.  Although a complete semilattice is the same as a complete lattice, a homomorphism $f$ between, say, two complete join-semilattices $L_1$ and $L_2$, may fail to be a homomorphism between $L_1$ and $L_2$ as complete lattices.  Formally, a \emph{complete join-semilattice homomorphism} between two complete join-semilattices $L_1$ and $L_2$ is a function $f:L_1\to L_2$ such that for any subset $A\subseteq L_1$, we have $$f(\bigvee A)=\bigvee f(A)$$ where $f(A)=\lbrace f(a)\mid a\in A\rbrace$.  Note that it is not required that $f(\bigwedge A)=\bigwedge f(A)$, so that $f$ needs not be a complete lattice homomorphism.
+
+To give a concrete example where a complete join-semilattice homomorphism $f$ fails to be complete lattice homomorphism, take $L$ from the example above, and define $f:L\to L$ by $f(a)=1$ if $a\ne 0$ and $f(0)=0$.  Then for any $A\subseteq L$, it is evident that $f(\bigvee A)=\bigvee f(A)$.  However, if we take two incomparable elements $a,b\in L$, then $f(a\wedge b)=f(0)=0$, while $f(a)\wedge f(b)= 1\wedge 1=1$.
+
+\begin{thebibliography}{8}
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\bibitem{johnstone} P. T. Johnstone, \emph{Stone Spaces}, Cambridge University Press (1982).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Equality}
+\pmcreated{2013-03-22 18:01:26}
+\pmmodified{2013-03-22 18:01:26}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equality}
+\pmrecord{14}{40541}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06-00}
+\pmrelated{Equation}
+\pmdefines{equality relation}
+\pmdefines{identity}
+\pmdefines{identic equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In any set $S$, the {\em equality}, denoted by ``$=$'', is a binary relation which is reflexive, symmetric, transitive and antisymmetric, i.e. it is an antisymmetric equivalence relation on $S$, or which is the same thing, the equality is a symmetric partial order on $S$.
+
+In fact, for any set $S$, the smallest equivalence relation on $S$ is the equality (by smallest we \PMlinkescapetext{mean} that it is contained in every equivalence relation on $S$).  This offers a definition of ``equality''.  From this, it is clear that there is only one equality relation on $S$.\, Its equivalence classes are all singletons $\{x\}$ where\, $x \in S$.
+
+The concept of equality is essential in almost all branches of mathematics.  A few examples will suffice:
+\begin{eqnarray*}
+1 + 1 & = & 2 \\
+e^{i \pi} & = & -1 \\
+\mathbb{R}[i] & = & \mathbb{C}
+\end{eqnarray*}
+(The second example is Euler's identity.)\\
+
+\textbf{Remark 1.}\, Although the four characterising \PMlinkescapetext{properties}, reflexivity, \PMlinkname{symmetry}{Symmetric}, transitivity and \PMlinkname{antisymmetry}{Antisymmetric}, determine the equality on $S$ uniquely, they cannot be thought to form the definition of the equality, since the concept of antisymmetry already \PMlinkescapetext{contains} the equality.\\
+
+\textbf{Remark 2.}\, An equality (equation) in a set $S$ may be true regardless to the values of the variables involved in the equality; then one speaks of an {\em identity} or {\em identic equation} in this set.\, E.g.\, $(x+y)^2 = x^2+y^2$\, is an identity in a field with \PMlinkname{characteristic}{Characteristic} $2$.
+
+%%%%%
+%%%%%
+\end{document}

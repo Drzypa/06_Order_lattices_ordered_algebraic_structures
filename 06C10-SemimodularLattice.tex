@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemimodularLattice}
+\pmcreated{2013-03-22 15:26:20}
+\pmmodified{2013-03-22 15:26:20}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{semimodular lattice}
+\pmrecord{9}{37286}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C10}
+\pmsynonym{upper semimodular lattice}{SemimodularLattice}
+\pmsynonym{lower semimodular lattice}{SemimodularLattice}
+\pmrelated{ModularLattice}
+\pmrelated{IncidenceGeometry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A lattice $L$ is {\em semimodular}
+\footnote{Or {\em upper semimodular}, if one wants to stress the 
+distinction with lower semimodular lattices.}
+if for any $a$ and $b\in L$,
+\[
+  a \wedge b \prec a
+  \quad\text{implies}\quad
+  b \prec a \vee b,
+\]
+where $\prec$ denotes the covering relation in $L$.
+Dually, a lattice $L$ is said to be \emph{lower semimodular} 
+if for any $a$ and $b\in L$,
+\[
+  b \prec a \vee b
+  \quad\text{implies}\quad
+  a \wedge b \prec a.
+\]
+A chain finite lattice is \PMlinkname{modular}{ModularLattice} 
+if and only if it is both semimodular and lower semimodular.
+
+
+The smallest lattice which is semimodular but not modular is
+\[\xymatrix{
+    & 1 \ar@{-}[ld] \ar@{-}[d] \ar@{-}[rd] & \\
+    a \ar@{-}[d] & b \ar@{-}[ld] \ar@{-}[rd] & c \ar@{-}[d] \\
+    d \ar@{-}[rd] & & e \ar@{-}[ld] \\
+    & 0 &
+}\]
+since $d \le a$ but $a \wedge (c \vee d) \neq (a \wedge c) \vee d$.
+%%%%%
+%%%%%
+\end{document}

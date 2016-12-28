@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Nucleus}
+\pmcreated{2014-12-18 15:34:14}
+\pmmodified{2014-12-18 15:34:14}
+\pmowner{porton}{9363}
+\pmmodifier{porton}{9363}
+\pmtitle{Nucleus}
+\pmrecord{1}{}
+\pmprivacy{1}
+\pmauthor{porton}{9363}
+\pmtype{Definition}
+\pmclassification{msc}{06B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In order theory, a \emph{nucleus} is a 
+function $F$ on a meet-semilattice $\mathfrak{A}$ such that (for every $p$ in 
+$\mathfrak{A}$):
+
+\begin{enumerate}
+\item $p \le F(p)$
+\item $F(F(p)) = F(p)$
+\item $F(p \wedge q) = F(p) \wedge F(q)$
+\end{enumerate}
+
+Usually, the term \emph{nucleus}} is used in frames and locales theory (when the 
+semilattice $\mathfrak{A}$ is a frame).
+
+\section{Some well known results about nuclei}
+
+\textbf{Proposition} If $F$ is a nucleus on a frame $\mathfrak{A}$, then the poset 
+$\operatorname{Fix}(F)$ of fixed points of $F$, with order inherited from 
+$\mathfrak{A}$, is also a frame.
+\end{document}

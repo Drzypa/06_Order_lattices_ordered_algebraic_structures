@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorLattice}
+\pmcreated{2013-03-22 17:03:13}
+\pmmodified{2013-03-22 17:03:13}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{vector lattice}
+\pmrecord{7}{39344}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{46A40}
+\pmsynonym{Riesz Space}{VectorLattice}
+\pmdefines{vector sublattice}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+An ordered vector space whose underlying poset is a lattice is called a \emph{vector lattice}.  A vector lattice is also called a \emph{Riesz space}.
+
+For example, given a topological space $X$, its ring of continuous functions $C(X)$ is a vector lattice.  In particular, any finite dimensional Euclidean space $\mathbb{R}^n$ is a vector lattice.
+
+A \emph{vector sublattice} is a subspace of a vector lattice that is also a sublattice.
+
+Below are some properties of the join ($\vee$) and meet ($\wedge$) operations on a vector lattice $L$.  Suppose $u,v,w\in L$, then
+\begin{enumerate}
+\item $(u+w) \vee (v+w)=(u\vee v)+w$
+\item $u\wedge v=(u+v)-(u\vee v)$
+\item If $\lambda\ge 0$, then $\lambda u\vee \lambda v=\lambda(u\vee v)$
+\item If $\lambda\le 0$, then $\lambda u\vee \lambda v=\lambda(u\wedge v)$
+\item If $u\ne v$, then the converse holds for 3 and 4
+\item If $L$ is an ordered vector space, and if for any $u,v\in L$, either $u\vee v$ or $u\wedge v$ exists, then $L$ is a vector lattice.  This is basically the result of property 2 above.
+\item $(u\wedge v)+w=(u+w)\wedge (v+w)$ (dual of statement 1)
+\item $u\wedge v=-(-u\vee -v)$ (a direct consequence of statement 4, with $\lambda=-1$)
+\item $(-u)\wedge u\le 0\le (-u)\vee u$
+\begin{proof}
+$(-u)\wedge u\le u$ and $(-u)\wedge u\le -u$ imply that $2((-u)\wedge u)\le u+(-u)=0$, so $(-u)\wedge u\le 0$, which means $0\le -((-u)\wedge u)=u\vee (-u)$.
+\end{proof}
+\item $(a\vee b)+(c\vee d)=(a+c)\vee (a+d)\vee (b+c)\vee (b+d)$, by repeated application of 1 above.
+\end{enumerate}
+\textbf{Remark}.  The first five properties are also satisfied by an ordered vector space, with the assumptions that the suprema exist for the appropriate pairs of elements (see the entry on ordered vector space for detail).
+%%%%%
+%%%%%
+\end{document}

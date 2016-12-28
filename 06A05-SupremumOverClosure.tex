@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SupremumOverClosure}
+\pmcreated{2013-03-22 17:08:22}
+\pmmodified{2013-03-22 17:08:22}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{supremum over closure}
+\pmrecord{9}{39446}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A05}
+\pmclassification{msc}{26A15}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\begin{thm*}
+Let $f \colon \mathbb{R} \to \mathbb{R}$ be a continuous function and $A \subseteq \mathbb{R}$.  Then $\displaystyle \sup_{x \in A} f(x)=\sup_{x \in \overline{A}} f(x)$, where $\overline{A}$ denotes the closure of $A$.
+\end{thm*}
+
+\begin{proof}
+The theorem is clearly true for $A=\emptyset$.  Thus, it will be assumed that $A \neq \emptyset$.
+
+Since $A \subseteq \overline{A}$, we have $\displaystyle \sup_{x \in A} f(x) \le \sup_{x \in \overline{A}} f(x)$.
+
+Suppose first that $\displaystyle \sup_{x \in \overline{A}} f(x)=\infty$.  Let $r \in \mathbb{R}$.  Then there exists $x_0 \in \overline{A}$ with $f(x_0) \ge r+1$.  Since $f$ is continuous, there exists $\delta >0$ such that, for any $x \in \mathbb{R}$ with $-\delta<x-x_0<\delta$, we have $-1<f(x)-f(x_0)<1$.  Since $x_0 \in \overline{A}$, there exists $x_1 \in A$ with $-\delta <x_1-x_0<\delta$.  (Recall that $x \in \overline{A}$ if and only if every neighborhood of $x$ intersects $A$.)  Thus, $f(x_1)-f(x_0)>-1$.  Therefore, $f(x_1)>f(x_0)-1 \ge r+1-1=r$.  Hence, $\displaystyle \sup_{x \in A} f(x)=\infty$.
+
+Now suppose that $\displaystyle \sup_{x \in \overline{A}} f(x)=R$ for some $R \in \mathbb{R}$.  Let $\varepsilon >0$.  Then there exists $x_2 \in \overline{A}$ with $f(x_2) \ge R-\frac{\varepsilon}{2}$.  Since $f$ is continuous, there exists $\delta '>0$ such that, for any $x \in \mathbb{R}$ with $-\delta '<x-x_0<\delta '$, we have $\frac{-\varepsilon}{2}<f(x)-f(x_2)<\frac{\varepsilon}{2}$.  Since $x_2 \in \overline{A}$, there exists $x_3 \in A$ with $-\delta '<x_3-x_2<\delta '$.  Thus, $f(x_3)-f(x_2)>\frac{-\varepsilon}{2}$.  Therefore, $f(x_3)>f(x_2)-\frac{\varepsilon}{2} \ge R-\frac{\varepsilon}{2}-\frac{\varepsilon}{2}=R-\varepsilon$.  Hence, $\displaystyle \sup_{x \in A} f(x) \ge R$.
+
+In either case, it follows that $\displaystyle \sup_{x \in A} f(x)=\sup_{x \in \overline{A}} f(x)$.
+\end{proof}
+
+Note that this theorem also holds for continuous functions $f \colon X \to \mathbb{R}$, where $X$ is an arbitrary topological space.  To prove this fact, one would need to slightly adjust the proof supplied here.
+%%%%%
+%%%%%
+\end{document}

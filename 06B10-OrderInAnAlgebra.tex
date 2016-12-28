@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderInAnAlgebra}
+\pmcreated{2013-03-22 13:41:22}
+\pmmodified{2013-03-22 13:41:22}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{order in an algebra}
+\pmrecord{10}{34362}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B10}
+%\pmkeywords{order}
+%\pmkeywords{maximal order}
+%\pmkeywords{algebra}
+%\pmkeywords{ring of integers}
+\pmrelated{ComplexMultiplication}
+\pmdefines{order}
+\pmdefines{maximal order}
+\pmdefines{conductor of an order}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A$ be an algebra (not necessarily commutative), finitely generated over
+$\mathbb{Q}$. An {\it order} $R$ of $A$ is a subring
+of $A$ which is finitely generated as a
+$\mathbb{Z}$-module and which satisfies $R \otimes \mathbb{Q}= A$.
+
+{\bf Examples:}
+\begin{enumerate}
+\item The ring of integers in a number field is an order, known as
+the {\it maximal order}.
+
+\item Let $K$ be a quadratic imaginary field and $\mathcal{O}_K$ its
+ring of integers. For each integer $n\geq 1$ the ring
+$\mathcal{O}={\mathbb{Z}}+n\mathcal{O}_K$ is an order of $K$ (in fact it can be
+proved that every order of $K$ is of this form). The number $n$ is called the {\it \PMlinkescapetext{conductor}} of the order $\mathcal{O}$.
+\end{enumerate}
+
+{\it Reference}: Joseph H. Silverman, {\it The arithmetic of
+elliptic curves}, Springer-Verlag, New York, 1986.
+%%%%%
+%%%%%
+\end{document}

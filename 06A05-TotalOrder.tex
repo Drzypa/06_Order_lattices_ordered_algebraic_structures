@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TotalOrder}
+\pmcreated{2013-03-22 11:43:35}
+\pmmodified{2013-03-22 11:43:35}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{total order}
+\pmrecord{25}{30124}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A05}
+\pmclassification{msc}{91B12}
+\pmclassification{msc}{55-00}
+\pmclassification{msc}{55-01}
+\pmsynonym{linear order}{TotalOrder}
+\pmsynonym{total ordering}{TotalOrder}
+\pmsynonym{linear ordering}{TotalOrder}
+%\pmkeywords{transitivity}
+%\pmkeywords{reflexivity}
+%\pmkeywords{antisymmetry}
+%\pmkeywords{binary relation}
+\pmrelated{PartialOrder}
+\pmrelated{Relation}
+\pmrelated{SortingProblem}
+\pmrelated{OrderedRing}
+\pmrelated{ProofOfGeneralizedIntermediateValueTheorem}
+\pmrelated{LinearContinuum}
+\pmdefines{totally ordered set}
+\pmdefines{linearly ordered set}
+\pmdefines{comparability}
+\pmdefines{totally ordered}
+\pmdefines{linearly ordered}
+\pmdefines{chain}
+\pmdefines{totally-ordered set}
+\pmdefines{linearly-ordered set}
+\pmdefines{totally-ordered}
+\pmdefines{linearly-ordered}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+\PMlinkescapeword{between}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{property}
+\PMlinkescapeword{transitive}
+\PMlinkescapeword{words}
+
+A \emph{totally ordered set} (or \emph{linearly ordered set}) is a poset $(T,\leq)$ which has the property of \emph{comparability}:
+\begin{itemize}
+\item for all $x,y\in T$, either $x\leq y$ or $y \leq x$.
+\end{itemize}
+In other words, a totally ordered set is a set $T$ with a binary relation $\leq$ on it
+such that the following hold for all $x,y,z\in T$:
+\begin{itemize}
+\item $x\leq x$. ({\it reflexivity})
+\item If $x\leq y$ and $y\leq x$, then $x=y$. ({\it antisymmetry})
+\item If $x\leq y$ and $y\leq z$, then $x\leq z$. ({\it transitivity})
+\item Either $x\leq y$ or $y \leq x$. ({\it comparability})
+\end{itemize}
+
+The binary relation $\leq$ is then called a \emph{total order} or a \emph{linear order} (or \emph{total ordering} or \emph{linear ordering}).
+A totally ordered set is also sometimes called a \emph{chain}, especially when it is considered as a subset of some other poset.
+If every nonempty subset of $T$ has a least element, then the total order is called a \PMlinkname{well-order}{WellOrderedSet}.
+
+Some people prefer to define the binary relation $<$ as a total order, rather than $\leq$.
+In this case, $<$ is required to be \PMlinkname{transitive}{Transitive3} and to obey the law of trichotomy.
+It is straightforward to check that this is equivalent to the above definition, with the usual relationship between $<$ and $\leq$
+(that is, $x\leq y$ if and only if either $x<y$ or $x=y$).
+
+A totally ordered set can also be defined as a lattice $(T,\lor,\land)$ in which the following property holds:
+\begin{itemize}
+\item for all $x,y\in T$, either $x\land y=x$ or $x\land y=y$.
+\end{itemize}
+Then totally ordered sets are \PMlinkname{distributive lattices}{DistributiveLattice}.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfBooleanAlgebras}
+\pmcreated{2013-03-22 17:52:33}
+\pmmodified{2013-03-22 17:52:33}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{example of Boolean algebras}
+\pmrecord{15}{40356}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B20}
+\pmclassification{msc}{03G05}
+\pmclassification{msc}{06E05}
+\pmclassification{msc}{03G10}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Below is a list of examples of Boolean algebras.  Note that the phrase ``usual set-theoretic operations'' refers to the operations of union $\cup$, intersection $\cap$, and set complement $'$.
+
+\begin{enumerate}
+\item Let $A$ be a set.  The power set $P(A)$ of $A$, or the collection of all the subsets of $A$, together with the operations of union, intersection, and set complement, the empty set $\varnothing$ and $A$, is a Boolean algebra.  This is the canonical example of a Boolean algebra.
+\item In $P(A)$, let $F(A)$ be the collection of all finite subsets of $A$, and $cF(A)$ the collection of all cofinite subsets of $A$.  Then $F(A)\cup cF(A)$ is a Boolean algebra.
+\item More generally, any field of sets is a Boolean algebra.  In particular, any sigma algebra $\sigma$ in a set is a Boolean algebra.
+\item (product of algebras) Let $A$ and $B$ be Boolean algebras.  Then $A\times B$ is a Boolean algebra, where 
+\begin{eqnarray}
+(a,b)\vee (c,d)&:=&(a\vee c, b\vee d),\\ 
+(a,b)\wedge (c,d)&:=& (a\wedge c,b\wedge d),\\
+(a,b)'&:=&(a',b').
+\end{eqnarray}
+\item More generally, if we have a collection of Boolean algebras $A_i$, indexed by a set $I$, then $\prod_{i\in I} A_i$ is a Boolean algebra, where the Boolean operations are defined componentwise.  
+\item In particular, if $A$ is a Boolean algebra, then set of functions from some non-empty set $I$ to $A$ is also a Boolean algebra, since $A^I=\prod_{i\in I} A$.
+\item (subalgebras) Let $A$ be a Boolean algebra, any subset $B\subseteq A$ such that $0\in B$, $a'\in B$ whenever $a\in B$, and $a\vee b\in B$ whenever $a,b\in B$ is a Boolean algebra.  It is called a \emph{Boolean subalgebra} of $A$.  In particular, the homomorphic image of a Boolean algebra homomorphism is a Boolean algebra.
+\item (quotient algebras) Let $A$ be a Boolean algebra and $I$ a Boolean ideal in $A$.  View $A$ as a Boolean ring and $I$ an ideal in $A$.  Then the quotient ring $A/I$ is Boolean, and hence a Boolean algebra.
+\item Let $A$ be a set, and $R_n(A)$ be the set of all $n$-ary relations on $A$.  Then $R_n(A)$ is a Boolean algebra under the usual set-theoretic operations.  The easiest way to see this is to realize that $R_n(A)=P(A^n)$, the powerset of the $n$-fold power of $A$.
+\item The set of all clopen sets in a topological space is a Boolean algebra.
+\item Let $X$ be a topological space and $A$ be the collection of all regularly open sets in $X$.  Then $A$ has a Boolean algebraic structure.  The meet and the constant operations follow the usual set-theoretic ones: $U\wedge V=U\cap V$, $0=\varnothing$ and $1=X$.  However, the join $\wedge$ and the complementation $'$ on $A$ are different.  Instead, they are given by
+\begin{eqnarray}
+U'&:=&X-\overline{U},\\
+U\vee V&:=& (U\cup V)''.
+\end{eqnarray}
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

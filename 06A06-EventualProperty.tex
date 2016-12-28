@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EventualProperty}
+\pmcreated{2013-03-22 16:34:45}
+\pmmodified{2013-03-22 16:34:45}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{eventual property}
+\pmrecord{16}{38770}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmsynonym{residually constant}{EventualProperty}
+\pmdefines{eventually}
+\pmdefines{directed net}
+\pmdefines{eventually constant}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $X$ be a set and $P$ a property on the elements of $X$.  Let $(x_i)_{i\in D}$ be a net ($D$ a directed set) in $X$ (that is, $x_i\in X$).  As each $x_i\in X$, $x_i$ either has or does not have property $P$.  We say that the net $(x_i)$ has property $P$ \emph{above} $j\in D$ if $x_i$ has property $P$ for all $i\ge j$.  Furthermore, we say that $(x_i)$ \emph{eventually} has property $P$ if it has property $P$ above some $j\in D$.
+
+\textbf{Examples}.
+\begin{enumerate}
+\item Let $A$ and $B$ be non-empty sets.  For $x\in A$, let $P(x)$ be the property that $x\in B$.  So $P$ is nothing more than the property of elements being in the intersection of $A$ and $B$.  A net $(x_i)_{i\in D}$ eventually has $P$ means that for some $j\in D$, the set $\lbrace x_i\mid i\in A\mbox{, } i\ge j \rbrace \subseteq B$.  If $D=\mathbb{Z}$, then we have that $A$ and $B$ eventually coincide.  
+\item Now, suppose $A$ is a topological space, and $B$ is an open neighborhood of a point $x\in A$.  For $y\in A$, let $P_B(y)$ be the property that $y\in B$.  Then a net $(x_i)$ has $P_B$ eventually for every neighborhood $B$ of $x$ is a characterization of convergence (to the point $x$, and $x$ is the accumulation point of $(x_i)$).
+\item If $A$ is a poset and $B=\lbrace x\rbrace \subseteq A$.  For $y\in A$, let $P(y)$ again be the property that $y=x$.  Let $(x_i)$ be a net that eventually has property $P$.  In other words, $(x_i)$ is \emph{eventually constant}.  In particular, if for every chain $D$, the net $(x_i)_{i\in D}$ is eventually constant in $A$, then we have a characterization of the ascending chain condition in $A$.
+\item \textbf{directed net}.  Let $R$ be a preorder and let $(x_i)_{i\in D}$ be a net in $R$.  Let $x(D)$ be the image of the net: $x(D)=\lbrace x_i\in R \mid i\in D\rbrace$.  Given a fixed $k\in D$ and some $y\in x(D)$, let $P_k(y)$ be the property (on $x(D)$) that $x_k\le y$.  Let $$S=\lbrace k \in D \mid (x_i)\mbox{ eventually has }P_k\rbrace.$$  If $S=D$, then we say that the net $(x_i)$ is \emph{directed}, or that $(x_i)$ is a \emph{directed net}.  In other words, a directed net is a net $(x_i)_{i\in D}$ such that for \emph{every} $i\in D$, there is a $k(i)\in D$, such that $x_i\le x_j$ for all $j\ge k(i)$.
+
+If $(x_i)_{i\in D}$ is a directed net, then $x(D)$ is a directed set:  Pick $x_i,x_j\in x(D)$, then there are $k(i),k(j)\in D$ such that $x_i\le x_m$ for all $m\ge k(i)$ and $x_j\le x_n$ for all $n\ge k(j)$.  Since $D$ is directed, there is a $t\in D$ such that $t\ge k(i)$ and $t\ge k(j)$.  So $x_t\ge x_{k(i)}\ge x_i$ and $x_t\ge x_{k(j)}\ge x_j$.
+
+However, if $(x_i)_{i\in D}$ is a net such that $x(D)$ is directed, $(x_i)$ need not be a directed net.  For example, let $D=\lbrace p,q,r\rbrace$ such that $p\le q\le r$, and $R=\lbrace a,b\rbrace$ such that $a\le b$.  Define a net $x:D\to R$ by $x(p)=x(r)=b$ and $x(q)=a$.  Then $x$ is not a directed net.
+\end{enumerate}
+
+\textbf{Remark}.  The eventual property is a property on the class of nets (on a given set $X$ and a given property $P$).  We can write $\operatorname{Eventually}(P,X)$ to denote its dependence on $X$ and $P$.
+%%%%%
+%%%%%
+\end{document}

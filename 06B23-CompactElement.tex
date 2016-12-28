@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompactElement}
+\pmcreated{2013-03-22 15:52:50}
+\pmmodified{2013-03-22 15:52:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{compact element}
+\pmrecord{17}{37880}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B23}
+\pmsynonym{finite element}{CompactElement}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $X$ be a set and $\mathcal{T}$ be a topology on $X$, a well-known concept is that of a compact set: a set $A$ is compact if every open cover of $A$ has a finite subcover.  Another way of putting this, symbolically, is that if $$A\subseteq \bigcup \mathcal{S},$$ where $\mathcal{S}\subset \mathcal{T}$, then there is a finite subset $\mathcal{F}$ of $\mathcal{S}$, such that 
+$$A\subseteq \bigcup \mathcal{F}.$$
+
+A more general concept, derived from above, is that of a \emph{compact element} in a lattice.  Let $L$ be a lattice and $a\in L$.  Then $a$ is said to be \emph{compact} if 
+\begin{quote}\emph{
+whenever a subset $S$ of $L$ such that $\bigvee S$ exists and $a\le \bigvee S$, then there is a finite subset $F\subset S$ such that $a\le \bigvee F$.}
+\end{quote}
+
+If we let $\mathcal{D}$ to be the collection of closed subsets of $X$, and partial order $\mathcal{D}$ by inclusion, then $\mathcal{D}$ becomes a lattice with meet and join defined by set theoretic intersection and union.  It is easy to see that an element $A\in\mathcal{D}$ is a compact element iff $D$ is a compact closed subset in $X$.
+
+Here are some other common examples:
+\begin{enumerate}
+\item Let $C$ be a set and $2^C$ the subset lattice (power set) of $C$.  The compact elements of $2^C$ are the finite subsets of $C$.
+\item Let $V$ be a vector space and $L(V)$ be the subspace lattice of $V$.  Then the compact elements of $L(V)$ are exactly the finite dimensional subspaces of $V$.
+\item Let $G$ be a group and $L(G)$ the subgroup lattice of $G$.  Then the compact elements are the finitely generated subgroups of $G$.
+\item Note in all of the above examples, atoms are compact.  However, this is not true in general.  Let's construct one such example.  Adjoin  the symbol $\infty$ to the lattice $\mathbb{N}$ of natural numbers (with linear order), so that $n<\infty$ for all $n\in \mathbb{N}$.  So $\infty$ is the top element of $\mathbb{N}\cup\lbrace \infty\rbrace$ (and $1$ is the bottom element!).  Next, adjoin a symbol $a$ to $\mathbb{N}\cup\lbrace \infty\rbrace$, and define the meet and join properties with $a$ by
+\begin{itemize}
+\item $a\vee n=\infty$, $a\wedge n=1$ for all $n\in\mathbb{N}$, and
+\item $a\vee\infty =\infty$, $a\wedge\infty = a$.
+\end{itemize}
+The resulting set $L=\mathbb{N}\cup\lbrace \infty,a\rbrace$ is a lattice where $a$ is a non-compact atom.
+\end{enumerate}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item As we have seen from the examples above, compactness is closely associated with the concept of finiteness, a compact element is sometimes called a \emph{finite element}.
+\item Any finite join of compact elements is compact.
+\item An element $a$ in a lattice $L$ is compact iff for any \PMlinkname{directed}{DirectedSet} subset $D$ of $L$ such that $\bigvee D$ exists and $a\le \bigvee D$, then there is an element $d\in D$ such that $a\le d$.
+\item As the last example indicates, not all atoms are compact.  However, in an algebraic lattice, atoms are compact.  The first three examples are all instances of algebraic lattices.
+\item A compact element may be defined in an arbitrary poset $P$: $a\in P$ is compact iff $a$ is way below itself: $a\ll a$.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

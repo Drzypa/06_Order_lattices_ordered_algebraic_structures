@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BooleanRing}
+\pmcreated{2013-03-22 12:27:28}
+\pmmodified{2013-03-22 12:27:28}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{Boolean ring}
+\pmrecord{24}{32602}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E99}
+\pmclassification{msc}{03G05}
+\pmrelated{Idempotency}
+\pmrelated{BooleanLattice}
+\pmrelated{BooleanIdeal}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{boolean}
+\PMlinkescapeword{commutative}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{isomorphic}
+
+A \emph{Boolean ring} is a ring $R$ that has a multiplicative identity,
+and in which every element is idempotent, that is, 
+$$x^2=x\text{ for all }x\in R.$$
+Boolean rings are necessarily \PMlinkname{commutative}{CommutativeRing}.
+Also, if $R$ is a Boolean ring, then $x=-x$ for each $x\in R$.
+
+Boolean rings are equivalent to Boolean algebras (or \PMlinkname{Boolean lattices}{BooleanLattice}).
+Given a Boolean ring $R$, 
+define $x \land y = xy$ and $x \lor y = x + y + xy$ and $x'=x+1$
+for all $x,y\in R$, 
+then $(R,\land,\lor,\phantom{i}',0,1)$ is a Boolean algebra.
+Given a Boolean algebra $(L,\land,\lor,\phantom{i}',0,1)$,
+define $x\cdot y = x \land y$ and $x + y = (x' \land y) \lor (x \land y')$,
+then $(L,\cdot,+)$ is a Boolean ring.
+In particular, the category of Boolean rings is isomorphic to the category of Boolean lattices.
+
+\section*{Examples}
+
+As mentioned above, every Boolean algebra can be considered as a Boolean ring. In particular, if $X$ is any set, then the power set ${\cal P}(X)$ forms a Boolean ring, with intersection as multiplication and symmetric difference as addition.
+
+Let $R$ be the ring $\Z_2\times\Z_2$ with the operations being coordinate-wise.
+Then we can check:
+\begin{eqnarray*}
+(1,1)\times(1,1)&=&(1,1)\\
+(1,0)\times(1,0)&=&(1,0)\\
+(0,1)\times(0,1)&=&(0,1)\\
+(0,0)\times(0,0)&=&(0,0)
+\end{eqnarray*}
+the four elements that form the ring are idempotent. So $R$ is Boolean.
+%%%%%
+%%%%%
+\end{document}

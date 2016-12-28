@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferenceOfLatticeElements}
+\pmcreated{2013-03-22 17:57:44}
+\pmmodified{2013-03-22 17:57:44}
+\pmowner{porton}{9363}
+\pmmodifier{porton}{9363}
+\pmtitle{difference of lattice elements}
+\pmrecord{10}{40464}
+\pmprivacy{1}
+\pmauthor{porton}{9363}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmrelated{ComplementedLattice}
+\pmrelated{Pseudodifference}
+\pmrelated{SectionallyComplementedLattice}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathfrak{A}$ is a lattice with least element $0$.
+
+Let $a,b\in\mathfrak{A}$. A \emph{\PMlinkescapetext{difference}} of $a$ and $b$ is an element $c\in\mathfrak{A}$ that $b\cap c=0$ and $a\cup b=b\cup c$.  When there is only one difference of $a$ and $b$, it is denoted $a\setminus b$.
+
+One immediate property is: $0$ is the unique difference of any element $a$ and itself ($a\setminus a=0$).  For if $c$ is such a difference, then $a\cap c=0$ and $a=a\cup c$.  So $c\le a$ by the second equation, and hence that $c=a\cap c=0$ by the first equation.
+
+For arbitrary lattices \emph{\PMlinkescapetext{differences}} of two given elements do not necessarily exist. For some lattices there may be more than one difference of two given elements.
+
+For a distributive lattice with bottom element $0$, the difference of two elements, if it exists, must be unique.  To see this, let $c$ and $d$ be two differences of $a$ and $b$.  Then
+\begin{itemize}
+\item $b\cap c=b\cap d=0$, and
+\item $a\cup b = b\cup c = b\cup d$.
+\end{itemize}
+So $c= c\cap (b\cup c)= c\cap (b\cup d)= (c \cap b)\cup (c\cap d)=0\cup (c\cap d)= c\cap d$.  Similarly, $d=d\cap c$.  As a result, $c = c\cap d=d\cap c=d$.
+%%%%%
+%%%%%
+\end{document}

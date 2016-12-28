@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeMorganAlgebra}
+\pmcreated{2013-03-22 16:09:25}
+\pmmodified{2013-03-22 16:09:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{De Morgan algebra}
+\pmrecord{13}{38238}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D30}
+\pmclassification{msc}{03G10}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A bounded distributive lattice $L$ is called a \emph{De Morgan algebra} if there exists a unary operator $\sim:L\to L$ such that
+\begin{enumerate}
+\item $\sim(\sim a)=a$ and
+\item $\sim(a\vee b)=(\sim a )\wedge (\sim b)$.
+\end{enumerate}
+
+From the definition, we have the following properties:
+\begin{itemize}
+\item $\sim$ is a bijection, since for any $a\in L$, $a=\sim (\sim a)$.
+\item $\sim(a\wedge b)=\sim [(\sim (\sim a ))\wedge (\sim (\sim b))]=
+\sim [\sim ((\sim a)\vee (\sim b)) ]=(\sim a)\vee (\sim b)$, which is the dual statement of (2) above.  This, together with condition (2), are commonly known as the De Morgan's laws.
+\item $\sim 0 =\ \sim (0 \wedge (\sim a))=(\sim 0) \vee a$ for all $a\in L$, so $\sim 0 = 1$.  Dually, $\sim 1=0$.  As a result, a De Morgan algebra is an Ockham algebra.
+\item $a \le b$ iff $b=a \vee b$ iff $\sim b=\ \sim(a\vee b)=(\sim a)\wedge (\sim b)$ iff $\sim b \le\ \sim a$.
+\item A Boolean algebra is always a De Morgan algebra, where the $\sim$ is the complementation operator $'$.  The converse is not true.  In general, $\sim a$ is not a complement of $a$ (that is, $(\sim a)\wedge a \ne 0$ and $(\sim a)\vee a\ne 1$).  Otherwise, $L$ is a complemented lattice and consequently a Boolean algebra.
+\end{itemize}
+
+Furthermore, a Kleene algebra is, by definition, a De Morgan algebra.  But the converse is false.  For example, consider $L=\mathbf{n}\times \mathbf{n}$, where $\mathbf{n}=\lbrace 0,1,\ldots,n\rbrace$ is a chain with the usual ordering.  Define $\sim$ on $L$ by $\sim(a,b)=(n-b,n-a)$.  Then $\sim^2(a,b)=(a,b)$.  The De Morgan's laws follow from the identity $n-(a\vee b)=(n-a)\wedge (n-b)$ applied to each of the two components.  But $L$ is not Kleene in general.  Take $n=3$, then $\sim (1,2)=(1,2)$ and $\sim (2,1)=(2,1)$.  But $(1,2)=\sim (1,2)\wedge (1,2)$ and $(2,1)=\sim (2,1)\vee (2,1)$ are not comparable.
+
+Next, for any $a,b\in L$, define $a-b:=a\wedge (\sim b)$.  Then $-$ is a binary operator.  It has the following properties:
+
+\begin{itemize}
+\item $a-0 = a\wedge (\sim 0)=a\wedge 1 =a$.
+\item $0-a = 0\wedge (\sim a)=0$.
+\item $a-1 = a\wedge (\sim 1)=a\wedge 0=0$.
+\item $1-a = 1\wedge (\sim a)=\ \sim a$.
+\item $(a-b)-c=(a\wedge (\sim b))\wedge (\sim c)=a\wedge (\sim (b\vee c))=a-(b\vee c)$.
+\end{itemize}
+
+Finally, we define for $a,b\in L$, $a+b=(a-b)\vee (b-a)$.  This is again a binary operator, with the following properties:
+
+\begin{itemize}
+\item $a+b=b+a$.  This is obvious by the symmetry in the definition of $+$.
+\item $a+0=a$.  We have $a+0=(a-0)\vee (0-a)=a\vee 0=a$.
+\item $a+1=\ \sim a$, since $a+1=(a-1)\vee (1-a)=0\vee (\sim a)=\ \sim a$.  In particular $1+1=0$.
+\item $a+a=(a-a)\vee(a-a)=a-a=a\wedge (\sim a)$.  If we define $2a:=a+a$, then $a+2a=(a-2a)\vee (2a-a)=(a\wedge (a\vee (\sim a))\vee ((a\wedge (\sim a)\wedge (\sim a))=a\vee ((a\wedge (\sim a))=a$.
+\item More generally, we have 
+\begin{eqnarray*}
+a+(a+b) &=& (a-(a+b))\vee ((a+b)-a) \\
+&=&(a-((a-b)\vee(b-a)))\vee (((a-b)\vee(b-a))-a) \\ 
+&=&(a\wedge (\sim a\vee b)\wedge (\sim b\vee a))\vee (((\sim b \wedge a)\vee (\sim a\wedge b))\wedge (\sim a)) \\
+&=& (a\wedge (\sim a\vee b))\vee (((\sim b\wedge a)\wedge (\sim a))\vee (\sim a\wedge b)) \\
+&=& ((a\wedge (\sim a\vee b))\vee (\sim a\wedge b)) \vee (\sim b\wedge (\sim a\wedge a)) \\ 
+&=& ((\sim a\wedge a) \vee (a\wedge b)\vee (\sim a \wedge b))\vee (\sim b\wedge 2a) \\
+&=& (2a \vee ((\sim a \wedge a)\vee b))\vee (\sim b\wedge 2a) \\
+&=& (2a \vee (2a \vee b))\vee (\sim b\wedge 2a) \\
+&=& (2a \vee b)\vee (\sim b\wedge 2a) \\
+&=& 2a \vee (\sim b \wedge 2a) \vee b \\ 
+&=& 2a \vee b.
+\end{eqnarray*}
+\end{itemize}
+
+\textbf{Remark}.  Since a De Morgan algebra is an Ockham algebra, a morphism between any two objects in the category of De Morgan algebras behaves just like an Ockham algebra homomorphism: it preserves $\sim$.
+
+\begin{thebibliography}{6}
+\bibitem{gg} G. Gr\"atzer, {\it General Lattice Theory}, 2nd Edition, Birkh\"auser (1998)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteDistributivity}
+\pmcreated{2013-03-22 15:41:34}
+\pmmodified{2013-03-22 15:41:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{complete distributivity}
+\pmrecord{22}{37636}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D10}
+\pmrelated{JoinInfiniteDistributive}
+\pmdefines{completely distributive}
+\pmdefines{$(m}
+\pmdefines{n)$-distributive}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A lattice $L$ is said to be \emph{completely distributive} if it is a complete lattice such that, given any sets $K\subseteq I\times J$ such that $K$ projects onto $I$, and any subset $\lbrace x_{ij} \mid (i,j)\in K \rbrace$ of $L$,
+\begin{equation}
+\bigwedge_{i\in I}(\bigvee_{j\in K(i)} x_{ij})=\bigvee_{f\in A}(\bigwedge_{i\in I} x_{if(i)}),
+\end{equation}
+where $K(i):=\lbrace j\in J\mid (i,j)\in K\rbrace$, and $A=\lbrace f:I\to J\mid f(i)\in K(i)\mbox{ for all }i\in I\rbrace$.
+
+By setting $I=J=\lbrace 1,2\rbrace$ and $K=\lbrace (1,1),(2,1),(2,2)\rbrace$, then $K(1)=\lbrace 1\rbrace$, $K(2)=\lbrace 1,2\rbrace$, and $A$ consists of two functions $\lbrace (1,1), (2,1)\rbrace$ and $\lbrace (1,1),(2,2)\rbrace$.  Then, the equation above reads:
+$$(x_{11}) \wedge (x_{21} \vee x_{22})= (x_{11}\wedge x_{21}) \vee (x_{11}\wedge x_{22})$$
+which is one of the distributive laws, so that complete distributivity implies distributivity.
+
+More generally, setting $I=\lbrace 1,2\rbrace$ and $J$ containing $1$ but otherwise arbitrary, and $K=\lbrace (2,j)\mid j\in J\rbrace \cup \lbrace (1,1)\rbrace$.  Then $K(1)=\lbrace 1\rbrace$, $K(2)=J$, and $A$ is the set of functions from $I$ to $J$ fixing $1$, and the equation (1) above now looks like
+$$x_{11} \wedge (\bigvee \lbrace x_{2j}\mid j\in J\rbrace = \bigvee \lbrace x_{11}\wedge x_{2j} \mid j\in J\rbrace$$
+which shows that completely distributivity implies \emph{\PMlinkname{join infinite distributivity}{JoinInfiniteDistributive}}.
+
+\textbf{Remarks.}  
+\begin{enumerate}
+\item Dualizing the above equation results in the same lattice.  In other words, a completely distributive lattice may be equivalently defined using the dual of Equation (1).  As a result, a completely distributive lattice also satisfies MID, and hence is infinite distributive.
+\item However, a complete distributive lattice does not have to be completely distributive.  Here's an example: let $\mathbb{N}$ be the set of natural numbers with the usual ordering, and $\mathbb{N}'$ be an identical copy of $\mathbb{N}$ such that each natural number $n$ corresponds to $n'\in \mathbb{N}'$.  Then $\mathbb{N}'$ has a natural ordering induced by the usual ordering on $\mathbb{N}$.  Take the union $N$ of these two sets.  Then $N$ becomes a lattice if we extend the meets and joins on $\mathbb{N}$ and $\mathbb{N}'$ by additionally setting 
+\begin{displaymath}
+a'\vee b:= \left\{
+\begin{array}{ll}
+a' & \textrm{if } b\le a, \\
+b' & \textrm{otherwise.}
+\end{array}
+\right.
+\end{displaymath}
+and 
+\begin{displaymath}
+a' \wedge b:= \left\{
+\begin{array}{ll}
+b & \textrm{if } b\le a, \\
+a & \textrm{otherwise.}
+\end{array}
+\right.
+\end{displaymath}
+Finally, let $L$ be the lattice formed from $N$ by adjoining an extra element $\infty$ to be its top element.  It is not hard to see that $L$ is complete and distributive.  However, $L$ is not completely distributive, for $0' \wedge (\bigvee \lbrace a\mid a\in \mathbb{N}\rbrace )=0' \wedge \infty =0'$, whereas $\bigvee \lbrace 0'\wedge a \mid a\in \mathbb{N} \rbrace = \bigvee \lbrace 0\rbrace = 0 \ne 0'$.
+
+\item In some literature, completeness assumption is not required, so that the equation (1) above is conditionally defined.  In other words, the equation is defined only when each side of the equation exists first.
+
+\item Another generalization is the so-called $(\mathfrak{m},\mathfrak{n})$-distributivity, where $\mathfrak{m}$ and $\mathfrak{n}$ are cardinal numbers.  Specifically, a lattice $L$ is $(\mathfrak{m},\mathfrak{n})$-distributive if it is complete and equation (1) is true whenever $I$ has cardinality $\le \mathfrak{m}$ and each $K(i)$ has cardinality $\le \mathfrak{n}$ for each $i\in I$.
+\end{enumerate}
+
+\begin{thebibliography}{8}
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

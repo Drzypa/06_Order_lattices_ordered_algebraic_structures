@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RankselectedPoset}
+\pmcreated{2013-03-22 16:23:43}
+\pmmodified{2013-03-22 16:23:43}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{rank-selected poset}
+\pmrecord{5}{38541}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A11}
+\pmclassification{msc}{06A06}
+\pmdefines{alpha invariant}
+\pmdefines{beta invariant}
+\pmdefines{rank-selected M\"obius invariant}
+\pmdefines{rank-selected Mobius invariant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $P$ be a graded poset of rank $n+1$ with rank function $\rho$.  For any $S\subset\{0,1,\dots,n+1\}$ let $P_S$ denote the subset
+\[
+P_S = \{ x \in P \colon \rho(x) \in S \} = \rho^{-1}(S).
+\]
+Each such subset inherits a poset structure from $P$ as an induced poset.  So we call $P_S$ the {\em rank-selected poset} of $P$ induced by $S$, or more briefly the $S$-rank-selected subposet of $P$.
+
+The rank-selected posets of a poset $P$ can be used to define two special arithmetic invariants of $P$.  First for each $S$, the {\em alpha invariant} $\alpha_S(P)$ is the number of saturated chains in $P_S$.  Then define $\beta_S(P)$ by
+\[
+\beta_S(P) = \sum_{T\subset S}(-1)^{|S| - |T|}\alpha_T(P).
+\]
+The invariant $\beta$ is called the {\em rank-selected M\"obius invariant} of $P$.
+
+For example, let $L$ be the face poset of a convex polytope $P$ of dimension $n$, including the special elements $\widehat{0}$ (representing the empty face) and $\widehat{1}$ (representing the interior of the polytope).  For any $i\in\{0,\dots,n-1\}$, the alpha invariant $\alpha_{\{i+1\}}(L)$ counts the number of faces of $P$ of dimension $i$.  For arbitrary $S\subset\{1,\dots,n\}$, the numbers $\alpha_S(L)$ are entries in the flag $f$-vector of $P$ and thus count flags of faces in $P$, while the $\beta_S(L)$ are entries in the flag $h$-vector of $P$.
+
+While the alpha invariant is by construction always nonnegative, the M\"obius invariant is not guaranteed to be nonnegative.  Posets for which the M\"obius invariant is always nonnegative (and therefore counts something) are of special interest to combinatorialists.  In particular, the M\"obius invariant is nonnegative for face posets of convex polytopes.
+
+\begin{thebibliography}{9}
+\bibitem{cite:RS}
+Stanley, R., \emph{Enumerative Combinatorics}, vol. 1, 2nd ed., Cambridge
+University Press, Cambridge, 1996.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

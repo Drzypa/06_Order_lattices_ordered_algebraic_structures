@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SectionallyComplementedLattice}
+\pmcreated{2013-03-22 17:58:46}
+\pmmodified{2013-03-22 17:58:46}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{sectionally complemented lattice}
+\pmrecord{6}{40488}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C15}
+\pmclassification{msc}{06B05}
+\pmrelated{DifferenceOfLatticeElements}
+\pmdefines{sectionally complemented}
+\pmdefines{dually sectionally complemented lattice}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} Let $L$ be a lattice with the least element $0$.  Then the following are equivalent:
+\begin{enumerate}
+\item Every pair of elements have a \PMlinkname{difference}{DifferenceOfLatticeElements}.
+\item for any $a\in L$, the lattice interval $[0,a]$ is a complemented lattice.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Suppose first that every pair of elements have a difference.  Let $b\in [0,a]$ and let $c$ be a difference between $a$ and $b$.  So $0=b\wedge c$ and $c\vee b=b\vee a=a$, since $b\le a$.  This shows that $c$ is a complement of $b$ in $[0,a]$.
+
+Next suppose that $[0,a]$ is complemented for every $a\in L$.  Let $x,y\in L$ be any two elements in $L$.  Let $a=x\vee y$.  Since $[0,a]$ is complemented, $y$ has a complement, say $z\in [0,a]$.  This means that $y\wedge z=0$ and $y\vee z=a= x\vee y$.  Therefore, $z$ is a difference of $x$ and $y$.
+\end{proof}
+
+\textbf{Definition}.  A lattice $L$ with the least element $0$ satisfying either of the two equivalent conditions above is called a \emph{sectionally complemented lattice}.
+
+Every relatively complemented lattice is sectionally complemented.  Every sectionally complemented distributive lattice is relatively complemented.
+
+Dually, one defines a \emph{dually sectionally complemented lattice} to be a lattice $L$ with the top element $1$ such that for every $a\in L$, the interval $[a,1]$ is complemented, or, equivalently, the lattice dual $L^{\partial}$ is sectionally complemented.
+
+\begin{thebibliography}{6}
+\bibitem{gg} G. Gr\"atzer, {\it General Lattice Theory}, 2nd Edition, Birkh\"auser (1998)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

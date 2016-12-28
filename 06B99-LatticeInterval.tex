@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LatticeInterval}
+\pmcreated{2013-03-22 15:44:56}
+\pmmodified{2013-03-22 15:44:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{lattice interval}
+\pmrecord{11}{37701}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmclassification{msc}{06A06}
+\pmdefines{prime interval}
+\pmdefines{poset interval}
+\pmdefines{locally finite lattice}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+\textbf{Definition}.  Let $L$ be a lattice.  A subset $I$ of $L$ is called a \emph{lattice interval}, or simply an \emph{\PMlinkescapetext{interval}} if there exist elements $a,b\in L$ such that $$I=\lbrace t\in L\mid a\le t\le b\rbrace:=[a,b].$$
+
+The elements $a,b$ are called the endpoints of $I$.  Clearly $a,b\in I$.  Also, the endpoints of a lattice interval are unique: if $[a,b]=[c,d]$, then $a=c$ and $b=d$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item It is easy to see that the name is derived from that of an interval on a number line.  From this analogy, one can easily define lattice intervals without one or both endpoints.  Whereas an interval on a number line is linearly ordered, a lattice interval in general is not.  Nevertheless, a lattice interval $I$ of a lattice $L$ is a sublattice of $L$.
+\item A bounded lattice is itself a lattice interval: $[0,1]$.
+\item A \emph{prime interval} is a lattice interval that contains its endpoints and nothing else.  In other words, if $[a,b]$ is prime, then any $c\in [a,b]$ implies that either $c=a$ or $c=b$.  Simply put, $b$ covers $a$.  If a lattice $L$ contains $0$, then for any $a\in L$, $[0,a]$ is a prime interval iff $a$ is an atom.
+\item Since no operations of meet and join are used, all of the above discussion can be generalized to define an interval in a poset.
+\item Given a lattice $L$, let $\mathcal{B}$ be the collection of all lattice intervals without endpoints, we can form a topolgy on $L$ with $\mathcal{B}$ as the subbasis.  This does not insure that $\wedge$ and $\vee$ are continuous, so that $L$ with this topological structure may not be a topological lattice.
+\item \textbf{Locally Finite Lattice}.  A lattice that is derived based on the concept of lattice interval is that of a locally finite lattice.  A lattice $L$ is locally finite iff every one of its interval is finite.  Unless the lattice is finite, a locally finite lattice, if infinite, is either topless or bottomless.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

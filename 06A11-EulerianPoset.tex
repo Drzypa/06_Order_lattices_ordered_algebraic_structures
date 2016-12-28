@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulerianPoset}
+\pmcreated{2013-03-22 14:08:16}
+\pmmodified{2013-03-22 14:08:16}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Eulerian poset}
+\pmrecord{9}{35552}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A11}
+\pmclassification{msc}{06A07}
+\pmrelated{GradedPoset}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A graded poset $P$ is {\it Eulerian} if for any $x\le y$ in $P$, the 
+\PMlinkname{M\"{o}bius function}{MoebiusInversionFormula}
+ of the interval $[x,y]$ is given by
+\[\mu_P(x,y)=(-1)^{\rho(y)-\rho(x)},\]
+where $\rho$ is the rank function of $P$.  If $P$ is finite and
+graded with strictly
+positive rank, then we can equivalently and more simply say that $P$ is
+Eulerian if and only if each nontrivial interval of $P$ has the same number of
+elements of even rank as odd rank.
+
+For example, the \PMlinkname{lattice}{Lattice} $M_3$ is not Eulerian, because it
+has 3 elements of rank 1 but only 2 elements of ranks 0 or 2.
+\[\xymatrix{
+             & \widehat{1}\ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr] & \\
+a\ar@{-}[dr] & b\ar@{-}[d] & c\ar@{-}[dl] \\
+             & \widehat{0} &
+}\]
+On the other hand, the Boolean lattice $B_n$ is always Eulerian.
+\[\xymatrix{
+             & \widehat{1}\ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr] & \\
+ab\ar@{-}[d]\ar@{-}[dr] & ac\ar@{-}[dl]\ar@{-}[dr] & bc\ar@{-}[dl]\ar@{-}[d] \\
+a\ar@{-}[dr] & b\ar@{-}[d] & c\ar@{-}[dl] \\
+             & \widehat{0} &
+}\]
+Each interval of $B_n$ is isomorphic to a smaller Boolean lattice, so
+we can give a proof by induction that $B_n$ is Eulerian.  Now $B_0$ is
+a single point and so there is only one interval, which has M\"{o}bius
+function 1.  So to show that $B_n$ is Eulerian, we just need to show
+that the M\"obius function of $B_n$ is $(-1)^n$.  Recall that by definition,
+\begin{equation}
+\mu_{B_n}(B_n) = - \sum_{S\subset\{1,\dots,n\}}\mu(\emptyset,S)\tag{*}
+\end{equation}
+Thus $\sum_{S\subseteq\{1,\dots,n\}}\mu_{B_n}(\emptyset,S)=0$.  We can apply
+the binomial theorem to $0$ to see that
+$0=(-1+1)^n=\sum_{k=0}^n\binom{n}{k}(-1)^k$
+and thus
+\begin{align*}
+(-1)^n        &= - \sum_{k=0}^{n-1}\binom{n}{k}(-1)^k \\
+              &= - \sum_{S\subset\{1,\dots,n\}}\mu(\emptyset,S)\tag{**}
+\end{align*}
+It then follows from Equation~$(*)$ and Equation~$(**)$ that $\mu(B_n)=(-1)^n$.
+
+Eulerian posets are generalizations of certain special posets, such as
+face lattices of polytopes.
+
+\section*{Eulerian posets of small rank}
+
+In this section we classify bounded Eulerian posets of rank less than 4.
+
+For $n<2$, there is exactly one bounded poset of rank $n$, the chain,
+and it is Eulerian.
+
+A bounded poset of rank $2$ is determined precisely by its number of
+coatoms.  The ab-index of a rank $2$ bounded Eulerian poset with $r$
+coatoms is $a + (r-1)b$, which is a cd-index if and only if $r=2$.
+Since every Eulerian poset has a cd-index, this implies that every
+rank $2$ bounded Eulerian poset has exactly two coatoms.  Thus up to
+isomorphism $B_2$ is the only rank $2$ bounded Eulerian poset.
+
+Let $P$ be a rank $3$ bounded Eulerian poset.  Since $P$ has as many
+elements of odd rank as even rank, it has exactly the same number of
+atoms as coatoms.  Since every rank $2$ interval in $P$ is a copy of
+$B_2$, it follows that $P$ is not a chain and so has $n\ge 2$ atoms.
+Moreover, every atom is covered by exactly two coatoms, and every
+coatom covers exactly two atoms.  That is, the Hasse diagram of the
+interior of $P$ is a 2-regular bipartite graph.  This graph admits a
+decomposition into even cycles.  In each cycle, half of the nodes are
+atoms and half are coatoms.  The non-induced subposet of $P$
+consisting of the points on a cycle of length $2k$ plus the minimum
+and maximum elements of $P$ is the face poset of a $k$-gon.  Hence $P$
+itself is the face poset of the disjoint union of one or more $k$-gons
+for various $k\ge 2$.
+
+\begin{thebibliography}{1}
+\bibitem{cite:RS}
+Stanley, R., \emph{Enumerative Combinatorics}, vol. 1, 2nd ed., Cambridge
+University Press, Cambridge, 1996.
+\end{thebibliography}
+
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{function}
+\PMlinkescapeword{rank}
+\PMlinkescapeword{ranks}
+\PMlinkescapeword{section}
+%%%%%
+%%%%%
+\end{document}

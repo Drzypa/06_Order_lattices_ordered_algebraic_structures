@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StoneSpace}
+\pmcreated{2013-03-22 13:24:23}
+\pmmodified{2013-03-22 13:24:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Stone space}
+\pmrecord{19}{33949}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B30}
+\pmclassification{msc}{06E15}
+\pmsynonym{Boolean space}{StoneSpace}
+\pmrelated{DualityInMathematics}
+\pmrelated{DualOfStoneRepresentationTheorem}
+\pmdefines{dual algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+ A \emph{Stone space}, also called a \emph{Boolean space}, is a topological space that is zero-dimensional, \PMlinkname{$T_{0}$}{T0Space} and compact.  Equivalently, a Stone space is a totally disconnected compact Hausdorff space.
+
+Given a stone space $X$, one may associate a Boolean algebra $X^*$ by taking the set of all of its clopen sets.  The set theoretic operations of intersection, union, and complement makes $X^*$ a Boolean algebra.  $X^*$ is known as the \emph{dual algebra} of $X$.
+
+The significance of Stone spaces stems from \emph{Stone duality}:
+a pervasive equivalence between the algebraic notions and theorems
+of Boolean algebras on one hand, and the topological notions and
+theorems of Stone spaces on the other. This equivalence comprises
+the content and consequences of M. H. Stone's representation
+theorem.
+
+There is a bijective correspondence between the following
+
+\begin{enumerate}
+\item The class consisting of all Boolean spaces
+\item The class consisting of all Boolean algebras
+\item The class consisting of all Boolean rings
+\item The class consisting of all prime spectra of von Neumann regular rings
+\end{enumerate}
+
+In fact, viewing each class as a category equipped with the appropriate class of morphisms, the categories are naturally equivalent between one another.
+
+More to come: partial proofs, constructions, categorical equivalence between the first three items due to Stone's Representation Theorem and references $\dots$.
+
+\begin{thebibliography}{2}
+\bibitem{halmos} Paul R. Halmos, \emph{Lectures on Boolean Algebras}, D. Van Nostrand Company, Inc., 1963.
+\bibitem{johnstone} Peter T. Johnstone, \emph{Stone Spaces}, Cambridge University Press, 1982.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

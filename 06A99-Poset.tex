@@ -1,0 +1,314 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Poset}
+\pmcreated{2013-03-22 11:43:41}
+\pmmodified{2013-03-22 11:43:41}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{poset}
+\pmrecord{22}{30132}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A99}
+\pmsynonym{partially ordered set}{Poset}
+%\pmkeywords{Relation}
+%\pmkeywords{Partial Order}
+%\pmkeywords{Set}
+\pmrelated{Relation}
+\pmrelated{PartialOrder}
+\pmrelated{Semilattice}
+\pmrelated{StarProduct}
+\pmrelated{HasseDiagram}
+\pmrelated{GreatestLowerBound}
+\pmrelated{NetsAndClosuresOfSubspaces}
+\pmrelated{OrderPreservingMap}
+\pmrelated{DisjunctionPropertyOfWallman}
+\pmdefines{comparable}
+\pmdefines{incomparable}
+\pmdefines{cover}
+\pmdefines{covering}
+\pmdefines{order-preserving function}
+\pmdefines{monotone}
+\pmdefines{monotonic}
+\pmdefines{order morphism}
+\pmdefines{morphism of posets}
+\pmdefines{dual poset}
+\pmdefines{consecutive}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%%%%%\usepackage{xypic}
+\xyoption{all}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition}
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+\begin{document}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{property}
+\PMlinkescapeword{associate}
+\PMlinkescapeword{weaker}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{equality}
+\PMlinkescapeword{transitive closure}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{graph}
+
+A \emph{poset}, or \emph{partially ordered set}, consists of a set $P$
+and a binary relation $\le$ on $P$ which satisfies the following
+properties:
+\begin{itemize}
+\item
+$\le$ is \PMlinkname{\emph{reflexive}}{Reflexive}, so $a\le a$ always
+holds;
+
+\item
+$\le$ is \emph{antisymmetric}, so if $a\le b$ and $b\le a$ hold, then
+$a=b$; and
+
+\item
+$\le$ is \PMlinkname{\emph{transitive}}{Transitive3}, so if $a\le b$
+and $b\le c$ hold, then $a\le c$ also holds.
+
+\end{itemize}
+
+The relation $\le$ is called a \emph{partial order} on $P$.  In
+practice, $(P,\le)$ is usually conflated with $P$; if a distinction is
+needed, $P$ is called the \emph{ground set} or \emph{underlying set} of $(P,\le)$.  
+The binary relation $<$ defined by removing the diagonal from $\le$ 
+(i.e.\, $a<b$ iff $a\leq b$ and $a\neq b$) satisfies the following properties:
+\begin{itemize}
+\item
+$<$ is \emph{irreflexive}, so if $a<b$ holds, then $b<a$ does not
+hold; and
+
+\item
+$<$ is \emph{transitive}.
+\end{itemize}
+Since $\le$ is reflexive, it can be uniquely recovered from $<$ by adding 
+the diagonal.  For this reason, an irreflexive and transitive binary
+relation $<$ (called a \emph{strict partial order}) also defines a poset, by means
+of the associated relation $\le$ described above (which is called \emph{weak partial order}).
+
+Since every partial order is reflexive and transitive, every poset is
+a preorder.  The notion of partial order is stricter than that of
+preorder, Let $Q$ be the structure with ground set $Q=\{a,b\}$ and
+binary relation $\preceq\, = \{(a,a),(a,b),(b,a),(b,b)\}$.  A diagram
+of this structure, omitting loops, is displayed below.
+\[\xymatrix{
+b\ar@/^/[d] \\
+a\ar@/^/[u]
+}\]
+Observe that the binary relation on $Q$ is reflexive and transitive,
+so $Q$ is a preorder.  On the other hand, $a\preceq b$ and $b\preceq
+a$, while $a\ne b$.  So the binary relation on $Q$ is not
+antisymmetric, implying that $Q$ is not a poset.
+
+Since every total order is reflexive, antisymmetric, and transitive,
+every total order is a poset.  The notion of partial order is weaker
+than that of total order.  A total order must obey the trichotomy law,
+which states that for any $a$ and $b$ in the order, either $a\le b$ or
+$b\le a$.  Let $P$ be the structure with ground set $\{a,b,c\}$ and
+binary relation $\le\, = \{(a,a),(a,b),(a,c),(b,b),(c,c)\}$.  A
+diagram of this structure, omitting loops, is displayed below.
+\[\xymatrix{
+b &                 & c \\
+  & a\ar[ul]\ar[ur] &
+}\]
+Observe that the binary relation on $P$ is reflexive, antisymmetric,
+and transitive, so $P$ is a poset.  On the other hand, neither $b\le
+c$ nor $c\le b$ holds in $P$.  Thus $P$ fails to satisfy the
+trichotomy law and is not a total order.
+
+The failure of the trichotomy law for posets motivates the following
+terminology.  Let $P$ be a poset.  If $a\le b$ or $b\le a$ holds in
+$P$, we say that $a$ and $b$ are \emph{comparable}; otherwise, we say
+they are \emph{incomparable}.  We use the notation $a\shortparallel b$
+to indicate that $a$ and $b$ are incomparable.
+
+If $(P,\le_P)$ and $(Q,\le_Q)$ are posets, then a function
+$\varphi\colon P\to Q$ is said to be \emph{order-preserving}, or
+\emph{monotone}, provided that it preserves inequalities.  That is,
+$\varphi$ is order-preserving if whenever $a\le_P b$ holds, it follows
+that $\varphi(a)\le_Q\varphi(b)$ also holds.  The identity function on
+the ground set of a poset is order-preserving.  If $(P,\le_P)$,
+$(Q,\le_Q)$, and $(R,\le_R)$ are posets and $\varphi\colon P\to Q$ and
+$\psi\colon Q\to R$ are order-preserving functions, then the
+composition $\psi\circ\varphi\colon P\to R$ is also order-preserving.
+
+Posets together with order-preserving functions form a category, which
+we denoted by $\mathbf{Poset}$.  Thus an order-preserving function
+between the ground sets of two posets is sometimes also called a
+\emph{morphism of posets}.  The category of posets has
+\PMlinkname{arbitrary products}{ProductofPosets}.  Moreover, every
+poset can itself be viewed as a category, and it turns out that a
+morphism of posets is the same as a functor between the two posets.
+% We discuss this in more detail below.
+
+\section*{Examples of posets}
+
+The two extreme posets are the chain, in which any two elements are
+comparable, and the antichain, in which no two elements are
+comparable.  A poset with a singleton underlying set is necessarily
+both a chain and an antichain, but a poset with a larger underlying
+set cannot be both.
+
+\begin{example} 
+Let $\mathbb{N}$ be the set of natural numbers.  Inductively define a
+binary relation $\le$ on $\mathbb{N}$ by the following rules:
+\begin{itemize} 
+\item 
+for any $n\in\mathbb{N}$, the relation $0\le n$ holds; and
+
+\item
+whenever $m\le n$, the relation $m+1\le n+1$ also holds.
+\end{itemize}
+Then $(\mathbb{N},\le)$ is a chain, hence a poset.  This structure can
+be naturally embedded in the larger chains of the integers, the
+rational numbers, and the real numbers.  
+\end{example}
+
+The next example shows that nontrivial antichains exist.
+
+\begin{example}
+Let $P$ be a set with cardinality greater than $1$.  Let $\le$ be the
+diagonal of $P$.  Thus $\le$ represents equality, which is trivially a
+partial order relation (which is also the intersection of all partial
+orderings on $P$).  By construction, $a\le b$ in $P$ if and only
+$a=b$.  Thus no two elements of $P$ are comparable.
+\end{example}
+
+So far the only posets we have seen are chains and antichains.  Most
+posets are neither.  The following construction gives many such
+examples.
+
+\begin{example}
+If $X$ is any set, the powerset $P=P(X)$ of $X$ is partially ordered
+by inclusion, that is, by the relation $A\le B$ if and only if
+$A\subseteq B$.
+\end{example}
+
+There are important structure theorems for posets concerning chains
+and antichains.  One of the foundational results is Dilworth's
+theorem.  This theorem was massively generalized by Greene and
+Kleitman.
+
+A final example shows that one can manufacture a poset from an existing one.
+
+\begin{example}
+Let $P$ be a poset ordered by $\le$.   The \emph{dual poset} of $P$ is defined as 
+follows: it has the same underlying set as $P$, whose order is defined by $a\le'b$ 
+iff $b\le a$.  It is easy to see that $\le'$ is a partial order.  The dual of $P$ 
+is usually denoted by $P^{\partial}$.
+\end{example}
+
+\section*{Graph-theoretical view of posets}
+
+Let $P$ be a poset with strict partial order $<$.  Then $P$ can be
+viewed as a directed graph with vertex set the ground set of $P$ and
+edge set $<$.  For example, the following diagram displays the Boolean
+algebra $B_2$ as a directed graph.
+\[\xymatrix{
+             & \{0,1\}                        &              \\
+\{0\}\ar[ur] &                                & \{1\}\ar[ul] \\
+             & \emptyset\ar[ul]\ar[uu]\ar[ur] &
+}\]
+If $P$ is a sufficiently complicated poset, then drawing all of the
+edges of $P$ can obscure rather than reveal the structure of $P$.  For
+this reason it is convenient to restrict attention to a subrelation of
+$<$ from which $<$ can be uniquely recovered.  
+
+We describe a method of constructing a canonical subgraph of $P$ from
+which the partial order can be recovered as long as every interval of
+$P$ has finite height.  If $a$ and $b$ are elements of $P$, then we
+say that $b$ \emph{covers} $a$ if $a<b$ and there are no elements of
+$P$ strictly larger than $a$ but strictly smaller than $b$, that is, if
+$[a,b]=\{a,b\}$.  Two elements are said to be \emph{consecutive} if 
+one covers another.  Define a binary relation $<:$ on $P$ by
+\[
+a <: b \text{\ if and only if $b$ covers $a$.}
+\]
+By construction, the binary relation $<:$ is a subset of $<$.  Since
+$<$ is transitive, the \PMlinkname{transitive
+closure}{ClosureOfASetViaRelations} of $<:$ is also contained in $<$.
+
+\begin{proposition*}
+Suppose every interval of $P$ has finite height.  Then $<$ is the
+transitive closure of $<:$.
+\end{proposition*}
+
+\begin{proof}
+We prove this by induction on height.  By definition of $<:$, if $a<b$
+and the height of $[a,b]$ is 1, then $a<:b$.
+
+Assume for induction that whenever $a<b$ and the height of $[a,b]$ is
+at most $n$, then $(a,b)$ is in the transitive closure of $<:$.
+Suppose that $a<b$ and that the height of $[a,b]$ is $n+1$.  Since
+every chain in $[a,b]$ is finite, it contains an element $c$ which is
+strictly larger than $a$ and \PMlinkname{minimal}{MaximalElement} with
+respect to this property.  Therefore $[a,c]=\{a,c\}$, from which we
+conclude that $a<:c$.  Since the interval $[c,b]$ is a proper
+subinterval of $[a,b]$, it has height at most $n$, so by the induction
+assumption we conclude that $(c,b)$ is in the transitive closure of
+$<:$.  Since $(a,c)$ and $(c,b)$ are in the transitive closure of
+$<:$, so is $(a,b)$.  Hence whenever $a<b$ and the height of $[a,b]$
+is at most $n+1$, then $(a,b)$ is in the transitive closure of $<:$.
+
+This completes the proof.
+\end{proof}
+
+In the same way we associated a graph to $<$ we can associate a graph
+to $<:$.  The graph is usually called the Hasse diagram of the poset.
+Below we display the graph associated to the cover relation $<:$ of
+$B_2$.
+\[\xymatrix{
+             & \{0,1\}                 &              \\
+\{0\}\ar[ur] &                         & \{1\}\ar[ul] \\
+             & \emptyset\ar[ul]\ar[ur] &              
+}\]
+For simplicity, the Hasse diagram of a poset is usually drawn as an
+undirected graph.  Elements which are higher in the partial order
+relation are drawn physically higher.  Since a strict partial order is
+acyclic, this can be done uniquely and the partial order can be
+recovered from the drawing.
+
+\begin{thebibliography}{1}
+\bibitem{Gr1998}
+Gr\"atzer, G., \emph{General lattice theory}, 2nd ed., Birkh\"auser, 1998.
+
+\bibitem{St1996}
+Stanley, R., \emph{Enumerative Combinatorics}, vol. 1, 2nd ed., Cambridge
+University Press, Cambridge, 1996.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

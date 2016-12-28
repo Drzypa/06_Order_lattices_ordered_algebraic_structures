@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DefinitionOfVectorSpaceNeedsNoCommutativity}
+\pmcreated{2015-01-25 12:26:14}
+\pmmodified{2015-01-25 12:26:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{definition of vector space needs no commutativity}
+\pmrecord{5}{88224}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Feature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In the definition of \PMlinkname{vector space}{VectorSpace} one 
+usually lists the needed properties of the vectoral addition 
+and the multiplication of vectors by scalars as eight axioms, 
+one of them the commutative law
+$$u+v = v+u.$$
+The latter is however not necessary, because it may be proved 
+to be a consequence of the other seven axioms.\, The proof can 
+be based on the fact that in defining the \PMlinkname{group}{Group}, 
+it suffices to postulate only the existence of a right identity 
+element and the right inverses of the elements (see the article 
+``\PMlinkname{redundancy of two-sidedness in definition of group}
+{RedundancyOfTwoSidednessInDefinitionOfGroup}''). 
+
+Now, suppose the validity of \PMlinkname{the seven other axioms}
+{VectorSpace}, but not necessarily the above commutative law of 
+addition.\, We will show that the commutative law is in force.
+
+We need the identity\, $(-1)v = -v$\, which is easily justified
+(we have $\vec{0} = 0v = (1+(-1))v = \ldots$).\, Then we can 
+calculate as follows:
+\begin{align*}
+v+u &= (v+u)+\vec{0} = (v+u)+[-(u+v)+(u+v)]\\
+      &=\; [(v+u)+(-(u+v))]+(u+v) = [(v+u)+(-1)(u+v)]+(u+v)\\
+      &= [(v+u)+((-1)u+(-1)v)]+(u+v) = [((v+u)+(-u))+(-v)]+(u+v)\\
+      &= [(v+(u+(-u)))+(-v)]+(u+v) = [(v+\vec{0})+(-v)]+(u+v)\\
+      &= [v+(-v)]+(u+v) = \vec{0}+(u+v) \\
+      &=u+v
+\end{align*}
+Q.E.D.\\
+
+This proof by {\sc Y. Chemiavsky} and {\sc A. Mouftakhov} is 
+found in the 2012 March issue of {\it The American Mathematical 
+Monthly}.\\
+\end{document}

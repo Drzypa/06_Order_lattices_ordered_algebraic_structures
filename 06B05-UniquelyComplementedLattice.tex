@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquelyComplementedLattice}
+\pmcreated{2013-03-22 17:58:15}
+\pmmodified{2013-03-22 17:58:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{uniquely complemented lattice}
+\pmrecord{7}{40477}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B05}
+\pmclassification{msc}{06C15}
+\pmdefines{uniquely complemented}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that in a bounded distributive lattice, complements, relative complements, and differences of lattice elements, if exist, must be unique.  This leads to the general consideration of general bounded lattices in which complements are unique.
+
+\textbf{Definition}.  A complemented lattice such that every element has a unique complement is said to be \emph{uniquely complemented}.  If $a$ is an element of a uniquely complemented lattice, $a'$ denotes its (unique) complement.  One can think of $'$ as a unary operator on the lattice.
+
+One of the first consequences is $$a''=a.$$  To see this, we have that $a\vee a'=1$, $a\wedge a'=0$, as well as $a''\vee a'=1$, $a''\wedge a'=0$.  So $a=a''$, since they are both complements of $a'$.
+
+Below are some additional (and non-trivial) properties of a uniquely complemented lattice:
+\begin{itemize}
+\item there exists a uniquely complemented lattice that is not distributive
+\item a uniquely complemented lattice $L$ is distributive if at least one of the following is satisfied:
+\begin{enumerate}
+\item $'$, as an operator on $L$, is order reversing;
+\item $(a\vee b)'=a'\wedge b'$;
+\item $(a\wedge b)'=a'\vee b'$;
+\item (von Neumann) $L$ is a modular lattice;
+\item (Birkhoff-Ward) $L$ is an atomic lattice.
+\end{enumerate}
+In fact, the first three conditions are equivalent, so that $L$ is distributive if it satisfies the de Morgan's laws.
+\item (Dilworth) every lattice can be embedded in a uniquely complemented lattice.
+\end{itemize}
+
+\begin{thebibliography}{6}
+\bibitem{tsb} T.S. Blyth, {\em Lattices and Ordered Algebraic Structures}, Springer, New York (2005).
+\bibitem{gg} G. Gr\"atzer, {\it General Lattice Theory}, 2nd Edition, Birkh\"auser (1998)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartiallyOrderedGroup}
+\pmcreated{2013-03-22 16:42:25}
+\pmmodified{2013-03-22 16:42:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{partially ordered group}
+\pmrecord{14}{38922}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F05}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{06F15}
+\pmclassification{msc}{20F60}
+\pmsynonym{po-group}{PartiallyOrderedGroup}
+\pmsynonym{l-group}{PartiallyOrderedGroup}
+\pmsynonym{Archimedean po-group}{PartiallyOrderedGroup}
+\pmsynonym{integrally closed po-group}{PartiallyOrderedGroup}
+\pmsynonym{po-semigroup}{PartiallyOrderedGroup}
+\pmsynonym{lattice-ordered group}{PartiallyOrderedGroup}
+\pmsynonym{l-semigroup}{PartiallyOrderedGroup}
+\pmrelated{OrderedGroup}
+\pmdefines{directed group}
+\pmdefines{positive element}
+\pmdefines{positive cone}
+\pmdefines{lattice ordered group}
+\pmdefines{Archimedean partially ordered group}
+\pmdefines{integrally closed group}
+\pmdefines{integrally closed partially ordered group}
+\pmdefines{partially ordered semigroup}
+\pmdefines{lattice ordered semigroup}
+\pmdefines{Archimedean}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A \emph{partially ordered group} is a group $G$ that is a poset at the same time, such that if $a,b\in G$ and $a\le b$, then
+\begin{enumerate}
+\item $ac\le bc$, and
+\item $ca\le cb$,
+\end{enumerate}
+for any $c\in G$.  The two conditions are equivalent to the one condition $cad\le cbd$ for all $c,d\in G$.  A partially ordered group is also called a \emph{po-group} for short.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+One of the immediate properties of a po-group is this: if $a\le b$, then $b^{-1}\le a^{-1}$.  To see this, left multiply by the first inequality by $a^{-1}$ on both sides to obtain $e\le a^{-1}b$.  Then right multiply the resulting inequality on both sides by $b^{-1}$ to obtain the desired inequality: $b^{-1}\le a^{-1}$.
+\item
+If can be seen that for every $a\in G$, the automorphisms $L_a,R_a:G\to G$ also preserve order, and hence are order automorphisms as well.  For instance, if $b\le c$, then $L_a(b)=ab\le ac = L_a(c)$.
+\item
+A element $a$ in a po-group $G$ is said to be \emph{positive} if $e\le a$, where $e$ is the identity element of $G$.  The set of positive elements in $G$ is called the \emph{positive cone} of $G$.
+\item (special po-groups)
+\begin{enumerate}
+\item A po-group whose underlying poset is a directed set is called a \emph{directed group}.  
+\begin{itemize}
+\item
+If $G$ is a directed group, then $G$ is also a filtered set: if $a,b\in G$, then there is a $c\in G$ such that $a\le c$ and $b\le c$, so that $ac^{-1}b\le a$ and $ac^{-1}b\le b$ as well.
+\item
+Also, if $G$ is directed, then $G=\langle G^+\rangle$: for any $x\in G$, let $a$ be the upper bound of $\lbrace x,e\rbrace$ and let $b=ax^{-1}$.  Then $e\le b$ and $x=a^{-1}b\in \langle G^+\rangle$.
+\end{itemize}
+\item A po-group whose underlying poset is a lattice is called a \emph{lattice ordered group}, or an \emph{l-group}.
+\item If the partial order on a po-group $G$ is a linear order, then $G$ is called a totally ordered group, or simply an ordered group.
+\item A po-group is said to be \emph{Archimedean} if $a^n\le b$ for all $n\in \mathbb{Z}$, then $a=e$.  Equivalently, if $a\ne e$, then for any $b\in G$, there is some $n\in \mathbb{Z}$ such that $b<a^n$.  This is a generalization of the Archimedean property on the reals: if $r\in \mathbb{R}$, then there is some $n\in \mathbb{N}$ such that $r<n$.  To see this, pick $b=r$, and $a=1$.
+\item A po-group is said to be \emph{integrally closed} if $a^n\le b$ for all $n\ge 1$, then $a\le e$.  An integrally closed group is Archimedean: if $a^n\le b$ for all $n\in\mathbb{Z}$, then $a\le e$ and $e\le b$.  Since we also have $(a^{-1})^{-n}\le b$ for all $n<0$, this implies $a^{-1}\le e$, or $e\le a$.  Hence $a=e$.  In fact, an directed integrally closed group is an Abelian po-group.
+\end{enumerate}
+\item Since the definition above does not involve any specific group axioms, one can more generally introduce partial ordering on a semigroup in the same fashion.  The result is called a partially ordered semigroup, or a po-semigroup for short.  A \emph{lattice ordered semigroup} is defined similarly.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

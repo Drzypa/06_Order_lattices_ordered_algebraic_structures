@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pseudocomplement}
+\pmcreated{2013-03-22 15:47:23}
+\pmmodified{2013-03-22 15:47:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{pseudocomplement}
+\pmrecord{21}{37750}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D15}
+\pmsynonym{pseudocomplemented algebra}{Pseudocomplement}
+\pmsynonym{Stone algebra}{Pseudocomplement}
+\pmsynonym{Stone lattice}{Pseudocomplement}
+\pmrelated{BrouwerianLattice}
+\pmrelated{ComplementedLattice}
+\pmrelated{Pseudodifference}
+\pmdefines{pseudocomplemented lattice}
+\pmdefines{benzene}
+\pmdefines{p-algebra}
+\pmdefines{pseudocomplemented poset}
+\pmdefines{relative pseudocomplement}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+Given an element $a$ in a bounded lattice $L$, a complement of $a$ is defined to be an element $b\in L$, if such an element exists, such that 
+$$a\wedge b=0,\qquad{ and }\qquad a\vee b =1.$$
+If a complement of an element exists, it may not be unique.  For example, in the middle row of the following diagram (called the \emph{diamond})
+
+\begin{equation*}
+\xymatrix{
+& 1 \ar@{-}[ld] \ar@{-}[d] \ar@{-}[rd] & \\
+a \ar@{-}[rd] & b \ar@{-}[d] & c \ar@{-}[ld] \\
+& 0 &
+}
+\end{equation*}
+
+any two of the three elements are complements of the third.
+
+To get around the non-uniqueness issue, an alternative to a complement, called the \emph{pseudocomplement} of an element, is defined.  However, the cost of having the uniqueness is the lost of one of the equations above (in fact, the second one).  The weakening of the second equation is not an arbitrary choice, but historical, when propositional logic was being generalized and the law of the excluded middle was dropped in order to develop non-classical logics.
+
+\begin{quote}
+An element $b$ in a lattice $L$ with $0$ is a pseudocomplement of $a\in L$ if 
+\begin{enumerate}
+\item $b\wedge a=0$
+\item for any $c$ such that $c\wedge a=0$ then $c\le b$.
+\end{enumerate}
+In other words, $b$ is the maximal element in the set $\lbrace c\in L\mid c\wedge a=0\rbrace$.
+\end{quote}
+
+It is easy to see that given an element $a\in L$, the pseudocomplement of $a$, if it exists, is unique.  If this is the case, then the psedocomplement of $a$ is written as $a^*$.
+
+The next natural question to ask is: if $a^*$ is the pseudocomplement of $a$, is $a$ the pseudocomplement of $a^*$?  The answer is no, as the following diagram illustrates (called the \emph{benzene})
+
+\begin{equation*}
+\xymatrix{
+& 1 \ar@{-}[rd] \ar@{-}[ld] \\
+x \ar@{-}[d] &  & y \ar@{-}[d] \\
+a \ar@{-}[rd] & & b \ar@{-}[ld] \\
+& 0 &
+}
+\end{equation*}
+
+The pseudocomplement of $a$ is $y$, but the pseudocomplement of $y$, however, is $x$.  In fact, it is possible that $a^{**}$ may not even exist!  A lattice $L$ in which every element has a pseudocomplement is called a \emph{pseudocomplemented lattice}.  Necessarily $L$ must be a bounded lattice.
+
+From the above little discussion, it is not hard to deduce some of the basic properties of pseudocomplementation in a pseudocomplemented lattice:
+
+\begin{enumerate}
+\item $1^*=0$ and $0^*=1$ (if $c\wedge 1=0$, then $c=0$, and the largest $c$ such that $c\wedge 0=0$ is $1$)
+\item $a\le a^{**}$ (since $a^*\wedge a=0$ and $a^*\wedge a^{**}=0$, $a\le a^{**}$)
+\item $a\le b$, then $b^*\le a^*$ (since $a\wedge b^* \le b\wedge b^*=0$, and $a\wedge a^*=0$, $b^*\le a^*$)
+\item $a^*=a^{***}$ ($a\le a^{**}$ by $2$ above, so $a^{***}\le a^*$ by $3$, but $a^*\le a^{***}$ by $2$, so $a^*=a^{***}$)
+\end{enumerate}
+
+Furthermore, it can be shown that in a pseudocomplemented lattice, the subset of all pseudocomplements has the structure of a Boolean lattice.
+
+\textbf{Example}.  The most common example is the lattice $L(X)$ of open sets in a topological space $X$.  $L(X)$ is usually not complemented, because the set complement of an open set is closed.  However, $L(X)$ is pseudocomplemented, and if $U$ is an open set in $X$, then its pseudocomplement is $(U^c)^{\circ}$, the interior of the complement of $U$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+A closely related concept to a pseudocomplemented lattice is that of a \emph{pseudocomplemented algebra}, or \emph{p-algebra} for short, which is a pseudocomplemented lattice such that $^*$ is considered as an operator.  In other words, a morphism between two pseudocomplemented lattices is just a lattice homomorphism, where as a morphism between two p-algebras is a lattice homomorphism $f$ preserving $^*$: $f(a^*)=f(a)^*$.  In the category of p-algebras, the morphism between any pair of objects is a $\lbrace 0,1\rbrace$-lattice homomorphism, since $f(1)=f(0^*)=f(0)^*=0^*=1$.  A p-algebra is sometimes known as a \emph{Stone algebra}.
+\item
+The notion of a pseudocomplement can be generalized.  Notice first that the definition of a pseudocomplement of an element does not involve the join operation.  In fact, all we need is a poset with the least element.  A poset $P$ with the least element $0$ is called a \emph{pseudocomplemented poset} if , for each element $a\in P$, there is an element $a^*\in P$ such that their greatest lower bound is $0$ and is the largest such element with this property.  By definition, $a^*$ is unique for each $a\in P$, and that $P$ itself is bounded, with the greatest element $1$, as it is the pseudocomplement of $0$.  A pseudocomplemented poset that is also a lattice is a clearly a pseudocomplemented lattice.  Examples of pseudocomplemented posets that are not lattices are found in the third reference below.
+\item
+The notion of a pseudocomplement can be generalized in other ways.  For example, we say that an element $b$ in a lattice $L$ is a pseudocomplement of $a$ \emph{relative to} $d$ if $b$ is a pseudocomplement in the sublattice $[d,\infty)$ (think of $d$ as $0$ in the definition of a pseudocomplement).  Of course, this requires that both $a$ and $b$ be at least $d$.  A pseudocomplement is therefore a pseudocomplement relative to $0$.  See the entry on Brouwerian lattice for more detail.
+\item
+In the definition of a pseudocomplement, some authors relax the first condition above.  Instead, the pseudocomplement $b$ (of $a$) is only required to be the supremum of the set $\lbrace c\in L\mid c\wedge a=0\rbrace$.
+\end{itemize}
+
+\begin{thebibliography}{6}
+\bibitem{tsb} T.S. Blyth, {\em Lattices and Ordered Algebraic Structures}, Springer, New York (2005).
+\bibitem{gg} G. Gr\"atzer, {\it General Lattice Theory}, 2nd Edition, Birkh\"auser (1998).
+\bibitem{rh} R. Halas, {\it \PMlinkexternal{http://www.emis.de/journals/AM/93-34/halas.ps}{http://www.emis.de/journals/AM/93-34/halas.ps}}, Archivum Mathematicum (BRNO) 1993.
+\bibitem{sg} S. Ghilardi, {\it \PMlinkexternal{http://homes.dsi.unimi.it/~ghilardi/allegati/dispcesena.pdf}{http://homes.dsi.unimi.it/~ghilardi/allegati/dispcesena.pdf}}, 2000.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

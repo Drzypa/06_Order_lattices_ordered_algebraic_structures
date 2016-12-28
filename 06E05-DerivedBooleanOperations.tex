@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivedBooleanOperations}
+\pmcreated{2013-03-22 17:58:49}
+\pmmodified{2013-03-22 17:58:49}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{derived Boolean operations}
+\pmrecord{9}{40489}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E05}
+\pmclassification{msc}{03G05}
+\pmclassification{msc}{06B20}
+\pmclassification{msc}{03G10}
+\pmdefines{symmetric difference}
+\pmdefines{conditional}
+\pmdefines{biconditional}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that a Boolean algebra is an algebraic system $A$ consisting of five operations:
+\begin{enumerate}
+\item two binary operations: the meet $\wedge$ and the join $\vee$,
+\item one unary operation: the complementation $'$, and
+\item two nullary operations (constants): $0$ and $1$.
+\end{enumerate}
+
+From these operations, define the following ``derived'' operations (on $A$): for $a,b\in A$
+\begin{enumerate}
+\item (subtraction) $a-b:=a\wedge b'$,
+\item (symmetric difference or addition) $a\Delta b$ (or $a+b$)$:=(a-b)\vee (b-a)$,
+\item (conditional) $a\to b:=(a-b)'$,
+\item (biconditional) $a\leftrightarrow b:=(a\to b)\wedge (b\to a)$, and
+\item (Sheffer stroke) $a|b:=a'\wedge b'$.
+\end{enumerate}
+
+Notice that the operators $\to$ and $\leftrightarrow$ are dual of $-$ and $\Delta$ respectively.
+
+It is evident that these derived operations (and indeed the entire theory of Boolean algebras) owe their existence to those operations and connectives that are found in logic and set theory, as the following table illustrates:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline symbol $\backslash$ operation & Boolean & Logic & Set \\
+\hline\hline $\vee$ or $\cup$ & join & logical or & union \\
+\hline $\wedge$ or $\cap$ & meet & logical and & intersection \\
+\hline $'$ or $\neg$ or $^{\complement}$ & complement & logical not & complement \\
+\hline $0$  & bottom element & falsity & empty set \\
+\hline $1$  & top element & truth & universe \\
+\hline $-$ or $\setminus$ & subtraction & & set difference \\
+\hline $\Delta$ or $+$ & symmetric difference & & \PMlinkname{symmetric difference}{SymmetricDifference} \\
+\hline $\to$  & conditional & implication & \\
+\hline $\leftrightarrow$  & biconditional & logical equivalence & \\
+\hline $|$  & Sheffer stroke & Sheffer stroke & \\
+\hline
+\end{tabular}
+\end{center}
+
+Some of the elementary properties of these derived Boolean operators are:
+\begin{enumerate}
+\item $a-0=a$ and $a-a=0-a=a-1=0$,
+\item $(A,+,\wedge,0,1)$ is a ring (a Boolean ring),
+\item all Boolean operations can be defined in terms of the Sheffer stroke $|$.
+\end{enumerate}
+
+The proofs of these properties mimic the proofs for the properties of the corresponding operators found in naive set theory and propositional logic, such as \PMlinkname{this entry}{LogicalConnective}.
+%%%%%
+%%%%%
+\end{document}

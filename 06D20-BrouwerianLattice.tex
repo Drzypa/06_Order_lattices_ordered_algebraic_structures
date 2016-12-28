@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrouwerianLattice}
+\pmcreated{2013-03-22 16:32:59}
+\pmmodified{2013-03-22 16:32:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Brouwerian lattice}
+\pmrecord{21}{38733}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D20}
+\pmclassification{msc}{06D15}
+\pmsynonym{relatively pseudocomplemented}{BrouwerianLattice}
+\pmsynonym{pseudocomplemented relative to}{BrouwerianLattice}
+\pmsynonym{Brouwerian algebra}{BrouwerianLattice}
+\pmsynonym{implicative lattice}{BrouwerianLattice}
+\pmrelated{PseudocomplementedLattice}
+\pmrelated{Pseudocomplement}
+\pmrelated{RelativeComplement}
+\pmdefines{relative pseudocomplement}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $L$ be a lattice, and $a,b\in L$.  Then $a$ is said to be \emph{pseudocomplemented relative to} $b$ if the set $$T(a,b):=\lbrace c \in L \mid c \wedge a \le b\rbrace$$ has a maximal element.  The maximal element (necessarily unique) of $T(a,b)$ is called the \emph{pseudocomplement} of $a$ relative to $b$}, and is denoted by $a\to b$.  So, $a\to b$, if exists, has the following property $$c\wedge a\le b \mbox{ iff } c\le a\to b.$$
+If $L$ has $0$, then the pseudocomplement of $a$ relative to $0$ is the pseudocomplement of $a$.
+
+An element $a\in L$ is said to be \emph{relatively pseudocomplemented} if $a\to b$ exists for every $b\in L$.  In particular $a\to a$ exists.  Since $T(a,a)=L$, so $L$ has a maximal element, or $1\in L$.
+
+A lattice $L$ is said to be \emph{relatively pseudocomplemented}, or \emph{Brouwerian}, if every element in $L$ is relatively pseudocomplemented.  Evidently, as we have just shown, every Brouwerian lattice contains $1$.  A Brouwerian lattice is also called an \emph{implicative lattice}.
+
+Here are some other properties of a Brouwerian lattice $L$:
+\begin{enumerate}
+\item $b\le a\to b$ (since $b\wedge a\le b$)
+\item $1=a\to 1$ (consequence of 1)
+\item (Birkhoff-Von Neumann condition) $a\le b$ iff $a\to b=1$ (since $1\wedge a=a\le b$)
+\item $a\wedge (a\to b)= a\wedge b$ 
+\begin{proof}
+On the one hand, by 1, $b\le a\to b$, so $a\wedge b\le a\wedge (a\to b)$.  On the other hand, by definition, $a\wedge (a\to b)\le b$.  Since $a\wedge (a\to b)\le a$ as well, $a\wedge (a\to b)\le a\wedge b$, and the proof is complete.
+\end{proof}
+\item $a=1\to a$ (consequence of 4)
+\item if $a\le b$, then $(c\to a)\le (c\to b)$ (use 4, $c\wedge (c\to a)=c\wedge a\le a\le b$)
+\item if $a\le b$, then $(b\to c)\le (a\to c)$ (use 4, $a\wedge (b\to c)\le b\wedge (b\to c)=b\wedge c\le c$)
+\item $a\to (b\to c)=(a \wedge b)\to c = (a\to b)\to (a\to c)$
+\begin{proof}  We shall use property 4 above a number of times, and the fact that $x=y$ iff $x\le y$ and $y\le x$.
+First equality:  
+\begin{eqnarray*}
+\big( a\to (b\to c) \big) \wedge (a\wedge b) &=& \big( a \wedge (b\to c)\big) \wedge b \\ &=& \big( b\wedge (b\to c)\big) \wedge a \\ &=& (b\wedge c)\wedge a\le c.\end{eqnarray*} 
+So $a\to (b\to c)\le (a\wedge b)\to c$.  
+
+On the other hand, $\big( (a\wedge b)\to c \big)\wedge a \wedge b=a\wedge b\wedge c\le c$, so $\big( (a\wedge b)\to c \big)\wedge a\le b\to c$, and consequently $(a\wedge b)\to c \le  a\to (b\to c)$.
+
+Second equality: $\big( (a\wedge b)\to c \big) \wedge (a\to b) \wedge a = \big( (a\wedge b)\to c \big)\wedge (a\wedge b)=(a\wedge b)\wedge c\le c$, so $\big( (a\wedge b)\to c \big) \wedge (a\to b) \le a\to c$ and consequently $(a\wedge b)\to c \le (a\to b)\to (a\to c)$.
+ 
+On the other hand, 
+\begin{eqnarray*}
+\big( (a\to b)\to (a\to c)\big) \wedge (a\wedge b) &=& \big( (a\to b)\to (a\to c)\big) \wedge \big( a\wedge (a\to b)\big) \\ &=& \big( (a\to b)\wedge (a\to c)\big) \wedge a \\ &=& (a\wedge b)\wedge (a\to c) \\ &=& b\wedge (a\wedge c)\le c
+,
+\end{eqnarray*}
+ so $(a\to b)\to (a\to c)\le (a\wedge b)\to c$.
+\end{proof}
+\item $L$ is a distributive lattice.
+\begin{proof}
+By the proposition found in entry distributive inequalities, it is enough to show that $$a\wedge (b\vee c)\le  (a\wedge b)\vee (a\wedge c).$$  To see this: note that $a\wedge b\le (a\wedge b)\vee (a\wedge c)$, so $b\le a\to \big( (a\wedge b)\vee (a\wedge c)\big)$.  Similarly, $c\le a\to \big( (a\wedge b)\vee (a\wedge c)\big)$.  So $b\vee c \le a\to \big( (a\wedge b)\vee (a\wedge c)\big)$, or $a\wedge (b\vee c)\le  (a\wedge b)\vee (a\wedge c)$.
+\end{proof}
+\end{enumerate}
+
+If a Brouwerian lattice were a chain, then relative pseudocomplentation can be given by the formula: $a\to b = 1$ if $a\le b$, and $a\to b = b$ otherwise.  From this, we see that the real interval $(\infty, r]$ is a Brouwerian lattice if 
+$x\to y$ is defined according to the formula just mentioned (with $\vee$ and $\wedge$ defined in the obvious way).  Incidentally, this lattice has no bottom, and is therefore not a Heyting algebra.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item Brouwerian lattice is named after the Dutch mathematician L. E. J. Brouwer, who rejected classical logic and proof by contradiction in particular.  The lattice was invented as the algebraic counterpart to the Brouwerian intuitionistic (or constructionist) logic, in contrast to the Boolean lattice, invented as the algebraic counterpart to the classical propositional logic.
+\item In the literature, a Brouwerian lattice is sometimes defined to be synonymous as a Heyting algebra (and sometimes even a complete Heyting algebra).  Here, we shall distinguish the two related concepts, and say that a Heyting algebra is a Brouwerian lattice with a bottom.
+\item In the category of Brouwerian lattices, a morphism between a pair of objects is a lattice homomorphism $f$ that preserves relative pseudocomplementation: $$f(a\to b)=f(a)\to f(b).$$
+As $f(1)=f(a\to a)=f(a)\to f(a)=1$, this morphism preserves the top elements as well.
+\end{itemize}
+
+\textbf{Example}.  Let $L(X)$ be the lattice of open sets of a topological space.  Then $L(X)$ is Brouwerian.  For any open sets $A,B\in X$, $A\to B=(A^c\cup B)^{\circ}$, the interior of the union of $B$ and the complement of $A$.
+
+\begin{thebibliography}{8}
+\bibitem{gb} G. Birkhoff, {\em Lattice Theory}, AMS Colloquium Publications, Vol. XXV, 3rd Ed. (1967).
+\bibitem{rg} R. Goldblatt, {\em Topoi, The Categorial Analysis of Logic}, Dover Publications (2006).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

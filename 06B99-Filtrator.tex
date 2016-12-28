@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Filtrator}
+\pmcreated{2013-03-22 19:31:25}
+\pmmodified{2013-03-22 19:31:25}
+\pmowner{porton}{9363}
+\pmmodifier{porton}{9363}
+\pmtitle{Filtrator}
+\pmrecord{6}{42499}
+\pmprivacy{1}
+\pmauthor{porton}{9363}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{54A20}
+%\pmkeywords{order theory}
+%\pmkeywords{partially ordered set}
+\pmrelated{Filter}
+\pmrelated{Filter2}
+\pmdefines{primary filtrator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A \emph{filtrator} is a pair $(\mathfrak{A};\mathfrak{Z})$ consisting of a poset $\mathfrak{A}$ (the \emph{base} of the filtrator) and its subset $\mathfrak{Z}$ (the \emph{core} of the filtrator). The set $\mathfrak{Z}$ is considered as a poset with the induced order.
+
+Having fixed a filtrator and an $a\in\mathfrak{A}$, we define:
+
+$$\operatorname{up} a = \{ X\in\mathfrak{Z} | X \ge a \} \quad \operatorname{down} a = \{ X\in\mathfrak{Z} | X \le a \}.$$
+
+Probably the most important example of a filtrator is a \emph{primary filtrator} that is the pair $(\mathfrak{F};\mathfrak{P})$ where $\mathfrak{F}$ is the set of filters on a poset ordered reverse to set-theoretic inclusion of filters and $\mathfrak{P}$ is the set of principal filters on this poset. For a filter $\mathcal{F}\in\mathfrak{F}$ we have $\operatorname{up}\mathcal{F}$ essentially equivalent with the set $\mathcal{F}$.
+
+\begin{thebibliography}{1}
+  \bibitem[1]{filters}Victor Porton. \PMlinkexternal{Filters on posets and
+  generalizations.}{http://www.mathematics21.org/binaries/filters.pdf} International Journal of Pure and
+  Applied Mathematics, 74(1):55--119, 2012.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

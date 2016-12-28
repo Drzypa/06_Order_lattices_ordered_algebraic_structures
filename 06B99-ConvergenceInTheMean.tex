@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceInTheMean}
+\pmcreated{2015-04-08 7:29:35}
+\pmmodified{2015-04-08 7:29:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{convergence in the mean}
+\pmrecord{7}{88226}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let
+$$b_n := \frac{a_1+a_2+\ldots+a_n}{n} \quad (n = 1,2,3,\ldots)$$
+be the arithmetic mean of the numbers $a_1,a_2,\ldots,a_n$. \,
+The sequence 
+\begin{align}
+a_1, a_2, a_3, \ldots
+\end{align}
+is said to \PMlinkname{{\it converge in the mean}}{ConvergenceInTheMean} iff the 
+sequence
+\begin{align}
+b_1,b_2,b_3,\ldots
+\end{align}
+converges.\\
+On has the
+
+\textbf{Theorem.}\, If the sequence (1) is convergent having the limit $A$, then also the sequence
+(2) converges to the limit $A$.\, Thus, a convergent sequence is always convergent in the mean.
+
+{\it Proof.}\, Let $\varepsilon$ be an arbitrary positive number.\, We may write
+\begin{align*}
+|A-b_n|  &= |A-\frac{1}{n}(a_1+\ldots+a_k)-\frac{1}{n}(a_{k+1}+\ldots+a_n)|\\ 
+         &= |\frac{1}{n}[(A-a_1)+\ldots+(A-a_k)]+\frac{1}{n}[(A-a_{k+1})+\ldots+(A-a_n)]|\\
+         &\leqq \frac{|(A-a_1)+\ldots+(A-a_k)|}{n}+\frac{|A-a_{k+1}|+\ldots+|A-a_n|}{n}.
+\end{align*}
+The supposition implies that there is a positive integer $k$ such that 
+$$|A-a_i| < \frac{\varepsilon}{2} \quad\mbox{ for all  } i > k.$$
+Let's fix the integer $k$.\, Choose the number 
+$l$ so great that
+$$\frac{|(A-a_1)+\ldots+(A-a_k)|}{n} < \frac{\varepsilon}{2}
+ \quad\mbox{ for   } n > l.$$
+Let now\, $n > \max\{k,l\}$.\, The three above inequalities yield
+$$|A-b_n| \;<\; \frac{\varepsilon}{2}+\frac{1}{n}\!(n-k)\!\!\frac{\varepsilon}{2} \;<\;
+\frac{\varepsilon}{2}+\frac{\varepsilon}{2} = \varepsilon,$$
+whence we have\, 
+$$\lim_{n\to\infty}b_n = A.$$\\
+
+\textbf{Note.}\, The \PMlinkname{converse}{Converse} of the theorem is not 
+true.\, For example, if 
+$$a_n := \frac{1+(-1)^n}{2}$$
+i.e. if the sequence (1) has the form\, $0,1,0,1,0,1,\ldots,$\,
+then it is divergent but converges in the mean to the limit 
+$\frac{1}{2}$; the corresponding sequence (2) is
+$0,\frac{1}{2},\frac{1}{3},\frac{2}{4},\frac{2}{5},
+\frac{3}{6},\frac{3}{7},\frac{4}{8},\frac{4}{9},\ldots$\\
+
+
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplementedLattice}
+\pmcreated{2013-03-22 15:02:25}
+\pmmodified{2013-03-22 15:02:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{complemented lattice}
+\pmrecord{26}{36754}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C15}
+\pmclassification{msc}{06B05}
+\pmsynonym{perspective elements}{ComplementedLattice}
+\pmsynonym{complemented}{ComplementedLattice}
+\pmrelated{Perspectivity}
+\pmrelated{OrthocomplementedLattice}
+\pmrelated{PseudocomplementedLattice}
+\pmrelated{DifferenceOfLatticeElements}
+\pmrelated{Pseudocomplement}
+\pmdefines{related elements in lattice}
+\pmdefines{complement}
+\pmdefines{complemented element}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $L$ be a bounded lattice (with $0$ and $1$), and $a\in L$.  A \emph{complement} of $a$ is an element $b\in L$ such that 
+\begin{quote}$a\land b=0$ and $a\lor b=1$.\end{quote}
+
+\textbf{Remark}.  Complements may not exist.  If $L$ is a non-trivial chain, then no element (other than $0$ and $1$) has a complement.  This also shows that if $a$ is a complement of a non-trivial element $b$, then $a$ and $b$ form an antichain.
+
+An element in a bounded lattice is \emph{complemented} if it has a complement.  A \emph{complemented lattice} is a bounded lattice in which every element is complemented.
+
+
+\textbf{Remarks}.
+\begin{itemize}
+\item In a complemented lattice, there may be more than one complement corresponding to each element.  Two elements are said to be \emph{related}, or \emph{perspective} if they have a common complement.  For example, the following lattice is complemented.
+
+\begin{equation*}
+\xymatrix{
+& 1 \ar@{-}[ld] \ar@{-}[d] \ar@{-}[rd] & \\
+a \ar@{-}[rd] & b \ar@{-}[d] & c \ar@{-}[ld] \\
+& 0 &
+}
+\end{equation*}
+
+Note that none of the non-trivial elements have unique complements.  Any two non-trivial elements are related via the third.
+\item If a complemented lattice $L$ is a distributive lattice, then $L$ is uniquely complemented (in fact, a Boolean lattice).  For if $y_1$ and $y_2$ are two complements of $x$, then $$y_2=1\land y_2=(x\lor y_1)\land y_2=
+(x\land y_2)\lor(y_1\land y_2)=0\lor(y_1\land y_2)=y_1\land y_2.$$  Similarly, $y_1=y_2\land y_1$. So $y_2=y_1$.
+\item In the category of complemented lattices, a morphism between two objects is a $\lbrace 0,1\rbrace$-lattice homomorphism; that is, a lattice homomorphism which preserves $0$ and $1$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

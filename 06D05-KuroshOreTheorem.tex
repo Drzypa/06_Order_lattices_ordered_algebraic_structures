@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KuroshOreTheorem}
+\pmcreated{2013-03-22 18:10:11}
+\pmmodified{2013-03-22 18:10:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Kurosh-Ore theorem}
+\pmrecord{6}{40731}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D05}
+\pmclassification{msc}{06C05}
+\pmclassification{msc}{06B05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{thm}[Kurosh-Ore]  Let $L$ be a modular lattice and suppose that $a\in L$ has two irredundant decompositions of joins of join-irreducible elements:
+$$a=x_1\vee \cdots \vee x_m = y_1 \vee \cdots \vee y_n.$$
+Then
+\begin{enumerate}
+\item $m=n$, and
+\item every $x_i$ can be replaced by some $y_j$, so that $$a= x_1\vee \cdots \vee x_{i-1} \vee y_j \vee x_{i+1} \vee \cdots \vee x_m.$$
+\end{enumerate}
+\end{thm}
+
+There is also a dual statement of the above theorem in terms of meets.
+
+\textbf{Remark}.  Additionally, if $L$ is a distributive lattice, then the second property above (known the \emph{replacement property}) can be strengthened: each $x_i$ is equal to some $y_j$.  In other words, except for the re-ordering of elements in the decomposition, the above join is unique.
+%%%%%
+%%%%%
+\end{document}

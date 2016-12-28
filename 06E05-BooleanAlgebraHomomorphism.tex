@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BooleanAlgebraHomomorphism}
+\pmcreated{2013-03-22 18:02:05}
+\pmmodified{2013-03-22 18:02:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Boolean algebra homomorphism}
+\pmrecord{5}{40554}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E05}
+\pmclassification{msc}{03G05}
+\pmclassification{msc}{06B20}
+\pmclassification{msc}{03G10}
+\pmsynonym{Boolean homomorphism}{BooleanAlgebraHomomorphism}
+\pmdefines{kernel}
+\pmdefines{complete Boolean algebra homomorphism}
+\pmdefines{$\kappa$-complete Boolean algbra homomorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $A$ and $B$ be Boolean algebras.  A function $f:A\to B$ is called a \emph{Boolean algebra homomorphism}, or homomorphism for short, if $f$ is a $\lbrace 0,1\rbrace$-\PMlinkname{lattice homomorphism}{LatticeHomomorphism} such that $f$ respects $'$: $f(a')=f(a)'$.  
+
+Typically, to show that a function between two Boolean algebras is a Boolean algebra homomorphism, it is not necessary to check every defining condition.  In fact, we have the following:
+\begin{enumerate}
+\item if $f$ respects $'$, then $f$ respects $\vee$ iff it respects $\wedge$;
+\item if $f$ is a lattice homomorphism, then $f$ respects $0$ and $1$ iff it respects $'$.
+\end{enumerate}
+The first assertion can be shown by de Morgan's laws.  For example, to see the LHS implies RHS, $f(a\wedge b)= f((a'\vee b')')= f(a'\vee b')'=((f(a')\vee f(b'))'= f(a')'\wedge f(b')'= f(a)'' \wedge f(b)'' = f(a)\wedge f(b)$.  The second assertion can also be easily proved.  For example, to see that the LHS implies RHS, we have that $f(a')\vee f(a)= f(a'\vee a)=f(1)=1$ and $f(a')\wedge f(a)=f(a'\wedge a)=f(0)=0$.  Together, this implies that $f(a')$ is the complement of $f(a)$, which is $f(a)'$.
+
+If a function satisfies one, and hence all, of the above conditions also satisfies the property that $f(0)=0$, for $f(0)=f(a\wedge a')=f(a)\wedge f(a')= f(a)\wedge f(a)'=0$.  Dually, $f(1)=1$.
+
+As a Boolean algebra is an algebraic system, the definition of a Boolean algebra homormphism is just a special case of an algebra homomorphism between two algebraic systems.  Therefore, one may similarly define a Boolean algebra monomorphism, epimorphism, endormophism, automorphism, and isomorphism.
+
+Let $f:A\to B$ be a Boolean algebra homomorphism.  Then the \emph{kernel} of $f$ is the set $\lbrace a\in A\mid f(a)=0\rbrace$, and is written $\ker(f)$.  Observe that $\ker(f)$ is a Boolean ideal of $A$.
+
+Let $\kappa$ be a cardinal.  A Boolean algebra homomorphism $f:A\to B$ is said to be $\kappa$-complete if for any subset $C\subseteq A$ such that 
+\begin{enumerate}
+\item $|C|\le \kappa$, and 
+\item $\bigvee C$ exists, 
+\end{enumerate}
+then $\bigvee f(C)$ exists and is equal to $f(\bigvee C)$.  Here, $f(C)$ is the set $\lbrace f(c)\mid c\in C\rbrace$.  Note that again, by de Morgan's laws, if $\bigwedge C$ exists, then $\bigwedge f(C)$ exists and is equal to $f(\bigwedge C)$.  If we place no restrictions on the cardinality of $C$ (i.e., drop condition 1), then $f:A\to B$ is said to be a \emph{complete Boolean algebra homomorphism}.  In the categories of $\kappa$-complete Boolean algebras and complete Boolean algebras, the morphisms are $\kappa$-complete homomorphisms and complete homomorphisms respectively.
+%%%%%
+%%%%%
+\end{document}

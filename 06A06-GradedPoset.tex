@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GradedPoset}
+\pmcreated{2013-03-22 14:09:12}
+\pmmodified{2013-03-22 14:09:12}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{graded poset}
+\pmrecord{9}{35571}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{05B35}
+%\pmkeywords{poset}
+%\pmkeywords{graded}
+%\pmkeywords{rank}
+\pmrelated{EulerianPoset}
+\pmrelated{StarProduct}
+\pmrelated{HeightOfAnElementInAPoset}
+\pmdefines{rank function}
+\pmdefines{saturated chain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{rank}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{saturated}
+\PMlinkescapeword{property}
+
+A \emph{graded poset} is a poset $P$ that is equipped with a \emph{rank function} $\rho$, which is a function from $P$ to $\mathbb{Z}$, satisfying the following three conditions:  
+\begin{enumerate}
+\item $\rho$ is constant on all minimal elements of $P$, usually with value $-1$ or $0$
+\item $\rho$ is \emph{isotone}, that is, if $a\le b$, then $\rho(a)\le\rho(b)$, and
+\item $\rho$ preserves covering relations: if $a\prec b$, then $\rho(a)+1=\rho(b)$.
+\end{enumerate}
+
+Equivalently, a poset $P$ is graded if it admits a partition into
+maximal antichains $\{A_n\mid n\in\mathbb{N}\}$ such that 
+for each $x\in A_n$,
+all of the elements covering $x$ are in $A_{n+1}$ and all the elements
+covered by $x$ are in $A_{n-1}$.
+
+A poset $P$ \emph{can be graded} if one can define a rank function $\rho$ on $P$ so $(P,\rho)$ is a graded poset.  Below is a poset that can not be graded:
+
+\begin{equation*}
+\entrymodifiers={[o]} \xymatrix @!=1pt {
+& & \circ \ar@{-}[ld] \ar@{-}[rd] & \\
+& \ar@{-}[ld] & & \circ \ar@{-}[d] \\
+\circ \ar@{-}[rd] & & & \ar@{-}[d] \\
+& \ar@{-}[rd] & & \circ \ar@{-}[ld] \\
+& & \circ & }
+\end{equation*}
+
+\subsection*{Generalized rank functions}
+Since certain common posets such as the face lattice of a polytope are most naturally graded by \PMlinkname{dimension}{Dimension2}, the rank of a minimal element is sometimes required to be $-1$.  
+
+More generally, given a chain $C$, one can define \emph{$C$-graded posets}.  A poset $P$ is $C$-graded provided that there is a poset map $\rho\colon P\to C$ that preserves covers and is constant on minimal elements of $P$.  Such a rank function is unique up to choice of the rank of minimal elements.  In practice, however, the term graded is only used to indicate $\mathbb{N}$-grading, $\mathbb{N}\cup\{-1\}$-grading, or $\mathbb{Z}$-grading.
+
+\subsection*{Maximal chains in graded posets}
+Let $P$ be a graded poset with rank function $\rho$.  A chain $C$ in $P$ is said to be a \emph{saturated chain} provided that $\rho(C)=\rho(P)$.  If $C$ is saturated in $P$, then each cover relation in $C$ is also a cover relation in $P$; thus a saturated chain is also a maximal chain.  
+
+It is a property of graded posets that all saturated chains have the same cardinality.  As a partial converse, if $P$ is a finite \PMlinkname{bounded poset}{BoundedLattice} and each maximal chain has the same cardinality, then $P$ is graded.
+%%%%%
+%%%%%
+\end{document}

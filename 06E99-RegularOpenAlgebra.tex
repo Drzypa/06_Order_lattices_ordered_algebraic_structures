@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularOpenAlgebra}
+\pmcreated{2013-03-22 17:56:21}
+\pmmodified{2013-03-22 17:56:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{regular open algebra}
+\pmrecord{16}{40436}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A \emph{regular open algebra} is an algebraic system $\mathcal{A}$ whose universe is the set of all regular open sets in a topological space $X$, and whose operations are given by
+\begin{enumerate}
+\item a constant $1$ such that $1:=X$,
+\item a unary operation $'$ such that for any $U$,\; $U':=U^\bot$, where $U^\bot$ is the complement of the closure of $U$ in $X$,
+\item a binary operation $\wedge$ such that for any $U,V\in \mathcal{A}$, $U\wedge V:=U\cap V$, and
+\item a binary operation $\vee$ such that for any $U,V\in \mathcal{A}$, $U\vee V:=(U\cup V)^{\bot\bot}$.
+\end{enumerate}
+
+From the parent entry, all of the operations above are well-defined (that the result sets are regular open).  Also, we have the following:
+\begin{thm} $\mathcal{A}$ is a Boolean algebra \end{thm}
+\begin{proof} We break down the proof into steps:
+\begin{enumerate}
+\item $\mathcal{A}$ is a lattice.  This amounts to verifying various laws on the operations:
+\begin{itemize}
+\item (idempotency of $\vee$ and $\wedge$): Clearly, $U\wedge U=U$.  Also, $U\vee U=(U\cup U)^{\bot\bot}=U^{\bot\bot}=U$, since $U$ is regular open.  
+\item Commutativity of the binary operations are obvious.
+\item The associativity of $\wedge$ is also obvious.  The associativity of $\vee$ goes as follows: $U\vee (V\vee W)=(U\cup (V\cup W)^{\bot\bot})^{\bot\bot} = U^\bot \cap (V\cup W)^{\bot\bot\bot} = U^\bot \cap (V\cup W)^\bot$, since $V\cup W$ is open (which implies that $(V\cup W)^\bot$ is regular open).  The last expression is equal to $U^\bot \cap (V^\bot \cap W^\bot)$.  Interchanging the roles of $U$ and $W$, we obtain the equation $W\vee (V\vee U) = W^\bot \cap (V^\bot \cap U^\bot)$, which is just $U^\bot \cap (V^\bot \cap W^\bot)$, or $U\vee (V\vee W)$.  The commutativity of $\vee$ completes the proof of the associativity of $\vee$.  
+\item Finally, we verify the absorption laws.  First, $U\wedge (U\vee V)=U\cap (U\cup V)^{\bot\bot}= U^{\bot\bot}\cap (U\cup V)^{\bot\bot} = (U^\bot \cup (U\cup V)^\bot)^\bot = (U^\bot \cup (U^\bot \cap V^\bot)^\bot = (U^\bot)^\bot = U$.  Second, $U\vee (U\wedge V)=(U\cup (U\vee W)^{\bot\bot}=U^{\bot\bot}=U$.
+\end{itemize}
+\item $\mathcal{A}$ is complemented.  First, it is easy to see that $\varnothing$ and $X$ are the bottom and top elements of $\mathcal{A}$.  Furthermore, for any $U\in \mathcal{A}$, $U\wedge U'=U\cap U^\bot=U\cap (X\setminus \overline{U}) \subseteq \overline{U}\cap (X\setminus \overline{U})=\varnothing$.  Finally, $U\vee U'=(U\cup U^\bot)^{\bot\bot} = (U^\bot \cap U^{\bot\bot})^\bot = (U^\bot \cap U)^\bot = \varnothing^\bot=X$.
+\item $\mathcal{A}$ is distributive.  This can be easily proved once we show the following: for any open sets $U,V$: $$(*) \qquad U^{\bot\bot}\cap V^{\bot\bot}=(U\cap V)^{\bot\bot}.$$  To begin, note that since $U\cap V\subseteq U$, and $^\bot$ is order reversing, $(U\cap V)^{\bot\bot} \subseteq U^{\bot\bot}$ by applying $^\bot$ twice.  Do the same with $V$ and take the intersection, we get one of the inclusions: $(U\cap V)^{\bot\bot} \subseteq U^{\bot\bot}\cap V^{\bot\bot}$.  For the other inclusion, we first observe that $$U\cap \overline{V}\subseteq \overline{U\cap V}.$$  If $x\in$ LHS, then $x\in U$ and for any open set $W$ with $x\in W$, we have that $W\cap V\ne \varnothing$.  In particular, $U\cap W$ is such an open set (for $x\in U\cap W$), so that $(U\cap W)\cap V\ne \varnothing$, or $W\cap (U\cap V)\ne \varnothing$.  Since $W$ is arbitrary, $x\in$ RHS.  Now, apply the set complement, we have $(U\cap V)^\bot \subseteq U^\complement \cup V^\bot$.  Applying $^\bot$ next we get $(U\cap V)^{\bot\bot}$ for the LHS, and $(U^\complement \cup V^\bot)^\bot = U^{\complement-\complement}\cap V^{\bot\bot}=U^{\complement\complement}\cap V^{\bot\bot}=U\cap V^{\bot\bot}$ for RHS, since $U^\complement$ is closed.  As $^\bot$ reverses order, the new inclusion is $$(**) \qquad U\cap V^{\bot\bot}\subseteq (U\cap V)^{\bot \bot}.$$
+From this, a direct calculation shows $U^{\bot\bot}\cap V^{\bot\bot} \subseteq (U^{\bot\bot} \cap V)^{\bot\bot} \subseteq (U \cap V)^{\bot\bot\bot\bot}=(U\cap V)^{\bot\bot}$, noticing that the first and second inclusions use $(**)$ above (and the fact that $^{\bot\bot}$ preserves order), and the last equation uses the fact that for any open set $W$, $W^\bot$ is regular open.  This proves the $(*)$.
+
+Finally, to finish the proof, we only need to show one of two distributive laws, say, $U\wedge (V\vee W)=(U\wedge V)\vee (U\wedge W)$, for the other one follows from the use of the distributive inequalities.  This we do be direct computation: $U\wedge (V\vee W)=U \cap (V\cup W)^{\bot\bot} = U^{\bot\bot}\cap (V\cup W)^{\bot\bot}=(U\cap (V\cup W))^{\bot\bot}=((U\cap V)\cup (U\cap W))^{\bot\bot}=((U\wedge V)\cup (U\wedge W))^{\bot\bot}=(U\wedge V)\vee (U\wedge W)$.
+\end{enumerate}
+Since a complemented distributive lattice is Boolean, the proof is complete.
+\end{proof}
+\begin{thm} The subset $\mathcal{B}$ of all clopen sets in $X$ forms a Boolean subalgebra of $\mathcal{A}$. \end{thm}
+\begin{proof} Clearly, every clopen set is regular open.  In addition, $1\in \mathcal{B}$.  If $U$ is clopen, so is the complement of its closure, and hence $U'\in \mathcal{B}$.  If $U,V$ are clopen, so is their intersection $U\wedge V$.  Similarly, $U\cup V$ is clopen, so that $U\vee V =U\cup V$ is clopen also.  \end{proof}
+\begin{thm} In fact, $\mathcal{A}$ is a complete Boolean algebra. For an arbitrary subset $\mathcal{K}$ of $A$, the meet and join of $\mathcal{K}$ are $(\bigcap \lbrace U\mid U\in \mathcal{K}\rbrace)^{\bot\bot}$ and $(\bigcup \lbrace U\mid U\in \mathcal{K}\rbrace)^{\bot\bot}$ respectively.  \end{thm}
+\begin{proof}  Let $V=(\bigcup \lbrace U\mid U\in \mathcal{K}\rbrace)^{\bot\bot}$.  For any $U\in \mathcal{K}$, $U\subseteq \bigcup \lbrace U\mid U\in \mathcal{K}\rbrace$ so that $U=U^{\bot\bot}=(\bigcup \lbrace U\mid U\in \mathcal{K}\rbrace)^{\bot\bot} = V$.  This shows that $V$ is an upper bound of elements of $\mathcal{K}$.  If $W$ is another such upper bound, then $U\subseteq W$, so that $\bigcup \lbrace U\mid U\in \mathcal{K}\rbrace \subseteq W$, whence $V=(\bigcup \lbrace U\mid U\in \mathcal{K}\rbrace)^{\bot\bot}\subseteq W^{\bot\bot}=W$.  The infimum is proved similarly.
+\end{proof}
+\begin{thm} $\mathcal{A}$ is the smallest complete Boolean subalgebra of $P(X)$ extending $\mathcal{B}$. \end{thm}
+
+More to come...
+%%%%%
+%%%%%
+\end{document}

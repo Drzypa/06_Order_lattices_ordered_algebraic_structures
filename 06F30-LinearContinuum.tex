@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearContinuum}
+\pmcreated{2013-03-22 17:17:40}
+\pmmodified{2013-03-22 17:17:40}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{linear continuum}
+\pmrecord{11}{39638}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F30}
+\pmclassification{msc}{54B99}
+%\pmkeywords{linear order}
+%\pmkeywords{total order}
+%\pmkeywords{least upper bound}
+%\pmkeywords{least upper bound property}
+%\pmkeywords{supremum}
+%\pmkeywords{order topology}
+\pmrelated{DenseTotalOrder}
+\pmrelated{TotalOrder}
+\pmrelated{Supremum}
+\pmrelated{LowestUpperBound}
+\pmrelated{OrderTopology}
+\pmrelated{ASpaceIsConnectedUnderTheOrderedTopologyIfAndOnlyIfItIsALinearContinuum}
+\pmdefines{linear continuum}
+
+%%packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+%%theorem environments
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{proposition*}{Proposition}
+%math operators and commands
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\medset}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigg\{#1\bigg\}}
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\medabs}[1]{\left\vert#1\right\vert}
+\newcommand{\bigabs}[1]{\bigg\vert#1\bigg\vert}
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\newcommand{\mednorm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\bignorm}[1]{\bigg\Vert#1\bigg\Vert}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\supp}{supp}
+
+\begin{document}
+Let $X$ be a totally-ordered set under an order \PMlinkescapetext{relation} $<$ having at least two distinct points. Then $X$ is said to be a \emph{linear continuum} if the following two conditions are satisfied:
+\begin{enumerate}
+\item The order relation $<$ is a dense total order (i.e., for every $x,y\in X$ with $x<y$ there exists $z\in X$ such that $x<z<y$).
+\item Every non-empty subset of $X$ that is bounded above has a least upper bound (i.e., $X$ has the least upper bound property).
+\end{enumerate}
+
+Some examples of ordered sets that are linear continua include $\mathbb{R}$, the set $[0,1]\times[0,1]$ in the dictionary order, and the so-called long line $\Omega\times[0,1)$ in the dictionary topology. (The third example is a special case of a general result on well-ordered sets and linear continua.)
+
+\begin{proposition*}
+If $X$ is a well-ordered set, then the set $X\times[0,1)$ is a linear continua in the dictionary order topology.
+\end{proposition*}
+
+Linear continua are of special interest when they are made into topological spaces under the order topology, and the following two \PMlinkescapeword{propositions} establish some useful properties of such spaces:
+
+\begin{proposition*}
+If $X$ is a linear continuum in the order topology, then $X$ is \PMlinkid{connected}{941} and so are intervals in $X$.
+\end{proposition*}
+
+As a corollary of the preceding \PMlinkescapeword{proposition}, we obtain the result that $\mathbb{R}$ is \PMlinkescapetext{connected} in its usual topology, as are the intervals $[a,b]$ and $(a,b)$, where $a<b\in\mathbb{R}$. 
+
+\begin{proposition*}
+If $X$ is a linear continuum in the order topology, then every closed interval in $X$ is compact.
+\end{proposition*}
+\begin{proof}
+This is essentially a slightly generalized version of the Heine-Borel Theorem for $\mathbb{R}$, and the proof is almost identical.
+\end{proof}
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

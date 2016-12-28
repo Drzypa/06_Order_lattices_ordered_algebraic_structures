@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartitionsFormALattice}
+\pmcreated{2013-03-22 16:45:22}
+\pmmodified{2013-03-22 16:45:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{partitions form a lattice}
+\pmrecord{6}{38982}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B20}
+\pmdefines{lattice of equivalence relations}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+Let $S$ be a set.  Let $\operatorname{Part}(S)$ be the set of all partitions on $S$.  Since each partition is a cover of $S$, $\operatorname{Part}(S)$ is partially ordered by covering refinement relation, so that $P_1\preceq P_2$ if for every $a\in P_1$, there is a $b\in P_2$ such that $a\subseteq b$.  We say that a partition $P$ is finer than a partition $Q$ if $P\preceq Q$, and coarser than $Q$ if $Q\preceq P$.
+
+\begin{prop} $\operatorname{Part}(S)$ is a complete lattice \end{prop}
+\begin{proof}
+For any set $\mathcal{P}$ of partitions $P_i$ of $S$, the intersection $\bigcap \mathcal{P}$ is a partition of $S$.  Take the meet of $P_i$ to be this intersection.  Next, let $\mathcal{Q}$ be the set of those partitions of $S$ such that each $Q\in \mathcal{Q}$ is coarser than each $P_i$.  This set is non-empty because $S\times S\in \mathcal{Q}$.  Take the meet $P'$ of all these partitions which is again coarser than all partitions $P_i$.  Define the join of $P_i$ to be $P'$ and the proof is complete.
+\end{proof}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+The top element of $\operatorname{Part}(S)$ is $S\times S$ and the bottom is the diagonal relation on $S$.
+\item
+Correspondingly, the partition lattice of $S$ also defines the \emph{lattice of equivalence relations} $\Delta$ on $S$.
+\item
+Given a family $\lbrace E_i\mid i\in I\rbrace$ of equvialence relations on $S$, we can explicitly describe the join $E:=\bigvee E_i$ of $E_i$, as follows: $a\equiv b\pmod E$ iff there is a finite sequence $a=c_1,\ldots,c_n=b$ such that 
+\begin{eqnarray}c_k\equiv c_{k+1} \pmod {E_{i(k)}}\qquad\mbox{ for }k=1,\ldots,n-1.\end{eqnarray}  It is easy to see this definition makes $E$ an equivalence relation.  To see that $E$ is the supremum of the $E_i$, first note that each $E_i\le E$.  Suppose now $F$ is an equivalence relation on $S$ such that $E_i\le F$ and $a\equiv b\pmod E$.  Then we get a finite sequence $c_k$ as described by (1) above, so $c_k\equiv c_{k+1}\pmod F$ for each $k\in \lbrace 1,\ldots,n-1\rbrace$.  Hence $a\equiv b\pmod F$ also.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

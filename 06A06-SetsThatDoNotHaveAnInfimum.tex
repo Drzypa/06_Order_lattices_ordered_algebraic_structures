@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SetsThatDoNotHaveAnInfimum}
+\pmcreated{2013-03-22 13:09:51}
+\pmmodified{2013-03-22 13:09:51}
+\pmowner{sleske}{997}
+\pmmodifier{sleske}{997}
+\pmtitle{sets that do not have an infimum}
+\pmrecord{9}{33607}
+\pmprivacy{1}
+\pmauthor{sleske}{997}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmrelated{InfimumAndSupremumForRealNumbers}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{dense}
+\PMlinkescapeword{natural}
+Some examples for sets that do not have an infimum:
+
+\begin{itemize}
+\item The set $M_1:=\mathbb Q$ (as a subset of $\mathbb Q$) does not have
+an infimum (nor a supremum).  Intuitively this is clear, as the set is
+unbounded. The (easy) formal proof is left as an exercise for the reader.
+
+\item A more interesting example: The set $M_2:=\{x \in \mathbb Q :
+x^2\geq 2, x>0 \}$ (again as a subset of $\mathbb Q$) .
+\begin{proof}
+Clearly, $\inf(M_2)>0$. Assume $i>0$ is an infimum of $M_2$. Now we use
+the fact that $\sqrt 2$ is not rational, and therefore $i<\sqrt 2$ or
+$i>\sqrt 2$.
+
+If $i<\sqrt 2$, choose any $j\in \mathbb Q$ from the interval $(i, \sqrt 2
+) \subset \mathbb R$ (this is a real interval, but as the rational numbers
+are \PMlinkname{dense}{Dense} in the real numbers, every nonempty interval in $\mathbb R$
+contains a rational number, hence such a $j$ exists).
+
+Then $j>i$, but $j< \sqrt 2$, hence $j^2<2$ and therefore $j$ is a lower
+bound for $M_2$, which is a contradiction.
+
+On the other hand, if $i>\sqrt 2$, the argument is very similar:
+Choose any $j\in \mathbb Q$ from the interval $(\sqrt 2, i) \subset
+\mathbb R$. Then $j<i$, but $j> \sqrt 2$, hence $j^2>2$ and therefore
+$j\in M_2$. Thus $M_2$ contains an element $j$ smaller than $i$, which is
+a contradiction to the assumption that $i=\inf(M_2)$
+\end{proof}
+
+Intuitively speaking, this example exploits the fact that $\mathbb Q$ does
+not have ``enough elements''. More formally, $\mathbb Q$ as a metric space
+is not \PMlinkname{complete}{Complete}. The $M_2$ defined above is the real interval
+$M_2':=(\sqrt 2, \infty)\subset \mathbb R$ intersected with $\mathbb Q$.
+$M_2'$ as a subset of $\mathbb R$ does have an infimum (namely $\sqrt 2$),
+but as that is not an element of $\mathbb Q$, $M_2$ does not have an
+infimum as a subset of $\mathbb Q$.
+
+This example also makes it clear that it is important to clearly state the
+superset one is working in when using the notion of infimum or supremum.
+
+It also illustrates that the infimum is a natural generalization of the
+minimum of a set, as a set that does not have a minimum may still have
+an infimum (such as $M_2'$).
+
+Of course all the ideas expressed here equally apply to the supremum, as the
+two notions are completely analogous (just reverse all inequalities).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

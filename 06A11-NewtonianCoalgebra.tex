@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NewtonianCoalgebra}
+\pmcreated{2013-03-22 16:48:36}
+\pmmodified{2013-03-22 16:48:36}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Newtonian coalgebra}
+\pmrecord{6}{39044}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A11}
+\pmclassification{msc}{16W30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $R$ be a commutative ring.  A \emph{Newtonian coalgebra} over $R$ is an $R$-module $C$ which is simultaneously a coalgebra with comultiplication $\Delta\colon C\to C\otimes C$ and an algebra with multiplication $\cdot\colon C\otimes C\to C$ such that $\Delta$ is a derivation over $\cdot$, that is, such that the identity
+\[
+\Delta(u\cdot v) = \Delta(u)\cdot v + u\cdot\Delta(v)
+\]
+holds for any $u$ and $v$ in $C$.  Newtonian coalgebras were introduced by Joni and Rota in~\cite{JoRo}, where they were called \emph{infinitesimal coalgebras}.     They reserved the term ``Newtonian coalgebra'' for the special case of the coalgebra of divided differences.  This example was studied in more detail by Hirschhorn and Raphael~\cite{HiRa}.  Joni and Rota also showed that Newtonian coalgebras provide a language which can explain iterated differentiation of trigonometric functions as well as Fa\`{a} di Bruno's formula.  See also the paper of Nichols and Sweedler~\cite{NiSw} for more on trigonometric coalgebras.
+
+A Newtonian coalgebra cannot have both a unit and a counit, so no Newtonian coalgebra is a Hopf algebra.  However, Aguiar~\cite{Ag} developed a notion of antipode that makes sense for Newtonian coalgebras, leading to what he calls an infinitesimal Hopf algebra.  Ehrenborg and Readdy~\cite{EhRe_coproducts} used Newtonian coalgebras to give an algebraic structure to the \PMlinkname{$\mathbf{cd}$-index}{CdIndex}, a poset invariant generalizing the $f$-vector of polytopes.
+
+One example of a Newtonian coalgebra is the free associative algebra $R\langle\mathbf{a},\mathbf{b}\rangle$ of polynomials on the noncommuting variables $\mathbf{a}$ and $\mathbf{b}$ with coefficients in $R$.  The product is the ordinary noncommutative polynomial product, and the comultiplication is defined by setting
+\[
+\Delta(u_1\cdots u_n) = \sum_{j\in[n]} u_1\cdots u_{i-1}\otimes u_{i+1}\cdots u_n
+\]
+for each monomial and extending by linearity.
+
+% I've commented out some of the references because I don't yet refer to
+% them, and right now the bibliography is longer than the rest of the 
+% entry.
+%
+\begin{thebibliography}{99}
+\bibitem{Ag}
+M.~Aguiar, Infinitesimal Hopf algebras.  {\it New trends in Hopf algebra theory: (La Falda, 1999)},  1--29, Contemp.~Math., 267, Amer.~Math.~Soc., Providence, RI, 2000. 
+
+\bibitem{Ag2}
+M.~Aguiar, Infinitesimal Hopf algebras and the $\mathbf{cd}$-index of polytopes.  {\it Discrete~Comput.~Geom.}, 27 (2002), no. 1, 3--28. 
+
+%\bibitem{BaBi}
+%M.~Bayer and L.~Billera, Generalized Dehn-Sommerville relations for polytopes, %spheres and Eulerian partially ordered sets.  {\it Invent.~Math.}, 79 (1985), %143--157.
+
+%\bibitem{BaKl}
+%M.~Bayer and A.~Klapper, A new index for polytopes,  {\it Discrete %Comput.~Geom.}, 6 (1991), 33--47.
+
+\bibitem{EhRe_coproducts}
+R.~Ehrenborg and M.~Readdy, Coproducts and the $\mathbf{cd}$-index,  {\it J.~Algebr.~Comb.}, 8 (1998), 273--299.
+
+%\bibitem{EhRe_homology}
+%R.~Ehrenborg and M.~Readdy, Homology of Newtonian coalgebras.  {\it European 
+%J.~Combin.} 23 (2002), no. 8, 919--927.
+
+\bibitem{HiRa}
+P.~S.~Hirschhorn and L.~A.~Raphael, Coalgebraic foundation of the method of divided differences,  {\it Adv.~Math.}, 91 (1992), 75--135.
+
+\bibitem{JoRo}
+S.~A.~Joni and G.-C.~Rota, {\it Coalgebras and bialgebras in combinatorics}, Stud.~Appl.~Math., 61 (1979), pp. 93--139.
+
+\bibitem{NiSw}
+W.~Nichols and M.~Sweedler, {\it Hopf algebras and combinatorics}, in {\it Proceedings of the conference on umbral calculus and Hopf algebras}, ed. R.~Morris, AMS, 1982.
+
+%\bibitem{Sw}
+%M.~Sweedler, {\it Hopf algebras}, Benjamin, New York, 1969.
+\end{thebibliography}
+
+% bleh
+\PMlinkescapeword{formula}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{infinitesimal}
+\PMlinkescapeword{language}
+\PMlinkescapeword{term}
+%%%%%
+%%%%%
+\end{document}

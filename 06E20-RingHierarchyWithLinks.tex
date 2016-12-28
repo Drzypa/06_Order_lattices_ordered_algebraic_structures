@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RingHierarchyWithLinks}
+\pmcreated{2013-03-22 18:11:17}
+\pmmodified{2013-03-22 18:11:17}
+\pmowner{SamB}{21010}
+\pmmodifier{SamB}{21010}
+\pmtitle{ring hierarchy with links?}
+\pmrecord{9}{40761}
+\pmprivacy{1}
+\pmauthor{SamB}{21010}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{pstricks}
+\usepackage{pst-node}
+
+% define commands here
+
+\begin{document}
+This isn't actually a useful diagram; see \PMlinkname{ring hierarchy}{RingHierarchy} for that. This is just an attempt to replicate it with links in the diagram; it isn't working well so far. (It does work in the page images view though.)
+
+\begin{figure}
+
+\psset{linearc=.15}
+\psset{arm=0}
+
+\begin{tabular}{ccccccc}
+ & & & \rnode{ring}{\PMlinkname{Ring (unital)}{Ring}}
+\\\\
+ & \rnode{comm}{Commutative ring} \ncline{->}{comm}{ring} & & & \rnode{noeth}{\PMlinkname{Noetherian Ring}{Noetherian}} \ncline{->}{noeth}{ring}
+\\\\
+\rnode{local}{Local Ring} \ncline{->}{local}{comm}
+\end{tabular}
+
+\end{figure}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Residuated}
+\pmcreated{2013-03-22 18:53:22}
+\pmmodified{2013-03-22 18:53:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{residuated}
+\pmrecord{12}{41737}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A99}
+\pmclassification{msc}{06A15}
+\pmdefines{residual}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\down}{\downarrow\!\!}
+\begin{document}
+Let $P,Q$ be two posets.  Recall that a function $f:P\to Q$ is order preserving iff $x\le y$ implies $f(x)\le f(y)$.  This is equivalent to saying that the preimage of any down set under $f$ is a down set.
+
+\textbf{Definition}  A function $f:P\to Q$ between ordered sets $P,Q$ is said to be \emph{residuated} if the preimage of any principal down set is a principal down set.  In other words, for any $y\in Q$, there is some $x\in P$ such that $$f^{-1}(\down{y}) = \down{x},$$ where $f^{-1}(A)$ for any $A\subseteq Q$ is the set $\lbrace a\in X\mid f(a)\in A\rbrace$, and $\down b = \lbrace c \mid c\le b\rbrace$.
+
+Let us make some observations on a residuated function $f:P\to Q$:
+\begin{enumerate}
+\item $f$ is order preserving.
+\begin{proof}
+Suppose $a\le b$ in $P$.  Then there is some $c\in P$ such that $\down c = f^{-1}(\down f(b))$.  Since $f(b) \in \down f(b)$, $b \in \down c$, or $b\le c$, which means $a\le c$, or $a\in \down c$.  But this implies $a\in f^{-1}(\down f(b))$, so that $f(a) \in \down f(b)$, or $f(a)\le f(b)$.
+\end{proof}
+\item The $x$ in the definition above is unique.
+\begin{proof}  If $\down x = \down z$, then $x\in \down z$, or $x\le z$.  Similarly, $z\le x$, so that $x=z$.
+\end{proof}
+\item $g:Q\to P$ given by $g(y)=x$ is a well-defined function, with the following properties:
+\begin{enumerate}
+\item $g$ is order preserving,
+\item $1_P \le g\circ f$,
+\item $f\circ g\le 1_Q$.
+\end{enumerate}
+\begin{proof}
+$g$ is order preserving: if $r\le s$ in $Q$, then $\down r \subseteq \down s$, so that $\down u = f^{-1}(\down r)\subseteq f^{-1}(\down s) = \down v$, where $u=g(r)$ and $v=g(s)$.  But $\down u\subseteq \down v$ implies $u\le v$, or $g(r)\le g(s)$.
+
+$1_P \le g\circ f$: let $x\in P$, $y=f(x)$, and $z=g(y)$.  Then $x\in f^{-1}(y) \subseteq f^{-1}(\down y) = \down z$, which implies $x\le z=g(f(x))$ as desired.
+
+$f\circ g\le 1_Q$: pick $y\in Q$ and let $x=g(y)$.  Then $f^{-1}(\down y)=\down x$, so that $f(x)\in f(\down x) = f(f^{-1}( \down y))=\down y$, or $f(x)\le y$, or $f(g(y))=f(x) \le y$ as a result.
+\end{proof}
+\end{enumerate}
+
+Actually, the third observation above characterizes $f$ being residuated:
+\begin{prop} If $f$ is order preserving, and $g$ satisfies $3(a)$ through $3(c)$, then $f$ is residuated.  In fact, such a $g$ is unique.
+\end{prop}
+\begin{proof}
+Suppose $y\in Q$, and let $x=g(y)$.  We want to show that $\down x=f^{-1}(\down y)$.  First, suppose $a \in f^{-1}(\down y)$.  Then $f(a) \le y$, which means $g(f(a))\le g(y)=x$.  But then $a\le g(f(a))$, and we get $a\le x$, or $a\in \down x$.  Next, suppose $a\le x=g(y)$.  Then $f(a) \le f(x) =f(g(y))\le y$, so $a\in f^{-1}(f(a))\subseteq f^{-1}(\down y)$.
+
+To see uniqueness, suppose $h:Q\to P$ is order preserving such that $1_P \le h\circ f$ and $f\circ h\le 1_Q$.  Then $g = 1_P \circ g \le (h \circ f )\circ g = h \circ (f\circ g) \le = h\circ 1_Q = h$ and $h = 1_P \circ h \le (g\circ f) \circ h = g \circ (f \circ h) \le g \circ 1_Q = g$.
+\end{proof}
+
+\textbf{Definition}.  Given a residuated function $f:P\to Q$, the unique function $g:Q\to P$ defined above is called the \emph{residual} of $f$, and is denoted by $f^+$.
+
+For example, given any function $f: A\to B$, the induced function $f: P(A)\to P(B)$ (by abuse of notation, we use the same notation as original function $f$), given by $f(S)=\lbrace f(a)\mid a\in S\rbrace$ is residuated.  Its residual is the function $f^{-1}: P(B)\to P(A)$, given by $f^{-1}(T)=\lbrace a \in A\mid f(a)\in T\rbrace$.
+
+Here are some properties of residuated functions and their residuals:
+\begin{itemize}
+\item A bijective residuated function is an order isomorphism, and conversely.  Furthermore, the residual is residuated, and is its inverse.
+\item If $f: P\to Q$ is residuated, then $f\circ f^+ \circ f = f$ and $f^+ \circ f \circ f^+ = f^+$.
+\item If $f: P\to Q$ and $g:Q\to R$ are residuated, so is $g\circ f$ and $(g\circ f)^+=f^+\circ g^+$.
+\item If $f: P\to Q$ is residuated, then $f^+\circ f: P \to P$ is a closure map on $P$.  Conversely, any closure function can be decomposed as the functional composition of a residuated function and its residual.
+\end{itemize}
+
+\textbf{Remark}.  Residuated functions and their residuals are closely related to Galois connections.  If $f:P\to Q$ is residuated, then $(f,f^+)$ forms a Galois connection between $P$ and $Q$.  On the other hand, if $(f,g)$ is a Galois connection between $P$ and $Q$, then $f: P\to Q$ is residuated, and $g: Q\to P$ is $f^+$.  Note that PM defines a Galois connection as a pair of order-preserving maps, where as in Blyth, they are order reversing.
+
+\begin{thebibliography}{6}
+\bibitem{tsb} T.S. Blyth, {\em Lattices and Ordered Algebraic Structures}, Springer, New York (2005).
+\bibitem{gg} G. Gr\"atzer, {\it General Lattice Theory}, 2nd Edition, Birkh\"auser (1998)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

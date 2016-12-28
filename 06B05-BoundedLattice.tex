@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedLattice}
+\pmcreated{2013-03-22 15:02:28}
+\pmmodified{2013-03-22 15:02:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{bounded lattice}
+\pmrecord{13}{36755}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B05}
+\pmclassification{msc}{06A06}
+\pmdefines{top}
+\pmdefines{bottom}
+\pmdefines{bounded poset}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A lattice $L$ is said to be \emph{\PMlinkescapetext{bounded from below}} if there is an element $0\in L$ such that $0\leq x$ for all $x\in L$.  Dually, $L$ is \emph{\PMlinkescapetext{bounded from above}} if there exists an element $1\in L$ such that $x\leq1$ for all $x\in L$.  A \emph{bounded lattice} is one that is \PMlinkescapetext{bounded} both from above and below.
+
+For example, any finite lattice $L$ is bounded, as $\bigvee L$ and $\bigwedge L$, being join and meet of finitely many elements, exist.  $\bigvee L=1$ and $\bigwedge L=0$.
+
+\textbf{Remarks}.
+Let $L$ be a bounded lattice with $0$ and $1$ as described above.
+\begin{itemize}
+\item $0\land x=0$ and $0\lor x=x$ for all $x\in L$.
+\item $1\land x=x$ and $1\lor x=1$ for all $x\in L$.
+\item As a result, $0$ and $1$, if they exist, are necessarily unique.  For
+if there is another such a pair $0^{\prime}$ and $1^{\prime}$, then
+$0=0\land 0^{\prime}=0^{\prime}\land 0=0^{\prime}$.  Similarly
+$1=1^{\prime}$.
+\item $0$ is called the \emph{bottom} of $L$ and $1$ is called the \emph{top} of $L$.
+\item $L$ is a lattice interval and can be written as $[0,1]$.
+\end{itemize}
+
+\textbf{Remark}.  More generally, a poset $P$ is said to be \emph{bounded} if it has both a greatest element $1$ and a least element $0$.
+%%%%%
+%%%%%
+\end{document}

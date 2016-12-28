@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeasureOnABooleanAlgebra}
+\pmcreated{2013-03-22 17:59:16}
+\pmmodified{2013-03-22 17:59:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{measure on a Boolean algebra}
+\pmrecord{8}{40498}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmrelated{Measure}
+\pmdefines{measure}
+\pmdefines{two-valued measure}
+\pmdefines{finitely additive}
+\pmdefines{countably additive}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $A$ be a Boolean algebra.  A \emph{measure} on $A$ is a non-negative extended real-valued function $m$ defined on $A$ such that
+\begin{enumerate}
+\item there is an $a\in A$ such that $m(a)$ is a real number (not $\infty$),
+\item if $a\wedge  b=0$, then $m(a\vee b)=m(a)+m(b)$.
+\end{enumerate}
+
+For example, a sigma algebra $\mathcal{B}$ over a set $E$ is a Boolean algebra, and a \PMlinkname{measure}{Measure} $\mu$ on the measurable space $(\mathcal{B},E)$ is a measure on the Boolean algebra $\mathcal{B}$.
+
+The following are some of the elementary properties of $m$:
+\begin{itemize}
+\item $m(0)=0$.
+
+By condition 1, suppose $m(a)=r\in \mathbb{R}$, then $m(a)=m(0\vee a)=m(0)+m(a)$, so that $m(0)=0$.  
+\item $m$ is non-decreasing: $m(a)\le m(b)$ for $a\le b$
+
+If $a\le b$, then $c=b-a$ and $a$ are disjoint ($c\wedge a=0$) and $b=c\vee a$.  So $m(b)=m(c\vee a)=m(c)+m(a)$.  As a result, $m(a)\le m(b)$.
+\item $m$ is subadditive: $m(a\vee b)\le m(a)+m(b)$.
+
+Since $a\vee b=(a-b)\vee b$, and $a-b$ and $b$ are disjoint, we have that $m(a\vee b)=m((a-b)\vee b)=m(a-b)+m(b)$.  Since $a-b\le a$, the result follows.
+\end{itemize}
+
+From the three properties above, one readily deduces that $I:=\lbrace a\in A\mid m(a)=0\rbrace$ is a Boolean ideal of $A$.
+
+A measure on $A$ is called a \emph{two-valued measure} if $m$ maps onto the two-element set $\lbrace 0,1\rbrace$.  Because of the existence of an element $a\in A$ with $m(a)=1$, it follows that $m(1)=1$.  Consequently, the set $F:=\lbrace a\in A \mid m(a)=1\rbrace$ is a Boolean filter.  In fact, because $m$ is two-valued, $F$ is an ultrafilter (and correspondingly, the set $\lbrace a\mid m(a)=0\rbrace$ is a maximal ideal).  
+
+Conversely, given an ultrafilter $F$ of $A$, the function $m:A\to \lbrace 0,1\rbrace$, defined by $m(a)=1$ iff $a\in F$, is a two-valued measure on $A$.  To see this, suppose $a\wedge b=0$.  Then at least one of them, say $a$, can not be in $F$ (or else $0=a\wedge b\in F$).  This means that $m(a)=0$.  If $b\in F$, then $a\vee b\in F$, so that $m(a\vee b)=1=m(b)=m(b)+m(a)$.  On the other hand, if $b\notin F$, then $a',b'\in F$, so $a'\wedge b'\in F$, or $a\vee b\notin F$.  This means that $m(a\vee b)=0=m(a)+m(b)$.
+
+\textbf{Remark}.  A measure (on a Boolean algebra) is sometimes called \emph{finitely additive} to emphasize the defining condition 2 above.  In addition, this terminology is used when there is a need to contrast a stronger form of additivity: \emph{countable additivity}.  A measure is said to be \emph{countably additive} if whenever $K$ is a countable set of pairwise disjoint elements in $A$ such that $\bigvee K$ exists, then $$m(\bigvee K)=\sum_{a\in K} m(a).$$
+%%%%%
+%%%%%
+\end{document}

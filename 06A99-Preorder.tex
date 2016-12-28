@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Preorder}
+\pmcreated{2013-03-22 13:05:06}
+\pmmodified{2013-03-22 13:05:06}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{pre-order}
+\pmrecord{17}{33500}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A99}
+\pmsynonym{pre-ordering}{Preorder}
+\pmsynonym{preorder}{Preorder}
+\pmsynonym{preordering}{Preorder}
+\pmsynonym{quasi-order}{Preorder}
+\pmsynonym{quasi-ordering}{Preorder}
+\pmsynonym{quasiorder}{Preorder}
+\pmsynonym{quasiordering}{Preorder}
+\pmsynonym{semi-order}{Preorder}
+\pmsynonym{semi-ordering}{Preorder}
+\pmsynonym{semiorder}{Preorder}
+\pmsynonym{semiordering}{Preorder}
+\pmrelated{WellQuasiOrdering}
+\pmrelated{PartialOrder}
+\pmdefines{pre-ordered}
+\pmdefines{preordered}
+\pmdefines{semi-ordered}
+\pmdefines{semiordered}
+\pmdefines{quasi-ordered}
+\pmdefines{quasiordered}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\def\lesssim{\preceq} % this was used to work around a bug, but shouldn't be needed now
+
+\begin{document}
+\PMlinkescapeword{satisfy}
+
+\section*{Definition}
+
+A \emph{pre-order} on a set $S$ is a relation $\lesssim$ on $S$ satisfying the following two axioms:
+\begin{description}
+\item reflexivity: $s \lesssim s$ for all $s \in S$, and
+\item transitivity: If $s \lesssim t$ and $t \lesssim u$, then $s \lesssim u$; for all $s,t,u \in S$. 
+\end{description}
+
+\section*{Partial order induced by a pre-order}
+
+Given such a relation, define a new relation $s\sim t$ on $S$ by
+\[
+s\sim t \hbox{ if and only if } s\lesssim t \hbox{ and } t \lesssim s.
+\]
+Then $\sim$ is an equivalence relation on $S$, and $\lesssim$ induces a partial order $\leq$ on the set $S/\sim$ of equivalence classes of $\sim$ defined by
+\[
+[s] \leq [t] \hbox{ if and only if } s \lesssim t,
+\]
+where $[s]$ and $[t]$ denote the equivalence classes of $s$ and $t$. In particular, $\leq$ does satisfy antisymmetry, whereas $\lesssim$ may not.
+
+\section*{Pre-orders as categories}
+
+A pre-order $\lesssim$ on a set $S$ can be considered as a small category, in the which the objects are the elements of $S$ and there is a unique morphism from $x$ to $y$ if $x\lesssim y$ (and none otherwise).
+
+%%%%%
+%%%%%
+\end{document}

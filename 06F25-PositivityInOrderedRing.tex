@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PositivityInOrderedRing}
+\pmcreated{2013-03-22 14:46:40}
+\pmmodified{2013-03-22 14:46:40}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{positivity in ordered ring}
+\pmrecord{12}{36424}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F25}
+\pmclassification{msc}{12J15}
+\pmclassification{msc}{13J25}
+\pmrelated{PositiveCone}
+\pmrelated{TopicEntryOnRealNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, If\, $(R,\,\leq)$\, is an ordered ring, then it contains a subset $R_+$ having the following \PMlinkescapetext{properties}:
+\begin{itemize}
+ \item $R_+$ is \PMlinkescapetext{closed} under ring addition and, supposing that the ring contains no zero divisors, also under ring multiplication.
+ \item Every element $r$ of $R$ satisfies exactly one of the conditions\,\, 
+$(1)\,\,r = 0$,\,\,\, $(2)\,\,r\in R_+$,\,\,\, $(3)\,\,-r\in R_+$.
+\end{itemize}
+\end{thmplain}
+
+{\em Proof.}\, We take\, $R_+ = \{r\in R:\,\, 0 < r\} 
+= \{r\in R:\,\, 0\leq r\, \wedge \,0 \neq r\}$.\, Let\, $a,\,b \in R_+$.\, Then \, $0 < a$,\, $0 < b$, and therefore we have\, $0 < a\!+\!0 < a\!+\!b$,\, i.e.\, $a\!+\!b \in R_+$.\, If $R$ has no zero-divisors, then also\, $ab \neq 0$\, and\, $0 = a0 < ab$,\, i.e.\, $ab\in R_+$.\, Let $r$ be an arbitrary non-zero element of $R$.\, Then we must have either\, $0 < r$\, or\, $r < 0$\, (not both) because $R$ is totally ordered.\, The latter alternative gives that\, $0 = -r\!+\!r < -r\!+\!0 = -r$.\, The both cases \PMlinkescapetext{mean} that either\, $r\in R_+$\, or\, $-r\in R_+$.
+%%%%%
+%%%%%
+\end{document}

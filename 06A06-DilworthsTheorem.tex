@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DilworthsTheorem}
+\pmcreated{2013-03-22 15:49:37}
+\pmmodified{2013-03-22 15:49:37}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Dilworth's theorem}
+\pmrecord{14}{37794}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{06A07}
+\pmsynonym{Dilworth chain decomposition theorem}{DilworthsTheorem}
+\pmrelated{DualOfDilworthsTheorem}
+\pmdefines{chain covering number}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\begin{document}
+\begin{thm}  If $P$ is a poset with width $w<\infty$, then $w$ is also the smallest integer such that $P$ can be written as the union of $w$ chains.
+\end{thm}
+
+\textbf{Remark}.  The smallest cardinal $c$ such that $P$ can be written as the union of $c$ chains is called the \emph{chain covering number} of $P$.  So Dilworth's theorem says that if the width of $P$ is finite, then it is equal to the chain covering number of $P$.  If $w$ is infinite, then statement is not true.  The proof of Dilworth's theorem and its counterexample in the infinite case can be found in the reference below.
+
+\begin{thebibliography}{6}
+\bibitem{jbn} J.B. Nation, ``Lattice Theory", \PMlinkexternal{http://www.math.hawaii.edu/~jb/lat1-6.pdf}{http://www.math.hawaii.edu/~jb/lat1-6.pdf}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

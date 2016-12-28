@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfANonlatticeHomomorphism}
+\pmcreated{2013-03-22 16:58:31}
+\pmmodified{2013-03-22 16:58:31}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{example of a non-lattice homomorphism}
+\pmrecord{8}{39252}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B23}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Consider the Hasse diagram of the lattice of subgroups of the quaternion group 
+of order $8$, $Q_8$.  [The use of $Q_8$ is only for a concrete realization of the lattice.]
+\[
+\begin{xy}<5mm,0mm>:<0mm,5mm>::
+(0,3) +*{Q_8} = "Q8";
+(-2,2) +*{\langle i\rangle} = "i";
+(0,2) +*{\langle j\rangle} = "j";
+(2,2) +*{\langle k\rangle} = "k";
+(0,1) +*{\langle -1\rangle} = "-1";
+(0,0) +*{\langle 1\rangle} = "1";
+"1"; "-1" **@{-};
+"-1"; "i" **@{-};
+"-1"; "j" **@{-};
+"-1"; "k" **@{-};
+"i"; "Q8" **@{-};
+"j"; "Q8" **@{-};
+"k"; "Q8" **@{-};
+\end{xy}
+\]
+
+To establish an order-preserving map which is not a lattice isomorphism
+one can simply ``skip'' $\langle -1\rangle$, which we display graphically as:
+
+\[
+\begin{xy}<5mm,0mm>:<0mm,5mm>::
+(-3,3) +*{Q_8} = "Q81";
+(-5,2) +*{\langle i\rangle} = "i1";
+(-3,2) +*{\langle j\rangle} = "j1";
+(-1,2) +*{\langle k\rangle} = "k1";
+(-3,1) +*{\langle -1\rangle} = "-11";
+(-3,0) +*{\langle 1\rangle} = "11";
+(3,2.5) +*{Q_8} = "Q82";
+(1,1.5) +*{\langle i\rangle} = "i2";
+(3,1.5) +*{\langle j\rangle} = "j2";
+(5,1.5) +*{\langle k\rangle} = "k2";
+(3,0.5) +*{\langle -1\rangle} = "-12";
+(3,-0.5) +*{\langle 1\rangle} = "12";
+"11"; "-11" **@{-};
+"-11"; "i1" **@{-};
+"-11"; "j1" **@{-};
+"-11"; "k1" **@{-};
+"i1"; "Q81" **@{-};
+"j1"; "Q81" **@{-};
+"k1"; "Q81" **@{-};
+"12"; "-12" **@{-};
+"-12"; "i2" **@{-};
+"-12"; "j2" **@{-};
+"-12"; "k2" **@{-};
+"i2"; "Q82" **@{-};
+"j2"; "Q82" **@{-};
+"k2"; "Q82" **@{-};
+"Q81"; "Q82" **@{..};
+"i1"; "i2" **@{..};
+"j1"; "j2" **@{..};
+"k1"; "k2" **@{..};
+"-11"; "12" **@{..};
+"11"; "12" **@{..};
+\end{xy}
+\]
+
+Since containment is still preserved the map is order-preserving.  However, the intersection (meet) of
+$\langle i\rangle$ and $\langle j\rangle$, which is $\langle -1\rangle$, is not perserved under this
+map.  Thus it is not a lattice homomorphism.
+
+
+%%%%%
+%%%%%
+\end{document}

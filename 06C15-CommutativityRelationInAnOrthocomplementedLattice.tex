@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommutativityRelationInAnOrthocomplementedLattice}
+\pmcreated{2013-03-22 16:43:22}
+\pmmodified{2013-03-22 16:43:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{commutativity relation in an orthocomplemented lattice}
+\pmrecord{6}{38943}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C15}
+\pmclassification{msc}{03G12}
+\pmdefines{dually commute}
+\pmdefines{orthogonally commute}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\com}{\operatorname{C}}
+\newcommand{\dcom}{\operatorname{D}}
+\newcommand{\mcom}{\operatorname{M}}
+\begin{document}
+Let $L$ be an orthocomplemented lattice with $a,b\in L$.  We say that $a$ \emph{commutes} with $b$ if $a=(a\wedge b)\vee (a\wedge b^{\perp})$.  When $a$ commutes with $b$, we write $a\com b$.  Dualize everything, we have that $a$ \emph{dually commutes} with $b$, written $a\dcom b$, if $a=(a\vee b)\wedge (a\vee b^{\perp})$.
+
+\textbf{Some properties}.  Below are some properties of the commutativity relations $\com$ and $\dcom$.
+\begin{enumerate}
+\item $\com$ is reflexive.
+\item $a \com b$ iff $a \com b^{\perp}$.
+\item $a \com b$ iff $a^{\perp} \dcom b^{\perp}$.
+\item if $a\le b$ or $a\le b^{\perp}$, then $a\com b$.
+\item $a$ is said to \emph{orthogonally commute} with $b$ if $a \com b$ and $b\com a$.  In this case, we write $a \mcom b$.  The terminology comes from the following fact: $a \mcom b$ iff there are $x,y,z,t\in L$, with:
+\begin{enumerate}
+\item $x\perp y$ ($x$ is orthogonal to $y$, or $x\le y^{\perp}$), 
+\item $z\perp t$, 
+\item $x\perp z$,
+\item $a=x\vee y$, and 
+\item $b=z\vee t$.
+\end{enumerate}
+\item $\com$ is symmetric iff $\dcom=\com (=\mcom)$ iff $L$ is an orthomodular lattice.
+\item $\com$ is an equivalence relation iff $\com=L\times L$ iff $L$ is a Boolean algebra.
+\end{enumerate}
+
+\textbf{Remark}.  More generally, one can define commutativity $\com$ on an orthomodular poset $P$: for $a,b\in P$, $a \com b$ iff $a\wedge b$, $a\wedge b^{\perp}$, and $(a\wedge b)\vee (a\wedge b^{\perp})$ exist, and $(a\wedge b)\vee (a\wedge b^{\perp})=a$.  Dual commutativity and mutual commutativity in an orthomodular poset are defined similarly (with the provision that the binary operations on the pair of elements are meaningful).
+
+\begin{thebibliography}{8}
+\bibitem{lb} L. Beran, {\em Orthomodular Lattices, Algebraic Approach}, Mathematics and Its Applications (East European Series), D. Reidel Publishing Company, Dordrecht, Holland (1985).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WellQuasiOrdering}
+\pmcreated{2013-03-22 13:54:15}
+\pmmodified{2013-03-22 13:54:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{well quasi ordering}
+\pmrecord{13}{34653}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A99}
+\pmclassification{msc}{06A07}
+\pmsynonym{well quasi order}{WellQuasiOrdering}
+\pmsynonym{wqo}{WellQuasiOrdering}
+%\pmkeywords{Order}
+%\pmkeywords{Orderings}
+%\pmkeywords{QuasiOrdering}
+%\pmkeywords{PartialOrderings}
+%\pmkeywords{WellQuasiOrdering}
+\pmrelated{quasiOrder}
+\pmrelated{QuasiOrder}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newcommand{\NN}{{\mathbf N}}
+\begin{document}
+Let $Q$ be a set and $\precsim$ a quasi-order on $Q$.  An
+infinite sequence in $Q$ is referred to as \emph{bad} if for
+all $i<j \in \NN$, $a_i \not\precsim a_j$ holds; otherwise it is called
+\emph{good}. Note that an antichain is obviously a bad sequence. 
+
+A quasi-ordering $\precsim$ on $Q$ is a \emph{well-quasi-ordering} (\emph{wqo}) if for every infinite sequence is good.  Every well-ordering is a well-quasi-ordering.
+
+The following proposition gives equivalent definitions for
+well-quasi-ordering:
+\begin{prop}
+Given a set $Q$ and a binary relation $\precsim$ over $Q$, the
+following conditions are equivalent:
+\begin{itemize}
+  \item $(Q, \precsim)$ is a well-quasi-ordering;
+  \item $(Q, \precsim)$ has no infinite ($\omega$-) strictly decreasing chains
+and no infinite antichains.
+  \item Every linear extension of $Q/_\approx$ is a well-order, where $\approx$ is the equivalence relation and $Q/_\approx$ is the set of equivalence classes induced by $\approx$.
+  \item Any infinite ($\omega$-) $Q$-sequence contains an
+increasing chain.
+\end{itemize}
+\end{prop}
+
+The equivalence of WQO to the second and the fourth conditions is proved by the infinite version of Ramsey's theorem.
+%%%%%
+%%%%%
+\end{document}

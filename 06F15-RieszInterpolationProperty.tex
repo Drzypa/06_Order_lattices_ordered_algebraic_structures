@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RieszInterpolationProperty}
+\pmcreated{2013-03-22 17:04:22}
+\pmmodified{2013-03-22 17:04:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Riesz interpolation property}
+\pmrecord{7}{39365}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F15}
+\pmclassification{msc}{06A99}
+\pmclassification{msc}{06F20}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+The interpolation property, in its most general form, may be interpreted as follows: given a set $S$ and a transitive relation $\preceq$ defined on $S$, we say that $(S,\preceq)$, or $S$ for short, has the \emph{interpolation property} if for any $a,b\in S$ with $a\preceq b$, there is a $c\in S$ such that $a\preceq c\preceq b$.
+
+Let $P$ be a poset.  Let $\mathcal{A}$ be the set of all finite subsets of $P$.  Define $\preceq$ on $\mathcal{A}$ as follows: for any $A,B\in \mathcal{A}$, $A\preceq B$ iff $a\le b$ for every $a\in A$ and every $b\in B$.  It is not hard to see that $\preceq$ is a transitive relation on $\mathcal{A}$.  The following are equivalent:
+\begin{enumerate}
+\item $(\mathcal{A},\preceq)$ has the interpolation property
+\item for every pair of doubletons $\lbrace a_1,a_2\rbrace$ and $\lbrace b_1,b_2\rbrace$ with $a_i\le b_j$ for $i,j\in \mathbf{2}$, there is a $c\in P$ such that $a_i\le c\le b_j$ for $i,j\in \mathbf{2}$.
+\item for every pair of finite sets $\lbrace a_1,\ldots, a_n\rbrace$ and $\lbrace b_1,\ldots, b_m\rbrace$ with $a_i\le b_j$ for $i\in \mathbf{n}$ and $j\in \mathbf{m}$, there is a $c\in P$ such that $a_i\le c\le b_j$ for $i\in \mathbf{n}$, and $j\in \mathbf{m}$.
+\end{enumerate}
+
+Here, $\mathbf{n}$ denotes the set $\lbrace 1,\ldots,n\rbrace$.
+
+\begin{proof}
+Clearly $1\Rightarrow 2$ and $3\Rightarrow 1$.  To see that $2\Rightarrow 3$, we use induction twice: 
+
+if $\mathbf{n}=\mathbf{2}=\mathbf{m}$, then we are done.  Now, fix $\mathbf{n}=\mathbf{2}$ and induct on $\mathbf{m}$ first.  Let $i\in \mathbf{2}$.  If $a_i\le b_j$ for $j\in \mathbf{m+1}$, then $a_i\le b_j$ for $j\in \mathbf{m}$ in particular, so there is a $c\in P$ such that $a_i\le c\le b_j$ for $j\in \mathbf{m}$ (induction step).  This means $a_i\le c$ and $a_i\le b_{m+1}$.  Apply $2$ to get a $d\in P$ with $a_i\le d$ and $d\le c$ and $d\le b_{m+1}$.  As a result, $a_i\le d\le b_j$ for $j\in \mathbf{m+1}$.  
+
+Next, fix $\mathbf{m}$ and induct on $\mathbf{n}$.  Let $j\in \mathbf{m}$.  If $a_i\le b_j$ for $i\in \mathbf{n+1}$, then $a_i\le b_j$ for $i\in \mathbf{n}$ in particular, so there is an $e\in P$ such that $a_i\le e\le b_j$ for $i\in \mathbf{n}$ (induction step).  This means $a_{n+1}\le b_j$ and $e\le b_j$.  Apply the result from the previous induction step, we find an $f\in P$ such that $a_{n+1}\le f$ and $e\le f$ and $f\le b_j$.  As a result, $a_i\le f\le b_j$ for $i\in \mathbf{n+1}$.
+\end{proof}
+
+\textbf{Definition}.  A poset is said to have the \emph{Riesz interpolation property} if it satisfies any of the three equivalent conditions above.
+
+In other words, if one finite set, say $A$, is bounded above by another finite set $B$, then there is an element $c$ that serves as an upper bound for $A$ and a lower bound for $B$.  One readily sees that any lattice has the Riesz interpolation property.  In fact, a poset having the Riesz interpolation property can be thought of as an intermediate concept between an arbitrary poset and a lattice.
+
+A poset having the Riesz interpolation property can be illustrated by the following Hasse diagrams:
+\begin{equation*}
+\xymatrix @!=40pt {
+b_1 \ar@{-}[rd]|!{"2,1";"1,2"}\hole \ar@{-}[d] & b_2 \ar@{-}[ld] \ar@{-}[d] \\
+a_1 & a_2 }
+\xymatrix @!=7pt {
+& & \\
+& \mbox{ implies } & \\
+& & }
+\xymatrix @!=7pt {
+b_1 \ar@{-}[rd] & & b_2 \ar@{-}[ld] \\
+& c \ar@{-}[rd] \ar@{-}[ld] & \\
+a_1 & & a_2 }
+\end{equation*}
+
+\textbf{Remark}.  One can generalize the Riesz interpolation property on a poset $P$ to the \emph{countable interpolation property}, if $\mathcal{A}$ is to be the set of countable subsets of $P$, or a \emph{universal interpolation property}, if $\mathcal{A}=2^P$, the powerset of $P$.
+%%%%%
+%%%%%
+\end{document}

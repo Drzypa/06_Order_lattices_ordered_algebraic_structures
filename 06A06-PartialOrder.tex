@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialOrder}
+\pmcreated{2013-03-22 11:43:32}
+\pmmodified{2013-03-22 11:43:32}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{partial order}
+\pmrecord{24}{30123}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{35C10}
+\pmclassification{msc}{35C15}
+\pmclassification{msc}{55-01}
+\pmclassification{msc}{55-00}
+\pmsynonym{order}{PartialOrder}
+\pmsynonym{partial ordering}{PartialOrder}
+\pmsynonym{ordering}{PartialOrder}
+%\pmkeywords{relation}
+%\pmkeywords{total order}
+%\pmkeywords{transitivity}
+%\pmkeywords{reflexivity}
+%\pmkeywords{antisymmetry}
+\pmrelated{Relation}
+\pmrelated{TotalOrder}
+\pmrelated{Poset}
+\pmrelated{BinarySearch}
+\pmrelated{SortingProblem}
+\pmrelated{ChainCondition}
+\pmrelated{PartialOrderWithChainConditionDoesNotCollapseCardinals}
+\pmrelated{QuasiOrder}
+\pmrelated{CategoryAssociatedToAPartialOrder}
+\pmrelated{OrderingRelation}
+\pmrelated{HasseDiagram}
+\pmrelated{NetsAndClosuresOfSubspaces}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%%%%%\usepackage{xypic}
+\begin{document}
+A \emph{partial order} (often simply referred to as an \emph{order} or \emph{ordering}) is a relation $\leq\:\subset A\times A$ that satisfies the following three properties:
+
+\begin{enumerate}
+    \item Reflexivity: $a \leq a$ for all $a\in A$
+    \item Antisymmetry: If $a \leq b$ and $b \leq a$ for any $a, b\in A$, then $a = b$
+    \item Transitivity: If $a \leq b$ and $b \leq c$ for any $a, b, c\in A$, then $a \leq c$
+\end{enumerate}
+
+A \emph{total order} is a partial order that satisfies a fourth property known as \emph{comparability}:
+
+\begin{itemize}
+\item Comparability:  For any $a,b\in A$, either $a\leq b$ or $b\leq a$.
+\end{itemize}
+
+A set and a partial order on that set define a poset.
+
+\textbf{Remark}.  In some literature, especially those dealing with the foundations of mathematics, a partial order $\le$ is defined as a transitive irreflexive binary relation (on a set).  As a result, if $a\le b$, then $b \nleq a$, and therefore $\le$ is antisymmetric.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

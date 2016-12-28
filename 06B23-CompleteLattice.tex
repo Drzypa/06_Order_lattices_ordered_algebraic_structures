@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteLattice}
+\pmcreated{2013-03-22 12:56:44}
+\pmmodified{2013-03-22 12:56:44}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{complete lattice}
+\pmrecord{10}{33304}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B23}
+\pmclassification{msc}{03G10}
+\pmrelated{TarskiKnasterTheorem}
+\pmrelated{CompleteLatticeHomomorphism}
+\pmrelated{Domain6}
+\pmrelated{CompleteSemilattice}
+\pmrelated{InfiniteAssociativityOfSupremumAndInfimumRegardingItself}
+\pmrelated{CompleteBooleanAlgebra}
+\pmrelated{ArbitraryJoin}
+\pmdefines{countably complete lattice}
+\pmdefines{countably-complete lattice}
+\pmdefines{$\kappa$-complete}
+\pmdefines{$\kappa$-complete lattice}
+
+
+\begin{document}
+\section*{Complete lattices}
+
+A \emph{complete lattice} is a poset $P$
+such that every subset of $P$ has both a supremum and an infimum in $P$.
+
+For a complete lattice $L$,
+the supremum of $L$ is denoted by $1$,
+and the infimum of $L$ is denoted by $0$.
+Thus $L$ is a bounded lattice,
+with $1$ as its greatest element and $0$ as its least element.
+Moreover, $1$ is the infimum of the empty set,
+and $0$ is the supremum of the empty set.
+
+\section*{Generalizations}
+
+A \emph{countably complete lattice} is a poset $P$
+such that every countable subset of $P$
+has both a supremum and an infimum in $P$.
+
+Let $\kappa$ be an infinite cardinal.
+A $\kappa$-complete lattice is a lattice $L$
+such that for every subset $A\subseteq L$
+with $|A|\le \kappa$, both $\bigvee A$ and $\bigwedge A$ exist.
+(Note that an $\aleph_0$-complete lattice
+is the same as a countably complete lattice.)
+
+Every complete lattice is a \PMlinkescapetext{$\kappa$-complete lattice}
+for every infinite cardinal $\kappa$,
+and in particular is a countably complete lattice.
+Every countably complete lattice is a bounded lattice.
+
+
+%%%%%
+%%%%%
+\end{document}

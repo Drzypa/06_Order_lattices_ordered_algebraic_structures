@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonmodularSublattice}
+\pmcreated{2013-03-22 16:55:25}
+\pmmodified{2013-03-22 16:55:25}
+\pmowner{ixionid}{16766}
+\pmmodifier{ixionid}{16766}
+\pmtitle{nonmodular sublattice}
+\pmrecord{8}{39186}
+\pmprivacy{1}
+\pmauthor{ixionid}{16766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C05}
+%\pmkeywords{modular lattice sublattice}
+\pmrelated{ModularLattice}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Any nonmodular lattice $L$ contains the lattice $N_5$ (shown below) as a sublattice.
+$$ \xymatrix {
+& x\lor y \ar@{-}[ld] \ar@{-}[rdrd] & & \\
+(x\lor y)\land z \ar@{-}[dd] & & & \\
+& & & y \ar@{-}[ldld] \\
+x\lor (y\land z) \ar@{-}[rd] & & & \\
+& y\land z & & }  $$
+
+\begin{proof}
+Since $L$ is not modular, by definition it contains elements $x$, $y$ and $z$ such that $x\leq z$ and $x\lor (y\land z) < (x\lor y) \land z$.  Then the sublattice formed by $y$, $x\lor y$, $y\land z$, $(x\lor y)\land z$ and $x\lor (y\land z)$ is isomorphic to $N_5$.  This is because $y\land z\leq x\lor(y\land z)<(x\lor y)\land z\leq x\lor y$ while $[x\lor(y\land z)]\lor y=x\lor y$ by absorption and similarly $y\land[(x\lor y)\land z]=y\land z$. Moreover, $x\lor(y\land z)$ covers $y\land z$ since $y\land z=x\lor(y\land z)$ would imply $x\leq y\land z \leq y$, whence $x\lor y=y$ and $(x\lor y)\land z=y\land z=x\lor(y\land z)$ contrary to our hypothesis. By the same method, $ (x\lor y)\land z=x\lor y $ leads to a contradiction of nonmodularity, so $ x\lor y $ covers $ (x\lor y)\land z $.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

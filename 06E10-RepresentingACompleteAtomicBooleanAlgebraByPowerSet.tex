@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentingACompleteAtomicBooleanAlgebraByPowerSet}
+\pmcreated{2013-03-22 19:08:30}
+\pmmodified{2013-03-22 19:08:30}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{representing a complete atomic Boolean algebra by power set}
+\pmrecord{8}{42041}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E10}
+\pmrelated{RepresentingABooleanLatticeByFieldOfSets}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+It is a known fact that every Boolean algebra is isomorphic to a field of sets (of some set) (proof \PMlinkname{here}{RepresentingABooleanLatticeByFieldOfSets}).  In this entry, we show that, furthermore, if a Boolean algebra is atomic and complete, then it is isomorphic to \emph{the} field of sets of some set, in other words, the powerset of some set, viewed as a Boolean algebra via the usual set-theoretic operations of union, intersection, and complement.  
+
+The proof is based on the following function, defined for any atomic Boolean algebra:
+
+\textbf{Definition}.  Let $B$ be an atomic Boolean algebra, and $X$ \emph{the} set of its atoms.  Define $f: B\to P(X)$ by $$f(x):=\lbrace a \mid a\le x \rbrace.$$
+
+It is easy to see that $f(x)=\lbrace x\rbrace$ iff $x$ is an atom of $B$.
+
+\begin{prop} $f(x)$ and $f(x')$ are complement of one another in $X$. \end{prop}
+\begin{proof}  For any $a\in X$, $a\le 1=x\vee x'$, so that $a\le x$ or $a\le x'$, or $a\in f(x)$ or $a\in f(x')$.  This shows that $f(x)\cup f(x')=X$.  If $a\in f(x)\cap f(x')$, then $a\le x$ and $a\le x'$, so that $a\le x\wedge x'=0$, which is impossible, since $a$ is an atom, and by definition, must be greater than $0$.
+\end{proof}
+
+\begin{prop} $f$ is a Boolean algebra homomorphism.  \end{prop}
+\begin{proof} First, $f(x') = X-f(x)$ by the last proposition.
+
+Next, $f(x\vee y)= \lbrace a \mid a\le x\vee y \rbrace = \lbrace a \mid a\le x \mbox{ or } a\le y\rbrace$ since $a$ is an atom.  But the right hand side equals $\lbrace a\mid a\le x\rbrace \cup \lbrace a\mid a\le y \rbrace = f(x)\cup f(y)$, we see that $f$ preserves $\vee$. 
+
+Finally, $f(0)=\lbrace a\mid a\le 0\rbrace = \varnothing$ since any atom must be greater than $0$.
+
+Hence, $f$ is a Boolean algebra homomorphism.
+\end{proof}
+
+\begin{prop} $f$ is an injection. \end{prop}
+\begin{proof} Suppose $f(x)=\varnothing$.  If $x\ne 0$, then there must be some atom $a$ such that $a\le x$.  But this implies that $f(x)\ne \varnothing$, a contradiction.  Hence $x=0$ and $f$ is injective.  \end{proof}
+
+\begin{prop} $f$ is conditionally complete, in the sense that if $\bigvee A$ is defined for any $A\subseteq B$, then $$f(\bigvee A)=\bigcup \lbrace f(x)\mid x\in A\rbrace.$$ \end{prop}
+\begin{proof}  Suppose $y=\bigvee A$ and $Y=f(y)$.  Let $Z=\bigcup \lbrace f(x) \mid x\in A \rbrace$.  We want to show that $Y=Z$.  If $a\in Y$, then $a\le y$, or $a\le x$ for some $x \in A$, since $a$ is an atom.  So $a\in f(x)\subseteq Z$.  Conversely, if $a\in Z$, then $a\in f(x)$, or $a\le x$ for some $x\in A$.  This means that $a\le x \le \bigvee A =y$, and therefore $a\in f(y)=Y$.
+\end{proof}
+
+\begin{prop} If $B$ is complete, so is $f$.  Moreover, $f$ is surjective.  \end{prop}
+\begin{proof} The first sentence is a direct consequence of the previous proposition.  For the second setnence, let $Y\in P(X)$.  Let $y=\bigvee Y$.  $x$ exists because $B$ is complete.  So $f(y)=f(\bigvee Y) = \bigcup \lbrace f(x) \mid x \in Y \rbrace = \bigcup \lbrace \lbrace x\rbrace \mid x\in Y\rbrace = Y$, since each $x\in Y$ is an atom.  \end{proof}
+
+Rewording the above proposition, we have
+\begin{thm} Any complete atomic Boolean algebra is isomorphic (as complete Boolean algebras) to the powerset of some set, namely, the set of all of its atoms.  \end{thm}
+
+A useful application of this representation theorem is the following:
+\begin{cor} The cardinality of a finite Boolean algebra is a power of $2$. \end{cor}
+\begin{proof} Every finite Boolean algebra is complete and atomic, and hence isomorphic to the powerset of a set, which is also finite, and the result follows. \end{proof}
+
+\textbf{Remark}.  The proof does not depend on the representation of a Boolean algebra by a field of sets.
+%%%%%
+%%%%%
+\end{document}

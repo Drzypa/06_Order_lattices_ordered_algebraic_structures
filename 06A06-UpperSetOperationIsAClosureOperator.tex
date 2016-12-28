@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UpperSetOperationIsAClosureOperator}
+\pmcreated{2013-03-22 16:41:43}
+\pmmodified{2013-03-22 16:41:43}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{upper set operation is a closure operator}
+\pmrecord{8}{38908}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\up}{\uparrow\!\!}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+In this entry, we shall prove the assertion made in
+the \PMlinkname{main entry}{UpperSet} that $\uparrow$
+is a closure operator.  This will be done by checking 
+that the defining properties are satisfied.  To begin,
+recall the definition of our operation:
+
+\begin{definition}
+Let $P$ be a poset and $A$ a subset of $P$. The \emph{upper set} 
+of $A$ is defined to be the set
+\[
+\up A = \lbrace b \in P \mid (\exists \, a \in A) \, 
+a \le b \rbrace
+\]
+\end{definition}
+
+Now, we verify each of the properties which is required
+of a closure operator.
+
+\begin{theorem}
+$\up \emptyset = \emptyset$
+\end{theorem}
+
+\begin{proof}
+Any statement of the form ``$(\exists \, a \in \emptyset) P(a)$'' 
+is identically false no matter what the predicate $P$ (i.e. it is 
+an antitautology) and the set of objects satsfying an identically
+false condition is empty, so $\up \emptyset = \emptyset$.
+\end{proof}
+
+\begin{theorem}
+$A\subseteq \up A$
+\end{theorem}
+
+\begin{proof}
+This follows from reflexivity --- for every $a \in A$, one has
+$a \le a$, hence $a \in \up A$.
+\end{proof}
+
+\begin{theorem}
+$\uparrow \up A=\up A$
+\end{theorem}
+
+\begin{proof}
+By the previous result, $\up A \subseteq \uparrow \up A$.  Hence, 
+it only remains to show that $\uparrow \up A \subseteq \up A$.
+This follows from transitivity.  In order for some $a$ to
+be an element of $\uparrow \up A$, there must exist $b$ and $c$
+such that $a \ge b \ge C$ and $C \in A$.  By transitivity, $A \ge C$,
+so $a \in \up A$, hence $\uparrow \up A \subseteq \up A$ as well.
+\end{proof}
+
+\begin{theorem}
+If $A$ and $B$ are subsets of a partially ordered set, then
+\[
+\up (A \cup B) = (\up A) \cup (\up B)
+\]
+\end{theorem}
+
+\begin{proof}
+On the one hand, if $a \in \up (A \cup B)$, then $a \ge b$ for
+some $b \in A \cup B$.  It then follows that either $b \in A$
+or $b \in B$.  In the former case, $a \in \up A$, in the latter
+case, $a \in \up B$ so, either way $a \in (\up A) \cup (\up B)$.
+Hence $\up (A \cup B) \subseteq (\up A) \cup (\up B)$.
+
+On the other hand, if $a \in (\up A) \cup (\up B)$, then either
+$a \in (\up A)$ or $a \in (\up B)$.  In the former case, there 
+exists $b$ such that $a \ge b$ and $b \in A$.  Since $A \subseteq
+A \cup B$, we also have $b \in A \cup B$, hence $a \in \up
+(A \cup B)$.  Likewise, in the second case, we also conclude
+that $a \in \up (A \cup B)$.  Therefore, we have 
+$(\up A) \cup (\up B) \subseteq \up (A \cup B)$.
+\end{proof}
+
+\begin{theorem}
+$\up P = P$
+\end{theorem}
+
+\begin{theorem}
+$A\subseteq B$, $\up A\subseteq \up B$
+\end{theorem}
+%%%%%
+%%%%%
+\end{document}

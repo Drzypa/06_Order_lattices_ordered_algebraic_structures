@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartiallyOrderedAlgebraicSystem}
+\pmcreated{2013-03-22 19:03:19}
+\pmmodified{2013-03-22 19:03:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{partially ordered algebraic system}
+\pmrecord{8}{41935}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F99}
+\pmclassification{msc}{08C99}
+\pmclassification{msc}{08A99}
+\pmrelated{AlgebraicSystem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $A$ be a poset.  Recall a function $f$ on $A$ is said to be 
+\begin{itemize}
+\item order-preserving (or isotone) provided that $f(a)\le f(b)$, or 
+\item order-reversing (or antitone) provided that $f(a)\ge f(b)$, or
+\end{itemize}
+whenever $a\le b$.  Furthermore, $f$ is called monotone if $f$ is either isotone or antitone.  
+
+For every function $f$ on $A$, we denote it to be $\uparrow$, $\downarrow$, or $\updownarrow$ according to whether it is isotone, antitone, or both.  The following are some easy consequences:
+\begin{itemize}
+\item $\uparrow \circ \downarrow = \downarrow \circ \uparrow = \downarrow$ (meaning that the composition of an isotone and an antitone maps is antitone), 
+\item $\uparrow \circ \uparrow = \downarrow \circ \downarrow = \uparrow$ (meaning that the composition of two isotone or two antitone maps is isotone),
+\item $f$ is $\updownarrow$ iff it is a constant on any chain in $A$, and if this is the case, for every $a\in A$, $f^{-1}(a)$ is a maximal chain in $A$.
+\end{itemize}
+
+The notion above can be generalized to $n$-ary operations on a poset $A$.  An $n$-ary operation $f$ on a poset $A$ is said to be \emph{isotone}, \emph{antitone}, or \emph{monotone} iff when $f$ is isotone, antitone, or monotone with respect to each of its $n$ variables.  We continue to use to arrow notations above to denote $n$-ary monotone functions.  For example, a ternary function that is $(\uparrow,\downarrow,\uparrow)$ is isotone with respect to its first and third variables, and antitone with respect to its second variable.
+
+\textbf{Definition}.  A \emph{partially ordered algebraic system} is an algebraic system $\mathcal{A}=(A,O)$ such that $A$ is a poset, and every operation $f \in O$ on $A$ is monotone.  A partially ordered algebraic system is also called a partially ordered algebra, or a po-algebra for short.
+
+Examples of po-algebras are po-groups, po-rings, and po-semigroups.  In all three cases, the multiplication operations are $(\uparrow,\uparrow)$, as well as the addition operation in a po-ring..  In the case of a po-group, the 
+multiplicative inverse operation is $\downarrow$, as well as the additive inverse operation in a po-ring.
+
+Another example is an ordered vector space $V$ over a field $k$.  The underlying universe is $V$ (not $k$).  Addition over $V$ is, like the other examples above, isotone.  Each element $r\in k$ acts as a unary operator on $V$, given by $r(v)=rv$, the scalar multiplication of $r$ and $v$.  As $k$ is itself a poset, it can be partitioned into three sets: the positive cone $P(k)$ of $k$, the negative cone $-P(k)$, and $\lbrace 0\rbrace$.  Then $r\in P(k)$ iff it is $\uparrow$ as a unary operator, $r\in -P(k)$ iff it is $\downarrow$, and $r=0$ iff it is $\updownarrow$.
+
+\textbf{Remarks}
+\begin{itemize}
+\item A homomorphism from one po-algebra $\mathcal{A}$ to another $\mathcal{B}$ is an isotone map $\phi$ from posets $A$ to $B$ that is at the same time a homomorphism from the algebraic systems $\mathcal{A}$ to $\mathcal{B}$.
+\item A partially ordered subalgebra of a po-algebra $\mathcal{A}$ is just a subalgebra of $\mathcal{A}$ viewed as an algebra, where the partial ordering on the universe of the subalgebra is inherited from the partial ordering on $A$.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{LF} L. Fuchs, {\em Partially Ordered Algebraic Systems}, Addison-Wesley, (1963).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

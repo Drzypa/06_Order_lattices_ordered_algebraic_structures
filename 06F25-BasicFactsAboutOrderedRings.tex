@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BasicFactsAboutOrderedRings}
+\pmcreated{2013-03-22 16:17:21}
+\pmmodified{2013-03-22 16:17:21}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{basic facts about ordered rings}
+\pmrecord{11}{38405}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F25}
+\pmclassification{msc}{12J15}
+\pmclassification{msc}{13J25}
+\pmrelated{MathbbCIsNotAnOrderedField}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{lem}{Lemma}
+
+\begin{document}
+Throughout this entry, $(R, \le)$ is an ordered ring.
+
+\begin{lem}
+If $a,b,c \in R$ with $a<b$, then $a+c<b+c$.
+\end{lem}
+
+\begin{proof}
+The contrapositive will be proven.
+
+Let $a,b,c \in R$ with $a+c \ge b+c$.  Note that $-c \in R$.  Thus,
+
+\begin{center}
+$\begin{array}{rl}
+b & =b+0 \\
+& =b+c+(-c) \\
+& \le a+c+(-c) \\
+& =a+0 \\
+& =a. \qedhere \end{array}$
+\end{center}
+\end{proof}
+
+\begin{lem}
+If $|R| \neq 1$ and $R$ has a characteristic, then it must be $0$.
+\end{lem}
+
+\begin{proof}
+Suppose not.  Let $n$ be a positive integer such that $\operatorname{char}~R=n$.    Since $|R| \neq 1$, it must be the case that $n>1$.
+
+Let $r \in R$ with $r>0$.  By the previous lemma, $\displaystyle 0<r \le \ldots \le \sum_{j=1}^{n-1} r \le \sum_{j=1}^n r=0$, a contradiction.
+\end{proof}
+
+\begin{lem}
+If $a,b \in R$ with $a \le b$ and $c \in R$ with $c<0$, then $ac \ge bc$.
+\end{lem}
+
+\begin{proof}
+Note that $-c \in R$ and $0=c+(-c)<0+(-c)=-c$.  Since $a \le b$, $-(ac)=a(-c) \le b(-c)=-(bc)$.  Thus,
+
+\begin{center}
+$\begin{array}{rl}
+bc & =bc+0 \\
+& =bc+(ac+(-(ac))) \\
+& =(bc+ac)+(-(ac)) \\
+& \le (bc+ac)+(-(bc)) \\
+& =-(bc)+(bc+ac) \\
+& =(-(bc)+bc)+ac \\
+& =0+ac \\
+& =ac. \qedhere \end{array}$
+\end{center}
+\end{proof}
+
+\begin{lem}
+Suppose further that $R$ is a ring with multiplicative identity $1 \neq 0$.  Then $0<1$.
+\end{lem}
+
+\begin{proof}
+Suppose that $0 \not< 1$.  Since $R$ is an ordered ring, it must be the case that $1<0$.  By the previous lemma, $1 \cdot 1 \ge 0 \cdot 1$.  Thus, $1 \ge 0$, a contradiction.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DimensionOfAPoset}
+\pmcreated{2013-03-22 16:33:29}
+\pmmodified{2013-03-22 16:33:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{dimension of a poset}
+\pmrecord{7}{38744}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{06A07}
+\pmdefines{dimension}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $P$ be a finite poset and $\mathcal{R}$ be the family of all realizers of $P$.  The \emph{dimension} of $P$, written $\operatorname{dim}(P)$, is the cardinality of a member $E\in \mathcal{R}$ with the smallest cardinality.  In other words, the dimension $n$ of $P$ is the least number of linear extensions $L_1,\ldots,L_n$ of $P$ such that $P=L_1\cap \cdots \cap L_n$.  ($E$ can be chosen to be $\lbrace L_1,\ldots, L_n\rbrace$).
+
+If $P$ is a chain, then $\operatorname{dim}(P)=1$.  The converse is clearly true too.  An example of a poset with dimension 2 is an antichain with at least $2$ elements.  For if $P=\lbrace a_1,\ldots, a_m\rbrace$ is an antichain, then one way to linearly extend $P$ is to simply put $a_i\le a_j$ iff $i\le j$.  Called this extension $L_1$.  Another way to order $P$ is to reverse $L_1$, by $a_i\le a_j$ iff $j\le i$.  Call this $L_2$.  Note that $L_1$ and $L_2$ are duals of each other.  Let $L=L_1\cap L_2$.  As both $L_1$ and $L_2$ are linear extensions of $P$, $P\subseteq L$.  On the other hand, if $(a_i,a_j)\in L$, then $a_i\le a_j$ in both $L_1$ and $L_2$, so that $i\le j$ and $j\le i$, or $i=j$ and whence $a_i=a_j$, which implies $(a_i,a_j)=(a_i,a_i)\in P$.  $L\subseteq P$ and thus $\operatorname{dim}(P)=2$.
+
+\textbf{Remark}.  Let $P$ be a finite poset.  A theorem of Dushnik and Miller states that the smallest $n$ such that $P$ can be embedded in $\mathbb{R}^n$, considered as the $n$-fold product of posets, or chains of real numbers $\mathbb{R}$, is the dimension of $P$.
+
+\begin{thebibliography}{8}
+\bibitem{wt} W. T. Trotter, {\em Combinatorics and Partially Ordered Sets}, Johns-Hopkins University Press, Baltimore (1992).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

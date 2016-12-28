@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalVectorLattice}
+\pmcreated{2013-03-22 17:03:51}
+\pmmodified{2013-03-22 17:03:51}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{topological vector lattice}
+\pmrecord{6}{39356}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{46A40}
+\pmdefines{locally solid}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A \emph{topological vector lattice} $V$ over $\mathbb{R}$ is
+\begin{itemize}
+\item a Hausdorff topological vector space over $\mathbb{R}$,
+\item a vector lattice, and
+\item \emph{locally solid}.  This means that there is a neighborhood base of $0$ consisting of solid sets.
+\end{itemize}
+
+\begin{prop}  A topological vector lattice $V$ is a topological lattice.\end{prop}
+
+Before proving this, we show the following equivalence on the continuity of various operations on a vector lattice $V$ that is also a topological vector space.  
+\begin{lem} Let $V$ be a vector lattice and a topological vector space.  The following are equivalent:
+\begin{enumerate}
+\item $\vee:V^2\to V$ is continuous (simultaneously in both arguments)
+\item $\wedge:V^2\to V$ is continuous (simultaneously in both arguments)
+\item $^+:V\to V$ given by $x^+:=x\vee 0$ is continuous
+\item $^-:V\to V$ given by $x^-:=-x\vee 0$ is continuous
+\item $|\cdot|:V\to V$ given by $|x|:=-x\vee x$ is continuous
+\end{enumerate}
+\end{lem}
+\begin{proof}
+$(1\Leftrightarrow 2)$.  If $\vee$ is continuous, then $x\wedge y=x+y-x\vee y$ is continuous too, as $+$ and $-$ are both continuous under a topological vector space.  This proof works in reverse too.  $(1\Rightarrow 3)$, $(1\Rightarrow 4)$, and $(3\Leftrightarrow 4)$ are obvious.  To see $(4\Rightarrow 5)$, we see that $|x|=x^++x^-$, since $^-$ is continuous, $^+$ is continuous also, so that $|\cdot|$ is continuous.  To see $(5\Rightarrow 4)$, we use the identity $x=x^+-x^-$, so that $|x|=(x+x^-)+x^-$, which implies $x^-=\frac{1}{2}(|x|-x)$ is continuous.  Finally, $(3\Rightarrow 1)$ is given by $x\vee y=(x-y+y)\vee (0+y)=(x-y)\vee 0+y=(x-y)^++y$, which is continuous.
+\end{proof}
+In addition, we show an important inequality that is true on any vector lattice:
+\begin{lem} Let $V$ be a vector lattice.  Then $|a^+-b^+|\le |a-b|$ for any $a,b\in V$. \end{lem}
+\begin{proof}
+$|a^+-b^+|=(b^+-a^+)\vee (a^+-b^+)=(b\vee 0-a\vee 0)\vee(a\vee 0-b\vee 0)$.  Next, $a\vee 0 - b\vee 0 = (b+(-a\wedge 0)\vee (-a\wedge 0)=((b-a)\wedge b)\vee (-a\wedge 0)$ so that $|a^+-b^+|=((b-a)\wedge b)\vee (-a\wedge 0)\vee ((a-b)\wedge a)\vee (-b\wedge 0)\le (b-a)\vee (-a\wedge 0)\vee (a-b)\vee (-b\wedge 0)$.  Since $(b-a)\vee (a-b)=|a-b|$ and $a\vee 0$ are both in the positive cone of $V$, so is their sum, so that $0\le (b-a)\vee (a-b)+(a\vee 0)=(b-a)\vee (a-b)-(-a\wedge 0)$, which means that $(-a\wedge 0)\le (b-a)\vee (a-b)$.  Similarly, $(-b\wedge 0)\le (b-a)\vee (a-b)$.  Combining these two inequalities, we see that $|a^+-b^+|\le (b-a)\vee (-a\wedge 0)\vee (a-b)\vee (-b\wedge 0) \le (b-a)\vee (a-b)=|a-b|$.
+\end{proof}
+
+We are now ready to prove the main assertion.
+\begin{proof}
+To show that $V$ is a topological lattice, we need to show that the lattice operations meet $\wedge$ and join $\vee$ are continuous, which, by Lemma 1, is equivalent in showing, say, that $^+$ is continuous.  Suppose $N$ is a neighborhood base of 0 consisting of solid sets.  We prove that $^+$ is continuous.  This amounts to showing that if $x$ is close to $x_0$, then $x^+$ is close to $x_0^+$, which is the same as saying that if $x-x_0$ is in a solid neighborhood $U$ of $0$ ($U\in N$), then so is $x^+-x_0^+$ in $U$.  Since $x-x_0\in U$, $|x-x_0|\in U$.  But $|x^+-x_0^+|\le |x-x_0|$ by Lemma 2, and $U$ is solid, $x^+-x_0^+\in U$ as well, and therefore $^+$ is continuous.
+\end{proof}
+
+As a corollary, we have
+\begin{prop}  A topological vector lattice is an ordered topological vector space.  \end{prop}
+\begin{proof}  All we need to show is that the positive cone is a closed set.  But the positive cone is defined as $\lbrace x\mid 0\le x\rbrace = \lbrace x\mid x^-=0\rbrace$, which is closed since $^-$ is continuous, and the positive cone is the inverse image of a singleton, a closed set in $\mathbb{R}$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

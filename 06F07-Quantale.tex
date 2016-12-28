@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Quantale}
+\pmcreated{2013-03-22 17:00:08}
+\pmmodified{2013-03-22 17:00:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{quantale}
+\pmrecord{12}{39284}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F07}
+\pmsynonym{standard Kleene algebra}{Quantale}
+\pmdefines{quantale homomorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A \emph{quantale} $Q$ is a set with three binary operations on it: $\wedge,\vee$, and $\cdot$, such that 
+\begin{enumerate}
+\item $(Q,\wedge,\vee)$ is a complete lattice (with $0$ as the bottom and $1$ as the top), and
+\item $(Q,\cdot)$ is a monoid (with $1'$ as the identity with respect to $\cdot$), such that
+\item $\cdot$ distributes over arbitrary joins; that is, for any $a\in Q$ and any subset $S\subseteq Q$,
+$$a\cdot\big(\bigvee S\big)=\bigvee \lbrace a\cdot s\mid s\in S\rbrace\quad\mbox{ and }\quad \big(\bigvee S\big) \cdot a=\bigvee \lbrace s \cdot a\mid s\in S\rbrace.$$
+\end{enumerate}
+It is sometimes convenient to drop the multiplication symbol, when there is no confusion.  So instead of writing $a\cdot b$, we write $ab$.
+
+The most obvious example of a quantale comes from ring theory.  Let $R$ be a commutative ring with $1$.  Then $L(R)$, the lattice of ideals of $R$, is a quantale.  
+\begin{proof}
+In addition to being a (complete) lattice, $L(R)$ has an inherent multiplication operation induced by the multiplication on $R$, namely, $$IJ:=\lbrace \sum_{i=1}^n r_is_i\mid r_i\in I\mbox{ and }s_i\in J\mbox{, }n\in\mathbb{N}\rbrace,$$ making it into a semigroup under the multiplication.  
+
+Now, let $S=\lbrace I_i\mid i\in N\rbrace$ be a set of ideals of $R$ and let $I=\bigvee S$.  If $J$ is any ideal of $R$, we want to show that $IJ=\bigvee \lbrace I_iJ\mid i\in N\rbrace$ and, since $R$ is commutative, we would have the other equality $JI=\bigvee \lbrace JI_i\mid i\in N \rbrace$.  To see this, let $a\in IJ$.  Then $a=\sum r_is_i$ with $r_i\in I$ and $s_i\in J$.  Since each $r_i$ is a finite sum of elements of $\bigcup S$, $r_is_i$ is a finite sum of elements of $\bigcup\lbrace I_iJ\mid i\in N\rbrace$, so $a\in \bigvee \lbrace I_iJ\mid i\in N\rbrace$.  This shows $IJ\subseteq \bigvee \lbrace I_iJ\mid i\in N\rbrace$.  Conversely, if $a\in \bigvee \lbrace I_iJ\mid i\in N\rbrace$, then $a$ can be written as a finite sum of elements of $\bigcup \lbrace I_iJ\mid i\in N\rbrace$.  In turn, each of these additive components is a finite sum of products of the form $r_ks_k$, where $r_k\in I_i$ for some $i$, and $s_k\in J$.  As a result, $a$ is a finite sum of elements of the form $r_ks_k$, so $a\in IJ$ and we have the other inclusion $\bigvee \lbrace I_iJ\mid i\in N\rbrace \subseteq IJ$.
+
+Finally, we observe that $R$ is the multiplicative identity in $L(R)$, as $IR=RI=I$ for all $I\in L(R)$.  This completes the proof.
+\end{proof}
+
+\textbf{Remark}.  In the above example, notice that $IJ\le I$ and $IJ\le J$, and we actually have $IJ\le I\wedge J$.  In particular, $I^2\le I$.  With an added condition, this fact can be characterized in an arbitrary quantale (see below).
+
+\textbf{Properties}.  Let $Q$ be a quantale.
+\begin{enumerate}
+\item
+Multiplication is monotone in each argument.  This means that if $a,b\in Q$, then $a\le b$ implies that $ac\le bc$ and $ca\le cb$ for all $c\in Q$.  This is easily verified.  For example, if $a\le b$, then $ac\vee bc=(a\vee b)c=bc$, so $ac\le bc$.  So a quantale is a partially ordered semigroup, and in fact, an l-monoid (an l-semigroup and a monoid at the same time).
+\item
+If $1=1'$, then $ab\le a\wedge b$: since $a\le 1$, then $ab\le a1=a1'=a$; similarly, $b\le ab$.  In particular, the bottom $0$ is also the multiplicative zero: $a0\le a\wedge 0=0$, and $0a=0$ similarly.
+\item
+Actually, $a0=0a=0$ is true even without $1=1'$: since $a\varnothing=\lbrace ab\mid b\in \varnothing\rbrace = \varnothing$ and $0:=\bigvee \varnothing$, we have $a0=a\bigvee \varnothing=\bigvee a\varnothing=\bigvee\varnothing=0$.  Similarly $0a=0$.  So a quantale is a semiring, if $\vee$ is identified as $+$ (with $0$ as the additive identity), and $\cdot$ is again $\cdot$ (with $1'$ the multiplicative identity).
+\item
+Viewing quantale $Q$ now as a semiring, we see in fact that $Q$ is an idempotent semiring, since $a+a=a\vee a=a$.
+\item
+Now, view $Q$ as an i-semiring.  For each $a\in Q$, let $S=\lbrace 1',a,a^2,\ldots\rbrace$ and define $a^*=\bigvee S$.  We observe some basic properties
+\begin{itemize}
+\item $1'+aa^*=a^*$: since $1'\vee (a\bigvee S)=1'\vee (\bigvee \lbrace a1',aa,aa^2,\ldots\rbrace) = \bigvee \lbrace 1',a,a^2,\ldots \rbrace = \bigvee S=a^*$
+\item $1'+a^*a=a^*$ as well
+\item if $ab\le b$, then $a^*b\le b$: by induction on $n$, we have $a^nb\le b$ whenever $a\le b$, so that $a^*b=\bigvee \lbrace a^nb\mid n\in \mathbb{N}\cup \lbrace 0\rbrace \rbrace \le b$.
+\item similarly, if $ba\le b$, then $ba^*\le b$
+\end{itemize}
+All of the above properties satisfy the conditions for an i-semiring to be a Kleene algebra.  For this reason, a quantale is sometimes called a \emph{standard Kleene algebra}.
+\item
+Call the multiplication \emph{idempotent} if each element is an idempotent with respect to the multiplication: $aa=a$ for any $a\in Q$.  If $\cdot$ is idempotent and $1=1'$, then $\cdot =\wedge$.  In other words, $ab=a\wedge b$.  
+\begin{proof}
+As we have seen, $ab\le a\wedge b$ in the 2 above.  Now, suppose $c\le a\wedge b$.  Then $c\le a$ and $c\le b$, so $c=c^2\le cb\le ab$.  So $ab$ is the greatest lower bound of $a$ and $b$, i.e., $ab=a\wedge b$.  This also means that $ba=b\wedge a=a\wedge b=ab$.
+\end{proof}
+\item
+In fact, a locale is a quantale if we define $\cdot:=\wedge$.  Conversely, a quantale where $\cdot$ is idempotent and $1=1'$ is a locale.
+\begin{proof}
+If $Q$ is a locale with $\cdot=\wedge$, then $aa=a\wedge a=a$ and $a1=a\wedge 1=a=1\wedge a=1a$, implying $1=1'$.  The infinite distributivity of $\cdot$ over $\vee$ is just a restatement of the infinite distributivity of $\wedge$ over $\vee$ in a locale.  Conversely, if $\cdot$ is idempotent and $1=1'$, then $\cdot=\wedge$ as shown previously, so $a\wedge (\bigvee S)=a (\bigvee S)=\bigvee \lbrace as\mid s\in S\rbrace =\bigvee \lbrace a\wedge s\mid s\in S\rbrace$.  Similarly $(\bigvee S) \wedge a = \bigvee \lbrace s\wedge a\mid s\in S\rbrace$.  Therefore, $Q$ is a locale.
+\end{proof}
+
+\end{enumerate}
+
+\textbf{Remark}.  A \emph{quantale homomorphism} between two quantales is a complete lattice homomorphism and a monoid homomorphism at the same time.
+
+\begin{thebibliography}{8}
+\bibitem{sv} S. Vickers, {\em Topology via Logic}, Cambridge University Press, Cambridge (1989).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

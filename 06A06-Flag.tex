@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Flag}
+\pmcreated{2013-03-22 12:42:35}
+\pmmodified{2013-03-22 12:42:35}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{flag}
+\pmrecord{9}{32994}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{15A03}
+\pmdefines{adapted basis}
+\pmdefines{complete flag}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{#1}{#2}}
+\begin{document}
+Let $V$ be a finite-dimensional vector space.  A filtration of
+subspaces
+$$V_1\subset V_2\subset\cdots \subset V_n= V$$
+is called a \emph{flag} in $V$.
+We speak of a {\em complete flag} when
+$$\dim V_i = i$$
+for each $i=1,\ldots,n$.
+
+Next, putting
+$$d_k = \dim V_k,\quad k=1,\ldots n,$$
+we say that a list of vectors
+$(u_1,\ldots,u_{d_n})$ is an \emph{adapted basis} relative to the flag, if
+the first $d_1$ vectors give a basis of $V_1$, the first $d_2$ vectors
+give a basis of $V_2$, etc.  Thus, an alternate characterization of a
+complete flag, is that the first $k$ elements of an adapted basis are
+a basis of $V_k$.
+
+\paragraph{Example}
+Let us consider $\reals^n$.  For each $k=1,\ldots,n$ let $V_k$ be the
+span of $e_1,\ldots,e_k$, where $e_j$ denotes the $j\supth$ basic
+vector, i.e. the column vector with $1$ in the $j\supth$ position and
+zeros everywhere else.  The $V_k$ give a complete flag in $\reals^n$ .
+The list $(e_1,e_2,\ldots, e_n)$ is an adapted basis relative to this
+flag, but the list $(e_2,e_1,\ldots,e_n)$ is not.
+
+\paragraph{Generalizations.}
+More generally, a flag can be defined as a maximal chain in a partially ordered set.   If one considers the poset consisting of subspaces of a (finite dimensional) vector space, one recovers the definition given above.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BooleanPrimeIdealTheorem}
+\pmcreated{2013-03-22 18:45:52}
+\pmmodified{2013-03-22 18:45:52}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Boolean prime ideal theorem}
+\pmrecord{10}{41545}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E05}
+\pmclassification{msc}{03G05}
+\pmclassification{msc}{03E25}
+\pmsynonym{BPI}{BooleanPrimeIdealTheorem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $A$ be a Boolean algebra.  Recall that an ideal $I$ of $A$ if it is closed under $\vee$, and for any $a\in I$ and $b\in A$, $a\wedge b\in I$.  $I$ is proper if $I\ne A$ and non-trivial if $I\ne (0)$, and $I$ is prime if it is proper, and, given $a\wedge b\in I$, either $a\in I$ or $b\in I$.
+
+\begin{thm}[Boolean prime ideal theorem]  Every Boolean algebra contains a prime ideal.
+\end{thm}
+
+\begin{proof}  Let $A$ be a Boolean algebra.  If $A$ is trivial (the two-element algebra), then $(0)$ is the prime ideal we want.  Otherwise, pick $a\in A$, where $0\ne a\ne 1$, and let be the trivial ideal.  By Birkhoff's prime ideal theorem for distributive lattices, $A$, considered as a distributive lattice, has a prime ideal $P$ (containing $(0)$ obviously) such that $a\notin P$.  Then $P$ is also a prime ideal of $A$ considered as a Boolean algebra.
+\end{proof}
+
+There are several equivalent versions of the Boolean prime ideal theorem, some are listed below:
+\begin{enumerate}
+\item Every Boolean algebra has a prime ideal.
+\item Every ideal in a Boolean algebra can be enlarged to a prime ideal.
+\item Given a set $S$ in a Boolean algebra $A$, and an ideal $I$ disjoint from $S$, then there is a prime ideal $P$ containing $I$ and disjoint from $S$.
+\item An ideal and a filter in a Boolean algebra, disjoint from one another, can be enlarged to an ideal and a filter that are complement (as sets) of one another.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+Because the Boolean prime ideal theorem has been extensively studied, it is often abbreviated in the literature as BPI.  Since the prime ideal theorem for distributive lattices uses the axiom of choice, ZF+AC implies BPI.  However, there are models of ZF+BPI where AC fails.
+\item
+It can be shown (see John Bell's online article \PMlinkexternal{here}{http://plato.stanford.edu/entries/axiom-choice/}) that BPI is equivalent, under ZF, to some of the well known theorems in mathematics:
+\begin{itemize}
+\item Tychonoff's theorem for Hausdorff spaces: the product of compact Hausdorff spaces is compact under the product topology,
+\item the Stone representation theorem,
+\item the \PMlinkname{compactness theorem}{CompactnessTheoremForFirstOrderLogic} for first order logic, and
+\item the completeness theorem for first order logic.
+\end{itemize}
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{gg} G. Gr\"{a}tzer, {\em General Lattice Theory}, 2nd Edition, Birkh\"{a}user (1998).
+\bibitem{tjj} T. J. Jech, \emph{The Axiom of Choice}, North-Holland Pub. Co., Amsterdam, (1973).
+\bibitem{rs} R. Sikorski, {\em Boolean Algebras}, 2nd Edition, Springer-Verlag, New York (1964).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

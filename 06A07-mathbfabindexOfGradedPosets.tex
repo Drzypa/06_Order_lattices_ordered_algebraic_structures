@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{mathbfabindexOfGradedPosets}
+\pmcreated{2013-03-22 15:46:47}
+\pmmodified{2013-03-22 15:46:47}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{$\mathbf{ab}$-index of graded posets}
+\pmrecord{6}{37737}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A07}
+\pmsynonym{ab-index}{mathbfabindexOfGradedPosets}
+\pmsynonym{cd-index}{mathbfabindexOfGradedPosets}
+\pmsynonym{$\mathbf{ab}$-index}{mathbfabindexOfGradedPosets}
+\pmsynonym{$\mathbf{cd}$-index}{mathbfabindexOfGradedPosets}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\aaa}{\mathbf{a}}
+\newcommand{\bbb}{\mathbf{b}}
+\newcommand{\ccc}{\mathbf{c}}
+\newcommand{\ddd}{\mathbf{d}}
+\begin{document}
+Let $P$ be a graded poset of rank $n+1$ 
+with a $\hat{0}$ and a $\hat{1}$.
+Let $\rho\colon P\to\mathbb{N}$ be the rank function of $P$.
+The {\em $\mathbf{ab}$-index} of $P$ with coefficients in 
+the ring $R$ is a noncommutative polynomial $\Psi(P)$ in
+the free associative algebra 
+$R\langle\mathbf{a},\mathbf{b}\rangle$ defined by the formula
+\[
+\Psi(P)=\sum_{c=\{\hat{0}=x_0<x_1<\dots<x_k=\hat{1}\}}w(c),
+\]
+with the weight of a chain $c$ defined by 
+$w(c)=z_1\cdots z_n$, where
+\[
+z_i=\begin{cases}
+\bbb,   & i\in\rho(x_0,\dots,x_k) \\
+\aaa-\bbb, & \text{otherwise}.
+\end{cases}
+\]
+
+Let us compute $\Psi$ in a simple example.  Let $P_n$ be the
+face lattice of an $n$-gon.  Below we display $P_5$.
+\[\xymatrix{
+ &  & 
+\hat{1}\ar@{-}[lld]\ar@{-}[ld]\ar@{-}[d]\ar@{-}[rd]\ar@{-}[rrd] &  &  \\
+\{p,q\}\ar@{-}[d]\ar@{-}[rrrrd] & 
+\{q,r\}\ar@{-}[ld]\ar@{-}[d] & 
+\{r,s\}\ar@{-}[ld]\ar@{-}[d] & 
+\{s,t\}\ar@{-}[ld]\ar@{-}[d] & 
+\{t,u\}\ar@{-}[ld]\ar@{-}[d] \\
+\{p\}\ar@{-}[rrd] & 
+\{q\}\ar@{-}[rd] & 
+\{r\}\ar@{-}[d] & 
+\{s\}\ar@{-}[ld] & 
+\{t\}\ar@{-}[lld] \\
+ &  & \hat{0} &  & 
+}\]
+Thus $P_n$ has 
+$n$ atoms, corresponding to vertices, and $n$ coatoms, corresponding
+to edges.  Further, each vertex is incident with exactly two edges.
+Let $c=\{\hat{0}=x_0<\cdots<x_k=\hat{1}\}$ be a chain in $P_n$.  There
+are four possibilities.
+\begin{enumerate}
+\item
+$c=\{\hat{0} < \hat{1}\}$.  This chain does not include any elements
+of ranks 1 or 2, so its weight is $(\aaa-\bbb)^2=\aaa^2-\aaa\bbb-\bbb\aaa+\bbb^2$.
+\item
+$c$ includes a vertex but not an edge.  This can happen in $n$ ways.
+Each such chain has weight $\bbb(\aaa-\bbb)$.
+\item
+$c$ includes an edge but not a vertex. This can also happen in $n$ ways.
+Each such chain has weight $(\aaa-\bbb)\bbb$.
+\item
+$c$ includes a vertex and an edge.  Since each vertex is incident with
+exactly two edges, this can happen in $2n$ ways.  The weight of such a
+chain is $b^2$.
+\end{enumerate}
+Summing over all the chains yields
+\begin{align*}
+\Psi(P)
+&=\aaa^2+(n-1)\cdot\aaa\bbb+(n-1)\cdot\bbb\aaa+\bbb^2 \\
+&=(\aaa+\bbb)^2+(n-2)\cdot(\aaa\bbb+\bbb\aaa).
+\end{align*}
+In this case the $\aaa\bbb$-index can be rewritten as a noncommutative
+polynomial in the variables $\ccc=\aaa+\bbb$ and $\ddd=\aaa\bbb+\bbb\aaa$.
+When this happens, we say that $P$ has a {\em $\ccc\ddd$-index}.  Thus 
+the $\ccc\ddd$-index of the $n$-gon is $\ccc^2+(n-2)\cdot\ddd$.  Not
+every graded poset has a $\ccc\ddd$-index.  However, every poset which 
+arises
+as the face lattice of a convex polytope, or more generally, every graded
+poset which satisfies the generalized Dehn-Sommerville relations, has a $\ccc\ddd$-index.
+
+An example of a poset whose $\aaa\bbb$-index cannot be written 
+in terms of $\ccc$ and $\ddd$ is the boolean algebra $B_2$ with 
+a new maximal element adjoined:
+\[\xymatrix{
+& \hat{1}\ar@{-}[d] & \\
+& \{0,1\}\ar@{-}[ld]\ar@{-}[rd] & \\
+\{0\}\ar@{-}[rd] & & \{1\}\ar@{-}[ld] \\
+& \hat{0} &
+}\]
+The $\aaa\bbb$-index of this poset is $\aaa^2+\bbb\aaa$.
+
+\begin{thebibliography}{3}
+\bibitem{cite:BB}
+Bayer, M. and L. Billera, \emph{Generalized Dehn-Sommerville relations for
+polytopes, spheres and Eulerian partially ordered sets}, Invent. Math. 79
+(1985), no. 1, 143--157.
+\bibitem{cite:BK}
+Bayer, M. and A. Klapper, \emph{A new index for polytopes}, Discrete Comput.
+Geom. 6
+(1991), no. 1, 33--47.
+\bibitem{cite:RS}
+Stanley, R., \emph{Flag $f$-vectors and the $\mathbf{cd}$-index}, Math. Z. 216 (1994), 483-499.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

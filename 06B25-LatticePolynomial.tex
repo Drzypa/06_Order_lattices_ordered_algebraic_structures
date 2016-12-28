@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LatticePolynomial}
+\pmcreated{2013-03-22 16:30:53}
+\pmmodified{2013-03-22 16:30:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{lattice polynomial}
+\pmrecord{9}{38692}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B25}
+\pmdefines{lattice polynomial function}
+\pmdefines{equivalent lattice polynomials}
+\pmdefines{weight of a lattice polynomial}
+\pmdefines{arity of a lattice polynomial}
+\pmdefines{Boolean polynomial}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A \emph{lattice polynomial}, informally, is an expression involving a finite number of variables $x,y,z,\ldots$, two symbols $\vee,\wedge$, and sometimes the parentheses $(,)$ in a \emph{meaningful manner}.  Loosely speaking, whenever $p$ and $q$ are lattice polynomials, the only lattice polynomials that can be formed from $p,q,\vee,\wedge$ are $p\vee q$ and $p\wedge q$.  We will explain formally what \emph{meaningful manner} is a little later.  Some examples of lattice polynomials are $x\vee (x\vee x)$, $(y\wedge x)\vee x$, and $(x\vee y)\wedge (y\vee z)\wedge (z\vee x)$, while $\vee\wedge x$, $xy\wedge yz$, $z\vee)($ are not lattice polynomials.
+
+To formally define what a lattice polynomial is, we resort to model theory.  To begin with, we have a countable set of variables $V=\lbrace x, y, z,\ldots \rbrace$, a set of binary function symbols $F=\lbrace \vee, \wedge\rbrace$.  We define pairwise disjoint sets $S_0,S_1,\ldots,S_n,\ldots$ recursively, as follows:
+\begin{itemize}
+\item $S_0=V$,
+\item $S_{k+1}=\lbrace (p\vee q), (p\wedge q)\mid p,q\in S_k\rbrace\cup S_k$.
+\end{itemize}
+Then we set $S=\bigcup_{i=0}^{\infty} S_i$.  An element of $S$ is called a \emph{lattice polynomial}.
+
+Note that in the above definition, $((x\vee y)\vee z)$ is a lattice polynomial while $(x\vee y\vee z)$ is not, for any variables $x,y,z\in V$.  To reduce the number of parentheses in a lattice polynomial, we typically identify $(p\vee q)$ with $p\vee q$ and $(p\wedge q)$ with $p\wedge q$.  In addition, since the meet and join operations are associative in any lattice, it is a common practice to further reduce the number of parentheses in a lattice polynomial by identifying both $(p\vee (q\vee r))$ and $((p \vee q)\vee r)$ with $p\vee q\vee r$, and $(p\wedge (q\wedge r))$ and $((p \wedge q)\wedge r)$ with $p\wedge q\wedge r$.
+
+Another thing that can be said about the above construction of is that any given lattice polynomial can be constructed from $S_0$ in a finite number of steps.  If $p\in S_n-S_{n-1}$, $n\ge 1$, then $p$ can be constructed in exactly $n$ steps.  The minimum number of variables (in $S_0$) that is required to construct $p$ is called the \emph{arity} of $p$.  For example, if $p=((x\vee y)\wedge x)$ then the arity of $p$ is $2$.  If an $n$-ary lattice polynomial $p$ can be constructed from $x_1,\ldots,x_n$, we often write $p=p(x_1,\ldots,x_n)$.
+
+One more important number associated with a lattice polynomial $p$ is its \emph{weight}, defined recursively as $w(p)=1$ if $p\in S_0$, and $w(p\vee q)=w(p\wedge q)=w(p)+w(q)$.
+
+Given any $n$-ary lattice polynomial $p$ and any lattice $L$, we can associate $p$ with an $m$-ary \emph{lattice polynomial function} $f:L^m\to L$ defined by $$f(a_1,\ldots,a_m):=p(a_1,\ldots,a_n),\mbox{ where }m\ge n\mbox{ and }a_i \in L.$$
+The expression $p(a_1,\ldots,a_n)$ is the \emph{evaluation} of $p$ at $(a_1,\ldots,a_n)$.  That is, we substitute each $x_i$ for $a_i$, and we interpret $\vee$ and $\wedge$ in $p$ as the join and meet operations in $L$.
+
+Two lattice polynomials $p,q$ of arities $m,n$, where $m\ge n$, are said to be \emph{equivalent} if their corresponding $m$-ary lattice polynomial functions evaluate to the same values in any lattice.  For example, $x\vee y$ and $y\vee x$ are equivalent.  Similarly, $x$, $x\vee x$, $x\wedge x$, and $x\vee (y\wedge x)$ are equivalent lattice polynomials.
+
+\textbf{Remark}.  Similarly, one can define a \emph{Boolean polynomial} by enlarging the set $F$ of function symbols to include the unary operator $^{\prime}$, and $S_{k+1}=\lbrace (p\vee q), (p\wedge q), (p^{\prime}) \mid p,q\in S_k\rbrace\cup S_k$.  Then a Boolean polynomial is just an element of $S=\cup_{i=0}^{\infty} S_i$.  The weight of a Boolean polynomial is similarly defined, with the additional $w(p^{\prime})=w(p)$.
+%%%%%
+%%%%%
+\end{document}

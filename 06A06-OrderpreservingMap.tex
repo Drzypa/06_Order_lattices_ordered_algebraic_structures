@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderpreservingMap}
+\pmcreated{2013-03-22 17:44:43}
+\pmmodified{2013-03-22 17:44:43}
+\pmowner{porton}{9363}
+\pmmodifier{porton}{9363}
+\pmtitle{order-preserving map}
+\pmrecord{10}{40195}
+\pmprivacy{1}
+\pmauthor{porton}{9363}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmsynonym{monotone function}{OrderpreservingMap}
+\pmsynonym{monotonic function}{OrderpreservingMap}
+\pmsynonym{order homomorphism}{OrderpreservingMap}
+\pmsynonym{isotone function}{OrderpreservingMap}
+\pmsynonym{isotonic function}{OrderpreservingMap}
+\pmsynonym{order-preserving}{OrderpreservingMap}
+\pmsynonym{isotone}{OrderpreservingMap}
+\pmsynonym{isotonic}{OrderpreservingMap}
+\pmsynonym{order-reversing}{OrderpreservingMap}
+\pmsynonym{antitonic}{OrderpreservingMap}
+\pmsynonym{antitone}{OrderpreservingMap}
+%\pmkeywords{partial order}
+\pmrelated{Poset}
+\pmrelated{LatticeHomomorphism}
+\pmdefines{monotonicity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\emph{Order-preserving map} from a poset $L$ to a poset $M$ is a function $f$ such that
+$$\forall x,y\in L:(x\ge y\implies f(x)\ge f(y)).$$
+
+Order-preserving maps are also called \emph{monotone functions} or \emph{monotonic functions} or \emph{order homomorphisms} or \emph{isotone functions} or \emph{isotonic functions}.
+
+\emph{Order-reversing map} from a poset $L$ to a poset $M$ is a function $f$ such that
+$$\forall x,y\in L:(x\ge y\implies f(x)\le f(y)).$$
+
+Order-reversing maps are also called \emph{antitone functions}.
+%%%%%
+%%%%%
+\end{document}

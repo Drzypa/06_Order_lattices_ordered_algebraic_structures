@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KleeneAlgebra1}
+\pmcreated{2013-03-22 17:08:43}
+\pmmodified{2013-03-22 17:08:43}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Kleene algebra}
+\pmrecord{8}{39453}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D30}
+\pmrelated{KleeneAlgebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+This entry concerns a Kleene algebra that is defined as a lattice satisfying certain conditions.  There is another \PMlinkescapetext{type} of Kleene algebra, which is the abstraction of the algebra of regular expressions in the theory of computations.  The two concepts are different.  For Kleene algebras of the second kind, please see this \PMlinkname{link}{KleeneAlgebra}.
+
+A lattice $L$ is said to be a \emph{Kleene algebra} if it is a De Morgan algebra (with the associated unary operator $\sim$ on $L$) such that $(\sim a\wedge a)\le (\sim b\vee b)$ for all $a,b\in L$.
+
+Any Boolean algebra $A$ is a Kleene algebra, if the complementation operator $'$ is interpreted as $\sim$.  This is true because $a'\wedge a=0\le 1=b'\vee b$ for all $a, b\in A$.  The converse is not true.  For example, consider the chain $\mathbf{n}=\lbrace 0,1,\ldots,n\rbrace$, with the usual ordering. Define $\sim$ by $\sim(k)=n-k$.  Then it is easy to see that $\sim$ satisfies all the defining conditions of a De Morgan algebra.  In addition, since every $a,b\in \mathbf{n}$ are comparable, say $a\le b$, then $(\sim a\wedge a)\le a\le b\le (\sim b\vee b)$.  And if $b\le a$ on the other hand, then $\sim a\le\ \sim b$ so that $(\sim a\wedge a)\le\ \sim a\le\ \sim b\le (\sim b\vee b)$.  But $\mathbf{n}$ is not Boolean, as $a\vee b$ is never $n$ unless one of them is.
+
+\textbf{Remark}.  As Boolean algebras are the algebraic realizations of the classical two-valued propositional logic, Kleene algebras are the \PMlinkescapetext{algebraic} realizations of a three-valued propositional logic, where the three truth values can be described as true ($2$), false ($0$), and unknown ($1$).  Just as $\lbrace 0,1\rbrace$ is the simplest Boolean algebra (it is a simple algebra), $\lbrace 0,1,2\rbrace$ is the simplest Kleene algebra, where $\sim$ is defined the same way as in the example above.
+
+\begin{thebibliography}{6}
+\bibitem{gg} G. Gr\"atzer, {\it General Lattice Theory}, 2nd Edition, Birkh\"auser (1998)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

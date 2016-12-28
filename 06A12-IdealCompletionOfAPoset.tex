@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealCompletionOfAPoset}
+\pmcreated{2013-03-22 17:03:01}
+\pmmodified{2013-03-22 17:03:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{ideal completion of a poset}
+\pmrecord{8}{39340}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A12}
+\pmclassification{msc}{06A06}
+\pmrelated{LatticeOfIdeals}
+\pmdefines{ideal completion}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\up}{\uparrow\!\!}
+\newcommand{\down}{\downarrow\!\!}
+\begin{document}
+Let $P$ be a poset. Consider the set $\operatorname{Id}(P)$ of all order ideals of $P$.
+
+\begin{thm} $\operatorname{Id}(P)$ is an algebraic dcpo, such that $P$ can be embedded in. \end{thm}
+\begin{proof}
+We shall list, and when necessary, prove the following series of facts which ultimately prove the main assertion.  For convenience, write $P'=\operatorname{Id}(P)$.
+\begin{enumerate}
+\item $P'$ is a poset with $\le$ defined by set theoretic inclusion.
+\item For any $x\in P$, $\down x\in P'$.
+\item $P$ can be embedded in $P'$.  The function $f:P\to P'$ defined by $f(x)=\down x$ is order preserving and one-to-one.  If $x\le y$, and $a\le x$, then $a\le y$, hence $\down x\subseteq \down y$.  If $\down x=\down y$, we have that $x\le y$ and $y\le x$, so $x=y$, since $\le$ is antisymmetric.
+\item $P'$ is a dcpo.  Suppose $D$ is a directed set in $P'$.  Let $E=\bigcup D$.  For any $x,y\in E$, $x\in I$ and $y\in J$ for some ideals $I,J\in D$.  As $D$ is directed, there is $K\in D$ such that $I\subseteq K$ and $J\subseteq K$.  So $x,y\in K$ and hence there is $z\in K\subseteq E$ such that $x\le z$ and $y\le z$.  This shows that $E$ is directed.  Next, suppose $x\in E$ and $y\le x$.  Then $x\in I$ for some $I\in D$, so $y\in I\subseteq E$ as well.  This shows that $E$ is a down set.  So $E$ is an ideal of $P$: $\bigvee D=E\in P'$.
+\item For every $x\in P$, $\down x$ is a compact element of $P'$.  If $\down x\le \bigvee D$, where $D$ is directed in $P'$, then $\down x\subseteq \bigcup D$, or $x\in \bigcup D$, which implies $x\in I$ for some ideal $I\in D$.  Therefore $\down x\subseteq I$, and $\down x$ is way below itself: $\down x$ is compact.
+\item $P'$ is an algebraic dcpo.  Let $I\in P'$.  Let $C=\lbrace \down x\mid x\in I\rbrace$.  For any $x,y\in I$, there is $z\in I$ such that $x\le z$ and $y\le z$.  This shows that $\down x\le \down z$ and $\down y\le \down z$ in $C$, so that $C$ is directed.  It is easy to see that $I=\bigvee C$.  Since $I$ is a join of a directed set consisting of compact elements, $P'$ is algebraic.
+\end{enumerate}
+This completes the proof.
+\end{proof}
+
+\textbf{Definition}.  $\operatorname{Id}(P)$ is called the \emph{ideal completion} of $P$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+In general, the ideal completion of a poset is not a complete lattice.  It is complete in the sense of being directed complete.  This is different from another type of completion, called the MacNeille completion of $P$, which is a complete lattice.  
+\item
+If $P$ is an upper semilattice, then so is $\operatorname{Id}(P)$.  In fact, the join of any non-empty family of ideals exists.  Furthermore, if $P$ has a bottom element $0$, then $\operatorname{Id}(P)$ is a complete lattice.
+\begin{proof}
+Let $S$ be a non-empty family of ideals in $P$.  Let $A$ be the set of $P$ consisting of all finite joins of elements of those ideals in $S$, and $B=\down A$.  Clearly, $B$ is a lower set.  For every $a,b\in B$, we have $c,d\in A$ such that $a\le c$ and $b\le d$.  Since $c$ and $d$ are both finite joins of elements of those ideals in $S$, so is $c\vee d$.  Since $a\le c\vee d$ and $b\le c\vee d$, $B$ is directed.  If $I$ is any ideal larger than any of the ideals in $S$, clearly $A\subseteq I$, since $I$ is directed.  So $B=\down A\subseteq \down I=I$.  Therefore, $B=\bigvee S$.
+
+If $0\in P$, then $\langle 0\rangle$, the bottom of $\operatorname{Id}(P)$, is the join of the empty family of ideals in $P$.  By \PMlinkname{this entry}{CriteriaForAPosetToBeACompleteLattice}, $\operatorname{Id}(P)$ is a complete lattice.
+\end{proof}
+\item
+If $P$ is a lower semilattice, then so is $\operatorname{Id}(P)$.
+\begin{proof}
+Let $I,J$ be two ideals in $P$ and $K=I\cap J$.  By definition, $I$ and $J$ are non-empty, so let $a\in I$ and $b\in J$.  As $P$ is a lower semilattice, $c:=a\wedge b$ exists and $c\le a$ and $c\le b$.  So $c \in I\cap J$, and that $K=I\cap J$ is non-empty.  If $x\le y\in K$, then $x\le y\in I$ or $x\in I$.  Similarly $x\in J$.  Therefore $x\in I\cap J=K$ and $K$ is a lower set.  If $r,s\in K$, then there is $u\in I$ and $v\in J$ such that $r,s\le u,v$.  So $r,s\le u\wedge v$ and $K$ is directed.  This means that $I\cap J\in \operatorname{Id}(P)$.
+\end{proof}
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

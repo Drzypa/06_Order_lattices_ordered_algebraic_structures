@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CenterOfALattice}
+\pmcreated{2013-03-22 17:31:50}
+\pmmodified{2013-03-22 17:31:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{center of a lattice}
+\pmrecord{5}{39927}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B05}
+\pmdefines{central element}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{central}
+\PMlinkescapeword{center}
+
+Let $L$ be a bounded lattice.  An element $a\in L$ is said to be \emph{central} if $a$ is \PMlinkname{complemented}{ComplementedLattice} and \PMlinkname{neutral}{SpecialElementsInALattice}.  The \emph{center} of $L$, denoted $\operatorname{Cen}(L)$, is the set of all central elements of $L$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item $0$ and $1$ are central: they are complements of one another, both distributive and dually distributive, and satisfying the property $$a\wedge b=a\wedge c\mbox{ and }a\vee b=a\vee c\mbox{ imply }b=c\mbox{ for all }b,c\in L$$ where $a\in \lbrace 0,1\rbrace$, and therefore neutral.
+\item $\operatorname{Cen}(L)$ is a sublattice of $L$.
+\item $\operatorname{Cen}(L)$ is a Boolean algebra.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{gg} G. Gr\"{a}tzer, {\em General Lattice Theory}, 2nd Edition, Birkh\"{a}user (1998).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

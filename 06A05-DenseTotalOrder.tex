@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DenseTotalOrder}
+\pmcreated{2013-03-22 16:40:48}
+\pmmodified{2013-03-22 16:40:48}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{dense total order}
+\pmrecord{8}{38888}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A05}
+\pmsynonym{dense linear order}{DenseTotalOrder}
+\pmrelated{LinearContinuum}
+\pmdefines{dense}
+\pmdefines{dense in}
+\pmdefines{dense in itself}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A total order $(S,<)$ is \emph{dense} if whenever $x < z$ in $S$, there exists at least one element $y$ of $S$ such that $x < y < z$.  That is, each nontrivial closed interval has nonempty interior.
+
+A subset $T$ of a total order $S$ is \emph{dense in} $S$ if for every $x,z\in S$ such that $x<z$, there exists some $y\in T$ such that $x<y<z$.  Because of this, a dense total order $S$ is sometimes said to be \emph{dense in itself}.
+
+For example, the integers with the usual order are not dense, since there is no integer strictly between $0$ and $1$.  On the other hand, the rationals $\mathbb{Q}$ are dense, since whenever $r$ and $s$ are rational numbers, it follows that $(r+s)/2$ is a rational number strictly between $r$ and $s$.  
+Also, both $\mathbb{Q}$ and the irrationals $\mathbb{R}\setminus\mathbb{Q}$ are dense in $\mathbb{R}$.
+
+It is usually convenient to assume that a dense order has at least two elements.  This allows one to avoid the trivial cases of the one-point order and the empty order.
+%%%%%
+%%%%%
+\end{document}

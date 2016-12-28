@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HeytingAlgebra}
+\pmcreated{2013-03-22 16:33:03}
+\pmmodified{2013-03-22 16:33:03}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Heyting algebra}
+\pmrecord{20}{38734}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D20}
+\pmclassification{msc}{03G10}
+\pmsynonym{pseudo-Boolean algebra}{HeytingAlgebra}
+\pmrelated{QuantumTopos}
+\pmrelated{Lattice}
+\pmdefines{Heyting lattice}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A \emph{Heyting lattice} $L$ is a Brouwerian lattice with a bottom element $0$.  Equivalently, $L$ is Heyting iff it is relatively pseudocomplemented and pseudocomplemented iff it is bounded and relatively pseudocomplemented.
+
+Let $a^*$ denote the pseudocomplement of $a$ and $a\to b$ the pseudocomplement of $a$ relative to $b$. Then we have the following properties:
+
+\begin{enumerate}
+\item $a^*=a\to 0$ (equivalence of definitions)
+\item $1^*=0$ (if $c=1\to 0$, then $c=c\wedge 1\le 0$ by the definition of $\to$.)
+\item $a^*=1$ iff $a=0$ ($1=a\to 0$ implies that $c\wedge a\le 0$ whenever $c\le 1$.  In particular $a\le 1$, so $a=a\wedge a\le 0$ or $a=0$.  On the other hand, if $a=0$, then $a^*=0^*=0\to 0=1$.)
+\item $a\le a^{**}$ and $a^*=a^{***}$ (already true in any pseudocomplemented lattice)
+\item $a^*\le a\to b$ (since $a^*\wedge a=0\le b$)
+\item $(a\to b)\wedge (a\to b^*)=a^*$ 
+\begin{proof}
+If $c\wedge a=0$, then $c\wedge a\le b$ so $c\le (a\to b)$, and $c\le (a\to b^*)$ likewise, so $c\le (a\to b)\wedge (a\to b^*)$.  This means precisely that $a^*=(a\to b)\wedge (a\to b^*)$.
+\end{proof}
+\item $a\to b\le b^*\to a^*$ (since $(a\to b)\wedge b^*\le (a\to b)\wedge (a\to b^*)=a^*)$
+\item $a^*\vee b\le a\to b$ (since $b\wedge a\le b$ and $a^* \wedge a=0\le b$)
+\end{enumerate}
+
+Note that in property 4, $a\le a^{**}$, whereas $a^{**}\le a$ is in general not true, contrasting with the equality $a=a^{\prime\prime}$ in a Boolean lattice, where $^{\prime}$ is the complement operator.  It is easy to see that if $a^{**}\le a$ for all $a$ in a Heyting lattice $L$, then $L$ is a Boolean lattice.  In this case, the pseudocomplement coincides with the complement of an element $a^*=a^{\prime}$, and we have the equality in property 7: $a^*\vee b=a\to b$, meaning that the concept of \PMlinkname{relative pseudocomplementation}{RelativelyPseudocomplemented} coincides with the material implication in classical propositional logic.
+
+A \emph{Heyting algebra} is a Heyting lattice $H$ such that $\to$ is a binary operator on $H$.  A Heyting algebra homomorphism between two Heyting algebras is a lattice homomorphism that preserves $0,1$, and $\to$.  In addition, if $f$ is a Heyting algebra homomorphism, $f$ preserves psudocomplementation: $f(a^*)=f(a\to 0)=f(a)\to f(0)=f(a)\to 0=f(a)^*$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+In the literature, the assumption that a Heyting algebra contains $0$ is sometimes dropped.  Here, we call it a Brouwerian lattice instead.
+\item
+Heyting algebras are useful in modeling intuitionistic logic.  Every intuitionistic propositional logic can be modelled by a Heyting algebra, and every intuitionistic predicate logic can be modelled by a complete Heyting algebra.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

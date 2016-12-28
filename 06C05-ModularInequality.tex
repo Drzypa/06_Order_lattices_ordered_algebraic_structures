@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModularInequality}
+\pmcreated{2014-02-01 1:48:21}
+\pmmodified{2014-02-01 1:48:21}
+\pmowner{ixionid}{16766}
+\pmmodifier{ixionid}{16766}
+\pmtitle{modular inequality}
+\pmrecord{10}{39210}
+\pmprivacy{1}
+\pmauthor{ixionid}{16766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C05}
+%\pmkeywords{lattice modular}
+\pmrelated{ModularLattice}
+\pmrelated{DistributiveInequalities}
+\pmdefines{modular inequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In any \PMlinkname{lattice}{lattice} the self-dual \emph{modular inequality} is true:
+if $ x\leq z $ then $ x\lor (y\land z)\leq (x\lor y)\land z $.
+\begin{proof}
+$ x\leq x\lor y $ and we are given that $ x\leq z$, so $ x\leq (x\lor y)\land z $.
+Also, $ y\land z\leq y \leq x\lor y $ and $ y\land z\leq z $ imply that $ y\land z\leq (x\lor y)\land z$.
+Therefore, $ x\lor (y\land z)\leq(x\lor y)\land z$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

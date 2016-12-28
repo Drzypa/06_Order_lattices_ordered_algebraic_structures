@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthomodularLattice}
+\pmcreated{2013-03-22 16:33:06}
+\pmmodified{2013-03-22 16:33:06}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{orthomodular lattice}
+\pmrecord{10}{38735}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C15}
+\pmclassification{msc}{81P10}
+\pmclassification{msc}{03G12}
+\pmrelated{OrthocomplementedLattice}
+\pmrelated{LatticeOfProjections}
+\pmdefines{orthomodular poset}
+\pmdefines{orthogonal}
+\pmdefines{orthogonal complement}
+\pmdefines{relative orthogonal complement}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\subsubsection*{Orthogonality Relations}
+Let $L$ be an orthocomplemented lattice and $a,b\in L$.  $a$ is said to be \emph{orthogonal} to $b$ if $a\le b^{\perp}$, denoted by $a\perp b$.  If $a\le b^{\perp}$, then $b=b^{\perp\perp}\le a^{\perp}$, so $\perp$ is a symmetric relation on $L$.  It is easy to see that, for any $a,b\in L$, $a\perp b$ implies $a\wedge b=0$, and $a\perp a^{\perp}$.  
+
+For any $a\in L$, define $M(a):=\lbrace c\in L\mid c\perp a\mbox{ and }1=c \vee a\rbrace$.  An element of $M(a)$ is called an \emph{orthogonal complement} of $a$.  We have $a^{\perp}\in M(a)$, and any orthogonal complement of $a$ is a complement of $a$.
+
+If we replace the $1$ in $M(a)$ by an arbitrary element $b\ge a$, then we have the set $$M(a,b):=\lbrace c\in L\mid c\perp a\mbox{ and }b=c \vee a\rbrace.$$
+An element of $M(a,b)$ is called an \emph{orthogonal complement} of $a$ \emph{relative to} $b$.  Clearly, $M(a)=M(a,1)$.  Also, for $a,c\le b$, $c\in M(a,b)$ iff $a\in M(c,b)$.  As a result, we can define a symmetric binary operator $\oplus$ on $[0,b]$, given by $b=a\oplus c$ iff $c\in M(a,b)$.  Note that $b=b\oplus 0$.
+
+Before the main definition, we define one more operation: $b-a:=b\wedge a^{\perp}$.  Some properties: (1) $a-a=0$, $a-0=a$, $0-a=0$, $a-1=0$, and $1-a=a^{\perp}$; (2) $b-a=a^{\perp}-b^{\perp}$; and (3) if $a\le b$, then $a\perp (b-a)$ and $a\oplus (b-a)\le b$.
+
+\subsubsection*{Definition}  
+A lattice $L$ is called an \emph{orthomodular lattice} if 
+\begin{enumerate}
+\item $L$ is orthocomplemented, and
+\item (\emph{orthomodular law}) if $x\le y$, then $y=x\oplus (y-x)$.
+\end{enumerate}
+
+The orthomodular law can be restated as follows: if $x\le y$, then 
+$y=x\vee (y\wedge x^{\perp})$.  Equivalently, $x\le y$ implies $y=(y\wedge x)\vee (y\wedge x^{\perp})$.  Note that the equation is automatically true in an arbitrary distributive lattice, even without the assumption that $x\le y$.
+
+For example, the lattice $\mathbb{C}(H)$ of closed subspaces of a hilbert space $H$ is orthomodular.  $\mathbb{C}(H)$ is modular iff $H$ is finite dimensional.  In addition, if we give the set $\mathbb{P}(H)$ of (bounded) projection operators on $H$ an ordering structure by defining $P\le Q$ iff $P(H)\le Q(H)$, then $\mathbb{P}(H)$ is lattice isomorphic to $\mathbb{C}(H)$, and hence orthomodular.
+
+A simple example of an orthocomplemented lattice that is not orthomodular is the benzene:
+
+\begin{equation*}
+\xymatrix {
+& 1 \ar@{-}[ld] \ar@{-}[rd] & \\
+b \ar@{-}[d] & & a^{\perp} \ar@{-}[d] \\
+a \ar@{-}[rd] & & b^{\perp} \ar@{-}[ld] \\
+& 0 & }
+\end{equation*}
+Note that $a\le b$, but $a\vee (b\wedge a^{\perp})=a\vee 0=a\ne b$.
+
+An nice example of an orthomodular lattice that is not modular can be found in the reference below.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item Orthomodular lattices were first studied by John von Neumann and Garett Birkhoff, when they were trying to develop the \PMlinkname{logic of quantum mechanics}{QuantumLogic} by studying the structure of the lattice $\mathbb{P}(H)$ of projection operators on a Hilbert space $H$.  However, the term was coined by Irving Kaplansky, when it was realized that $\mathbb{P}(H)$, while orthocomplemented, is not modular.  Rather, it satisfies a variant of the modular law as indicated above.
+\item More generally, an \emph{orthomodular poset} $P$ is an orthocomplemented poset such that
+\begin{enumerate}
+\item given any pair of orthogonal elements $x,y\in P$ ($x\le y^{\perp}$), their greatest lower bound exists ($x\vee y$ exists).  Simply put, $x\perp y$ implies $x\vee y\in P$.
+\item for any $x,y\in P$ such that $x\le y$, the orthomodular law holds (the right hand side of the orthomodular law exists via the first condition).
+\end{enumerate}
+From this definition, we see that an orthomodular lattice is just an orthomodular poset that is also a lattice.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{lb} L. Beran, {\em Orthomodular Lattices, Algebraic Approach}, Mathematics and Its Applications (East European Series), D. Reidel Publishing Company, Dordrecht, Holland (1985).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuousGeometry}
+\pmcreated{2013-03-22 16:42:21}
+\pmmodified{2013-03-22 16:42:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{continuous geometry}
+\pmrecord{8}{38921}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C20}
+\pmclassification{msc}{51D30}
+\pmsynonym{von Neumann lattice}{ContinuousGeometry}
+\pmrelated{LatticeOfProjections}
+\pmdefines{irreducible continuous geometry}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $V$ be a finite dimensional vector space (over some field) with dimension $n$.  Let $PG(V)$ be its lattice of subspaces, also known as the projective geometry of $V$.  It is well-known that we can associate each element $a\in PG(V)$ a unique integer $\dim(a)$, namely, the dimension of the $a$ as a subspace of $V$.  $\dim$ can be seen as a function from $PG(V)$ to $\mathbb{Z}$.  One property of $\dim$ is that for every $i$ between $0$ and $n$, there is an $a\in PG(V)$ such that $\dim(a)=i$.  If we normalize $\dim$ by dividing its values by $n$, then we get a function $d: PG(V)\to [0,1]$.  As $n$ (the dimension of $V$) increases, the range of $d$ begins to ``fill up'' $[0,1]$.  Of course, we know this is impossible as long as $V$ is finite dimensional.
+
+\underline{Question:} is there a ``geometry'' on which a ``dimension function'' is defined so that it is onto the closed unit interval $[0,1]$?
+
+The answer is yes, and the geometry is the so-called ``continuous geometry''.  However, like projective geometries, it is really just a lattice (with some special conditions).  A continuous geometry $L$ is a generalization of a projective geometry so that a ``continuous'' dimension function $d$ can be defined on $L$ such that for every real number $r\in [0,1]$ there is an $a\in L$ such that $d(a)=r$.  Furthermore, $d$ takes infinite independent joins to infinite sums: $$d(\bigvee_{i=1}^{\infty} a_i)=\sum_{i=1}^{\infty} d(a_i)\mbox{ whenever }a_{j+1}\wedge (\bigvee_{i=1}^{j} a_i)=0\mbox{ for }j\ge 1.$$
+
+\textbf{Definition}.  A \emph{continuous geometry} is a lattice $L$ that is complemented, modular, meet continuous, and join continuous.
+
+From a continuous geometry $L$, it can be shown that the \PMlinkname{perspective}{ComplementedLattice} relation $\thicksim$ on elements of $L$ is a transitive relation (Von Neumann).  Since $\thicksim$ is also reflexive and symmetric, it is an equivalence relation.  In a projective geometry, perspective elements are exactly subspaces having the same dimension.  From this equivalence relation, one can proceed to define a ``dimension'' function from $L$ into $[0,1]$.
+
+Continuous geometry was introduced by Von Neumann in the 1930's when he was working on the theory of operator algebras in Hilbert spaces.  Write $PG(n-1)$ the projective geometry of dimension $n-1$ over $D$ (lattice of left (right) subspaces of left (right) $n$-dimensional vector space over $D$).  Von Neumann found that $PG(n-1)$ can be embedded into $PG(2n-1)$ in such a way that not only the lattice operations are preserved, but the values of the ``normalized dimension function'' $d$ described above are also preserved.  In other words, if $\phi:PG(n-1)\to PG(2n-1)$ is the embedding, and $d_{n}$ is the dimension function on $PG(n-1)$ and $d_{2n}$ is the dimension function on $PG(2n-1)$, then  $d_{n}(a)=d_{2n}(\phi(a))$.  As a result, we get a chain of embeddings $$PG(1)\hookrightarrow PG(3)\hookrightarrow  \cdots \hookrightarrow  PG(2^n-1) \hookrightarrow  \cdots.$$
+Taking the union of these lattices, we get a lattice $PG(\infty)$, which is complemented and modular, which has a ``normalized dimension function'' $d$ into $[0,1]$ whose values take the form $p/2^m$ ($p,m$ positive integers).  This $d$ is also a valuation on $PG(\infty)$, turning it into a metric lattice, which in turn can be completed to a lattice $CG(D)$.  This $CG(D)$ is the first example of a continuous geometry having a ``continuous'' dimension function.
+
+
+\textbf{Remarks}.
+\begin{itemize}
+\item Any continuous geometry is a complete lattice and a topological lattice if order convergence is used to define a topology on it.
+\item An \emph{irreducible continuous geometry} is a continuous geometry whose center is trivial (consisting of just $0$ and $1$).  It turns out that an irreducible continuous geometry is just $CG(D)$ for some division ring $D$. 
+\item (Kaplansky) Any orthocomplemented complete modular lattice is a continuous geometry.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{jvn} J. von Neumann, {\em Continuous Geometry}, Princeton, (1960).
+\bibitem{gb} G. Birkhoff {\em Lattice Theory}, 3rd Edition, AMS Volume XXV, (1967).
+\bibitem{gg} G. Gr\"{a}tzer, {\em General Lattice Theory}, 2nd Edition, Birkh\"{a}user (1998).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

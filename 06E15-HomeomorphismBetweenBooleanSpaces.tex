@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomeomorphismBetweenBooleanSpaces}
+\pmcreated{2013-03-22 19:09:04}
+\pmmodified{2013-03-22 19:09:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{homeomorphism between Boolean spaces}
+\pmrecord{4}{42055}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E15}
+\pmclassification{msc}{06B30}
+\pmrelated{DualOfStoneRepresentationTheorem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we derive a test for deciding when a bijection between two Boolean spaces is a homeomorphism.
+
+We start with two general remarks.
+
+\begin{lem}  If $Y$ is zero-dimensional, then $f:X\to Y$ is continuous provided that $f^{-1}(U)$ is open for every clopen set $U$ in $Y$. \end{lem}
+\begin{proof}  Since $Y$ is zero-dimensional, $Y$ has a basis of clopen sets.  To check the continuity of $f$, it is enough to check that $f^{-1}(U)$ is open for each member of the basis, which is true by assumption.  Hence $f$ is continuous.
+\end{proof}
+
+\begin{lem} If $X$ is compact and $Y$ is Hausdorff, and $f$ is a bijection, then $f$ is a homeomorphism iff it is continuous. \end{lem}
+\begin{proof}  One direction is obvious.  We want to show that $f^{-1}$ is continuous, or equivalently, for any closed set $U$ in $X$, $f(U)$ is closed in $Y$.  Since $X$ is compact, $U$ is compact, and therefore $f(U)$ is compact since $f$ is continuous.  But $Y$ is Hausdorff, so $f(U)$ is closed.
+\end{proof}
+
+\begin{prop} If $X,Y$ are Boolean spaces, then a bijection $f:X\to Y$ is homeomorphism iff it maps clopen sets to clopen sets.  \end{prop}
+\begin{proof} Once more, one direction is clear.  Now, suppose $f$ maps clopen sets to clopen sets.  Since $X$ is zero-dimensional, $f^{-1}:Y\to X$ is continuous by the first proposition.  Since $Y$ is compact and $X$ Hausdorff, $f^{-1}$ is a homeomorphism by the second proposition.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

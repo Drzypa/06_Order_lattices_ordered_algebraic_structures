@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Domain12}
+\pmcreated{2013-03-22 16:49:25}
+\pmmodified{2013-03-22 16:49:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{domain}
+\pmrecord{8}{39062}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B35}
+\pmsynonym{directed complete}{Domain12}
+\pmsynonym{directed complete poset}{Domain12}
+\pmsynonym{directed complete partially ordered set}{Domain12}
+\pmrelated{CompleteLattice}
+\pmdefines{domain}
+\pmdefines{dcpo}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\dom}{\operatorname{dom}}
+\begin{document}
+A poset $P$ is said to be a \emph{directed complete partially ordered set}, or \emph{dcpo} for short, if every directed set $D\subseteq P$ has a supremum.  Since the empty set is directed, a dcpo must have a bottom element.
+
+A \emph{domain} $P$ is a continuous dcpo.  Here, continuous means that $P$ is a continuous poset.
+
+\textbf{Example}.  Let $A,B$ be sets.  Consider the set $P$ of all partial functions from $A$ to $B$.  This means that any $f\in P$ is a function $C\to B$, for some subset $C$ of $A$.  We show that $P$ is a domain.
+\begin{enumerate}
+\item $P$ is a poset:  Define a binary relation on $P$ as follows: $f\le g$ iff $g$ is an extension of $f$.  In other words, if $f:C\to B$ and $g:D\to B$, then $C \subseteq D$ and $f(x)=g(x)$ for all $x\in C$.  Clearly, $\le$ is reflexive, anti-symmetric, and transitive.  So $\le$ turns $P$ into a poset.  
+\item $P$ is a dcpo:  Suppose that $D$ is a directed subset of $P$.  Set $E=\bigcup \lbrace \dom(f) \mid f\in D\rbrace$.  Define $g:E\to B$ as follows: for any $x\in E$, $g(x)=f(x)$ where $x\in \dom(f)$ for some $f\in D$.  Is this well-defined?  Suppose $x\in \dom(f_1)\cap\dom(f_2)$.  Since $D$ is directed, there is an $f\in D$ extending both $f_1$ and $f_2$.  This means that $f_1(x)=f(x)=f_2(x)$.  Therefore, $g:=\bigvee D$ is a well-defined function (on $E$).  Hence $P$ is a dcpo.
+\item If $f,g\ll h$, then $f\vee g\ll h$:  Since $h$ extends both $f$ and $g$, $a:=f\vee g:\dom(f)\cup\dom(g)\to B$ is well-defined (the construction is the same as above).  To show that $a\ll h$, suppose $D\subseteq P$ is directed and $h\le \bigvee D$ (note that $\bigvee D$ exists by 2 above).  Since $f\ll h$, there is $r\in D$ such that $f\le r$.  Similarly, $g\ll h$ implies an $s\in D$ with $g\le s$.  Since $D$ is directed, there is $t\in D$ with $r,s\le t$.  This means $f\le t$ and $g\le t$, or $a=f\vee g\le t$.
+\item $P$ is continuous: Let $\operatorname{wb}(h)=\lbrace f \in P\mid f\ll h \rbrace$.  Then by 3 above, $\operatorname{wb}(h)$ is a directed set.  By 2, $b:=\bigvee \operatorname{wb}(h)$ exists, and $b\le h$.  Suppose $x\in \dom(h)$.  Then the function $c_x:\lbrace x\rbrace\to B$ defined by $c_x(x)=h(x)$ is way below $h$, for if $h\le \bigvee D$, then $x\in \dom(f)$ for some $f\in D$, or $\dom(c_x)=\lbrace x\rbrace \subseteq \dom(f)$, which means $c_x\le f$.  Therefore, $c_x\le b$.  This implies that $\dom(h)= \bigvee \lbrace \dom(c_x)\mid x\in \dom(h)\rbrace \subseteq \dom(b)$.  As a result, $h\le b$.
+\end{enumerate}
+
+\textbf{Remark}.  Domain theory is a branch of order theory that is used extensively in theoretical computer science.  As in the example, one can think of a domain as a collection of partial pictures or pieces of partial information.  Being continuous is the same as saying that any picture or piece of information can be pieced together by partial ones by way of ``approximations''.
+%%%%%
+%%%%%
+\end{document}

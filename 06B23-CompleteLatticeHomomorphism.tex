@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteLatticeHomomorphism}
+\pmcreated{2013-03-22 16:58:02}
+\pmmodified{2013-03-22 16:58:02}
+\pmowner{porton}{9363}
+\pmmodifier{porton}{9363}
+\pmtitle{complete lattice homomorphism}
+\pmrecord{6}{39241}
+\pmprivacy{1}
+\pmauthor{porton}{9363}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B23}
+\pmrelated{CompleteLattice}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\emph{Complete lattice homomorphism} is a function from one lattice to an other lattice, which preserves arbitrary (not only finite) meets and joins.
+
+If $\phi:L \to M$ is lattice homomorphism between complete lattices $L$ and $M$ such that
+\begin{itemize}
+\item
+$\phi(\bigvee \lbrace a_i\mid i\in I\rbrace) = \bigvee \lbrace \phi(a_i)\mid
+i\in I\rbrace$, and
+\item
+$\phi(\bigwedge \lbrace a_i\mid i\in I\rbrace) = \bigwedge \lbrace
+\phi(a_i)\mid i\in I\rbrace$,
+\end{itemize}
+then $\phi$ is called a \emph{complete lattice homomorphism}.
+
+Most often are considered \emph{complete lattice homomorphisms} from one complete lattice to an other complete lattice (that is when all meets and joins are defined).
+
+\emph{Complete lattice homomorphism} is a special case of lattice homomorphism.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProductOfPosets}
+\pmcreated{2013-03-22 16:33:25}
+\pmmodified{2013-03-22 16:33:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{product of posets}
+\pmrecord{14}{38743}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{06A99}
+\pmrelated{LatticeInMathbbRn}
+\pmdefines{product of lattices}
+\pmdefines{Cartesian ordering}
+\pmdefines{lexicographic ordering}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\subsubsection*{Cartesian Ordering}
+
+Let $(P_1,\le_1)$ and $(P_2,\le_2)$ be posets.  Let $P=P_1\times P_2$, the Cartesian product of the underlying sets.  Next, define a binary relation $\le$ on $P$, given by $$(a,b)\le (c,d)\qquad\mbox{ iff }\qquad a\le_1 c\mbox{ and }b\le_2 d.$$  Then $\le$ is a partial order on $P$.  $(P,\le)$ is called the \emph{product of posets} $(P_1,\le_1)$ and $(P_2,\le_2)$.  The ordering $\le$ is called the \emph{Cartesian ordering}.  As it is customary, we write $P$ to mean $(P,\le)$.
+
+If $P_1$ and $P_2$ are antichains, their product is also an antichain.  If they are both join semilattices, then their product $P$ is a join semilattice as well.  The join of $(a,b)$ and $(c,d)$ are given by $$(a,b)\vee (c,d)=(a\vee_1 c,b\vee_2 d).$$  Conversely, if the product $P$ of two posets $P_1$ and $P_2$ is a join semilattice, then $P_1$ and $P_2$ are both join semilattices.  If $(a,b)\vee (c,d)=(e,f)$, then $e$ is the upper bound of $a$ and $c$.  If $g\le e$ is an upper bound of $a$ and $c$, then $(g,f)$ is an upper bound of $(a,b)$ and $(c,d)$, whence $(g,f)=(e,f)$, or $g=e$.  So $g=a\vee_1 c$.  Similarly, $f=b\vee_2 d$.  Dually, $P=P_1\times P_2$ is a meet semilattice (and consequently, a lattice) iff both $P_1$ and $P_2$ are.  Equivalently, the product of (semi)lattices can be defined purely algebraically (using $\vee$ and $\wedge$ only).
+
+Another simple fact about the product of posets is the following: the product is never a chain unless one of the posets is trivial (a singleton).  To see this, let $P=P_1\times P_2$ and $(a,b),(c,d)\in P$.  Then $(a,b)$ and $(c,d)$ are comparable, say $(a,b)\le (c,d)$, which implies $a\le_1 c$ and $b\le_2 d$.  Also, $(c,b)$ and $(a,d)$ are comparable.  But since $b\le_2 d$, we must have $(c,b)\le (a,d)$, which means $c\le_1 a$, showing $a=c$, or $P_1=\lbrace a\rbrace$.
+
+\textbf{Remark}.  The product of two posets can be readily extended to any finite product, countably infinite product, or even arbitrary product of posets.  The definition is similar to the one given above and will not be repeated here.
+
+An example of a product of posets is the \PMlinkname{lattice in $\mathbb{R}^n$}{LatticeInMathbbRn}, which is defined as the free abelian group over $\mathbb{Z}$ in $n$ generators.  But from a poset perspective, it can be viewed as a product of $n$ chains, each order isomorphic to $\mathbb{Z}$.  As we have just seen earlier, this product is a lattice, and hence the name ``lattice'' in $\mathbb{R}^n$.
+
+\subsubsection*{Lexicographic Ordering}
+Again, let $P_1$ and $P_2$ be posets.  Form the Cartesian product of $P_1$ and $P_2$ and call it $P$.  There is another way to partial order $P$, called the \emph{lexicographic order}.  Specifically, 
+$$
+(a,b)\le (c,d)\quad\mbox{ iff }\quad\begin{cases}
+a\le c\mbox{, or }\\
+a=c\mbox{ and }b\le d.
+\end{cases}
+$$
+More generally, if $\lbrace P_i\mid i\in I\rbrace$ is a collection of posets indexed by a set $I$ that is linearly ordered, then the Cartesian product $P:=\prod P_i$ also has the lexicographic order: 
+\begin{quote}
+$(a_i)\le (b_i)$ iff there is some $k\in I$ such that $a_j=b_j$ for all $j< k$ and $a_k\le b_k$.  
+\end{quote}
+We show that this is indeed a partial order on $P$:
+\begin{proof}  The three things we need to verify are
+\begin{itemize}
+\item (Reflexivity).  Clearly, $(a_i)\le (a_i)$, since $a_i\le a_i$ for any $i\in I$.  
+\item (Transitivity).  If $(a_i)\le (b_i)$ and $(b_i)\le (c_i)$, then for some $k,\ell\in I$ we have that 
+\begin{enumerate}
+\item
+$a_j=b_j$ for all $j<k$ and $a_k\le b_k$, and 
+\item
+$b_j=c_j$ for all $j<\ell$ and $b_{\ell}\le c_{\ell}$.  
+\end{enumerate}
+Since $I$ is a total order, $k$ and $\ell$ are comparable, say $k\le \ell$, so that $a_j=b_j=c_j$ for all $k<\ell$ and $a_k\le b_k\le c_k$.  Since $P_k$ is partially ordered, $a_k\le c_k$ as well.  Therefore $(a_i)\le (c_i)$.  
+\item (Antisymmetry).  Finally, suppose $(a_i)\le (b_i)$ and $(b_i)\le (a_i)$.  If $(a_i)\ne (b_i)$, then $(a_i)\le (b_i)$ implies that we can find $k\in I$ such that $a_j=b_j$ for all $j<k$ and $a_k<b_k$.  By the same token, $(b_i)\le (a_i)$ implies the existence of $\ell\in I$ with $b_j=a_j$ for all $j<\ell$ and $b_{\ell}<a_{\ell}$.  Since $I$ is linearly ordered, we can again assume that $k\le \ell$.  But then this means that either $k<\ell$, in which case $b_k=a_k$, a contradiction, or $k=\ell$, in which case we have that $a_k<b_k=b_{\ell}<a_{\ell}=a_k$, another contradiction.  Therefore $(a_i)=(b_i)$.
+\end{itemize}  This completes the proof.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

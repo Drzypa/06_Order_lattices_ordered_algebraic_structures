@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DistributiveInequalities}
+\pmcreated{2013-03-22 16:37:48}
+\pmmodified{2013-03-22 16:37:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{distributive inequalities}
+\pmrecord{5}{38830}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D99}
+\pmrelated{ModularInequality}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $L$ be a lattice.  Then for $a,b,c\in L$, we have the following inequalities:
+
+\begin{enumerate}
+\item $a\vee (b\wedge c)\le (a\vee b)\wedge (a\vee c)$,
+\item $(a\wedge b)\vee (a\wedge c)\le a\wedge (b\vee c)$.
+\end{enumerate}
+
+\begin{proof}
+Since $a\le a\vee b$ and $a\le a\vee c$, $a\le (a\vee b)\wedge (a\vee c)$.
+Similarly, $b\wedge c \le b\le a\vee b$ and $b\wedge c\le c\le a\vee c$ imply 
+$b\wedge c\le (a\vee b)\wedge (a\vee c)$.
+Together, we have $a\vee (b\wedge c)\le (a\vee b)\wedge (a\vee c)$.
+
+The second inequality is the dual of the first one.
+\end{proof}
+
+The two inequalities above are called the \emph{distributive inequalities}.
+
+\textbf{Proposition}  A lattice $L$ is a distributive lattice if one of the following inequalities holds:
+\begin{enumerate}
+\item $(a\vee b)\wedge (a\vee c)\le a\vee (b\wedge c)$,
+\item $a\wedge (b\vee c)\le (a\wedge b)\vee (a\wedge c)$.
+\end{enumerate}
+
+\begin{proof}
+By the distributive inequalities, all we need to show is that 1. implies 2.  (that 2. implies 1. is just the dual statement).  So suppose 1. holds.  Then 
+\begin{alignat*}{2}
+(a\wedge b)\vee (a\wedge c) &\ge ((a\wedge b)\vee a)\wedge ((a\wedge b)\vee c) & \qquad\mbox{by assumption}\\ 
+&= a \wedge ((a\wedge b)\vee c) & \qquad\mbox{by absorption}\\ 
+&\ge a\wedge ((c\vee a)\wedge (c\vee b)) & \qquad\mbox{by assumption}\\ 
+&= (a\wedge (c\vee a))\wedge (c\vee b) & \qquad\mbox{meet associativity}\\ 
+&= a \wedge (c\vee b). & \qquad\mbox{by absorption}
+\end{alignat*}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeetContinuous}
+\pmcreated{2013-03-22 16:36:41}
+\pmmodified{2013-03-22 16:36:41}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{meet continuous}
+\pmrecord{12}{38808}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A12}
+\pmclassification{msc}{06B35}
+\pmsynonym{order convergence}{MeetContinuous}
+\pmrelated{CriteriaForAPosetToBeACompleteLattice}
+\pmrelated{JoinInfiniteDistributive}
+\pmdefines{join continuous}
+\pmdefines{order converges}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $L$ be a meet semilattice.  We say that $L$ is \emph{meet continuous} if
+\begin{enumerate}
+\item for any monotone net $D=\lbrace x_i \mid i\in I\rbrace$ in $L$, its supremum $\bigvee D$ exists, and 
+\item for any $a\in L$ and any monotone net $\lbrace x_i\mid i\in I\rbrace$,  $$a\wedge \bigvee \lbrace x_i \mid i\in I \rbrace = \bigvee \lbrace a\wedge x_i\mid i\in I \rbrace.$$ 
+\end{enumerate}
+
+A monotone net $\lbrace x_i\mid i\in I\rbrace$ is a net $x:I\to L$ such that $x$ is a non-decreasing function; that is, for any $i\le j$ in $I$, $x_i\le x_j$ in $L$.
+
+Note that we could have replaced the first condition by saying simply that $D\subseteq L$ is a directed set.  (A monotone net is a directed set, and a directed set is a trivially a monotone net, by considering the identity function as the net).  It's not hard to see that if $D$ is a directed subset of $L$, then $a\wedge D:=\lbrace a\wedge x\mid x\in D\rbrace$ is also directed, so that the right hand side of the second condition makes sense.
+
+Dually, a join semilattice $L$ is \emph{join continuous} if its dual (as a meet semilattice) is meet continuous.  In other words, for any antitone net $D=\lbrace x_i\mid i\in I\rbrace$, its infimum $\bigwedge D$ exists and that 
+$$a\vee \bigwedge \lbrace x_i\mid i\in I\rbrace =\bigwedge \lbrace a\vee x_i\mid i\in I\rbrace.$$
+An antitone net is just a net $x:I\to L$ such that for $i\le j$ in $I$, $x_j\le x_i$ in $L$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item A meet continuous lattice is a complete lattice, since a poset such that finite joins and directed joins exist is a complete lattice (see the link below for a proof of this).
+\item 
+Let a lattice $L$ be both meet continuous and join continuous.  Let $\lbrace x_i\mid i\in I\rbrace$ be any net in $L$.  We define the following:
+$$\overline{\lim}\ x_i = \bigwedge_{j\in I} \lbrace \bigvee_{j\le i} x_i\rbrace\qquad\mbox{ and }\qquad\underline{\lim}\ x_i = \bigvee_{j\in I} \lbrace \bigwedge_{i\le j} x_i\rbrace$$
+If there is an $x\in L$ such that $\overline{\lim}\ x_i=x=\underline{\lim}\ x_i$, then we say that the net $\lbrace x_i\rbrace$ \emph{order converges} to $x$, and we write $x_i\to x$, or $x=\lim\ x_i$.  Now, define a subset $C\subseteq L$ to be \emph{closed} (in $L$) if for any net $\lbrace x_i\rbrace$ in $C$ such that $x_i\to x$ implies that $x\in C$, and \emph{open} if its set complement is closed, then $L$ becomes a topological lattice.  With respect to this topology, meet $\wedge$ and join $\vee$ are easily seen to be continuous.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{gb} G. Birkhoff, {\em Lattice Theory}, 3rd Edition, Volume 25, AMS, Providence (1967).
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\bibitem{gg} G. Gr\"{a}tzer, {\em General Lattice Theory}, 2nd Edition, Birkh\"{a}user (1998).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

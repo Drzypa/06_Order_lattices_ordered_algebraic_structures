@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConnectedPoset}
+\pmcreated{2013-03-22 17:08:31}
+\pmmodified{2013-03-22 17:08:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{connected poset}
+\pmrecord{6}{39449}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A07}
+\pmrelated{ConnectedGraph}
+\pmdefines{connected}
+\pmdefines{connected component}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $P$ be a poset.  Write $a\perp b$ if either $a\le b$ or $b\le a$.  In other words, $a\perp b$ if $a$ and $b$ are comparable.  A poset $P$ is said to be \emph{connected} if for every pair $a,b\in P$, there is a finite sequence $a=c_1, c_2,\ldots, c_n=b$, with each $c_i\in P$, such that $c_i\perp c_{i+1}$ for each $i=1,2,\ldots,n-1$.
+
+For example, a poset with the property that any two elements are either bounded from above or bounded from below is a connected poset.  In particular, every semilattice is connected.  A fence is always connected.  If $P$ has more than one element and contains an element that is both maximal and minimal, then it is not connected.  A \emph{connected component} in a poset $P$ is a maximal connected subposet.  In the last example, the maximal-minimal point is a component in $P$.  Any poset can be written as a disjoint union of its components.
+
+It is true that a poset is connected if its corresponding Hasse diagram is a connected graph.  However, the converse is not true.  Before we see an example of this, let us recall how to construct a Hasse diagram from a poset $P$.  The diagram so constructed is going to be an undirected graph (since this is all we need in our discussion).  Draw an edge between $a,b\in P$ if either $a$ covers $b$ or $b$ covers $a$.  Let us denote this relation between $a$ and $b$ by $a \asymp b$.  Let $E$ be the collection of all these edges.  Then $G=(P,E)$ is a graph where elements of $P$ serve as vertices and $E$ as the constructed edges.  From this construction, one sees that a finite path exists between $a,b\in V(G)=P$ if there is a finite sequence $a=d_0,d_1,\ldots, d_m=b$, with each $d_i\in V(G)$, such that $d_i\asymp d_{i+1}$ for $i=1,\ldots,m-1$.  In other words, $a$ and $b$ can be ``joined'' by a finite number of edges, such that $a$ is a vertex on the first edge and $b$ is the vertex on the last edge.
+
+As promised, here is an example of a connected poset whose underlying Hasse diagram is not connected.  take the real line $\mathbb{R}$ with $\infty$ adjoined to the right (meaning every element $r\in \mathbb{R}$ is less than or equal to $\infty$).  Then the resulting poset is connected, but its underlying Hasse diagram is not, since no element in $\mathbb{R}$ can be joined to $\infty$ by a finite path.
+%%%%%
+%%%%%
+\end{document}

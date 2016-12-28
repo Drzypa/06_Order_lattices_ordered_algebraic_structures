@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderOfSixMeans}
+\pmcreated{2013-03-22 18:45:28}
+\pmmodified{2013-03-22 18:45:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{order of six means}
+\pmrecord{4}{41537}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A05}
+\pmclassification{msc}{26B35}
+\pmclassification{msc}{26D07}
+\pmrelated{Mean3}
+\pmrelated{ComparisonOfPythagoreanMeans}
+\pmrelated{InequalityWithAbsoluteValues}
+\pmrelated{LehmerMean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkescapetext{size order} of the six usual means of two positive numbers ($a$ and $b$) is from the least to the greatest one
+\begin{enumerate}
+\item harmonic mean,
+\item geometric mean,
+\item Heronian mean,
+\item arithmetic mean,
+\item quadratic mean,
+\item contraharmonic mean,
+\end{enumerate}
+i. e. 
+$$\frac{2ab}{a\!+\!b} \;\leqq\; \sqrt{ab} \;\leqq\; \frac{a\!+\!\sqrt{ab}\!+\!b}{3} \;\leqq\; \frac{a\!+\!b}{2} 
+\;\leqq\; \sqrt{\frac{a^2\!+\!b^2}{2}} \;\leqq\; \frac{a^2\!+\!b^2}{a\!+\!b}.$$
+The equality signs are valid iff \,$a = b$.\\
+
+{\em Proof.}\; If\, $x^2-y^2 \geqq 0$\, for nonnegative $x$ and $y$,\, then\, $x \geqq y$.
+
+``$1\leqq2$'':\\
+$\displaystyle\left(\sqrt{ab}\right)^2-\left(\frac{a\!+\!b}{2}\right)^2 = ab\!-\!\frac{4a^2b^2}{(a\!+\!b)^2} 
+= ab\left(1\!-\!\frac{4ab}{(a\!+\!b)^2}\right) = ab\cdot\frac{(a\!+\!b)^2-4ab}{(a\!+\!b)^2} 
+= \frac{ab(a\!-\!b)^2}{(a+b)^2} \geqq 0$\\
+
+``$2\leqq3$'' and ``$3\leqq4$'': proven in\, Heronian mean is between geometric and arithmetic mean
+
+``$4\leqq5$'':\\
+$\displaystyle\left(\sqrt{\frac{a^2\!+\!b^2}{2}}\right)^2-\left(\frac{a\!+\!b}{2}\right)^2 
+= \frac{2a^2\!+\!2b^2\!-\!a^2\!-\!2ab\!-\!b^2}{4} = \left(\frac{a\!-\!b}{2}\right)^2 \geqq 0$\\
+
+``$5\leqq6$'':\\
+$\displaystyle\left(\frac{a^2\!+\!b^2}{a\!+\!b}\right)^2-\left(\sqrt{\frac{a^2\!+\!b^2}{2}}\right)^2 
+= \frac{2(a^2\!+\!b^2)^2-(a^2\!+\!b^2)(a\!+\!b)^2}{2(a\!+\!b)^2} = 
+\frac{(a^2\!+\!b^2)(2a^2\!+\!2b^2\!-\!a^2\!-\!2ab\!-\!b^2)}{2(a\!+\!b)^2}\\ 
+= \frac{(a^2\!+\!b^2)(a\!-\!b)^2}{2(a\!+\!b)^2} \geqq 0$
+%%%%%
+%%%%%
+\end{document}

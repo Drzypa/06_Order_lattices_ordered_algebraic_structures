@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpecialElementsInALattice}
+\pmcreated{2013-03-22 16:42:29}
+\pmmodified{2013-03-22 16:42:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{special elements in a lattice}
+\pmrecord{6}{38923}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+%\pmkeywords{distributive}
+%\pmkeywords{standard}
+%\pmkeywords{neutral}
+\pmdefines{distributive element}
+\pmdefines{standard element}
+\pmdefines{neutral element}
+\pmdefines{dually distributive}
+\pmdefines{dually standard}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $L$ be a lattice and $a\in L$ is said to be
+\begin{itemize}
+\item \emph{distributive} if $a\vee (b\wedge c)=(a\vee b)\wedge (a\vee c)$,
+\item \emph{standard} if $b\wedge (a\vee c)=(b\wedge a)\vee (b\wedge c)$, or
+\item \emph{neutral} if $(a\wedge b)\vee (b\wedge c)\vee (c\wedge a) = (a\vee b)\wedge (b\vee c)\wedge (c\vee a)$
+\end{itemize}
+for all $b,c\in L$.  There are also dual notions of the three types mentioned above, simply by exchanging $\vee$ and $\wedge$ in the definitions.  So a \emph{dually distributive} element $a\in L$ is one where $a\wedge (b\vee c)=(a\wedge b)\vee (a\wedge c)$ for all $b,c\in L$, and a \emph{dually standard element} is similarly defined.  However, a \emph{dually neutral} element is the same as a neutral element.
+
+\textbf{Remarks}  For any $a\in L$, suppose $P$ is the property in $L$ such that $a\in P$ iff $a\vee b=a\vee c$ and $a\wedge b=a\wedge c$ imply $b=c$ for all $b,c\in L$.
+\begin{itemize}
+\item A standard element is distributive.  Conversely, a distributive satisfying  $P$ is standard.
+\item A neutral element is distributive (and consequently dually distributive).  Conversely, a distributive and dually distributive element that satisfies $P$ is neutral.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{gb} G. Birkhoff {\em Lattice Theory}, 3rd Edition, AMS Volume XXV, (1967).
+\bibitem{gg} G. Gr\"{a}tzer, {\em General Lattice Theory}, 2nd Edition, Birkh\"{a}user (1998).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

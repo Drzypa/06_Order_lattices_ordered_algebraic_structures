@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderedGroup}
+\pmcreated{2013-03-22 14:54:36}
+\pmmodified{2013-03-22 14:54:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ordered group}
+\pmrecord{16}{36595}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A05}
+\pmclassification{msc}{20F60}
+\pmrelated{KrullValuation}
+\pmrelated{PartiallyOrderedGroup}
+\pmrelated{PraeclarumTheorema}
+\pmdefines{ordered group equipped with zero}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem{thmplain}{Theorem}
+\begin{document}
+\textbf{Definition 1.}\, We say that the subsemigroup $S$ of the group $G$ (with the operation denoted multiplicatively) defines an \PMlinkescapetext{{\em order for the group}} $G$, if 
+\begin{itemize}
+ \item $a^{-1}Sa \subseteq S \quad \forall a\in G,$
+ \item $G = S\cup \{1\} \cup S^{-1}$\,\, where \,$S^{-1} = \{s^{-1}: \,s\in S\}$\, and the members of the union are pairwise disjoint.
+\end{itemize}
+
+
+The order ``$<$'' of the group $G$ is explicitly given by setting in $G$:
+$$a < b \,\, \Leftrightarrow \,\,ab^{-1}\in S$$
+Then we speak of the {\em ordered group}\, $(G,\,<)$,\, or simply $G$.\\
+
+\begin{thmplain}
+\,\,The order ``$<$'' defined by the subsemigroup $S$ of the group $G$ has the following properties.
+\begin{enumerate}
+ \item For all\, $a,\,b\in G$, exactly one of the conditions\,\, $a < b,\,\,a = b,\,\,b < a$\,\, holds.
+ \item $a < b \,\land\, b < c \,\,\Rightarrow\,\,a < c$
+ \item $a < b \,\,\Rightarrow\,\, ac < bc \,\land\, ca < cb$ 
+ \item $a < b \,\land\, c < d \,\,\Rightarrow\,\, ac < bd$
+ \item $a < b \,\,\Leftrightarrow\,\, b^{-1} < a^{-1}$
+ \item $a < 1 \,\,\Leftrightarrow\,\, a\in S$
+\end{enumerate}
+\end{thmplain}
+
+
+\textbf{Definition 2.}\, The set $G$ is an {\em ordered group equipped with zero} 0, if the set $G^*$ of its elements distinct from its element 0 forms an ordered group\, $(G^*,\,<)$\, and if
+\begin{itemize}
+ \item $0a = a0 = 0 \quad\forall a\in G,$
+ \item $0 < a \quad\forall a\in G^*.$
+\end{itemize}
+
+Cf. 7 in examples of semigroups.
+
+\begin{thebibliography}{9}
+\bibitem{artin} {\sc Emil Artin}: {\em Theory of Algebraic Numbers}.\, Lecture notes. \,Mathematisches Institut, G\"ottingen (1959).
+\bibitem{Jaffard} {\sc Paul Jaffard}: {\em Les syst\`emes d'id\'eaux}.\, Dunod, Paris (1960).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

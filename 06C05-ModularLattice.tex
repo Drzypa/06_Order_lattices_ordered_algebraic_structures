@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModularLattice}
+\pmcreated{2013-03-22 12:27:26}
+\pmmodified{2013-03-22 12:27:26}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{modular lattice}
+\pmrecord{17}{32598}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C05}
+\pmsynonym{Dedekind lattice}{ModularLattice}
+\pmrelated{ModularLaw}
+\pmrelated{SemimodularLattice}
+\pmrelated{NonmodularSublattice}
+\pmrelated{ModularInequality}
+\pmdefines{modular}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\meet{\land}
+\def\join{\lor}
+
+\begin{document}
+\PMlinkescapeword{modular}
+\PMlinkescapeword{rank}
+\PMlinkescapeword{satisfies}
+
+A lattice $L$ is said to be \emph{modular}
+if $x \lor (y \land z) = (x \lor y) \land z$
+for all $x,y,z\in L$ such that $x \leq z$.
+In fact it is sufficient to show that
+$x \lor (y \land z) \ge (x \lor y) \land z$
+for all $x,y,z\in L$ such that $x \leq z$,
+as the reverse inequality holds in all lattices (see modular inequality).
+
+There are a number of other equivalent conditions for a lattice $L$ to be modular:
+\begin{itemize}
+\item $(x\meet y)\join(x\meet z)=x\meet(y\join(x\meet z))$
+      for all $x,y,z\in L$.
+\item $(x\join y)\meet(x\join z)=x\join(y\meet(x\join z))$
+      for all $x,y,z\in L$.
+\item For all $x,y,z\in L$,
+      if $x<z$ then either $x\meet y<z\meet y$ or $x\join y<z\join y$.
+\end{itemize}
+
+The following are examples of modular lattices.
+\begin{itemize}
+\item All \PMlinkname{distributive lattices}{DistributiveLattice}.
+\item The lattice of normal subgroups of any group.
+\item The lattice of submodules of any \PMlinkname{module}{Module}.
+     (See modular law.)
+\end{itemize}
+
+A finite lattice $L$ is modular
+if and only if it
+is graded and its rank function $\rho$ satisfies
+$\rho(x)+\rho(y)=\rho(x\land y)+\rho(x\lor y)$ for all $x,y\in L$.
+%%%%%
+%%%%%
+\end{document}

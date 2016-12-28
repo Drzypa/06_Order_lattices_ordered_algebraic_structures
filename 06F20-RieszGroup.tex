@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RieszGroup}
+\pmcreated{2013-03-22 17:09:18}
+\pmmodified{2013-03-22 17:09:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Riesz group}
+\pmrecord{7}{39464}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{20F60}
+\pmdefines{Riesz decomposition property}
+\pmdefines{interpolation group}
+\pmdefines{antilattice}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $G$ be a po-group and $G^+$ the positive cone of $G$.  The following are equivalent:
+\begin{enumerate}
+\item $G$, as a poset, sastisfies the Riesz interpolation property;
+\item if $x,y_1,y_2\in G^+$ and $x\le y_1y_2$, then $x=z_1z_2$ with $z_i\le y_i$ for some $z_i\in G^+$, $i=1,2$.
+\end{enumerate}
+The second property above, put it plainly, says that any positive element that is bounded from above by a product of positive elements, can be ``decomposed'' as a product of positive elements.  This property is known as the \emph{Riesz decomposition property}.
+\begin{proof}
+$(1\Rightarrow 2)$.  Given $x\le y_1y_2$ and $e\le x,y_1,y_2$.  Set $r=y_1^{-1}x$.  Then we have four inequalities, which can be abbreviated as $\lbrace r,e\rbrace \le \lbrace x,y_2\rbrace$, where each of the elements in the first set is less than or equal to each of the elements in the second set.  By the Riesz interpolation property, we can insert an element between the sets: $\lbrace r,e\rbrace \le z_2 \le \lbrace x,y_2\rbrace$.  From this it is clear that $e\le z_2\le y_1$.  Set $z_1=xz_2^{-1}$.  Since $z_2\le x$, we have $e\le xz_2^{-1}=z_1$.  Also, since $y_1^{-1}x=r\le z_2$, $z_2^{-1}\le x^{-1}y_1$, so that $z_1\le x(x^{-1}y_1)=y_1$.
+
+$(2\Rightarrow 1)$.  Suppose $\lbrace a,b\rbrace \le \lbrace c,d\rbrace$.  Set $x=a^{-1}c$, $y_1=a^{-1}d$ and $y_2=b^{-1}c$.  Then $x,y_1,y_2\in G^+$.  Since $e\le db^{-1}$, we have $x=a^{-1}c= a^{-1}ec\le a^{-1}(db^{-1})c= (a^{-1}d)(b^{-1}c)=y_1y_2$.  By the Riesz decomposition property, $a^{-1}c=x=z_1z_2$ for some $z_1,z_2\in G$ with $e\le z_1\le y_1=a^{-1}d$ and $e\le z_2\le y_2=b^{-1}c$.  The decomposition equality can be rewritten as $c=az_1z_2$, and the last two inequalities can be rewritten as $az_1\le d$ and $bz_2\le c$.  Set $s=az_1$, so we have $a\le az_1=s\le az_1z_2=c$.  Furthermore, since $bz_2\le c=az_1z_2$, we get $b\le az_1=s$.  Finally from $z_1\le a^{-1}d$, we have $s=az_1\le d$.  Gather all the inequalities, we have finally $\lbrace a,b\rbrace\le s\le\lbrace c,d\rbrace$.
+\end{proof}
+
+\textbf{Definitions}.  Let $G$ be a po-group.
+\begin{itemize}
+\item $G$ is called an \emph{interpolation group} if $G$ satisfies one of the two equivalent conditions in the theorem above.
+\item $G$ is a \emph{Riesz group} if $G$ is a directed interpolation group.  By directed we mean that $G$, as a poset, is a directed set.
+\item $G$ is an \emph{antilattice} if $G$ is a Riesz group with the property that if $a,b\in G$ have a greatest lower bound, then $a$ and $b$ are comparable.
+\end{itemize}
+
+Any lattice-ordered group is an antilattice.  Here is an interpolation group that is not an l-group.  Let $G=\mathbb{Z}\times \mathbb{Z}$.  Define $(a,b)\le (c,d)$ iff $(c,d)-(a,b)=(0,n)$ for some non-negative integer $n$.  This order is a partial order.  But $G$ is not a lattice, since $(1,0)\vee (0,0)$ does not exist.  However, if any two elements in $G$ have either an upper bound or a lower bound, then the elements are in fact comparable.  Therefore, $\lbrace a,b\rbrace \le \lbrace c,d\rbrace$ means that $a,b,c,d$ form a chain.  So any element in the interval $[a\vee b,c\wedge d]$ ``interpolates'' $\lbrace a,b\rbrace$ and $\lbrace c,d\rbrace$.  Note that $G$ is not a Riesz group, for otherwise it would be a chain.
+%%%%%
+%%%%%
+\end{document}

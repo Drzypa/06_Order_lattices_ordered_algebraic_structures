@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderedTopologicalVectorSpace}
+\pmcreated{2013-03-22 17:03:23}
+\pmmodified{2013-03-22 17:03:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{ordered topological vector space}
+\pmrecord{4}{39347}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{46A40}
+\pmclassification{msc}{06F30}
+\pmsynonym{ordered topological linear space}{OrderedTopologicalVectorSpace}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $k$ be either $\mathbb{R}$ or $\mathbb{C}$ considered as a field.  An \emph{ordered topological vector space} $L$, (\emph{ordered t.v.s} for short) is 
+\begin{itemize}
+\item a topological vector space over $k$, and 
+\item an ordered vector space over $k$, such that 
+\item the positive cone $L^+$ of $L$ is a closed subset of $L$.
+\end{itemize}
+
+The last statement can be interpreted as follows: if a sequence of non-negative elements $x_i$ of $L$ converges to an element $x$, then $x$ is non-negative.
+
+\textbf{Remark}.  Let $L,M$ be two ordered t.v.s., and $f:L\to M$ a linear transformation that is monotone.  Then if $0\le x\in L$, $0\le f(x)\in M$ also.  Therefore $f(L^+)\subseteq M^+$.  Conversely, a linear map that is invariant under positive cones is monotone.
+%%%%%
+%%%%%
+\end{document}

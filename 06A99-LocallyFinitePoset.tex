@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyFinitePoset}
+\pmcreated{2013-03-22 14:09:15}
+\pmmodified{2013-03-22 14:09:15}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{locally finite poset}
+\pmrecord{5}{35572}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A99}
+\pmdefines{locally finite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A poset $P$ is \emph{locally finite} if every interval $[x,y]$ in $P$ is finite.  For example, $\mathbb{Z}$ with the usual order is locally finite but not finite, while $\mathbb{Q}$ is neither.
+
+Every locally finite poset is also chain finite, but the converse does not hold.  To see this, define a partial order on $\mathbb{N}$ by the rule that
+$k \le \ell$ if and only if $k=0$ or $\ell=1$.  Thus $0$ is the minimum element, $1$ is the maximum element, and the remaining elements form an infinite antichain.  Every bounded chain in this poset is finite but the entire poset is an infinite interval, so the poset is chain finite but not locally finite.
+
+\PMlinkescapeword{entire}
+\PMlinkescapeword{interval}
+%%%%%
+%%%%%
+\end{document}

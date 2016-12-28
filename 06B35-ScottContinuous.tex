@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ScottContinuous}
+\pmcreated{2013-03-22 16:49:53}
+\pmmodified{2013-03-22 16:49:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Scott continuous}
+\pmrecord{6}{39072}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B35}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\up}{\uparrow\!\!}
+\newcommand{\down}{\downarrow\!\!}
+\begin{document}
+Let $P_1,P_2$ be two \PMlinkname{dcpos}{Dcpo}.  A function $f:P_1\to P_2$ is said to be \emph{Scott continuous} if for any directed set $D\subseteq P_1$, $f(\bigvee D)=\bigvee f(D)$.
+
+First, observe that $f$ is monotone.  If $a\le b$, then $f(b)=f(\bigvee \lbrace a,b\rbrace)=\bigvee \lbrace f(a),f(b)\rbrace$, so that $f(a)\le f(b)$.  As a result, if $D$ is directed, so is $f(D)$.
+
+\begin{prop}  $f:P_1\to P_2$ is Scott continuous iff it is continuous when $P_1$ and $P_2$ are equipped with the Scott topologies. \end{prop}
+
+Before proving this, let's make one additional observation: 
+\begin{lem} If $f$ is continuous (under Scott topologies), then $f$ is monotone.  \end{lem}
+\begin{proof}
+Suppose $a\le b\in P_1$.  We wish to show that $f(a)\le f(b)$, or $f(a)\in \down f(b)$.  Assume the contrary.  Consider $U=P_2-\down f(b)$.  Then $f(a)\in U$ and $U$ is Scott open, hence $a\in f^{-1}(U)$ is Scott open also.  Since $a\le b$ and $f^{-1}(U)$ is upper, $b\in f^{-1}(U)$, which implies $f(b)\in U=P_2-\down f(b)$, a contradiction.  Therefore, $f(a)\le f(b)$.
+\end{proof}
+
+Now the proof of the proposition.
+
+\begin{proof}
+Suppose first that $f$ is Scott continuous.  Take an open set $U\in P_2$.  We want to show that $V:=f^{-1}(U)$ is open in $P_1$.  In other words, $V$ is upper and that $V$ has non-empty intersection with any directed set $D\in P_1$ whenever its supremum $\bigvee D$ lies in $V$.  If $a\in \up V$, then some $b\in V$ with $b\le a$, which implies $f(b)\le f(a)$.  Since $f(b)\in U$, $f(a)\in \up U=U$, so $a\in f^{-1}(U)=V$, $V$ is upper.  Now, suppose $\bigvee D \in V$.  So $\bigvee f(D)=f(\bigvee D)\in U$.  Since $f(D)$ is directed, there is $y\in f(D)\cap U$, which means there is $x\in P_1$ such that $f(x)=y$ and $x \in D\cap V$.  This shows that $V$ is Scott open.
+
+Conversely, suppose $f$ is continuous (inverse of a Scott open set is Scott open).  Let $D$ be a directed subset of $P_1$ and let $d=\bigvee D$.  We want to show that $f(d)=\bigvee f(D)$.  First, for any $e\in D$, we have that $e\le d$ so that $f(e)\le f(d)$ since $f$ is monotone.  This shows $\bigvee f(D)\le f(d)$.  Now suppose $r$ is any upper bound of $f(D)$.  We want to show that $f(d)\le r$, or $f(d)\in \down r$.  Assume not.  Then $f(d)$ lies in $U:=P_2-\down r$, a Scott open set.  So $\bigvee D=d\in f^{-1}(U)$, also Scott open, which implies some $e\in D$ with $e\in f^{-1}(U)$, or $f(e)\in U$.  This means $f(e) \not\le r$, a contradiction.  Thus $f(d)\le r$, and the proof is complete.
+\end{proof}
+
+\textbf{Remark}.  This notion of continuity is attributed to Dana Scott when he was trying to come up with a model for the formal system of untyped lambda calculus.
+
+\begin{thebibliography}{8}
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

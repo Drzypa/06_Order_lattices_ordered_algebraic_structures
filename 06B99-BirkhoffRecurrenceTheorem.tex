@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BirkhoffRecurrenceTheorem}
+\pmcreated{2015-03-20 0:56:48}
+\pmmodified{2015-03-20 0:56:48}
+\pmowner{Filipe}{28191}
+\pmmodifier{Filipe}{28191}
+\pmtitle{Birkhoff Recurrence Theorem}
+\pmrecord{2}{88234}
+\pmprivacy{1}
+\pmauthor{Filipe}{28191}
+\pmtype{Theorem}
+%\pmkeywords{Recurrence; Dynamical Systems}
+\pmrelated{Poincaré Recurrence Theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $T:X\rightarrow X$ be a continuous tranformation in a compact metric space $X$. Then, there exists some point $x \in X$ that is recurrent to $T$, that is, there exists a sequence $(n_k)_k$ such that $T^{n_k}(x)\rightarrow x$ when $k\rightarrow \infty$.
+
+Several proofs of this theorem are available. It may be obtained from topological arguments together with Zorn's lemma. It is also a consequence of Krylov-Bogolyubov theorem, or existence of invariant probability measures theorem, which asserts that every continuous transformation in a compact metric space admits an invariant probability measure, and an application of Poincaré Recurrence theorem to that invariant probability measure yields Birkhoff Recurrence theorem.
+
+There is also a generalization of Birkhoff recurrence theorem for multiple commuting transformations, known as Birkhoff Multiple Recurrence theorem.
+\end{document}

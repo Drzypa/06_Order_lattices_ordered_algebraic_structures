@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PurePoset}
+\pmcreated{2013-03-22 17:19:47}
+\pmmodified{2013-03-22 17:19:47}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{pure poset}
+\pmrecord{4}{39682}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\fm}[1]{{\it #1}}
+\begin{document}
+A poset is \emph{pure} if it is finite and every maximal chain has the same length.
+If \fm{P} is a pure poset, we can create a rank function \fm{r} on \fm{P} by defining
+\fm{r}(\fm{x}) to be the length of a maximal chain bounded above by \fm{x}.  Every
+interval of a pure poset is a graded poset, and every graded poset is pure.  Moreover,
+the closure of a pure poset, formed by adjoining an artificial minimum element and 
+an artificial maximum element, is always graded.
+
+The face poset of a pure simplicial complex is pure as a poset.
+
+% add more stuff
+
+\PMlinkescapeword{closure}
+\PMlinkescapeword{face} % need to create face poset
+%%%%%
+%%%%%
+\end{document}

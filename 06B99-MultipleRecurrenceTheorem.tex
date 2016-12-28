@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultipleRecurrenceTheorem}
+\pmcreated{2015-03-20 0:29:34}
+\pmmodified{2015-03-20 0:29:34}
+\pmowner{Filipe}{28191}
+\pmmodifier{Filipe}{28191}
+\pmtitle{Multiple Recurrence Theorem}
+\pmrecord{1}{}
+\pmprivacy{1}
+\pmauthor{Filipe}{28191}
+\pmtype{Theorem}
+\pmsynonym{Poincaré Multiple Recurrence Theorem; Fürstenberg Recurrence theorem}{MultipleRecurrenceTheorem}
+%\pmkeywords{Recurrence}
+\pmrelated{Poincaré Recurrence Theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $(X, \mathcal{B}, \mu)$ be a probability space, and let $T_i:X \rightarrow X$ be measure-preserving transformations, for $i$ between $1$ and $q$. Assume that all the transformations $T_i$ commute. If $E\subset X$ is a positive measure set $\mu(E)>0$, then, there exists $n \in \mathbb{N}$ such that 
+$$\mu (E \cap T_1^{-n}(E) \cap \cdots \cap T_q^{-n}(E))>0$$
+In other words there exist a certain time $n$ such that the subset of $E$ for which all elements return to $E$ simultaneously for all transformations $T_i$ is a subset of $E$ with positive measure.
+Observe that the theorem may be applied again to the set $G=E \cap T_1^{-n}(E) \cap \cdots \cap T_q^{-n}(E)$, obtaining the existence of $m\in \mathbb{N}$ such that
+$$\mu (G \cap T_1^{-m}(G) \cap \cdots \cap T_q^{-m}(G))>0$$
+so that $$\mu (E \cap T_1^{-(m+n)}(E) \cap \cdots \cap T_q^{-(m+n)}(E))\geq \mu (G \cap T_1^{-m}(G) \cap \cdots \cap T_q^{-m}(G)) >0$$
+So we may conclude that, when $E$ has positive measure, there are infinite times for which there is a simultaneous return for a subset of $E$ with positive measure.
+
+As a corollary, since the powers $T,T^2 \cdots T^q$ of a transformation $T$ commute, we have that, for $E$ with positive measure there exists $n \in \mathbb{N}$ such that
+$$\mu (E\cap T^{-n}(E) \cap \cdots \cap T^{-qn}(E))>0$$ 
+As a consequence of the multiple recurrence theorem one may prove Szemerédi's Theorem about arithmetic progressions.
+\end{document}

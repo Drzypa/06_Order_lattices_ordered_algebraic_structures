@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RedundancyOfTwosidednessInDefinitionOfGroup}
+\pmcreated{2015-01-20 17:28:03}
+\pmmodified{2015-01-20 17:28:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{redundancy of two-sidedness in definition of group}
+\pmrecord{3}{88222}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In the definition of group, one usually supposes that there is a two-sided identity element and that 
+any element has a two-sided inverse (cf. \PMlinkname{group}{Group}).
+
+The group may also be defined without the two-sidednesses:\\
+
+A {\it group} is a pair of a non-empty set $G$ and its associative binary operation 
+$(x,y) \mapsto xy$ such that
+
+1) the operation has a right identity element $e$;
+
+2) any element $x$ of $G$ has a right inverse $x^{-1}$.\\
+
+We have to show that the right identity $e$ is also a left identity 
+and that any right inverse is also a left inverse.
+
+Let the above assumptions on $G$ be true.\, If $a^{-1}$ is the right 
+inverse of an arbitrary element $a$ of $G$, the calculation
+$$a^{-1}a = a^{-1}ae = a^{-1}aa^{-1}(a^{-1})^{-1} = 
+a^{-1}e(a^{-1})^{-1} = a^{-1}(a^{-1})^{-1} = e$$
+shows that it is also the left inverse of $a$.\, Using this result, 
+we then can write
+$$ea = (aa^{-1})a = a(a^{-1}a) = ae = a,$$
+whence $e$ is a left identity element, too.
+
+\end{document}

@@ -1,0 +1,316 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TarskiKnasterTheorem}
+\pmcreated{2013-03-22 15:30:19}
+\pmmodified{2013-03-22 15:30:19}
+\pmowner{kompik}{10588}
+\pmmodifier{kompik}{10588}
+\pmtitle{Tarski-Knaster theorem}
+\pmrecord{18}{37366}
+\pmprivacy{1}
+\pmauthor{kompik}{10588}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmsynonym{Tarski theorem}{TarskiKnasterTheorem}
+\pmsynonym{Knaster-Tarski theorem}{TarskiKnasterTheorem}
+\pmrelated{lattice}
+\pmrelated{completelattice}
+\pmrelated{fixedpoint}
+\pmrelated{ProofOfSchroederBernsteinTheoremUsingTarskiKnasterTheorem}
+\pmrelated{Lattice}
+\pmrelated{CompleteLattice}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\newtheorem{theorem}{Theorem}
+\numberwithin{equation}{section}
+\begin{document}
+The aim of this article is to prove
+\begin{theorem}
+[LATTICE-THEORETICAL FIXPOINT THEOREM]Let
+
+\begin{enumerate}
+\item[(i)] $\mathfrak{A}=(A,\ \leq)$ \ be a complete lattice,
+
+\item[(ii)] $f$ be an increasing function on $A$ to $A,$
+
+\item[(iii)] $P$ the set of all fixpoints of $f.$
+\end{enumerate}
+
+Then the set $P$ is not empty and the system $(P,\ \leq)$ is a complete
+lattice; in particular we have
+\[
+\cup P=\cup E_{x}[f(x)\geq x]\in P
+\]
+and
+\[
+\cap P=\cap E_{x}[f(x)\leq x]\in P.
+\]
+
+\end{theorem}
+
+This article follows, with clarification, Tarski's original
+1955 article \cite{tarski}, which may not be available to some readers.
+
+\section{Definitions}
+
+The symbol $\emptyset$ denotes the empty set. The symbol $\forall$ is
+shorthand for "for all".
+
+\begin{definition}
+A \textbf{poset} (partially ordered set) $\mathfrak{A}=(A,\ \leq)$ consists of
+a nonempty set $A$ and a relation
+\[
+\leq:\ A\times A\longrightarrow\{\text{False},\ \text{True}\}
+\]
+that is reflexive ($a\leq a$ $\forall a\in A$), antisymmetric ($\forall
+\ a,\ b\in A,$ if $a\leq b$ and $b\leq a,$ then $a=b$). and transitive
+\ ($\forall\ a,\ b,\ c\in A,$ if $a\leq b$ and $b\leq c,$ then $a\leq c$).
+\end{definition}
+
+\begin{definition}
+If $\mathfrak{A}=(A,\ \leq)$ is a poset and $B$\ is a nonempty subset of $A,$
+then $\sup(B)$ is an element of $A,$ if it exists, with these properties:
+
+\begin{enumerate}
+\item $\forall\ b\in B,~b\leq\sup(B)$, (in shorthand, $B\leq\sup(B)$).
+
+\item If $a\in A$ and $B\leq a,$ then $\sup(B)\leq a.$
+\end{enumerate}
+
+Similarly $\inf(B)$ is an element of $A,$ if it exists, with these properties:
+
+\begin{enumerate}
+\item[(3)] $\inf(B)\leq B,$
+
+\item[(4)] If $a\in A$ and $a\leq B,$ then $a\leq\inf(B).$
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+If $\sup(B)$ exists, then it is unique; if $\inf(B)$ exists, it is unique.
+\end{theorem}
+
+\begin{definition}
+Let $\mathfrak{A}=(A,\ \leq)$ be a poset. Then $\mathfrak{A}$ is a
+\textbf{lattice} if $\forall\ a,\ b\in A,$ the set $\{a,\ b\}$ has a $\sup$
+and an $\inf.$ We write
+\[
+a\cup b=\sup(\{a,\ b\})\quad\text{and}\quad a\cap b=\inf(\{a,\ b\}).
+\]
+
+\end{definition}
+
+As an exercise, prove the following:
+
+\begin{theorem}
+Let $\mathfrak{A}=(A,\ \leq)$ be a lattice.\ Then
+
+\begin{enumerate}
+\item $a\cup b=b\cup a,\qquad a\cap b=b\cap a$
+
+\item $(a\cup b)\cup c=a\cup(b\cup c),\qquad(a\cap b)\cap c=a\cap(b\cap c)$
+
+\item $a\cup(b\cap c)\leq(a\cup b)\cap(a\cup c).\qquad(a\cap b)\cup(a\cap
+c)\leq a\cap(b\cup c).$
+\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+A poset $\mathfrak{A}=(A,\ \leq)$ is a \textbf{complete lattice} if for each
+nonempty $B\subseteq A,$ both $\sup(B)$ and $\inf(B)$ exist.
+\end{definition}
+
+In particular, this is the case when $B=\{a,\ b\},$ so a complete lattice is a lattice.
+
+\section{The Tarski-Knaster Theorem}
+
+Statement of the theorem, as it is in \cite{tarski}:
+
+\begin{theorem}
+[LATTICE-THEORETICAL FIXPOINT THEOREM]Let
+
+\begin{enumerate}
+\item[(i)] $\mathfrak{A}=(A,\ \leq)$ \ be a complete lattice,
+
+\item[(ii)] $f$ be an increasing function on $A$ to $A,$
+
+\item[(iii)] $P$ the set of all fixpoints of $f.$
+\end{enumerate}
+
+Then the set $P$ is not empty and the system $(P,\ \leq)$ is a complete
+lattice; in particular we have
+\[
+\cup P=\cup E_{x}[f(x)\geq x]\in P
+\]
+and
+\[
+\cap P=\cap E_{x}[f(x)\leq x]\in P.
+\]
+
+\end{theorem}
+
+The symbols $\cup P$ and $\cap P$ are what I am calling $\sup(P)$ and
+$\inf(C).$ Now let me restate the theorem:
+
+\begin{theorem}
+Let $\mathfrak{A}=(A,\ \leq)$ be a complete lattice. Let $f$ be an increasing
+function on $A$ to $A,$ that is, whenever $a\leq b,$ then $f(a)\leq f(b).$ Let
+$P$ be the set of all fixed points of $f:$
+\[
+P=\{\ a\in A\ |\ f(a)=a\ \}.
+\]
+Then
+
+\begin{enumerate}
+\item $P\neq\emptyset$.
+
+\item The system $\mathfrak{P}=(P,$ $\leq)$ is a complete lattice.
+
+\item Set $B=\{\ b\in A\ |\ b\leq f(b)\ \}$. Then $B\neq\emptyset$ and
+$\sup(B)=\sup(P)\in P.$
+
+\item Set $C=\{\ c\in A\ |\ f(c)\leq c\ \}$. Then $C\neq\emptyset\ $and
+$\inf(C)=\inf(P)\in P.$
+\end{enumerate}
+\end{theorem}
+
+\begin{lemma}
+Let $\mathfrak{A}=(A,\ \leq)$ be a complete lattice and $\emptyset\neq
+A_{0}\subseteq A.$ Let
+\[
+D=\{d\in A\ |\ d\leq A_{0}\},\qquad E=\{e\in A\ |\ A_{0}\leq e\}.
+\]
+($d\leq A_{o}$ means $d\leq a_{0}$ $\forall a_{0}\in A_{0}.$) Then both $B$
+and $C$ are complete lattices, with $\leq$ \ inherited from that of $A.$
+\end{lemma}
+
+\begin{proof}
+[Proof (of Lemma)]We'll do the case of $D;$ that for $E$ is similar (dual).
+First, $D\neq\emptyset$ because $\inf(A)\in D.$ Suppose $\emptyset\neq
+G\subseteq D.$ Obviously
+\[
+\inf(G)\leq g\leq A_{0}
+\]
+for any $g\in G,$ so $\inf(G)\in D.$ As $g\leq A_{0}$ for all $g\in G,$ we
+have $\sup(G)\leq A_{0}$ by (2) in the definition of $\sup.$ So $\sup(G)\in
+D.$ As $G$ was any nonempty subset of $D,$ these statements say that $D$ is a
+complete lattice.
+\end{proof}
+
+\begin{proof}
+[Proof (of Theorem)]$B\neq\emptyset$ because $\inf(A)\in B.$ Hence $b_{1}
+=\sup(B)$ exists. If $b\in B,$ then $b\leq b_{1},$ which implies
+\[
+f(b)\leq f(b_{1}).
+\]
+because $f$ is increasing., so
+\[
+b\leq f(b)\leq f(b_{1}).
+\]
+This is true $\forall$ $b\in B.$ Hence
+\[
+b_{1}=\sup(B)\leq f(b_{1}).
+\]
+Therefore $b_{1}\in B.$ Because $f$ is increasing, this implies
+\[
+f(b_{1})\leq f(f(b_{1})),
+\]
+from which $f(b_{1})\in B.$ Hence $f(b_{1})\leq\sup(B)=b_{1}.$ From
+\[
+b_{1}\leq f(b_{1})\leq b_{1}
+\]
+we have $f(b_{1})=b_{1},$ that is, $b_{1}\in P.$ This settles (1):\ $P\neq
+\emptyset,$ and incidentally proves $\sup(B)\in P.\smallskip$
+
+From this,\ $\sup(B)\leq\sup(P).$ But obviously $P\subseteq B,$ so
+$\sup(P)\leq\sup(B).$ Therefore $\sup(P)=\sup(B),$ completing the proof of
+(3). Statement (4) is proved similarly (or dually).$\smallskip$
+
+Next we prove (2). Let $\emptyset\neq P_{0}\subseteq P.$ Set
+\[
+Q=\{\ q\in A\ |\ q\leq P_{0}\ \}.
+\]
+By the Lemma, $Q$ is a complete lattice. If $q\in Q,$\ then $\forall\ p_{0}\in
+P_{0},$ we have $q\leq p_{0},$ hence
+\[
+f(q)\leq f(p_{0})=p_{0}\ ,
+\]
+that is, $f(q)\in Q.$ In other words,
+\[
+f:\ Q\longrightarrow Q.
+\]
+By what we have already proved for $A,$ applied to $Q,$ we have $\sup(Q)\in
+Q,$ and $\sup(Q)$ is a fixed point of $f.$ That is, $\sup(Q)\in P.$ But
+obviously $\sup(Q)=\inf(P_{0}),$ so $\inf(P_{0})\in P$ Similarly $\sup
+(P_{0})\in P,$ completing the proof of (2):\ $P$ is a complete lattice.
+\end{proof}
+
+This theorem was proved by A. Tarski \cite{tarski}. A special case of
+this theorem (for lattices of sets) appeared in a paper of B. Knaster
+\cite{knaster}. Kind of converse of this theorem was proved by Anne C.
+Davis \cite{davis}: If every order-preserving function $f\colon L\to
+L$ has a fixed point, then $L$ is a complete lattice.
+
+\begin{thebibliography}{1}
+\bibitem{davis}
+Anne~C. Davis, \emph{{A characterization of complete lattices.}}, Pac. J. Math. \textbf{5} (1955), 311--319.
+
+\bibitem{forster}
+Thomas Forster, \emph{{Logic, induction and sets}}, {Cambridge University Press}, Cambridge, 2003.
+
+\bibitem{knaster}
+B.~Knaster, \emph{{Un th\'eor\`eme sur les fonctions d'ensembles.}}, Annales Soc. Polonaise \textbf{6} (1928), 133--134.
+
+\bibitem{kolibiar}
+M.~Kolibiar, A.~Leg\'e\v{n}, T.~\v{S}al\'at, and \v{S}. Zn\'am, \emph{Algebra a pr\'\i buzn\'e discipl\'\i ny}, Alfa, Bratislava, 1992 (Slovak).
+
+\bibitem{nation}
+J.~B. Nation: \PMlinkexternal{\emph{Notes on lattice theory}}{http://bigcheese.math.sc.edu/~mcnulty/alglatvar/}
+
+\bibitem{tarski}
+Alfred Tarski, \emph{{A lattice-theoretical fixpoint theorem and its applications.}}, Pac. J. Math. \textbf{5} (1955), 285--309.
+
+\bibitem{wiki}
+Wikipedia's entry on \PMlinkexternal{Knaster-Tarski theorem}{http://en.wikipedia.org/wiki/Knaster-Tarski_theorem}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

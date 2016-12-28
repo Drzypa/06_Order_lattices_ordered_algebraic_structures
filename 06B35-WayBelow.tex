@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WayBelow}
+\pmcreated{2013-03-22 16:38:28}
+\pmmodified{2013-03-22 16:38:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{way below}
+\pmrecord{10}{38844}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B35}
+\pmclassification{msc}{06A99}
+\pmsynonym{way way below}{WayBelow}
+\pmsynonym{way-below}{WayBelow}
+\pmsynonym{way-way-below}{WayBelow}
+\pmdefines{way below relation}
+\pmdefines{way way below relation}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $P$ be a poset and $a,b\in P$.  $a$ is said to be \emph{way below} $b$, written $a\ll b$, if for any directed set $D\subseteq P$ such that $\bigvee D$ exists and that $b\le \bigvee D$, then there is a $d\in D$ such that $a\le d$.
+
+First note that if $a\ll b$, then $a\le b$ since we can set $D=\lbrace b\rbrace$, and if $P$ is finite, we have the converse (since $\bigvee D\in D$).  So, given any element $b\in P$, what exactly are the elements that are way below $b$?  Below are some examples that will throw some light:
+
+\textbf{Examples}
+\begin{enumerate}
+\item Let $P$ be the poset given by the Hasse diagram below:
+$$\xymatrix{
+& & b \ar@{.}[d] \ar@{.}[dll] \ar@{.}[dr] & \\
+p \ar@{-}[d] \ar@{-}[dr] & & q \ar@{-}[dl] \ar@{-}[d] & r \ar@{-}[dl] \\
+s & t \ar@{-}[d] & u \ar@{-}[dl] \\
+& v & & }
+$$
+where the dotted lines denote infinite chains between the end points.  First, note that every element in $P$ is below ($\le$) $b$.  However, only $v$ is way below $b$.  $u$, for example, is not way below $b$, because $D=\lbrace x \mid p\le x< b \rbrace$ is a directed set such that $\bigvee D=b$ and non of the elements in $D$ are above $u$.  This illustrates the fact that if $P$ has a bottom, it is way below everything else.
+\item Suppose $P$ is a lattice.  Then $a\ll b$ iff for any set $D$ such that $\bigvee D$ exists and $b\le \bigvee D$, there is a finite subset $F\subseteq D$ such that $a\le \bigvee F$.
+\begin{proof}
+$(\Rightarrow)$.  Suppose $a\ll b$.  Let $D$ be the set in the assumption.  Let $E$ be the set of all finite joins of elements of $D$.  Then $D\subseteq E$.  Also, every element of $E$ is bounded above by $\bigvee D$.  If $t$ is an upper bound of elements of $E$, then it is certainly an upper bound of elements of $D$, and hence $\bigvee D\le t$.  So $\bigvee D$ is the least upper bound of elements of $E$, or $\bigvee E=\bigvee D$.  Furthermore, $E$ is directed.  So there is an element $e\in E$ such that $a\le e$.  But $e=\bigvee F$ for some finite subset of $D$, and this completes one side of the proof.
+
+$(\Leftarrow)$.  Let $D$ be a directed set such that $\bigvee D$ exists and $b\le \bigvee D$.  There is a finite subset $F$ of $D$ such that $a\le \bigvee F$.  Since $D$ is directed, there is an element $d\in D$ such that $d$ is the upper bound of elements of $F$.  So $a\le d$, completing the other side of the proof.
+\end{proof}
+\item With the above assertion, we see that, for example, in the lattice of subgroups $L(G)$ of a group $G$, $H\ll K$ iff $H$ is finitely generated.  Other similar examples can be found in the lattice of two-sided ideals of a ring, and the lattice of subspaces (projective geometry) of a vector space.
+\item In particular, if $P$ is a chain, then $a\le b$ implies that $a\ll b$.  If $D$ is a set such that $\bigvee D$ exists and $b\le \bigvee D$, then there is a $d\in D$ such that $b\le d$ (otherwise $b$ is an upper bound of elements of $D$ and $\bigvee D\le b$), so $a\le d$.
+\item Here's an example where $a\ll b$ in $P$ but $a$ is not the bottom of $P$.  Take two complete infinite chains $C_1$ and $C_2$ with bottom $0$ and $1$, and let $P$ be their \PMlinkname{product}{ProductOfPosets} $P=C_1\times C_2$.  What elements are way below $(1,1)$?  First, take $D=\lbrace (a,1)\mid 0\le a<1 \rbrace$.  Since $P$ is complete, $\bigvee D=(1,1)$, but every element of $D$ is stricly less than $(1,1)$, so $(1,1)$ is not way below itself.  What about elements of the form $(a,1)$, $a\ne 1$?  If we take $D=\lbrace (1,b)\mid 0\le b<1 \rbrace$, then $\bigvee D=(1,1)$ once again.  But no elements of $D$ are above $(a,1)$.  So $(a,1)$ can not be way below $(1,1)$.  Similarly, neither can $(1,b)$ be way below $(1,1)$.  Finally, what about $(a,b)$ for $a<1$ and $b<1$?  If $D$ is a set with $\bigvee D=(1,1)$, then $\bigvee D_1=1$ and $\bigvee D_2=1$, where $D_1=\lbrace x\mid (x,1)\in D\rbrace$ and $D_2=\lbrace y\mid (1,y)\in D\rbrace$.  Since $C_1$ and $C_2$ are chains, $a\le 1$ implies that there is an $s\in D_1$ such that $a\le s$.  Similarly, there is a $t\in D_2$ such that $b\le t$.  Together, $(a,b)\le (s,t)\in D$.  So $(a,b)\ll (1,1)$.
+\item Let $X$ be a topological space and $L(X)$ be the lattice of open sets in $X$.  Suppose $U,V\in L(X)$ and $U\le V$.  If there is a compact subset $C$ such that $U\subseteq C \subseteq V$, then $U\ll V$.
+\end{enumerate}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item In a lattice $L$, $a\ll a$ iff $a$ is a compact element.  This follows directly from the assertion above.  In fact, a compact element can be defined in a general poset as an element that is way below itself.
+\item If we remove the condition that $D$ be directed in the definition above, then $a$ is said to be \emph{way way below} $b$.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

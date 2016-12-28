@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteBooleanAlgebra}
+\pmcreated{2013-03-22 18:01:09}
+\pmmodified{2013-03-22 18:01:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{complete Boolean algebra}
+\pmrecord{11}{40535}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E10}
+\pmrelated{CompleteLattice}
+\pmdefines{$\kappa$-complete Boolean algebra}
+\pmdefines{countably complete Boolean algebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+A Boolean algebra $A$ is a \emph{complete Boolean algebra} if for every subset $C$ of $A$, the arbitrary join and arbitrary meet of $C$ exist.
+
+By de Morgan's laws, it is easy to see that a Boolean algebra is complete iff the arbitrary join of any subset exists iff the arbitrary meet of any subset exists.  For a proof of this, see \PMlinkname{this link}{PropertiesOfArbitraryJoinsAndMeets}.
+
+For an example of a complete Boolean algebra, let $S$ be any set.  Then the powerset $P(S)$ with the usual set theoretic operations is a complete Boolean algebra.
+
+In a complete Boolean algebra, the infinite distributive and infinite deMorgan's laws hold:
+\begin{itemize}
+\item $x\wedge \bigvee A = \bigvee (x\wedge A)$ and $x\vee \bigwedge A = \bigwedge (x\vee A)$
+\item $(\bigvee A)^* = \bigwedge A^*$ and $(\bigwedge A)^* = \bigvee A^*$, where $A^*:=\lbrace a^* \mid a\in A\rbrace$.
+\end{itemize}
+
+In the category of complete Boolean algebras, a morphism between two objects is a Boolean algebra homomorphism that preserves arbitrary joins (equivalently, arbitrary meets), and is called a \emph{complete Boolean algebra homomorphism}.
+
+\textbf{Remark}  There are infinitely many algebras between Boolean algebras and complete Boolean algebras.  Let $\kappa$ be a cardinal.  A Boolean algebra $A$ is said to be $\kappa$-complete if for every subset $C$ of $A$ with $|C|\le \kappa$, $\bigvee C$ (and equivalently $\bigwedge C$) exists.  A $\kappa$-complete Boolean algebra is usually called a $\kappa$-algebra.  If $\kappa=\aleph_0$, the first aleph number, then it is called a \emph{countably complete Boolean algebra}.  
+
+Any complete Boolean algebra is $\kappa$-complete, and any $\kappa$-complete is $\lambda$-complete for any $\lambda\le \kappa$.  An example of a $\kappa$-complete algebra that is not complete, take a set $S$ with $\kappa < |S|$, then the collection $A\subseteq P(S)$ consisting of any subset $T$ such that either $|T|\le \kappa$ or $|S-T|\le \kappa$ is $\kappa$-complete but not complete.
+
+A Boolean algebra homomorphism $f$ between two $\kappa$-algebras $A,B$ is said to be $\kappa$-complete if $$f(\bigvee \lbrace a \mid a\in C\rbrace)= \bigvee \lbrace f(a)\mid a\in C\rbrace $$ for any $C\subseteq A$ with $|C|\le \kappa$.
+%%%%%
+%%%%%
+\end{document}

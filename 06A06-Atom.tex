@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Atom}
+\pmcreated{2013-03-22 15:20:09}
+\pmmodified{2013-03-22 15:20:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{atom}
+\pmrecord{13}{37153}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmclassification{msc}{06B99}
+\pmdefines{atomic poset}
+\pmdefines{atomic lattice}
+\pmdefines{atomistic lattice}
+\pmdefines{atomistic}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $P$ be a poset, partially ordered by $\leq$.  An element $a\in P$ is called an \emph{atom} if it covers some minimal element of $P$.  As a result, an atom is never minimal.  A poset $P$ is called \emph{atomic} if for every element $p\in P$ that is not minimal has an atom $a$ such that $a\leq p$.
+
+
+\textbf{Examples}.
+\begin{enumerate}
+\item Let $A$ be a set and $P=2^A$ its power set.  $P$ is a poset ordered by $\subseteq$ with a unique minimal element $\varnothing$.  Thus, all singleton subsets $\lbrace a \rbrace$ of $A$ are atoms in $P$.
+\item $\mathbb{Z}^+$ is partially ordered if we define $a\leq b$ to mean that $a\mid b$.  Then $1$ is a minimal element and any prime number $p$ is an atom.
+\end{enumerate}
+
+\textbf{Remark.} Given a lattice $L$ with underlying poset $P$, an element $a\in L$ is called an \emph{atom} (of $L$) if it is an atom in $P$.  A lattice is a called an \emph{atomic lattice} if its underlying poset is atomic.  An \emph{atomistic lattice} is an atomic lattice such that each element that is not minimal is a join of atoms.  If $a$ is an atom in a semimodular lattice $L$, and if $a$ is not under $x$, then $a\vee x$ is an atom in any interval lattice $I$ where $x=\bigwedge I$.
+
+\textbf{Examples}.
+\begin{enumerate}
+\item $P=2^A$, with the usual intersection and union as the lattice operations meet and join, is atomistic: every subset $B$ of $A$ is the union of all the singleton subsets of $B$.
+\item $\mathbb{Z}^+$, partially ordered as above, with lattice binary operations defined by $a\wedge b=\operatorname{gcd}(a,b)$, and $a\vee b= \operatorname{lcm}(a,b)$, is a lattice that is atomic, as we have seen earlier.  But it is not atomistic: $4$ is not a join of $2$'s; $36$ is not a join of $2$ and $3$ are just two counterexamples.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

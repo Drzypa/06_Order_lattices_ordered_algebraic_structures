@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SikorskisExtensionTheorem}
+\pmcreated{2013-03-22 18:01:31}
+\pmmodified{2013-03-22 18:01:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Sikorski's extension theorem}
+\pmrecord{21}{40543}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E10}
+\pmsynonym{Sikorski extension theorem}{SikorskisExtensionTheorem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{thm}[Sikorski's \PMlinkescapetext{extension theorem}] Let $A$ be a Boolean subalgebra of a Boolean algebra $B$, and $f:A\to C$ a Boolean algebra homomorphism from $A$ to a complete Boolean algebra $C$.  Then $f$ can be extended to a Boolean algebra homomorphism $g:B \to C$. \end{thm}
+
+\textbf{Remark}.  In the category of Boolean algebras and Boolean algebra homomorphisms, this theorem says that every complete Boolean algebra is an injective object.
+
+\begin{proof}  We prove this using Zorn's lemma.  Let $M$ be the set of all pairs $(h,D)$ such that $D$ is a subalgebra of $B$ containing $A$, and $h:D\to C$ is an algebra homomorphism extending $f$.  Note that $M$ is not empty because $(f,A)\in M$.  Also, if we define $(h_1,D_1)\le (h_2,D_2)$ by requiring that $D_1\subseteq D_2$ and that $h_2$ extending $h_1$, then $(M,\le)$ becomes a poset.  Notice that for every chain $\mathcal{C}$ in $M$, $$(\bigcup \lbrace h\mid (h,D)\in \mathcal{C}\rbrace, \bigcup \lbrace D\mid (h,D)\in \mathcal{C}\rbrace)$$ is an upper bound of $\mathcal{C}$ (in fact, the least upper bound).  So $M$ has a maximal element, say $(g,E)$, by Zorn's lemma.  We want to show that $E=B$.
+
+If $E\ne B$, pick $a\in B-E$.  Let $r$ be the join of all elements of the form $g(x)$ where $x\in E$ and $x\le a$, and $t$ the meet of all elements of the form $g(y)$ where $y\in E$ and $a\le y$.  $r$ and $t$ exist because $C$ is complete.  Since $g$ preserves order, it is evident that $r\le t$.  Pick an element $s\in C$ such that $r\le s\le t$.
+
+Let $F=\langle E,a\rangle$.  Every element in $F$ has the form $(e_1\wedge a)\vee (e_2\wedge a')$, with $e_1,e_2\in E$.  Define $h:F\to C$ by setting $h(b)=(g(e_1)\wedge s)\vee (g(e_2)\wedge s')$, where $b=(e_1\wedge a)\vee (e_2\wedge a')$.  We now want to show that $h$ is a Boolean algebra homomorphism extending $g$.  There are three steps to showing this:
+\begin{enumerate}
+\item $h$ is a function.  Suppose $(e_1\wedge a)\vee (e_2\wedge a')=(e_3\wedge a)\vee (e_4\wedge a')$.  Then, by the last remark of \PMlinkname{this entry}{BooleanSubalgebra}, $e_2\Delta e_4 \le a \le e_1\leftrightarrow e_3$, so that $g(e_2)\Delta g(e_4) = g(e_2\Delta e_4)\le s \le g(e_1\leftrightarrow e_3) = g(e_1)\leftrightarrow g(e_3)$, which in turn implies that $(g(e_1)\wedge s)\vee (g(e_2)\wedge s') = (g(e_3)\wedge s)\vee (g(e_4)\wedge s')$.  Hence $h$ is well-defined.
+\item $h$ is a Boolean homomorphism.  All we need to show is that $h$ respects $\vee$ and $'$.  Let $x=(e_1\wedge a)\vee (e_2\wedge a')$ and $y = (e_3\wedge a)\vee (e_4\wedge a')$.  Then $x\vee y = (e_5\wedge a)\vee (e_6\wedge a')$, where $e_5=e_1\vee e_3$ and $e_6=e_2\vee e_4$.  So 
+\begin{eqnarray*}
+h(x\vee y) &=& (g(e_5)\wedge s)\vee (g(e_6)\wedge s') \\ 
+&=& ((g(e_1)\vee g(e_3))\wedge s)\vee ((g(e_2)\vee g(e_4))\wedge s') \\ 
+&=& (g(e_1)\wedge s)\vee (g(e_2)\wedge s') \vee (g(e_3)\wedge s)\vee (g(e_4)\wedge s') \\ 
+&=& h(x)\vee h(y),
+\end{eqnarray*}
+so $h$ respects $\vee$.  In addition, $h$ respects $'$, as $x'= (e_2'\wedge a)\vee (e_1\wedge a')$, so that
+\begin{eqnarray*}
+h(x') &=& h((e_2'\wedge a)\vee (e_1\wedge a')) = (g(e_2')\wedge s)\vee (g(e_1)\wedge s') \\ 
+&=& (g(e_2)'\wedge s)\vee (g(e_1)\wedge s') = ((g(e_1)\wedge s)\vee (g(e_2)\wedge s'))' \\ &=& h(x)'.
+\end{eqnarray*}
+\item $h$ extends $g$.  If $x\in E$, write $x=(x\wedge a)\vee (x\wedge a')$.  Then $$h(x)= (g(x)\wedge s)\vee (g(x)\wedge s') = g(x).$$
+\end{enumerate}
+This implies that $(g,E)< (h,F)$, and with this, we have a contradiction that $(g,E)$ is maximal.  This completes the proof.
+\end{proof}
+
+One of the consequences of this theorem is the following variant of the Boolean prime ideal theorem:
+\begin{cor}  Every Boolean ideal of a Boolean algebra is contained in a maximal ideal.
+\end{cor}
+\begin{proof}  Let $I$ be an ideal of a Boolean algebra $A$.  Let $B=\langle I\rangle$, the Boolean subalgebra generated by $I$.  The function $f:B \to \lbrace 0,1\rbrace$ given by $f(a)=0$ iff $a\in I$ is a Boolean homomorphism.  First, notice that $f(a)=0$ iff $a\in I$ iff $a'\notin I$ iff $f(a')=1$.  Next, if at least one of $a,b$ is in $I$, $a\wedge b\in I$, so that $f(a\wedge b)=0=f(a)\wedge f(b)$.  If neither are in $I$, then $a',b'\in I$, so $(a\wedge b)'= a'\vee b'\in I$, or $a\wedge b\notin I$.  This means that $f(a\wedge b)=1=f(a)\wedge f(b)$.
+
+Now, by Sikorski's extension theorem, $f$ can be extended to a homomorphism $g: A\to \lbrace 0,1\rbrace$.  The kernel of $g$ clearly contains $I$, and is in addition maximal (either $a$ or $a'$ is in the kernel of $g$).
+\end{proof}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+As the proof of the theorem shows, ZF+AC (the axiom of choice) implies Sikorski's extension theorem (SET).  It is still an open question whether the ZF+SET implies AC.  
+\item
+Next, comparing with the Boolean prime ideal theorem (BPI), the proof of the corollary above shows that ZF+SET implies BPI.  However, it was proven by John Bell in 1983 that SET is independent from ZF+BPI: there is a model satisfying all axioms of ZF, as well as BPI (considered as an axiom, not as a consequence of AC), such that SET fails.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{rs} R. Sikorski, {\em Boolean Algebras}, 2nd Edition, Springer-Verlag, New York (1964).
+\bibitem{jlb} J. L. Bell, {\em \PMlinkexternal{The Axiom of Choice}{http://plato.stanford.edu/entries/axiom-choice/}}, Stanford Encyclopedia of Philosophy (2008).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

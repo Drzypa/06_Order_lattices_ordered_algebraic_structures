@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChainFinite}
+\pmcreated{2013-03-22 16:55:07}
+\pmmodified{2013-03-22 16:55:07}
+\pmowner{lars_h}{9802}
+\pmmodifier{lars_h}{9802}
+\pmtitle{chain finite}
+\pmrecord{4}{39180}
+\pmprivacy{1}
+\pmauthor{lars_h}{9802}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+%\pmkeywords{poset}
+\pmdefines{chain finite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{relation}
+\PMlinkescapeword{information}
+
+A poset is said to be \emph{chain finite} if every chain with both 
+\PMlinkname{maximal}{MaximalElement} and minimal element is finite.
+
+$\mathbb{Z}$ with the standard order relation is chain finite, 
+since any infinite subset of $\mathbb{Z}$ must be 
+\PMlinkname{unbounded}{UpperBound} above or below. 
+$\mathbb{Q}$ with the standard order relation is not chain finite, 
+since for example 
+$\{ x \in\nobreak \mathbb{Q} \,\mid\, 0 \leqslant\nobreak x \leqslant\nobreak 1 \}$ 
+is infinite and has both a maximal element $1$ and a minimal element $0$.
+
+Chain finiteness is often used to draw conclusions about an order from information about its covering relation (or equivalently, from its Hasse diagram).
+%%%%%
+%%%%%
+\end{document}

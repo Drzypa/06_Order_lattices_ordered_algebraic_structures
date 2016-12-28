@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DisjunctionPropertyOfWallman}
+\pmcreated{2013-03-22 17:53:48}
+\pmmodified{2013-03-22 17:53:48}
+\pmowner{porton}{9363}
+\pmmodifier{porton}{9363}
+\pmtitle{disjunction property of Wallman}
+\pmrecord{7}{40385}
+\pmprivacy{1}
+\pmauthor{porton}{9363}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmsynonym{Wallman's disjunction property}{DisjunctionPropertyOfWallman}
+%\pmkeywords{partial order}
+\pmrelated{Poset}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A partially ordered set $\mathfrak{A}$ with a least element $0$ has the \emph{disjunction property of Wallman} if for every pair $(a,b)$ of elements of the poset, either $b\leq a$ or there exists an element $c\leq b$ such that $c\ne 0$ and $c$ has no nontrivial common predecessor with $a$. That is, in the latter case, the only $x$ with $x\leq a$ and $x\leq c$ is $x=0$.
+
+For the case if the poset $\mathfrak{A}$ is a $\cap$-semilattice \emph{disjunction property of Wallman} is equivalent to every of the following three formulas:
+
+\begin{enumerate}
+\item
+$\forall a,b\in\mathfrak{A}:(\{c\in\mathfrak{A}|c\cap a\ne 0\} = \{c\in\mathfrak{A}|c\cap b\ne 0\} \Rightarrow a = b)$;
+\item
+$\forall a,b\in\mathfrak{A}:(\{c\in\mathfrak{A}|c\cap a\ne 0\} \subseteq \{c\in\mathfrak{A}|c\cap b\ne 0\} \Rightarrow
+  a \subseteq b)$;
+\item
+$\forall a,b\in\mathfrak{A}:(a\subset b \Rightarrow
+\{c\in\mathfrak{A}|c\cap a\ne 0\} \subset \{c\in\mathfrak{A}|c\cap b\ne 0\})$.
+\end{enumerate}
+
+The proof of this equivalence can be found in \PMlinkexternal{this online article}{http://www.mathematics21.org/binaries/filters.pdf}.
+%%%%%
+%%%%%
+\end{document}

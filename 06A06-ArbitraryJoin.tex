@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArbitraryJoin}
+\pmcreated{2013-03-22 17:27:53}
+\pmmodified{2013-03-22 17:27:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{arbitrary join}
+\pmrecord{10}{39848}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmrelated{CompleteLattice}
+\pmrelated{CompleteSemilattice}
+\pmdefines{arbitrary meet}
+\pmdefines{infinite join}
+\pmdefines{infinite meet}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $P$ be a poset and $A\subseteq P$.  The \emph{join} of $A$ is the supremum of $A$, if it exists.  It is denoted by $$\bigvee A \qquad\mbox{ or }\qquad \bigvee_{i\in I}a_i\qquad\mbox{ or }\qquad \bigvee \lbrace a_i\mid i\in I\rbrace,$$ if the elements of $A$ are indexed by a set $I$: $$A=\lbrace a_i\mid i\in I\rbrace.$$  In other words, $\bigvee A = \sup A$, where the equality is directed in the sense that one side is defined iff the other side is, and when this is the case, both sides are equal.  Dually, one defines the \emph{meet} of $A$ to be the infimum of $A$, if it exists.  The meet of $A$ is denoted by $\bigwedge A$.
+
+\textbf{Remark}.  The concepts of $\bigvee$ and $\sup$ of an ordered set are identical.  Besides being notationally distinct, $\bigvee$ is often used in order theory, while $\sup$ is more prevalent in analysis.  Moreover, $\bigvee$ is generally being viewed as a (partial) function on the powerset $2^P$ of the poset $P$, while $\sup$ is frequently seen as an operation on sequences (or more generally nets) of elements of $P$.
+
+\begin{enumerate}
+\item As was remarked, given a poset $P$, let us view $\bigvee: 2^P\to P$ as a partial function.  Then $\bigvee$ is defined for all singletons.  In fact $\bigvee \lbrace a\rbrace =a$ for all $a\in P$.  Dually, $\bigwedge \lbrace a\rbrace =a$.
+\item If $\bigvee$ is defined for all doubletons, then it is defined for all finite subsets of $P$.  In this case, $P$ is called a join-semilattice.  Dually, $P$ is a meet-semilattice is $\bigwedge$ is defined for all doubletons.
+\item If $A\subseteq B$, then $\bigvee A\le \bigvee B$, provided that both joins exist.  We also have a dual statement: $A\subseteq B$ implies that $\bigwedge B\le \bigwedge A$, provided that both meets exist.
+\item $\bigvee \varnothing$ exists iff $P$ has a bottom $0$, and when this is the case, $\bigvee \varnothing=0$.  This is essentially the result of the previous bulleted statement.  Dually, $P$ has a top $1$ iff $\bigwedge \varnothing$ exists, and when this is the case $\bigwedge \varnothing = 1$.
+\item Simiarly $\bigvee P=1$ and $\bigwedge P=0$, where the equality is directed on both sides.
+\item It can be shown that if $\bigvee$ is a total function from $2^P$ to $P$, then $P$ is a complete lattice.  (see proof \PMlinkname{here}{CriteriaForAPosetToBeACompleteLattice}).
+\item Let $P$ be a poset such that $\bigvee$ is defined for all subsets (of $P$) of cardinality $\mathfrak{m}$, is it true that $\bigvee$ is defined for all subsets of cardinality $\le \mathfrak{m}$?  The answer is no, even when $\mathfrak{m}$ is finite.  A counterexample can be constructed as follows.  
+\begin{equation*}
+\xymatrix @!=1pt {
+& 1 \ar@{.}[d] \ar@{-}[rrdd] & & \\
+& \ar@{-}[rd] \ar@{-}[ld] & &  \\
+a & & b & c
+}
+\end{equation*}
+Let $C$ be an infinite chain with a top element $1$ (this can be found by taking the set of natural numbers and dualize the usual order).  Adjoin three elements $a,b,c$ to $C$ so that $a$ and $b$ are below all elements of $C$, and $c$ is covered by $1$, and no two of $a,b,c$ are comparable.  This new poset $P$ has the property that any three distinct elements have a join.  For example, $\bigvee \lbrace a,b,c\rbrace = 1$.  However, $\bigvee \lbrace a,b\rbrace$ does not exist.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

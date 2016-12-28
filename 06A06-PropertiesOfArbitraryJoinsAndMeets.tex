@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfArbitraryJoinsAndMeets}
+\pmcreated{2013-03-22 17:52:38}
+\pmmodified{2013-03-22 17:52:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of arbitrary joins and meets}
+\pmrecord{12}{40358}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we list and prove some of the basic properties of arbitrary joins and meets.  Some of the properties work in general posets, while others work only in lattices, and sometimes only in Boolean algebras.
+
+Let $P$ be a poset and $B$ and $C$ are subsets of $P$ such that $\bigvee B$ and $\bigvee C$ exist. 
+
+\begin{enumerate}
+\item $b\le \bigvee B$ for any $b\in B$.  More generally, if $A\subseteq B$ and $\bigvee A$ exists, then $\bigvee A\le \bigvee B$.
+\item if $b\le a$ for every $b\in B$, then $\bigvee B\le a$.
+\item If $B=\bigcup \lbrace B_i\mid i\in I\rbrace$, and each $b_i:=\bigvee B_i$ exists, then $\bigvee \lbrace b_i\mid i\in I\rbrace$ exists and is equal to $\bigvee B$.  Conversely, if we drop the assumption that $\bigvee B$ exists, but assume instead that $\bigvee \lbrace b_i\mid i\in I\rbrace$ exists, then $\bigvee B$ exists and is equal to $\bigvee \lbrace b_i\mid i\in I\rbrace$.
+\begin{proof}
+Let $b=\bigvee B$.  For each $i\in I$, and each $c\in B_i\subseteq B$, we clearly have that $c\le b$.  So $b_i\le b$, or that $b$ is an upper bound of the collection $D:=\lbrace b_i\mid i\in I\rbrace$.  If $d$ is any upper bound of $D$, then $b_i\le d$.  For any $c\in B$, $c\in B_i$ for some $i\in I$, so that $c\le b_i$ and hence $c\le d$.  This shows that $b\le d$, or that $b$ is the least upper bound of $D$.
+
+Conversely, suppose $D:=\bigvee \lbrace b_i\mid i\in I\rbrace$ exists and is equal to $d$.  Then for any $b\in B$, $b\in B_i$ for some $i\in I$, so that $b\le b_i$, and hence $b\le d$.  This shows that $d$ is an upper bound of $B$.  If $f$ is any upper bound of $B$, then $f$ is an upper bound of $B_i$ in particular, so $b_i\le f$.  Since $i$ is arbitray, $d\le f$, or that $d$ is the least upper bound of $B$.
+\end{proof}
+\item If $\bigvee \lbrace a\vee b\mid b\in B\rbrace$ exists, then it is equal to $a\vee \bigvee B$.
+\begin{proof}  Let $c=\bigvee B$ and $d=\bigvee \lbrace a\vee b\mid b\in B\rbrace$.  We want to show that $a\vee c=d$.  Since $b\le c$ for all $b\in B$, we have that $a\vee b\le a\vee c$, and so $d\le a\vee c$ as $d$ is the least upper bound of $\lbrace a\vee b\mid b\in B\rbrace$.  On the other hand $a\vee b\le d$, so that $a\le d$ and $b\le d$, for all $b\in B$, the last inequality means that $c\le d$ as well.  Therefore $a\vee c\le d$, and we are done.
+\end{proof}
+\item If $P$ is a Boolean algebra then the following hold:
+\begin{enumerate}
+\item $\bigwedge (B')$ exists, where $B':=\lbrace b'\mid b\in B\rbrace$, and is equal to $(\bigvee B)'$.
+\begin{proof}  Let $c=\bigvee B$.  Then $b\le c$ for any $b\in B$, so that $c'\le b'$, or $c'$ is a lower bound for $B'$.  If $d$ is any lower bound of $B'$, then $d\le b'$ for every $b\in B$, so that $b\le d'$, which implies $c\le d'$, or $d\le c'$.  This means that $c'$ is the greatest lower bound of $B'$, or that $c'=\bigwedge (B')$.
+\end{proof}
+\item
+$\bigvee \lbrace a\wedge b\mid b\in B\rbrace$ exists and is equal to $a\wedge \bigvee B$ for any $a\in A$.
+\begin{proof}
+Let $c=\bigvee B$.  Then $b\le c$ for any $b\in B$ and so $a\wedge b\le a\wedge c$.  Therefore $a\wedge c$ is an upper bound of $\lbrace a\wedge b\mid b\in B\rbrace$.  Now, if $d$ is an upper bound of $\lbrace a\wedge b\mid b\in B\rbrace$, then $a\wedge b\le d$ for every $b\in B$.  So $b=(a'\vee a)\wedge b=(a'\wedge b)\vee (a\wedge b) \le (a'\wedge b)\vee d \le a'\vee d$.  This means that $a'\wedge d$ is an upper bound of $B$, so $c\le a'\vee d$.  Therefore, $a\wedge c \le a \wedge (a'\vee d) = (a\wedge a')\vee (a\wedge d)=a\wedge d$.  Hence, $a\wedge c$ is the least upper bound of $\lbrace a\wedge b\mid b\in B\rbrace$.
+\end{proof}
+\item Define $B\wedge C:=\lbrace b\wedge c\mid b\in B\mbox{ and }c\in C\rbrace.$  Then $\bigvee (B\wedge C)$ exists and is equal to $\bigvee B\wedge \bigvee C$.
+\begin{proof}
+Let $d=\bigvee B$ and $e=\bigvee C$.  Then $\bigvee B\wedge \bigvee C=d\wedge \bigvee C=\bigvee \lbrace d\wedge c\mid c\in C\rbrace$ by 4.b above.  Now, $d\wedge c=\bigvee B\wedge c=\bigvee \lbrace b\wedge c\mid b\in B\rbrace$ again by 4.b.  For each $c\in C$, set $B_c:=\lbrace b\wedge c\mid b\in B\rbrace$.  Then $\bigvee B_c =d\wedge c$ and $B\wedge C=\bigcup \lbrace B_c\mid c\in C\rbrace$.  Therefore, by (3), $\bigvee (B\wedge C)$ exists and is equal to $\bigvee \lbrace \bigvee B_c\mid c\in C\rbrace=\bigvee \lbrace d\wedge c\mid c\in C\rbrace=\bigvee B\wedge \bigvee C$.
+\end{proof}
+\end{enumerate}
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+All of the properties above can be dualized: assume that $B$ and $C$ are subsets of a poset $P$ such that $\bigwedge B$ and $\bigwedge C$ exist, then:
+\begin{enumerate}
+\item if $A\subseteq B$ and $\bigwedge A$ exists, then $\bigwedge B\le \bigwedge A$.
+\item if $a\le b$ for every $b\in B$, then $a\le \bigwedge B$.
+\item if $B=\bigcup \lbrace B_i\mid i\in I\rbrace$, and each $b_i:=\bigwedge B_i$ exists, then $\bigwedge \lbrace b_i\mid i\in I\rbrace$ exists iff $\bigwedge B$ does, and they are equal when one exists.
+\item if $\bigwedge \lbrace a\wedge b\mid b\in B\rbrace$ exists, then it is equal to $a\wedge \bigwedge B$.
+\item If $P$ is a Boolean algebra, then 
+\begin{enumerate}
+\item $\bigvee (B')$ exists, where $B':=\lbrace b'\mid b\in B\rbrace$, and is equal to $(\bigwedge B)'$.
+\item $\bigwedge \lbrace a\vee b\mid b\in B\rbrace$ exists and is equal to $a\vee \bigwedge B$ for any $a\in A$.
+\item Define $B\vee C:=\lbrace b\vee c\mid b\in B\mbox{ and }c\in C\rbrace.$  Then $\bigwedge (B\vee C)$ exists and is equal to $\bigwedge B\vee \bigwedge C$.
+\end{enumerate}
+\end{enumerate}
+\item Notice that for property 5 above, the condition that $P$ be Boolean can not be dropped.  For example, consider the set $P$ of non-negative integers.  For any two elements $a,b\in P$, define $a\le b$ by the divisibility relation $a|b$.  It is easy to see that $P$ is a bounded distributive lattice, with top element $0$ and bottom element $1$.  However, it is not complemented (suppose $2'$ is a complement of $2$, then $2'\wedge 2=1$, so that $2'$ must be odd, but then $2'\vee 2=2\cdot 2'\ne 0$, a contradiction).  
+
+More generally, for any subset $A$ of $P$, define $\bigvee A$ to be the smallest non-negative integer $c$ such that $a|c$ for all $a\in A$, while $\bigwedge A$ is the largest non-negative integer $d$ such that $d|a$ for all $a\in A$.  If $A=\varnothing$, define $\bigvee A=1$ and $\bigwedge A=0$.  Then it is not hard to see that $P$ is in addition a complete lattice.  However, if we take $A$ to be the set of all odd prime numbers, then $\bigvee A=0$, so that for any $x\in P$, $x\wedge \bigvee A=0$.  But if $x$ is any element in $A$, then $\bigvee \lbrace x\wedge a\mid a\in A\rbrace=x\ne 0$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfPropertiesOfRegularOpenSet}
+\pmcreated{2013-03-22 17:59:24}
+\pmmodified{2013-03-22 17:59:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{derivation of properties of regular open set}
+\pmrecord{6}{40501}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that a subset $A$ of a topological space $X$ is regular open if it is equal to the interior of the closure of itself.
+
+To facilitate further analysis of regular open sets, define the operation $^{\bot}$ as follows:
+$$A^{\bot}:=X-\overline{A}.$$
+
+Some of the properties of $^\bot$ and regular openness are listed and derived:
+\begin{enumerate}
+\item For any $A\subseteq X$, $A^{\bot}$ is open.  This is obvious.
+\item $^\bot$ reverses inclusion.  This is also obvious.
+\item $\varnothing^{\bot}=X$ and $X^{\bot}=\varnothing$.  This too is clear.
+\item $A\cap A^{\bot}=\varnothing$, because $A\cap A^{\bot}\subseteq A\cap (X-A)=\varnothing$.
+\item $A\cup A^{\bot}$ is dense in $X$, because $X=\overline{A}\cup A^{\bot} \subseteq \overline{A}\cup \overline{A^\bot} =\overline{A\cup A^\bot}$.
+\item $A^{\bot}\cup B^{\bot}\subseteq(A\cap B)^{\bot}$.  To see this, first note that $A\cap B\subseteq A$, so that $A^\bot \subseteq (A\cap B)^\bot$.  Similarly, $A^\bot \subseteq (A\cap B)^\bot$.  Take the union of the two inclusions and the result follows.
+\item $A^{\bot}\cap B^{\bot}=(A\cup B)^{\bot}$.  This can be verified by direct calculation: $$A^{\bot}\cap B^{\bot}= (X- \overline{A})\cap (X-\overline{B})=X-(\overline{A}\cup \overline{B})=X-\overline{A\cup B}=(A\cup B)^{\bot}.$$
+\item $A$ is regular open iff $A=A^{\bot\bot}$.  See the remark at the end of \PMlinkname{this entry}{DerivationOfPropertiesOnInteriorOperation}.
+\item If $A$ is open, then $A^{\bot}$ is regular open.
+\begin{proof}
+By the previous property, we want to show that $A^{\bot\bot\bot}=A^\bot$ if $A$ is open.  For notational convenience, let us write $A^-$ for the closure of $A$ and $A^c$ for the complement of $A$.  As $^\bot=^{-c}$, the equation now becomes $A^{-c-c-c}=A^{-c}$ for any open set $A$.
+
+Since $A\subseteq A^-$ for any set, $A^{-c}\subseteq A^c$.  This means $A^{-c-}\subseteq A^{c-}$.  Since $A$ is open, $A^c$ is closed, so that $A^{c-}=A^c$.  The last inclusion becomes $A^{-c-}\subseteq A^c$.  Taking complement again, we have 
+\begin{equation}
+A\subseteq A^{-c-c}.
+\end{equation}
+Since $^\bot=^{-c}$ reverses inclusion, we have $A^{-c-c-c}\subseteq A^{-c}$, which is one of the inclusions.  On the other hand, the inclusion (1) above applies to \emph{any} open set, and because $A^{-c}$ is open, $A^{-c}\subseteq A^{-c-c-c}$, which is the other inclusion.
+\end{proof}
+\item If $A$ and $B$ are regular open, then so is $A\cap B$.
+\begin{proof}  Since $A,B$ are regular open, $(A\cap B)^{\bot\bot}= (A^{\bot\bot}\cap B^{\bot\bot})^{\bot\bot}$, which is equal to $(A^\bot \cup B^\bot)^{\bot\bot\bot}$ by property 7 above.  Since $A^\bot \cup B^\bot$ is open, the last expression becomes $(A^\bot \cup B^\bot)^\bot$ by property 9, or $A\cap B$ by property 7 again.
+\end{proof}
+\end{enumerate}
+
+\textbf{Remark}.  All of the properties above can be dualized for regular closed sets.  If fact, proving a property about regular closedness can be easily accomplished once we have the following: 
+\begin{quote}\begin{center}
+$(*)$ $A$ is regular open iff $X-A$ is regular closed.
+\end{center}\end{quote}
+\begin{proof}
+Suppose first that $A$ is regular open.  Then $\overline{\operatorname{int}(X-A)} = \overline{X-\overline{A}}=X-\operatorname{int}(\overline{A})=X-A$.  The converse is proved similarly.
+\end{proof}
+As a corollary, for example, we have: if $A$ is closed, then $\overline{X-A}$ is regular closed.
+\begin{proof}
+If $A$ is closed, then $X-A$ is open, so that $(X-A)^\bot=X-\overline{X-A}$ is regular open by property 9 above, which implies that $X-(X-A)^\bot = \overline{X-A}$ is regular closed by $(*)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OckhamAlgebra}
+\pmcreated{2013-03-22 17:08:34}
+\pmmodified{2013-03-22 17:08:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Ockham algebra}
+\pmrecord{9}{39450}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D30}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A lattice $L$ is called an \emph{Ockham algebra} if 
+\begin{enumerate}
+\item $L$ is distributive
+\item $L$ is bounded, with $0$ as the bottom and $1$ as the top
+\item there is a unary operator $\neg$ on $L$ with the following properties:
+\begin{enumerate}
+\item $\neg$ satisfies the de Morgan's laws; this means that:
+\begin{itemize}
+\item $\neg (a\vee b)=\neg a\wedge \neg b$ and
+\item $\neg (a\wedge b)=\neg a\vee \neg b$
+\end{itemize}
+\item $\neg 0=1$ and $\neg 1=0$
+\end{enumerate}
+\end{enumerate}
+Such a unary operator is an example of a dual endomorphism.  When applied, $\neg$ interchanges the operations of $\vee$ and $\wedge$, and $0$ and $1$.
+
+
+An Ockham algebra is a generalization of a Boolean algebra, in the sense that $\neg$ replaces $'$, the complement operator, on a Boolean algebra.
+
+\textbf{Remarks}. 
+\begin{itemize}
+\item
+An intermediate concept is that of a De Morgan algebra, which is an Ockham algebra with the additional requirement that $\neg (\neg a)=a$.
+\item
+In the category of Ockham algebras, the morphism between any two objects is a $\lbrace 0,1\rbrace$-\PMlinkname{lattice homomorphism}{LatticeHomomorphism} $f$ that preserves $\neg$: $f(\neg a)=\neg f(a)$.  In fact, $f(0)=f(\neg 1)=\neg f(1)=\neg 1=0$, so that it is safe to drop the assumption that $f$ preserves $0$.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{bv} T.S. Blyth, J.C. Varlet, {\em Ockham Algebras}, Oxford University Press, (1994).
+\bibitem{tsb} T.S. Blyth, {\em Lattices and Ordered Algebraic Structures}, Springer, New York (2005).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

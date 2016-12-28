@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvexSubgroup}
+\pmcreated{2013-03-22 17:04:04}
+\pmmodified{2013-03-22 17:04:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{convex subgroup}
+\pmrecord{4}{39360}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A99}
+\pmclassification{msc}{06F15}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{20F60}
+\pmdefines{convex subset}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+We begin this article with something more general.  Let $P$ be a poset.  A subset $A\subseteq P$ is said to be \emph{convex} if for any $a,b\in A$ with $a\le b$, the poset interval $[a,b]\subseteq A$ also.  In other words, $c\in A$ for any $c\in P$ such that $a\le c$ and $c\le b$.  Examples of convex subsets are intervals themselves, antichains, whose intervals are singletons, and the empty set.
+
+One encounters convex sets most often in the study of partially ordered groups.  A \emph{convex subgroup} $H$ of a po-group $G$ is a subgroup of $G$ that is a convex subset of the poset $G$ at the same time.  Since $e\in H$, we have that $[e,a]\subseteq H$ for any $e\le a\in H$.  Conversely, if a subgroup $H$ satisfies the property that $[e,a]\subseteq H$ whenever $a\in H$, then $H$ is a convex subgroup: if $a,b\in H$, then $a^{-1}b\in H$, so that $[e,a^{-1}b]\subseteq H$, which implies that $[a,b]=a[e,a^{-1}b]\subseteq H$ as well.
+
+For example, let $G=\mathbb{R}^2$ be the po-group under the usual Cartesian ordering.  $G$ and $0$ are both convex, but these are trivial examples.  Let us see what other convex subgroups $H$ there are.  Suppose $P=(a,b)\in H$ with $(a,b)\ne (0,0)=O$.  We divide this into several cases:
+\begin{enumerate}
+\item 
+$ab>0$.  If $a>0$, then $b>0$ ($P$ in the first quadrant), so that $O\le P$, which means $[O,P]\subseteq H$.  If $a<0$, then $b<0$ ($P$ in the third quandrant), so that $O\le -P$.  In either case, $H$ contains a rectangle ($[O,P]$ or $[O,-P]$) that generates $G$, so $H=G$.
+\item
+One of $a$ or $b$ is $0$.  Suppose $a=0$ for now.  Then either $0<b$ so that $[O,P]\subseteq H$ or $b<0$ so that $[O,-P]\subseteq H$.  In either case, $H$ contains a line segment on the $y$-axis.  But this line segment generates the $y$-axis.  So $y$-axis $\subseteq H$.  If $H$ is a subgroup of the $y$-axis, then $H$=$y$-axis.  
+
+Otherwise, another point $Q=(c,d)\in H$ not on the $y$-axis.  We have the following subcases:
+\begin{enumerate}
+\item
+If $cd>0$, then $H=G$ as in the previous case.  
+\item
+If $cd< 0$, say $d<0$ (or $0<c$), then for some positive integer $n$, $0<d+nb$, so that $O\le Q+nP$, and $H=G$ as well.  On the other hand, if $c<0$ (or $0<d$), then $-Q$ returns us to the previous argument and $H=G$ again.  
+\item
+If $d=0$ (so $c\ne 0$), then either $O\le P+Q$ (when $0<c$) or $O\le P-Q$ (when $c<0$), so that $H=G$ once more.
+\end{enumerate}
+
+A similar set of arguments shows that if $H$ contains a segment of the $x$-axis, then either $H$ is the $x$-axis or $H=G$.  In conclusion, in the case when $ab=0$, $H$ is either one of the two axes, or the entire group.
+\item
+$ab<0$.  It is enough to assume that $0<a$ and $b<0$ (that $P$ lies in the fourth quadrant), for if $P$ lies in the second quadrant, $-P$ lies in the fourth.  
+
+Since $O,P\in H$, $H$ could be a subgroup of the line group $L$ containing $O$ and $P$.  No two points on $L$ are comparable, for if $(r,s)<(t,u)$ on $L$, then the slope of $L$ is positive $$0<\frac{u-s}{t-r},$$ a contradiction.  So $L$, and hence $H$, is an antichaine.  This means that $H$ is convex.
+
+Suppose now $H$ contains a point $Q=(c,d)$ not on $L$.  We again break this down into subcases:
+\begin{enumerate}
+\item $Q$ is in the first or third quandrant.  Then $H=G$ as in the very first case above.
+\item $Q$ is on either of the axes.  Then $H=G$ also, as in case 2(b) above.
+\item $Q$ is in the second or fourth quadrant.  It is enough to assume that $Q$ is in the same quadrant as $P$ (fourth).  So we have $0<c$ and $d<0$.  Since $L$ passes through $P$ and not $Q$, we have that $$\frac{a}{c}\ne \frac{b}{d}.$$  Let $0<r=a/c$ and $0<s=b/d$ and assume $r<s$.  Then there is a rational number $m/n$ (with $0<m,n$) such that $$r<\frac{m}{n}<s.$$  This means that $na< mc$ and $nb<md$, or $nP<mQ$.  But $nP,mQ\in H$, so is $R=mQ-nP\in H$, which is in the first quadrant.  This implies that $H=G$ too.
+\end{enumerate}
+In summary, if $H$ contains a point in the second or fourth quadrant, then either $H$ is a subgroup of a line with slope $<0$, or $H=G$.
+\end{enumerate}
+The three main cases above exhaust all convex subgroups of $\mathbb{R}^2$ under the Cartesian ordering.  
+
+If the Euclidean plane is equipped with the lexicographic ordering, then the story is quite different, but simpler.  If $H$ is non-trivial, say $P=(a,b)\in H$, $P\ne O$.  If $0<a$, then $(c,d)\le (a,b)$ for any $c< a$ regardless of $d$.  Choose $Q=(c,d)$ to be in the first quadrant.  Then $[O,Q]\subseteq H$, so that $H=G$.  If $a<0$, then $-P$ takes us back to the previous argument.  If $a=0$, then either $[O,P]$ (when $0<b$), or $[O,-P]$ (when $b<0$) is a positive interval on the $y$-axis.  This implies that $H$ is at least the $y$-axis.  If $H$ contains no other points, then $H=y$-axis.  In summary, the po-group $\mathbb{R}^2$ with lexicographic order has the $y$-axis as the only non-trivial proper convex subgroup.
+
+
+\begin{thebibliography}{8}
+\bibitem{gb} G. Birkhoff {\em Lattice Theory}, 3rd Edition, AMS Volume XXV, (1967).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

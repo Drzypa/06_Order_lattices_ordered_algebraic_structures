@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSchroederBernsteinTheoremUsingTarskiKnasterTheorem}
+\pmcreated{2013-03-22 15:30:24}
+\pmmodified{2013-03-22 15:30:24}
+\pmowner{kompik}{10588}
+\pmmodifier{kompik}{10588}
+\pmtitle{proof of Schroeder-Bernstein theorem using Tarski-Knaster theorem}
+\pmrecord{7}{37367}
+\pmprivacy{1}
+\pmauthor{kompik}{10588}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmrelated{SchroederBernsteintheorem}
+\pmrelated{TarskiKnastertheorem}
+\pmrelated{TarskiKnasterTheorem}
+\pmrelated{SchroederBernsteinTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+\newcommand{\Zobr}[3]{#1:#2\to#3}
+
+\newcommand{\vp}{\varphi}
+
+\newcommand{\Invimg}[2]{\inv{#1}(#2)}
+\newcommand{\Img}[2]{#1[#2]}
+\begin{document}
+The Tarski-Knaster theorem can be used to give a short, elegant proof of the Schroeder-Bernstein theorem.
+
+\begin{proof}
+Suppose $f:S\to T$ and $g:T\to S$ are injective.  Define a function $\varphi\colon P(S)\to P(S)$
+by $\varphi(X)=S\setminus g(T\setminus f(X))$.
+
+If $X\subseteq Y\subseteq S$, then $S\setminus g(T\setminus f(X))\subseteq S\setminus g(T\setminus f(Y))$, and so $\varphi$ is monotone.  Since $P(S)$ is a complete lattice, we may apply the Tarski-Knaster theorem to conclude that the set of fixed points of $\varphi$ is a complete lattice and thus nonempty.
+
+Let $C$ be a fixed point of $\varphi$.  We have
+\[
+S\setminus C=g(T\setminus f(C)).
+\]
+Hence $g|_{T\setminus f(C)}\colon T\setminus f(C)\to S\setminus C$
+and $f|_C:C\to f(C)$ are bijections.  We can therefore construct the desired bijection $h\colon S\to T$ by defining
+\[
+h(x)=\begin{cases}
+f(x)                           & \text{if\ }x\in C \\
+(g|_{T\setminus f(C)})^{-1}(x) & \text{if\ }x\notin C.\qedhere
+\end{cases}
+\]
+\end{proof}
+
+The usual proof of Schroeder-Bernstein theorem explicitly constructs a fixed point of $\varphi$.
+
+\begin{thebibliography}{1}
+\bibitem{forster}
+Thomas Forster, \emph{{Logic, induction and sets}}, {Cambridge University Press}, Cambridge, 2003.
+
+\bibitem{kolibiar}
+M.~Kolibiar, A.~Leg\'e\v{n}, T.~\v{S}al\'at, and \v{S}. Zn\'am, \emph{Algebra a pr\'\i buzn\'e discipl\'\i ny}, Alfa, Bratislava, 1992 (Slovak).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartitionLattice}
+\pmcreated{2013-03-22 14:09:34}
+\pmmodified{2013-03-22 14:09:34}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{partition lattice}
+\pmrecord{9}{35581}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B20}
+\pmsynonym{lattice of partitions}{PartitionLattice}
+%\pmkeywords{partition lattice}
+%\pmkeywords{non-modular}
+%\pmkeywords{non-distributive}
+%\pmkeywords{graded}
+\pmrelated{Lattice}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage[all,web]{xypic}
+
+% define commands here
+\def\drawsqlat{%
+\begin{xy}{
+0;<1.7pc,0pc>:<0pc,1.7pc>::
+\xylattice{0}{9}{0}{9}}
+\end{xy}}
+\def\drawsq{\ar@{-}c;c+(1,0)\ar@{-}c;c+(0,1)\ar@{-}c+(1,0);c+(1,1)\ar@{-}c+(0,1);c+(1,1)}
+\def\drawsqlabel#1{\save c+(0.5,0.5)*\txt<2pc>{#1} \restore}
+
+\newcommand{\ferrers}[9]{%
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA<#1 \ifnum\latticeB=9 \drawsq\fi\fi
+\ifnum\latticeA<#2 \ifnum\latticeB=8 \drawsq\fi\fi
+\ifnum\latticeA<#3 \ifnum\latticeB=7 \drawsq\fi\fi
+\ifnum\latticeA<#4 \ifnum\latticeB=6 \drawsq\fi\fi
+\ifnum\latticeA<#5 \ifnum\latticeB=5 \drawsq\fi\fi
+\ifnum\latticeA<#6 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA<#7 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA<#8 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA<#9 \ifnum\latticeB=1 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+
+\begin{document}
+The \emph{partition lattice} (or \emph{lattice of partitions}) $\Pi_n$ is the lattice of \PMlinkname{set partitions}{Partition} of the set $[n]=\{1,\dots,n\}$.  The partial order on $\Pi_n$ is defined by refinement, setting $x\le y$ if any only if each cell of $x$ is contained in a cell of $y$.
+
+If $n<3$, then $\Pi_n$ is a chain.  But $\Pi_3$ is not even a distributive lattice:
+\[\xymatrix{
+& 123\ar@{-}[ld]\ar@{-}[d]\ar@{-}[rd] & \\
+1/23\ar@{-}[rd] & 12/3\ar@{-}[d] & 13/2\ar@{-}[ld] \\
+& 1/2/3 &
+}\]
+Moreover, the lattice $\Pi_n$ is an interval in the lattice $\Pi_{n+1}$, so the lattice of partitions on $[n]$ is distributive only if $n<3$.  On the other hand, it is always a graded poset with rank function
+$\rho(x)=n-|x|$, where $|x|$ is the number of cells in $x$.
+
+Each partition of $[n]$ has a corresponding Young tableau.  To determine the Young tableau corresponding to a partition, we arrange the cells of the partition in order of decreasing size, breaking ties by allowing cells with smaller minimal elements to come first.  The shape of the tableau is determined by the sizes of the cells, and the labels for the boxes come from the sets.
+
+To illustrate the process of associating a partition with a tableau, we perform it for the partition $\{\{1\},\{2,3\},\{4\},\{5,6,7\},\{8,9\}\}=1/23/4/567/89$ of $[9]$.  There is one cell of size $3$, namely, $567$.  There are two cells of size $2$, $23$ and $89$.  To order them we compare their minimal elements.  Since $2<8$, we list $23$ before $89$.  Similarly, we list $1$ before $4$.  After sorting we have rewritten the partition as $567/23/89/1/4$.  Thus our tableau will have shape $(3,2,2,1,1)$.  Labeling the shape gives us the following Young tableau.
+
+\begin{center}
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=1 \ifnum\latticeB=5 \drawsq\drawsqlabel{5} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=5 \drawsq\drawsqlabel{6} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=5 \drawsq\drawsqlabel{7} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\drawsqlabel{3} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\drawsqlabel{8} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\drawsqlabel{9} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\drawsqlabel{4} \fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{cite:RS}
+Stanley, R., \emph{Enumerative Combinatorics}, vol. 1, 2nd ed., Cambridge
+University Press, Cambridge, 1996.
+\end{thebibliography}
+
+\PMlinkescapeword{cell}
+\PMlinkescapeword{cells}
+\PMlinkescapeword{even}
+\PMlinkescapeword{isomorphic}
+%%%%%
+%%%%%
+\end{document}

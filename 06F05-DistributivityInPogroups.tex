@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DistributivityInPogroups}
+\pmcreated{2013-03-22 17:05:12}
+\pmmodified{2013-03-22 17:05:12}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{distributivity in po-groups}
+\pmrecord{6}{39379}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F05}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{06F15}
+\pmclassification{msc}{20F60}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $G$ be a po-group and $A$ be a set of elements of $G$.  Denote the supremum of elements of $A$, if it exists, by $\bigvee A$.  Similarly, denote the infimum of elements of $A$, if it exists, by $\bigwedge A$.  Furthermore, let $A^{-1}=\lbrace a^{-1}\mid a\in A\rbrace$, and for any $g\in G$, let $gA=\lbrace ga\mid a\in A\rbrace$ and $Ag=\lbrace ag\mid a\in A\rbrace$.
+\begin{enumerate}
+\item If $\bigvee A$ exists, so do $\bigvee gA$ and $\bigvee Ag$.
+\item If 1. is true, then $g\bigvee A=\bigvee gA =\bigvee Ag$.
+\item $\bigvee A$ exists iff $\bigwedge A^{-1}$ exists; when this is the case, $\bigwedge A^{-1}=(\bigvee A)^{-1}$.  
+\item If $\bigwedge A$ exists, so do $\bigwedge gA$, and $\bigwedge Ag$.
+\item If 4. is true, then $g\bigwedge A=\bigwedge gA=\bigwedge Ag$.
+\item If 1. is true and $A=\lbrace a,b\rbrace$, then $a\wedge b$ exists and is equal to $a(a\vee b)^{-1}b$.
+\end{enumerate}
+
+\begin{proof}  Suppose $\bigvee A$ exists.
+\begin{itemize}
+\item (1. and 2.)  Clearly, for each $a\in A$, $a\le \bigvee A$, so that $ga\le g\bigvee A$, and therefore elements of $gA$ are bounded from above by $g\bigvee A$.  To show that $g\bigvee A$ is the least upper bound of elements of $gA$, suppose $b$ is the upper bound of elements of $gA$, that is, $ga\le b$ for all $a\in A$, this means that $a\le g^{-1}b$ for all $a\in A$.  Since $\bigvee A$ is the least upper bound of the $a$'s, $\bigvee A\le g^{-1}b$, so that $g\bigvee A \le b$.  This shows that $g\bigvee A$ is the supremum of elements of $gA$; in other words, $g\bigvee A=\bigvee gA$.  Similarly, $\bigvee Ag$ exists and $g\bigvee A=\bigvee Ag$ as well.
+\item (3.)  Write $c=\bigvee A$.  Then $a\le c$ for each $a\in A$.  This means $c^{-1}\le a^{-1}$.  If $b\le a^{-1}$ for all $a\in A$, then $a\le b^{-1}$ for all $a\in A$, so that $c\le b^{-1}$, or $b\le c^{-1}$.  This shows that $c^{-1}$ is the greatest lower bound of elements of $A^{-1}$, or $(\bigvee A)^{-1}=\bigwedge A^{-1}$.  The converse is proved likewise.
+\item (4. and 5.)  This is just the dual of 1. and 2., so the proof is omitted.
+\item (6.)  If $A=\lbrace a,b\rbrace$, then $aA^{-1}b=A$, and the existence of $\bigwedge A$ is the same as the existence of $\bigwedge (aA^{-1}b)$, which is the same as the existence of $a (\bigwedge A^{-1}) b$ by 4 and 5 above.  Since $\bigvee A$ exists, so does $\bigwedge A^{-1}$, and hence $a (\bigwedge A^{-1}) b$, by 3 above.  Also by 3, we have the equality $a (\bigwedge A^{-1}) b=a(\bigvee A)^{-1} b$.  Putting everything together, we have the result: $a\wedge b=a(a\vee b)^{-1}b$.
+\end{itemize}
+This completes the proof.
+\end{proof}
+
+\textbf{Remark}.  From the above result, we see that group multiplication distributes over arbitrary joins and meets, if these joins and meets exist.
+
+One can use this result to prove the following: every Dedekind complete po-group is an Archimedean po-group.
+\begin{proof}
+Suppose $a^n\le b$ for all integers $n$.  Let $A=\lbrace a^n\mid n\in \mathbb{Z}\rbrace$.  Then $A$ is bounded from above by $b$ so has least upper bound $\bigvee A$.  Then $a\bigvee A=\bigvee aA=\bigvee A$, since $aA=A$.  As a result, multiplying both sides by $(\bigvee A)^{-1}$, we get $a=e$.
+\end{proof}
+
+\textbf{Remark}.  The above is a generalization of a famous property of the real numbers: $\mathbb{R}$ has the Archimedean property.
+%%%%%
+%%%%%
+\end{document}

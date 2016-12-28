@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Irredundant}
+\pmcreated{2013-03-22 18:10:08}
+\pmmodified{2013-03-22 18:10:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{irredundant}
+\pmrecord{8}{40730}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B05}
+\pmdefines{redundant}
+\pmdefines{irredundant meet}
+\pmdefines{irredundant join}
+\pmdefines{meet irredundant}
+\pmdefines{join irredundant}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\textbf{Definition}.  Let $L$ be a lattice.  A finite join $$a_1\vee a_2\vee \cdots \vee a_n$$ of elements in $L$ is said to be \emph{irredundant} if one can not delete an element from from the join without resulting in a smaller join.  In other words, 
+$$ \bigvee \lbrace a_j \mid j\ne i\rbrace < a_1\vee a_2\vee \cdots \vee a_n$$
+for all $i=1,\ldots, n$.  
+
+If the join is not irredundant, it is \emph{redundant}
+
+\emph{Irredundant meets} are dually defined.
+
+\textbf{Remark}.  The definitions above can be extended to the case where the join (or meet) is taken over an infinite number of elements, provided that the join (or meet) exists.
+
+\textbf{Example}.  In the lattice of all subsets (ordered by inclusion) of $\mathbb{Z}$, the set of all integers, the join $$\mathbb{Z}= \bigvee \lbrace p\mathbb{Z} \mid p \mbox{ is prime} \rbrace$$ is irredudant.  Another irredundant join representation of $\mathbb{Z}$ is just the join of all atoms, the singletons consisting of the individual elements of $\mathbb{Z}$.  However, $$\mathbb{Z}=\bigvee \lbrace n\mathbb{Z} \mid n \mbox{ is any positive integer} \rbrace$$ is redundant, since $n\mathbb{Z}$ can be removed whenever $n$ is a composite number.  The join of all doubletons is also redundant, for $\lbrace a,b\rbrace \le \lbrace a,c\rbrace \vee \lbrace c,b\rbrace$, for any $c\notin \lbrace a,b\rbrace$.
+
+\textbf{Definition}.  An element in a lattice is \emph{join irredundant} if it can not be written as a redundant join of elements.  Dually, an element is \emph{meet irredundant} if each of its representation as a meet of elements is irredundant.
+
+\textbf{Example}.  In the two lattice diagrams (Hasse diagram) below,
+$$
+\xymatrix{
+& 1 \ar@{-}[ld] \ar@{-}[rd] \ar@{-}[d] \\
+a \ar@{-}[rd] & b \ar@{-}[d] & c \ar@{-}[ld] \\
+& 0 
+}
+\hspace{3cm}
+\xymatrix{
+& 1 \ar@{-}[ld] \ar@{-}[rd] \\
+a \ar@{-}[rd] & & b \ar@{-}[ld] \\
+& 0 
+}
+$$
+The $1$ on the left diagram is not join irredundant, since $1=a\vee b\vee c = a\vee b$.  On the other hand, the $1$ on the right is join irredundant.  Similarly, the $0$ on the right is not meet irredundant, while the corresponding one on the right is.
+%%%%%
+%%%%%
+\end{document}

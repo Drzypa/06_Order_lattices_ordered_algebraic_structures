@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BooleanQuotientAlgebra}
+\pmcreated{2013-03-22 17:59:09}
+\pmmodified{2013-03-22 17:59:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Boolean quotient algebra}
+\pmrecord{8}{40496}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E05}
+\pmclassification{msc}{03G05}
+\pmclassification{msc}{06B20}
+\pmclassification{msc}{03G10}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\subsubsection*{Quotient Algebras via Congruences}
+
+Let $A$ be a Boolean algebra.  A congruence on $A$ is an equivalence relation $Q$ on $A$ such that $Q$ respects the Boolean operations:
+\begin{itemize}
+\item if $a Q b$ and $c Q d$, then $(a\vee c) Q (b\vee d)$
+\item if $a Q b$, then $a' Q b'$
+\end{itemize}
+By de Morgan's laws, we also have $a Q b$ and $c Q d$ implying $(a\wedge c) Q (b\wedge d)$.
+
+When $a$ is congruent to $b$, we usually write $a\equiv b\pmod{Q}$.
+
+Let $B$ be the set of congruence classes: $B=A/Q$, and write $[a]Q$, or simply $[a]$ for the congruence class containing the element $a\in A$.  Define on $B$ the following operations:
+\begin{itemize}
+\item $[a]\vee [b]:= [a\vee b]$
+\item $[a]':=[a']$
+\end{itemize}
+Because $Q$ respects join and complementation, it is clear that these are well-defined operations on $B$.  Furthermore, we may define $[a]\wedge [b]:=([a]'\vee [b]')'=([a']\vee [b'])'=[a'\vee b']'=[(a'\vee b')']=[a\wedge b]$.  It is also easy to see that $[1]$ and $[0]$ are the top and bottom elements of $B$.  Finally, it is straightforward to verify that $B$ is a Boolean algebra.  The algebra $B$ is called the \emph{Boolean quotient algebra} of $A$ via the congruence $Q$.
+
+\subsubsection*{Quotient Algebras via Ideals and Filters}
+
+It is also possible to define quotient algebras via Boolean ideals and Boolean filters.  Let $A$ be a Boolean algebra and $I$ an ideal of $A$.  Define binary relation $\sim$ on $A$ as follows:
+$$a\sim b\qquad \mbox{if and only if} \qquad a\Delta b\in I,$$
+where $\Delta$ is the symmetric difference operator on $A$.  Then
+\begin{enumerate}
+\item $\sim$ is an equivalence on $A$, because
+\begin{itemize}
+\item $a\Delta a=0\in I$, so $\sim$ is reflexive
+\item $b\Delta a=a\Delta b$, so $\sim$ is symmetric, and
+\item if $a\sim b$ and $b\sim c$, then $a\sim c$; to see this, note that $(a-b)\vee (b-c)=((a-b)\vee b)\wedge ((a-b)\vee c')=(a\vee b)\wedge ((a-b)\vee c')$.  Since the LHS (and hence the RHS) is in $I$, and that $a\le a\vee b$ and $c'\le (a-b)\vee c'$, RHS $\ge a\wedge c'=a-c\in I$ too.  Similarly $c-a\in I$ so that $a\sim c$.
+\end{itemize}
+\item $\sim$ respects $\vee$ and $'$, because
+\begin{itemize}
+\item if $a\sim b$ and $c\sim d$, then $(a\vee c)-(b\vee d)=(a\vee c)\wedge (b\vee d)'=(a\vee c)\wedge (b'\wedge d') = (a\wedge (b'\wedge d'))\vee (c\wedge (b'\wedge d'))\le (a\wedge b')\vee (c\wedge d')\in I$, so that $(a\vee c)-(b\vee d)\in I$ as well.  That $(b\vee d)-(a\vee c)\in I$ is proved similarly.  Hence $(a\vee c)\sim (b\vee d)$.
+\item $a'\Delta b'=a\Delta b$, so $\sim$ preserves $'$.
+\end{itemize}
+\end{enumerate}
+Thus, $\sim$ is a congruence on $A$.  The quotient algebra $A/\sim$ is called the \emph{quotient algebra} of $A$ via the ideal $I$, and is often denoted by $A/I$.
+
+From this congruence $\sim$, one can re-capture the ideal: $I=[0]$.
+
+Dually, one can obtain a quotient algebra from a Boolean filter.  Specifically, if $F$ is a filter of a Boolean algebra $A$, define $\sim$ on $A$ as follows:
+$$a\sim b\qquad \mbox{if and only if} \qquad a\leftrightarrow b\in F,$$
+where $\leftrightarrow$ is the biconditional operator on $A$.  Then it is easy to show that $\sim$ too is a congruence on $A$, so that one forms the \emph{quotient algebra} of $A$ via the filter $F$, denoted by $A/F$.  Of course, an easier approach to this is to realize that $F$ is a filter of $A$ iff $F':=\lbrace a'\mid a\in F\rbrace$ is an ideal of $A$, and the process of forming $A/F'$ turns out to be identical to $A/F$.
+
+From $\sim$, the filter $F$ can be recovered: $F=[1]$.
+
+In fact, given a congruence $Q$, the congruence class $[0]Q$ is a Boolean ideal and the congruence class $[1]Q$ is a Boolean filter, and that the quotient algebras derived from $Q,[0]Q$ and $[1]Q$ are all the same: $$A/Q=A/[0]Q=A/[1]Q.$$
+%%%%%
+%%%%%
+\end{document}

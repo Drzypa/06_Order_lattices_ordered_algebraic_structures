@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JoinIrreducibility}
+\pmcreated{2013-03-22 15:47:29}
+\pmmodified{2013-03-22 15:47:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{join irreducibility}
+\pmrecord{10}{37752}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B99}
+\pmsynonym{join-irreducible}{JoinIrreducibility}
+\pmsynonym{meet-irreducible}{JoinIrreducibility}
+\pmdefines{join irreducible}
+\pmdefines{meet irreducible}
+\pmdefines{irreducible}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+An element $a$ in a lattice $L$ is said to be \emph{join irreducible} iff $a$ is not a bottom element, and, whenever $a=b\vee c$, then $a=b$ or $a=c$.  Dually, $a\in L$ is \emph{meet irreducible} iff $a$ is not a top element, and, whenever $a=b\wedge c$, then $a=b$ or $a=c$.  If $a$ is both join and meet irreducible, then $a$ is said to be \emph{irreducible}. Any atom in a lattice is join irreducible.
+
+\textbf{Example}.  In the lattice diagram (Hasse diagram) below,
+$$
+\xymatrix{
+& 1 \ar@{-}[d] & \\
+& a \ar@{-}[ld] \ar@{-}[rd] \\
+b \ar@{-}[rd] & & c \ar@{-}[ld] \\
+& d \ar@{-}[d] & \\
+& 0 
+}
+$$
+$a$ is meet irreducible but not join irreducible, $d$ is join irreducible but not meet irreducible, while $b,c$ are irreducible.
+
+From this, we make the observations that in any chain, all the elements except the bottom one are join irreducible.  Dually, all the elements except the top one are meet irreducible.  An element is join irreducible iff it \PMlinkname{covers}{CoveringRelation} at most one other element.  An element is meet irreducible iff it is covered by at most one other element.
+
+\textbf{Remark.}  If a lattice satisfies the descending chain condition, then every element can be expressed as a join of join irreducible elements.  This statement can be dualized: if a lattice satisfies the ascending chain condition, then every element is the meet of meet irreducible elements.
+
+\begin{thebibliography}{6}
+\bibitem{dp} B. A. Davey, H. A. Priestley, {\it Introduction to Lattices and Order}, 2nd Edition, Cambridge (2003)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

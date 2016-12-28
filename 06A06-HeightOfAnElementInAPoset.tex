@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HeightOfAnElementInAPoset}
+\pmcreated{2013-03-22 16:31:32}
+\pmmodified{2013-03-22 16:31:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{height of an element in a poset}
+\pmrecord{10}{38705}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmrelated{GradedPoset}
+\pmdefines{Jordan-Dedekind chain condition}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newcommand{\up}{\uparrow\!\!}
+\newcommand{\down}{\downarrow\!\!}
+\begin{document}
+Let $P$ be a poset.  Given any $a\in P$, the lower set $\down a$ of $a$ is a subposet of $P$.  Call the height of $\down a$ less 1 the \emph{height} of $a$.  Let's denote $h(a)$ the height of $a$, so $$h(a)=\operatorname{height}(\down a)-1.$$  From this definition, we see that $h(a)=0$ iff $a$ is minimal and $h(a)=1$ iff $a$ is an atom.  Also, $h$ partitions $P$ into equivalence classes, so that $a$ is equivalent to $b$ in $P$ iff $h(a)=h(b)$.  Two distinct elements in the same equivalence class are necessarily incomparable.  In other words, the equivalence classes are antichains.  Furthermore, given any two equivalence classes $[a],[b]$, set $[a]\le[b]$ iff $h(a)\le h(b)$, then the set of equivalence classes form a chain.
+
+The height function of a poset $P$ looks remarkably like the rank function of a graded poset: $h$ is constant on the set of all minimal elements, and $h$ is isotone (preserves order).  When is $h$ a rank function (the additional condition being the preservation of the covering relation)?  The answer is given by a chain condition imposed on $P$, called the \emph{Jordan-Dedekind chain condition}:
+\begin{quote}
+(*) In a poset, the cardinalities of two maximal chains between common end points must be the same.
+\end{quote}
+Suppose for each $a\in P$, $h(a)$ is finite and $P$ has a unique minimal element $0$.  Then $P$ can be graded by $h$ iff (*) is satisfied.  More generally, if we drop the assumption of the uniqueness of a minimal element, then $P$ can be graded by $h$ iff any two maximal chains ending at the same end point have the same length.
+
+%%%%%
+%%%%%
+\end{document}

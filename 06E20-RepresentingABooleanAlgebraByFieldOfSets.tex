@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentingABooleanAlgebraByFieldOfSets}
+\pmcreated{2013-03-22 19:08:27}
+\pmmodified{2013-03-22 19:08:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{representing a Boolean algebra by field of sets}
+\pmrecord{13}{42040}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06E20}
+\pmclassification{msc}{06E05}
+\pmclassification{msc}{03G05}
+\pmclassification{msc}{06B20}
+\pmclassification{msc}{03G10}
+\pmrelated{FieldOfSets}
+\pmrelated{RepresentingADistributiveLatticeByRingOfSets}
+\pmrelated{LatticeHomomorphism}
+\pmrelated{RepresentingACompleteAtomicBooleanAlgebraByPowerSet}
+\pmrelated{StoneRepresentationTheorem}
+\pmrelated{MHStonesRepresentationTheorem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we show that every Boolean algebra is isomorphic to a field of sets, originally noted by Stone in 1936.  The bulk of the proof has actually been carried out in \PMlinkname{this entry}{RepresentingADistributiveLatticeByRingOfSets}, which we briefly state:
+\begin{quote}
+if $L$ is a distributive lattice, and $X$ the set of all prime ideals of $L$, then the map $F:L\to P(X)$ defined by $F(a)=\lbrace P\mid a\notin P\rbrace$ is an embedding.
+\end{quote}
+
+Now, if $L$ is a Boolean lattice, then every element $a\in L$ has a complement $a'\in L$.  $a'$ is in fact uniquely determined by $a$.
+
+\begin{prop} The embedding $F$ above preserves $'$ in the following sense: $$F(a')=X-F(a).$$ \end{prop}
+\begin{proof} $P\in F(a')$ iff $a'\notin P$ iff $a\in P$ iff $P\notin F(a)$ iff $P\in X-F(a)$.  \end{proof}
+
+\begin{thm} Every Boolean algebra is isomorphic to a field of sets. \end{thm}
+\begin{proof} From what has been discussed so far, $F$ is a Boolean algebra isomorphism between $L$ and $F(L)$, which is a ring of sets first of all, and a field of sets, because $X-F(a)=F(a')$.  \end{proof}
+
+\textbf{Remark}.  There are at least two other ways to characterize a Boolean algebra as a field of sets: let $L$ be a Boolean algebra:
+\begin{itemize}
+\item Every prime ideal is the kernel of a homomorphism into $\boldsymbol{2}:=\lbrace 0,1\rbrace$, and vice versa.  So for an element $a$ to be not in a prime ideal $P$ is the same as saying that $\phi(a)=1$ for some homomorphism $\phi:L \to \boldsymbol{2}$.  If we take $Y$ to be the set of all homomorphisms from $L$ to $\boldsymbol{2}$, and define $G:L\to P(Y)$ by $G(a)=\lbrace \phi \mid \phi(a)=1 \rbrace$, then it is easy to see that $G$ is an embedding of $L$ into $P(Y)$.
+\item Every prime ideal is a maximal ideal, and vice versa.  Furthermore, $P$ is maximal iff $P'$ is an ultrafilter.  So if we define $Z$ to be the set of all ultrafilters of $L$, and set $H:L\to P(Z)$ by $H(a)=\lbrace U\mid a\in U\rbrace$, then it is easy to see that $H$ is an embedding of $L$ into $P(Z)$.
+\end{itemize}
+If we appropriately topologize the sets $X,Y$, or $Z$, then we have the content of the Stone representation theorem.
+%%%%%
+%%%%%
+\end{document}

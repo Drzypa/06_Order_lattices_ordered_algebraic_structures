@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ScottTopology}
+\pmcreated{2013-03-22 16:49:29}
+\pmmodified{2013-03-22 16:49:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Scott topology}
+\pmrecord{10}{39063}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B35}
+\pmdefines{Scott open}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\up}{\uparrow\!\!}
+\newcommand{\down}{\downarrow\!\!}
+\begin{document}
+Let $P$ be a dcpo.  A subset $U$ of $P$ is said to be \emph{Scott open} if it satisfies the following two conditions:
+\begin{enumerate}
+\item $U$ an upper set: $\up U=U$, and 
+\item if $D$ is a directed set with $\bigvee D\in U$, then there is a $y\in D$ such that $(\ \up y\ ) \cap D\subseteq U$.
+\end{enumerate}
+Condition 2 is equivalent to saying that $U$ has non-empty intersection with $D$ whenever $D$ is directed and its supremum is in $U$.  
+
+For example, for any $x\in P$, the set $U(x):=P-(\ \down x\ )$ is Scott open: if $y\in \up U(x)$, then there is $z\in U(x)$ with $z\le y$.  Since $z\notin \down x$, $y\notin \down x$.  So $y\in U(x)$, or that $U(x)$ is upper.  If $D$ is directed and $e\le x$ for all $e\in D$, then $d:=\bigvee D\le x$ as well.  Therefore, $d\in U(x)$ implies $e\in U(x)$ for some $e\in D$.  Hence $U(x)$ is Scott open.
+
+The collection $\sigma(P)$ of all Scott open sets of $P$ is a topology, called the \emph{Scott topology} of $P$, named after its inventor Dana Scott.  Let us prove that $\sigma(P)$ is indeed a topology:
+\begin{proof}  We verify each of the axioms of an open set:
+\begin{itemize}
+\item Clearly $P$ itself is Scott open, and $\varnothing$ is vacuously Scott open.  
+\item 
+Suppose $U$ and $V$ are Scott open.  Let $W=U\cap V$ and $b\in \up W$.  Then for some $a\in W$, $a\le b$.  Since $a\in U\cap V$, $b\in\ \up U=U$ and $b\in\ \up V=V$.  This means $b\in W$, so $W$ is an upper set.  Next, if $D$ is directed with $\bigvee D\in W$, then, $\bigvee D \in U\cap V$.  So there are $y,z\in D$ with $(\ \up y\ ) \cap D\subseteq U$ and $(\ \up z\ ) \cap D\subseteq V$.  Since $D$ is directed, there is $t\in D$ such that $t\in (\ \up y\ ) \cap (\ \up z\ )$.  So $(\ \up t\ )\cap D\subseteq (\ \up y\ ) \cap (\ \up z\ )\cap D = \big( (\ \up y\ )\cap D \big)\cap \big( (\ \up z\ )\cap D\big)\subseteq U\cap V=W$.  This means that $W$ is Scott open.
+\item
+Suppose $U_i$ are open and $i\in I$ an index set.  Let $U=\bigcup \lbrace U_i \mid i\in I\rbrace$ and $b\in \up U$.  So $a\le b$ for some $a\in U$.  Since $a\in U_i$ for some $i\in I$, $b\in \up U_i=U_i$ as $U_i$ is upper.  Hence $b\in U_i\subseteq U$, or that $U$ is upper.  Next, suppose $D$ is directed with $\bigvee D\in U$.  Then $\bigvee D\in U_i$ for some $i\in I$.  Since $U_i$ is Scott open, there is $y\in D$ with $(\ \up y\ ) \cap D\subseteq U_i \subseteq U$, so $U$ is Scott open.
+\end{itemize}
+Since the Scott open sets satisfy the axioms of a topology, $\sigma(P)$ is a topology on $P$.
+\end{proof}
+
+\textbf{Examples}.  If $P$ is the unit interval: $P=[0,1]$, then $P$ is a complete chain, hence a dcpo.  Any Scott open set has the form $(a,1]$ if $0<a\le 1$, or $[0,1]$.  If $P=[0,1]\times [0,1]$, the unit square, then $P$ is a dcpo as it is already a continuous lattice.  The Scott open sets of $P$ are any upper subset of $P$ that is also an open set in the usual sense.
+
+\begin{thebibliography}{8}
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

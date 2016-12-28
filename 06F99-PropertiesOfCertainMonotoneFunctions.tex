@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfCertainMonotoneFunctions}
+\pmcreated{2013-03-22 19:03:31}
+\pmmodified{2013-03-22 19:03:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of certain monotone functions}
+\pmrecord{9}{41942}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F99}
+\pmclassification{msc}{08C99}
+\pmclassification{msc}{08A99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In the definitions of some partially ordered algebraic systems such as po-groups and po-rings, the multiplication is set to be compatible with the partial ordering on the universe in the following sense:
+$$ab \le ac \quad\mbox{iff}\quad b \le c \qquad\mbox{ and } \qquad ab \le cb \quad\mbox{iff}\quad a \le c$$
+This is no coincidence.  In fact, these ``definitions'' are actually consequences of properties concerning monotone functions satisfying certain algebraic rules, which is the focus of this entry.
+
+Recall that an $n$-ary function $f$ on a set $A$ is said to be monotone if it is monotone in each of its variables.  In other words, for every $i=1,2,\ldots,n$, the function $f(a_1,\ldots,a_{i-1},x,a_{i+1},\ldots,a_n)$ is monotone in $x$, where each of the $a_j$ is a fixed but arbitrary element of $A$.  We use the notation $\uparrow,\downarrow,\updownarrow$ to denote the monotonicity of each variable in $f$.  For example, $(\uparrow,\uparrow,\uparrow)$ denotes a ternary isotone function, whereas $(\downarrow,\updownarrow)$ denotes a binary function which is antitone with respect to its first variable, and both isotone/antitone with respect to the second.
+
+\begin{prop}  Let $f$ be an $n$-ary commutative monotone operation on a set $A$.  Then $f$ is either isotone or antitone.
+\end{prop}
+\begin{proof}  Suppose $f$ is isotone (or antitone) in its first variable.  Since $f(x,a_1,\ldots,a_{n-1}) = f(a_1,x,\ldots, a_{n-1}) = \cdots = f(a_1,\ldots,a_{n-1},x)$, $f$ is isotone (or antitone) in each of its remaining variables.
+\end{proof}
+
+\begin{prop}  Let $f$ be an $n$-ary monotone operation on a set $A$ with an identity element $e\in A$.  In other words, $f(x,e,\ldots, e) = f(e,x,\ldots,e) = \cdots = f(e,e,\ldots, x)=x$.  Then $f$ is either strictly isotone or strictly antitone.
+\end{prop}
+\begin{proof}  The proof is the same as the one before.  Furthermore, if $f$ is isotone and $a < b$, then $f(a,e,\ldots,e)=a<b=f(b,e,\ldots,e)$, so the strict ordering is preserved.  The same holds true if $f$ is antitone.
+\end{proof}
+
+\begin{prop}  Let $f$ be a binary monotone operation on a set $A$ such that it is isotone (antitone) with respect to its first variable.  Suppose $g$ is a unary operation on $A$ such that $f(x,g(x))$ is a fixed element of $A$.  Then $g$ is antitone (isotone).
+\end{prop}
+
+\begin{prop}  Let $f$ be an $n$-ary associative monotone operation on a set $A$.  Then
+\begin{itemize}
+\item $f$ is isotone if $n$ is even
+\item $f$ is either isotone, or is $(\underbrace{\uparrow,\ldots,\uparrow}_{m}, \downarrow,\underbrace{\uparrow,\ldots,\uparrow}_{m})$, if $n$ is odd, say $n=2m+1$.
+\end{itemize}
+\end{prop}
+\begin{proof}
+Suppose first that $n=2m$, $i\le m$, and $g(x)=f(a_1,\ldots, a_{i-1},x,\ldots, a_{m+1}, \ldots, a_{2m})$ is antitone.  Then $g(g(x))$ is isotone.  By the associativity of $f$, $g(g(x))$ is
+\begin{eqnarray*}
+&& f(a_1,\ldots, a_{i-1},f(a_1,\ldots, a_{i-1},x,a_{i+1},\ldots, a_m, \ldots, a_{2m}),\ldots, a_{m+1}, \ldots, a_{2m})\\
+&=& f(a_1,\ldots, a_{i-1},a_1,\ldots, a_{i-1},x,a_{i+1},\ldots, f(a_{2m-i+1}, \ldots, a_{2m},a_{i+1},\ldots, a_{m+1}, \ldots, a_{2m})).
+\end{eqnarray*}
+In the second expression, the position of $x$ is $2i-2\le 2m-1 < 2m$, therefore implying that $g(g(x))$ is antitone, which is a contradiction!  Therefore, $g(x)$ is isotone.
+Now, if $i>m$, and $h(x)=f(b_1,\ldots, b_m, \ldots, b_{i-1}, x, b_{i+1},\ldots, b_{2m})$ is antitone, then $h(h(x))$ is isotone.  But 
+\begin{eqnarray*}
+&& f(b_1,\ldots, b_m, \ldots, b_{i-1}, f(b_1,\ldots, b_m, \ldots, b_{i-1}, x, b_{i+1},\ldots, b_{2m}), b_{i+1}, \ldots, b_{2m})\\
+&=& f(f(b_1,\ldots, b_m, \ldots, b_{i-1},b_1,\ldots, b_{2m-i+1}), \ldots, b_{i-1},x,b_{i+1},\ldots, b_{2m}, b_{i+1}, \ldots, b_{2m})),
+\end{eqnarray*}
+and the position of $x$ is the second expression is $(i-1)-(2m-i+1)+2=2i-2m>1$, therefore implying that $h(h(x))$ is antitone, again a contradiction.  As a result, $f$ is isotone for all $i=1,\ldots, n$.
+
+The argument above also works when $n$ is odd, say $n=2m+1$ and $i\ne m+1$.  Finally, since $f$ is monotone, it is monotone with respect to the $i$-th variable when $i=m+1$, so $f$ is one of the following three forms: 
+$$(\underbrace{\uparrow,\ldots,\uparrow}_{2m+1}), \qquad (\underbrace{\uparrow,\ldots,\uparrow}_{m}, \updownarrow,\underbrace{\uparrow,\ldots,\uparrow}_{m}), \qquad (\underbrace{\uparrow,\ldots,\uparrow}_{m}, \downarrow,\underbrace{\uparrow,\ldots,\uparrow}_{m}),$$ the first two of which imply that $f$ is isotone.
+\end{proof}
+An example of an associative function that is, say $(\uparrow,\downarrow,\uparrow)$, is given by $$f:\mathbb{Z}^3 \to \mathbb{Z}\qquad\mbox{where}\qquad f(x,y,z)=x-y+z.$$
+$f$ is associative since $f(f(r,s,t),u,v)=f(r,f(s,t,u),v)=f(r,s,f(t,u,v))=r-s+t-u+v$.
+%%%%%
+%%%%%
+\end{document}

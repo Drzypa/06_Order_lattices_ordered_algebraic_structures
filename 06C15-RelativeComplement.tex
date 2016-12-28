@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelativeComplement}
+\pmcreated{2013-03-22 15:51:45}
+\pmmodified{2013-03-22 15:51:45}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{relative complement}
+\pmrecord{11}{37852}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06C15}
+\pmrelated{RelativePseudocomplement}
+\pmrelated{BrouwerianLattice}
+\pmdefines{relatively complemented lattice}
+\pmdefines{relatively complemented}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{interval}
+\PMlinkescapeword{bounded}
+
+A complement of an element in a lattice is only defined when the lattice in question is \PMlinkname{bounded}{BoundedLattice}.  In general, a lattice is not bounded and there are no complements to speak of.  Nevertheless, if the sublattice of a lattice is bounded, we can speak of complements of an element \emph{relative} to that sublattice.
+
+Let $L$ be a lattice, $a$ an element of $L$, and $I=[b,c]$ an \PMlinkname{interval}{LatticeInterval} in $L$.  An element\, $d\in L$\, is said to be a complement of $a$ \emph{relative} to $I$ if
+$$a\vee d=c\,\mbox{ and }\,a\wedge d=b.$$
+
+It is easy to see that $a\le c$ and $b\le a$,\, so\, $a\in I$.  Similarly, $d\in I$.
+
+An element $a\in L$ is said to be \emph{relatively complemented} if for every interval $I$ in $L$ with $a\in I$, it has a complement relative to $I$.  The lattice $L$ itself is called a \emph{relatively complemented lattice} if every element of $L$ is relatively complemented.  Equivalently, $L$ is relatively complemented iff each of its interval is a complemented lattice.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item A relatively complemented lattice is complemented if it is bounded.  Conversely, a complemented lattice is relatively complemented if it is 
+\PMlinkname{modular}{ModularLattice}.
+\item The notion of a relative complement of an element in a lattice has nothing to do with that found in set theory: let $U$ be a set and $A,B$ subsets of $U$, the relative complement of $A$ in $B$ is the set theoretic difference $B-A$.  While the relative difference is necessarily a subset of $B$, $A$ does not have to be a subset of $B$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

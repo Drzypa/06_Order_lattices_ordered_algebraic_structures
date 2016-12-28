@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Locale}
+\pmcreated{2013-03-22 16:38:11}
+\pmmodified{2013-03-22 16:38:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{locale}
+\pmrecord{12}{38838}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06D22}
+\pmsynonym{frame}{Locale}
+\pmsynonym{frame homomorphism}{Locale}
+%\pmkeywords{pointless topology}
+\pmrelated{CompleteHeytingAlgebra}
+\pmdefines{locale homomorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Topology, in its most abstract sense, is the study of a family of subsets, called open sets, of some given set $X$, when subject to certain conditions based purely on set-theoretic operations.  Namely, these conditions are that the intersection of two open sets is an open set, union of open sets is an open set, and that the empty set and $X$ are themselves open sets.  One can thus think of a topology as a certain kind of a lattice $L(X)$ of subsets associated with the set $X$, and the study of a general topological space can be distilled further, to the study of this particular lattice $L(X)$.  In this setting, the basic elements under scrutiny are no longer ``points'' in $X$, but elements of $L(X)$.  This shift in focus is the starting point of the so-called ``pointless topology'', where the study of topology takes on a lattice-theoretic flavor.
+
+Specifically, the lattice $L(X)$ is an example of what is known as a locale.  Formally, a \emph{locale} is a complete lattice $L$ that is meet infinitely distributive: $$x\wedge (\bigvee Y)=\bigvee (x\wedge Y)$$
+for any $Y\subseteq L$, where $x\wedge Y:=\lbrace x\wedge y\mid y\in Y\rbrace$.
+
+\underline{A ``pointless'' proof}.  To see that the lattice $L(X)$ of open sets of a topological space $X$ is a locale, we first observe that $L(X)$ is a complete lattice, since arbitrary joins of open sets are open by definition, which is enough to ensure that arbitrary meets exist too (although they are not arbitrary intersections, they are interiors of the intersections).  This means that $\bigvee Y$  and $\bigvee (x\bigwedge Y)$ are both open sets, and hence the expressions in the equality are at least meaningful at this point.  Further, $\bigvee (x\wedge Y)=\bigcup (x\cap Y)\subseteq x\cap (\bigcup Y)=x\wedge (\bigvee Y)$, because $x\cap y\subseteq x\cap (\bigcup Y)$ for individual $y\in Y$.  So we are left with showing that $x\wedge (\bigvee Y)\subseteq \bigvee (x\wedge Y)$.  Again, this is true at an individual level: 
+\begin{eqnarray}
+x\cap y\subseteq \bigcup (x\cap Y).
+\end{eqnarray}
+Let's write $z=\bigcup (x\cap Y)$.  Then the expression above becomes $y\cap x\subseteq z$, where $x,y,z$ are all open sets.  Put it another way, 
+\begin{eqnarray}
+y &=&(y\cap x)\cup (y-x) \\ 
+&\subseteq& z\cup (y-x) \\
+&=& z\cup (y\cap x^c) \\
+&=& (z\cup y)\cap (z\cup x^c) \\
+&\subseteq& (z\cup y)\cap (z\cup x^c)^{\circ}, 
+\end{eqnarray}
+where $-$ denotes the set difference operator, $^c$ is the set complementation, and $^\circ$ the interior operator.  (6) comes from the fact that $y$ is open.  Now, take the union of all $y\in Y$, and write this union $t:=\bigcup Y=\bigcup \lbrace y\mid y\in Y\rbrace$.  Then 
+\begin{eqnarray}
+t &\subseteq& (z\cup t)\cap (z\cup x^c)^{\circ} \\
+&\subseteq& (z\cup t)\cap (z\cup x^c) \\
+&=& z\cup (t\cap x^c).
+\end{eqnarray}
+Taking the intersection with $x$ on both sides, we have
+\begin{eqnarray}
+t\cap x &\subseteq& (z\cup (t\cap x^c))\cap x \\
+&=& (z\cap x)\cup ((t-x)\cap x) \\
+&=& (z\cap x)\cup \varnothing \\
+&=& z\cap x \\
+&\subseteq& z.
+\end{eqnarray}
+Substituting $t$ and $z$ back to their original form, we have $x\cap (\bigcup Y)\subseteq \bigcup (x\cap Y)$, which is what we wanted to prove.
+
+Notice that in the proof above, no points of $X$ are employed, and everything is done via basic set operations, as well as extra set operations, such as the interior operator.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item Another thing worthy of note is the following fact: 
+\begin{quote}
+A lattice is a locale iff it is a complete Brouwerian lattice (equivalently a complete Heyting algebra).
+\end{quote}
+A sketch of proof goes as follows: if $L$ is a locale, then for any $a,b\in L$, the element $\bigvee \lbrace c\mid a\wedge c\le b\rbrace$ is the relative pseudocomplement of $a$ in $b$.  Conversely, if $L$ is a Heyting algebra, then we can use the trick that for every $y\in Y$, $y\le x\to \bigvee (x\wedge Y)$, to show $x\wedge (\bigvee Y)\le \bigvee (x\wedge Y)$.
+\item Other examples of locales found in topology is the lattice of regular open sets in a topological space $X$.
+\item Complete Boolean algebras also provide examples of locales.  But a locale need not be complete Boolean.  The interval topology on the real line is such an example.
+\item A \emph{locale homomorphism} $\phi$ is a lattice homomorphism between two locales such that arbitrary sups are preserved: $\phi(\bigvee_{i\in I} \lbrace a_i\rbrace) = \bigvee_{i\in I} \lbrace \phi(a_i)\rbrace$.
+\item A locale is also called a \emph{frame}, and a frame homomorphism a locale homomorphism.  However, P. T. Johnstone distinguishes the two names when they are considered as categories.  The category \textbf{Fra} of frames consists of locales (or frames) as objects, and locale homomorphisms as morphisms.  On the other hand, the category \textbf{Loc} of locales is defined as the opposite category of \textbf{Fra}.
+\item In \cite{sv}, a frame and a locale are two distinct objects.  A frame is defined as above.  But a locale $L$ is a  triple $(F,P,\models)$, where $F$ is a frame, $P$ is the set of frame homomorphisms from $F$ to $\lbrace 0,1\rbrace$, the trivial frame (= the trivial Boolean algebra), and $\models$ is a subset (relation) of $P\times F$ given by $f \models a$ iff $f(a)=1$.  For each $a\in F$, let $U(a)=\lbrace f\in P\mid f\models a\rbrace$.  It is not hard to see that the collection of all sets of the form $U(a)$ forms a topology on $P$.  As a result, every frame can be viewed as a topology on some set!
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{fb} F. Borceux, {\em Handbook of Categorical Algebra 3: Categories of Sheaves}, Cambridge University Press (1994).
+\bibitem{ghklms} G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, {\em Continuous Lattices and Domains}, Cambridge University Press, Cambridge (2003).
+\bibitem{ptj} P. T. Johnstone, {\em The Art of Pointless Thinking: A Student's Guide to the Category of Locales, Category Theory at Work (Bremen, 1990)}, pp 85-107, Res. Exp. Math., 18, Heldermann, Berlin (1991).
+\bibitem{ptj} P. T. Johnstone, {\em Stone Spaces}, Cambridge University Press, Cambridge (1982).
+\bibitem{sv} S. Vickers, {\em Topology via Logic}, Cambridge University Press, Cambridge (1989).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

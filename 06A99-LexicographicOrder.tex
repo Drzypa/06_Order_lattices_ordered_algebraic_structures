@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LexicographicOrder}
+\pmcreated{2013-03-22 15:14:05}
+\pmmodified{2013-03-22 15:14:05}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{lexicographic order}
+\pmrecord{13}{37005}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A99}
+\pmdefines{dictionary order}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\newcommand{\wspace}[0]{'\ \ '}
+\begin{document}
+Let $A$ be a set equipped with a total order $<$, and let $A^n=A\times \cdots \times A$ be the $n$-fold Cartesian product of $A$.  Then the \emph{lexicographic order} $<$ on $A^n$ is defined as follows:
+ 
+If $a=(a_1, \ldots, a_n)\in A^n$ and $b=(b_1, \ldots, b_n)\in A^n$, 
+then $a<b$ if $a_1<b_1$ or
+\begin{eqnarray*}
+   a_1 &=& b_1, \\   
+       &\vdots & \\
+   a_k &=& b_k, \\
+   a_{k+1} &<& b_{k+1} \\
+\end{eqnarray*}
+for some $k=1,\ldots, n-1$.
+
+\subsubsection*{Examples}
+\begin{itemize}
+\item The lexicographic order yields a total order on the field of complex numbers.
+\item The lexicographic order of words of finite length consisting of letters $\wspace$ (space) $<a<b<\cdots<y<z$ is the \emph{dictionary order}.  To compare words of different length, one simply pads the shorter with $\wspace$s from the right. For example, $\operatorname{prove} < \operatorname{proved} < \operatorname{proven}$.
+\end{itemize}
+
+\subsubsection*{Properties}
+\begin{itemize}
+\item 
+The lexicographic order is a total order.
+\item 
+If the original set is well-ordered, the lexicographic ordering on the product is also a well-ordering.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

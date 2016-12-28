@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{mathbbCIsNotAnOrderedField}
+\pmcreated{2013-03-22 16:17:25}
+\pmmodified{2013-03-22 16:17:25}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{$\mathbb{C}$ is not an ordered field}
+\pmrecord{10}{38406}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F25}
+\pmclassification{msc}{13J25}
+\pmclassification{msc}{12J15}
+\pmrelated{Complex}
+\pmrelated{BasicFactsAboutOrderedRings}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\begin{thm}
+$\mathbb{C}$ is not an ordered field.
+\end{thm}
+
+First, the following theorem will be proven:
+
+\begin{thm}
+$\mathbb{Z}[i]$ is not an ordered ring.
+\end{thm}
+
+\begin{proof}
+Many facts that are used here are proven in the entry regarding basic facts about ordered rings.
+
+Suppose that $\mathbb{Z}[i]$ is an ordered ring under some total ordering $\le$.  Note that $0<1$ and $-1=-1+0<-1+1=0.$
+
+Note also that $i \neq 0$.  Thus, either $i>0$ or $i<0$.  In either case, $-1=i \cdot i \ge 0 \cdot i=0$, a contradiction.
+
+It follows that $\mathbb{Z}[i]$ is not an ordered ring.
+\end{proof}
+
+Because of theorem 2, no ring containing $\mathbb{Z}[i]$ can be an ordered ring.  It follows that $\mathbb{C}$ is not an ordered field.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedComplete}
+\pmcreated{2013-03-22 17:01:08}
+\pmmodified{2013-03-22 17:01:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{bounded complete}
+\pmrecord{8}{39303}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A12}
+\pmclassification{msc}{06B23}
+\pmclassification{msc}{03G10}
+\pmrelated{CompletenessPrinciple}
+\pmdefines{Dedekind complete}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $P$ be a poset.  Recall that a subset $S$ of $P$ is called \emph{bounded from above} if there is an element $a\in P$ such that, for every $s\in S$, $s\le a$.
+
+A poset $P$ is said to be \emph{bounded complete} if every subset which is bounded from above has a supremum.
+
+\textbf{Remark}.  Since it is not required that the subset be non-empty, we see that $P$ has a bottom.  This is because the empty set is vacuously bounded from above, and therefore has a supremum.  However, this supremum is less than or equal to every member of $P$, and hence it is the least element of $P$. 
+
+Clearly, any complete lattice is bounded complete.  An example of a non-complete bounded complete poset is any closed subset of $\mathbb{R}$ of the form $[a,\infty)$, where $a\in \mathbb{R}$.  In addition, arbitrary products of bounded complete posets is also bounded complete.  
+
+It can be shown that a poset is a bounded complete dcpo iff it is a complete semilattice.
+
+\textbf{Remark}.  A weaker concept is that of \emph{Dedekind completeness}: A poset $P$ is \emph{Dedekind complete} if every \emph{non-empty} subset bounded from above has a supremum.  An obvious example is $\mathbb{R}$, which is Dedekind complete but not bounded complete (as it has no bottom).  Dedekind completeness is more commonly known as the least upper bound property.
+%%%%%
+%%%%%
+\end{document}

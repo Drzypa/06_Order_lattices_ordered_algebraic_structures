@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriteriaForAPosetToBeACompleteLattice}
+\pmcreated{2013-03-22 16:37:53}
+\pmmodified{2013-03-22 16:37:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{criteria for a poset to be a complete lattice}
+\pmrecord{7}{38832}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B23}
+\pmclassification{msc}{03G10}
+\pmrelated{MeetContinuous}
+\pmrelated{IntersectionStructure}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition}.  Let $L$ be a poset.  Then the following are equivalent.
+
+\begin{enumerate}
+\item $L$ is a complete lattice.
+\item for every subset $A$ of $L$, $\bigvee A$ exists.
+\item for every finite subset $F$ of $L$ and every directed set $D$ of $L$, $\bigvee F$ and $\bigvee D$ exist.
+\end{enumerate}
+
+\begin{proof} Implications $1.\Rightarrow 2.\Rightarrow 3.$ are clear.  We will show $3.\Rightarrow 2.\Rightarrow 1.$
+
+$(3.\Rightarrow 2.)$  If $A=\varnothing$, then $\bigvee A=0$ by definition.  So assume $A$ be a non-empty subset of $L$.  Let $A^{\prime}$ be the set of all finite subsets of $A$ and $B=\lbrace \bigvee F\mid F\in A^{\prime}\rbrace$.  By assumption, $B$ is well-defined and $A\subseteq B$.  Next, let $B^{\prime}$ be the set of all directed subsets of $B$, and $C=\lbrace \bigvee D\mid D\in B^{\prime}\rbrace$.  By assumption again, $C$ is well-defined and $B\subseteq C$.  Now, every chain in $C$ has a maximal element in $C$ (since a chain is a directed set), $C$ itself has a maximal element $d$ by Zorn's Lemma.  We will show that $d$ is the least upper bound of elments of $A$.  It is clear that each $a\in A$ is bounded above by $d$ ($A\subseteq B\subseteq C$).  If $t$ is an upper bound of elements of $A$, then it is an upper bound of elements of $B$, and hence an upper bound of elements of $C$, which means $d\le t$.
+
+$(2.\Rightarrow 1.)$  By assumption $\bigvee \varnothing$ exists ($=0$), so that $\bigwedge L=0$.  Now suppose $A$ is a proper subset of $L$.  We want to show that $\bigwedge A$ exists.  If $A=\varnothing$, then $\bigwedge A=\bigvee L=1$ by definition of an arbitrary meet over the empty set.  So assume $A\neq \varnothing$.  Let $A^{\prime}$ be the set of lower bounds of $A$: $A^{\prime}=\lbrace x\in L\mid x\le a\mbox{ for all }a\in A\rbrace$ and let $b=\bigvee A^{\prime}$, the least upper bound of $A^{\prime}$.  $b$ exists by assumption.  Since $A$ is a set of upper bounds of $A^{\prime}$, $b\le a$ for all $a\in A$.  This means that $b$ is a lower bound of elements of $A$, or $b\in A^{\prime}$.  If $x$ is any lower bound of elements of $A$, then $x\le b$, since $x$ is bounded above by $b$ ($b=\bigvee A^{\prime}$).  This shows that $\bigwedge A$ exists and is equal to $b$.
+\end{proof}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+Dually, a poset is a complete lattice iff every subset has an infimum iff infimum exists for every finite subset and every directed subset.
+\item
+The above proposition shows, for example, that every closure system is a complete lattice.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

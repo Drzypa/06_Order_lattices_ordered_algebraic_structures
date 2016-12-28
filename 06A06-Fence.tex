@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Fence}
+\pmcreated{2013-03-22 17:08:00}
+\pmmodified{2013-03-22 17:08:00}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{fence}
+\pmrecord{7}{39439}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmdefines{even fence}
+\pmdefines{odd fence}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A finite poset is said to be a \emph{fence} if it has a Hasse diagram that looks like one of the following four types:
+\begin{enumerate}
+\item
+\begin{equation*}
+\xymatrix @C-=2pt @R=6pt {
+& & b_1 \ar@{-}[lldd] \ar@{-}[rrdd] & & & & b_2 \ar@{-}[lldd] \ar@{-}[rd] \\
+& & & & & & & \\
+a_1 & & & & a_2 & & }
+\xymatrix @C-=2pt @R=6pt  { {} \\ {\cdots} \\ }
+\xymatrix @C-=2pt @R=6pt  {
+& & & b_{m-1} \ar@{-}[lldd] \ar@{-}[rrdd] & & & & b_m \ar@{-}[lldd] \\
+\ar@{-}[rd] & & & & & & & & \\
+& a_{m-1} & & & & a_m & & }
+\end{equation*}
+\item
+\begin{equation*}
+\xymatrix @C-=2pt @R=6pt {
+b_1 \ar@{-}[rrdd] & & & & b_2 \ar@{-}[lldd] \ar@{-}[rrdd] & & \\
+& & & & & & & \ar@{-}[ld] \\
+& & a_1 & & & & a_2 }
+\xymatrix @C-=2pt @R=6pt  { {} \\ {\cdots} \\ }
+\xymatrix @C-=2pt @R=6pt  {
+& b_{n-1} \ar@{-}[ld] \ar@{-}[rrdd] & & & & b_n \ar@{-}[lldd] \ar@{-}[rrdd] & & \\
+& & & & & & & & \\
+& & & a_{n-1} & & & & a_n }
+\end{equation*}
+\item
+\begin{equation*}
+\xymatrix @C-=2pt @R=6pt {
+& & b_1 \ar@{-}[lldd] \ar@{-}[rrdd] & & & & b_2 \ar@{-}[lldd] \ar@{-}[rd] \\
+& & & & & & & \\
+a_1 & & & & a_2 & & }
+\xymatrix @C-=2pt @R=6pt  { {} \\ {\cdots} \\ }
+\xymatrix @C-=2pt @R=6pt  {
+& & & b_{p-1} \ar@{-}[lldd] \ar@{-}[rrdd] & & & & b_p \ar@{-}[lldd] \ar@{-}[rrdd] & & \\
+\ar@{-}[rd] & & & & & & & & & & \\
+& a_{p-1} & & & & a_p & & & & a_{p+1}}
+\end{equation*}
+\item
+\begin{equation*}
+\xymatrix @C-=2pt @R=6pt {
+b_1 \ar@{-}[rrdd] & & & & b_2 \ar@{-}[lldd] \ar@{-}[rrdd] & & \\
+& & & & & & & \ar@{-}[ld] \\
+& & a_1 & & & & a_2 }
+\xymatrix @C-=2pt @R=6pt  { {} \\ {\cdots} \\ }
+\xymatrix @C-=2pt @R=6pt  {
+& b_{q-1} \ar@{-}[ld] \ar@{-}[rrdd] & & & & b_q \ar@{-}[lldd] \ar@{-}[rrdd] & & & & b_{q+1} \ar@{-}[lldd] \\
+& & & & & & & & & & \\
+& & & a_{q-1} & & & & a_q & &}
+\end{equation*}
+\end{enumerate}
+where $m,n,p,q$ are positive integers.  
+
+When no pairs of $m,n,p,q$ are the same, no two types are order isomorphic.  A fence of type 1 or type 2 are called an \emph{even fence}, for the obvious reason that it contains an even number of elements.  The other two types are the \emph{odd fences}.  
+
+When $m=n$, the two even fences are isomorphic, simply by mapping $c_i$ in the first fence to $c_{n-i}$ in the second one, where $c$ is either $a$ or $b$.  When $p=q$, the two odd fences are dually isomorphic to one another (the dual of one fence is isomorphic to the other fence).
+
+Another property of a fence is that it is \PMlinkname{connected}{ConnectedPoset} and is minimal in the sense that, among all partial orderings on the underlying set, a fence has the least number of elements in its partial ordering.  Of course, the converse is not true, as the following example illustrates
+\begin{equation*}
+\xymatrix {
+b_1 \ar@{-}[rrd] & b_2 \ar@{-}[rd] & \cdots & b_{n-1} \ar@{-}[ld] & b_n \ar@{-}[lld] \\
+& & a_1 & & }
+\end{equation*}
+
+It can be shown that the number of lower sets in a fence is a Fibonacci number.  In other words, if $f(n)$ is the number of lower sets in a fence of cardinality $n$ ($n$ at least $2$), then $f(n+1)=f(n)+f(n-1)$ and $f(2)=2$.
+
+\textbf{Remark}.  One may extend the definition of a fence to the infinitely countable case.  In this case, it has a Hasse diagram that looks like
+\begin{equation*} 
+\xymatrix { {} \ar@{}[d]_-{\displaystyle{\stackrel{}{\cdots}}} \\ {} } 
+\xymatrix { 
+\ar@{-}[rd] & & b_{n-1} \ar@{-}[rd] \ar@{-}[ld] & & b_n \ar@{-}[ld] \ar@{-}[rd] & & b_{n+1} \ar@{-}[ld] \ar@{-}[rd] & \\ 
+& a_{n-1} & & a_n & & a_{n+1} & & } 
+\xymatrix { {} \ar@{}[d]_-{\displaystyle{\stackrel{}{\cdots}}} \\ {} } 
+\end{equation*} 
+Its underlying set is the disjoint union of the two countably infinite sets $A=\lbrace a_i\mid i\in \mathbb{Z}\rbrace$ and $B=\lbrace b_i\mid i\in \mathbb{Z}\rbrace$, and its partial order is the disjoint union of the three sets $\lbrace (a_i,b_i)\mid i\in \mathbb{Z}\rbrace$, $\lbrace (a_i,b_{i-1})\mid i\in \mathbb{Z}\rbrace$, and $\lbrace (c,c)\mid c\in A\cup B\rbrace$.
+
+\begin{thebibliography}{6}
+\bibitem{dp} B. A. Davey, H. A. Priestley, {\it Introduction to Lattices and Order}, 2nd Edition, Cambridge (2003)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

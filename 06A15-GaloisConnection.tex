@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaloisConnection}
+\pmcreated{2013-03-22 15:08:15}
+\pmmodified{2013-03-22 15:08:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Galois connection}
+\pmrecord{13}{36881}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A15}
+\pmsynonym{Galois correspondence}{GaloisConnection}
+\pmsynonym{Galois connexion}{GaloisConnection}
+\pmrelated{InteriorAxioms}
+\pmrelated{AdjointFunctor}
+\pmdefines{upper adjoint}
+\pmdefines{lower adjoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{root}
+
+The notion of a Galois connection has its root in Galois theory.  By the \PMlinkname{fundamental theorem of Galois theory}{FundamentalTheoremOfGaloisTheory}, there is a one-to-one correspondence between the intermediate fields between a field $L$ and its subfield $F$ (with appropriate conditions imposed on the extension $L/F$), and the subgroups of the Galois group $\operatorname{Gal}(L/F)$ such that the bijection is inclusion-reversing:
+$$\operatorname{Gal}(L/F)\supseteq H\supseteq\langle e \rangle\quad  \mbox{ iff }\quad F\subseteq L^H\subseteq L,\mbox{ and}$$ 
+$$F\subseteq K\subseteq L\quad\mbox{ iff }\quad \operatorname{Gal}(L/F)\supseteq \operatorname{Gal}(L/K)\supseteq\langle e \rangle.$$
+
+If the language of Galois theory is distilled from the above paragraph, what remains reduces to a more basic and general concept in the theory of ordered-sets:
+
+\textbf{Definition}.  Let $(P, \le_P)$ and $(Q, \le_Q)$ be two posets. A \emph{Galois connection} between $(P,\le_P)$ and $(Q,\le_Q)$ is a pair of functions $f:=(f^*,f_*)$ with $f^*\colon P\to Q$ and $f_*\colon Q\to P$, such that, for all $p\in P$ and $q\in Q$, we have $$f^*(p)\leq_Q q\quad \mbox{ iff }\quad p\leq_P f_*(q).$$ We denote a Galois
+connection between $P$ and $Q$ by $P\stackrel{f}{\multimap}Q$, or simply $P\multimap Q$.
+
+If we define $\le_P^{\prime}$ on $P$ by $a\le_P^{\prime}b$ iff $b\le_P a$, and define $\le_Q^{\prime}$ on $Q$ by $c\le_Q^{\prime}d$ iff $d\le_Q c$, then $(P,\le_P^{\prime})$ and $(Q,\le_Q^{\prime})$ are posets, (the duals of $(P,\le_P)$ and $(Q,\le_Q)$).  The existence of a Galois connection between $(P,\le_P)$ and $(Q,\le_Q)$ is the same as the existence of a Galois connection between $(Q,\le_Q^{\prime})$ and $(P,\le_P^{\prime})$.  In short, we say that there is a Galois connection between $P$ and $Q$ if there is a Galois connection between two posets $S$ and $T$ where $P$ and $Q$ are the underlying sets (of $S$ and $T$ respectively).  With this, we may say without confusion that ``a Galois connection exists between $P$ and $Q$ iff a Galois connection exists between $Q$ and $P$''.
+
+\textbf{Remarks.}
+\begin{enumerate}
+\item Since $f^*(p)\leq_Q f^*(p)$ for all $p\in P$, then by definition, $p\leq_P f_*f^*(p)$.  Alternatively, we can write \begin{eqnarray}1_P\leq_P f_*f^*, \end{eqnarray} where $1_P$ stands for the identity map on $P$. Similarly, if $1_Q$ is the identity map on $Q$, then \begin{eqnarray}f^*f_*\leq_Q 1_Q. \end{eqnarray}
+\item Suppose $a\leq_P b$.  Since $b\leq_P f_*f^*(b)$ by the remark above, $a\leq_P f_*f^*(b)$ and so by definition, $f^*(a)\leq_Q f^*(b)$. This shows that $f^*$ is monotone.  Likewise, $f_*$ is also monotone.
+\item Now back to Inequality (1), $1_P\leq_P f_*f^*$ in the first remark.  Applying the second remark, we obtain
+\begin{eqnarray}f^*\leq_Q f^*f_*f^*. \end{eqnarray} Next, according to Inequality (2), $f^*f_*(q)\leq_Q q$ for any $q\in Q$, it is true, in particular, when $q=f^*(p)$. Therefore, we also have
+\begin{eqnarray}f^*f_*f^*\leq_Q f^*.\end{eqnarray}  Putting Inequalities (3) and (4) together we have
+\begin{eqnarray}f^*f_*f^*=f^*.\end{eqnarray}  Similarly, \begin{eqnarray}f_*f^*f_*=f_*.\end{eqnarray}
+\item If $(f,g)$ and $(f,h)$ are Galois connections between $(P,\le_P)$ and $(Q,\le_Q)$, then $g=h$.  To see this, observe that $p\le_P g(q)$ iff $f(p)\le_Q q$ iff $p \le_P h(q)$, for any $p\in P$ and $q\in Q$.  In particular, setting $p=g(q)$, we get $g(q)\le_P h(q)$ since $g(q)\le_P g(q)$.  Similarly, $h(q)\le_P g(q)$, and therefore $g=h$.  By a similarly argument, if $(g,f)$ and $(h,f)$ are Galois connections between $(P,\le_P)$ and $(Q,\le_Q)$, then $g=h$.  Because of this uniqueness property, in a Galois connection $f=(f^*,f_*)$, $f^*$ is called \emph{the upper adjoint} of $f_*$ and $f_*$ \emph{the lower adjoint} of $f^*$.
+\end{enumerate}
+
+\textbf{Examples.}
+\begin{itemize}
+\item The most famous example is already mentioned in the first paragraph above: let $L$ is a finite-dimensional Galois extension of a field $F$, and $G:=\operatorname{Gal}(L/F)$ is the Galois group of $L$ over $F$.  If we define
+\begin{itemize}
+\item[a.] $P=\lbrace K\mid K\mbox{ is a field such that }F\subseteq K\subseteq L \rbrace,$ with $\leq_P=\subseteq$,
+\item[b.] $Q=\lbrace H\mid H\mbox{ is a subgroup of }G \rbrace,$ with $\leq_Q=\supseteq$,
+\item[c.] $f^*:P\to Q$ by $f^*(K)=\operatorname{Gal}(L/K)$, and \item[d.] $f_*:Q\to P$ by $f_*(H)=L^H$, the fixed field of $H$ in $L$.
+\end{itemize}
+Then, by the fundamental theorem of Galois theory, $f^*$ and $f_*$ are bijections, and $(f^*,f_*)$ is a Galois connection between $P$ and $Q$.
+\item Let $X$ be a topological space.  Define $P$ be the set of all open subsets of $X$ and $Q$ the set of all closed subsets of $X$. Turn $P$ and $Q$ into posets with the usual set-theoretic inclusion. Next, define $f^*:P\to Q$ by $f^*(U)=\overline{U}$, the closure of $U$, and $f_*:Q\to P$ by $f_*(V)=\operatorname{int}(V)$, the interior of $V$.  Then $(f^*,f_*)$ is a Galois connection between $P$ and $Q$.  Incidentally, those elements fixed by $f_*f^*$ are precisely the regular open sets of $X$, and those fixed by $f^*f_*$ are the regular closed sets.
+\end{itemize}
+
+\textbf{Remark}.  The pair of functions in a Galois connection are order preserving as shown above.  One may also define a Galois connection as a pair of maps $f^*:P\to Q$ and $f_*:Q\to P$ such that $f^*(p)\le_Q q$ iff $f_*(q)\le_P p$, so that the pair $f^*,f_*$ are order reversing.  In any case, the two definitions are equivalent in that one may go from one definition to another, (simply exchange $Q$ with $Q^{\partial}$, the \PMlinkname{dual}{DualPoset} of $Q$).
+
+\begin{thebibliography}{6}
+\bibitem{tsb} T.S. Blyth, {\em Lattices and Ordered Algebraic Structures}, Springer, New York (2005).
+\bibitem{dp} B. A. Davey, H. A. Priestley, {\it Introduction to Lattices and Order}, 2nd Edition, Cambridge (2003)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolidSet}
+\pmcreated{2013-03-22 17:03:19}
+\pmmodified{2013-03-22 17:03:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{solid set}
+\pmrecord{6}{39346}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{46A40}
+\pmsynonym{absolutely convex}{SolidSet}
+\pmdefines{vector lattice homomorphism}
+\pmdefines{solid closure}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $V$ be a vector lattice and $|\cdot|$ be the absolute value defined on $V$.  A subset $A\subseteq V$ is said to be \emph{solid}, or \emph{absolutely convex}, if, $|v|\le |u|$ implies that $v\in A$, whenever $u\in A$ in the first place.
+
+From this definition, one deduces immediately that $0$ belongs to every non-empty solid set.  Also, if $a$ is in a solid set, so is $a^+$, since $|a^+|=a^+\le a^++a^-=|a|$.  Similarly $a^-\in S$, and $|a|\in S$, as $||a||=|a|$.  Furthermore, we have 
+\begin{prop}  If $S$ is a solid subspace of $V$, then $S$ is a vector sublattice. \end{prop}
+\begin{proof}
+Suppose $a,b\in S$.  We want to show that $a\wedge b\in S$, from which we see that $a\vee b= a+b-(a\wedge b)\in S$ also since $S$ is a vector subspace.  Since both $a\wedge b, a\vee b\in S$, we have that $S$ is a sublattice.
+
+To show that $a\wedge b\in S$, we need to find $c\in S$ with $|a\wedge b|\le |c|$.  Let $c=|a|+|b|$.  Since $a,b\in S$, $|a|,|b|\in S$, and so $c\in S$ as well.  We also have that $|c|=c$.  So to show $a\wedge b\in S$, it is enough to show that $|a\wedge b|\le c$.  To this end, note first that $a\le |a|$ and $b\le |b|$, so $a\wedge b\le |a|\wedge |b|\le |a|\vee |b|$.  Also, since $-a\le |a|$ and $-b\le |b|$, $-(a\wedge b)=(-a)\vee (-b)\le |a|\vee |b|$.  As a result, $|a\wedge b|=-(a\wedge b)\vee (a\wedge b)\le |a|\vee |b|$.  But $|a|\vee |b|\le |a|\vee |b|+|a|\wedge |b|=|a|+|b|=c$, we have that $|a\wedge b|\le |a|\vee |b| \le c$.
+\end{proof}
+
+\textbf{Examples}  Let $V$ be a vector lattice.
+\begin{itemize}
+\item $0$ and $V$ itself are solid subspaces.  
+\item If $V$ is finite dimensional, the only solid subspaces are the improper ones.  
+\item An example of a proper solid subspace of a vector lattice is found, when we take $V$ to be the countably infinite direct product of $\mathbb{R}$, and $S$ to be the countably infinite direct sum of $\mathbb{R}$.
+\item An example of a solid set that is not a subspace is the unit disk in $\mathbb{R}^2$, where the ordering is defined componentwise.
+\item Given any set $A$, the smallest solid set containing $A$ is called the \emph{solid closure} of $A$.  For example, if $A=\lbrace a\rbrace$, then its solid closure is $\lbrace v\in V\mid |v|\le |a|\rbrace$.  In $\mathbb{R}^2$, the solid closure of any point $p$ is the disk centered at $O$ whose radius is $|p|$.
+\item The solid closure of $V^+$, the positive cone, is $V$.
+\end{itemize}
+
+\begin{prop}  If $V$ is a vector lattice and $S$ is a solid subspace of $V$, then $V/S$ is a vector lattice.
+\end{prop}
+\begin{proof}
+Since $S$ is a subspace $V/S$ has the structure of a vector space, whose vector space operations are inherited from the operations on $V$.  Since $S$ is solid, it is a sublattice, so that $V/S$ has the structure of a lattice, whose lattice operations are inherited from those on $V$.  It remains to show that the partial ordering is ``compatible'' with the vector operatons.  We break this down into two steps:
+\begin{itemize}
+\item for any $u+S,v+S,w+S \in V/S$, if $(u+S)\le (v+S)$, then $(u+S)+(w+S)\le (v+S)+(w+S)$.  This is a disguised form of the following: if $u-v\le a\in S$, then $(u+w)-(v+w)\le b\in S$ for some $b$.  This is obvious: just pick $b=a$.
+\item if $0+S\le u+S\in V/S$, then for any $0<\lambda \in k$ ($k$ an ordered field), $0+S\le \lambda (u+S)$.  This is the same as saying: if $c\le u$ for some $b\in S$, then $d\le \lambda u$ for some $d\in S$.  This is also obvious: pick $d=\lambda c$.
+\end{itemize}
+The proof is now complete.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

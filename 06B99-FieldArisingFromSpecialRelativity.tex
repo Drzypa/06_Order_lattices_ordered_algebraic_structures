@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FieldArisingFromSpecialRelativity}
+\pmcreated{2016-04-20 13:42:53}
+\pmmodified{2016-04-20 13:42:53}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{field arising from special relativity}
+\pmrecord{8}{88254}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The velocities $u$ and $v$ of two bodies moving along a line 
+obey, by the special theory of relativity, the addition rule
+\begin{align} 
+u\oplus v \;:=\; \frac{u+v}{1+\frac{uv}{c^2}},
+\end{align}
+  where $c$ is the velocity of light.\, As $c$ is unreachable for any material body, it 
+  plays for the velocities of the bodies the role of the infinity.\, These velocities $v$
+  thus satisfy always
+      $$|v| \;<\; c.$$
+ By (1) we get
+ $$c\oplus c \;=\; c, \quad c \oplus v \;=\; c$$
+  for $|v| < c$;\, so $c$ behaves like the infinity.
+  
+  One can define the \PMlinkname{mapping}{mapping}\,  $f:\; \mathbb{R} \to (-c,\,c) = S$\; by setting
+  \begin{align}
+  f(x) \;:=\; c\;\tanh{x}
+  \end{align}
+  which is easily seen to be a bijection.
+  
+  Define also the \PMlinkname{binary operation}{binaryoperation} $\odot$  
+  for the \PMlinkname{numbers}{number} $u,\,v$ of the 
+  \PMlinkname{open interval}{interval}\, 
+  $(-c,\,c)$ by
+  \begin{align}
+  u \odot v \;=\; c\; 
+  \tanh\left[\left(\mbox{artanh}\frac{u}{c}\right)
+  \left(\mbox{artanh}\frac{v}{c}\right)\right].
+  \end{align}
+  Then the system $(S,\oplus,\odot)$ may be checked to be a ring 
+  and the bijective mapping (2) to be 
+  \PMlinkname{homomorphic}{structurehomomorphism}:
+  $$f(x+y) \;=\; f(x)\oplus f(y), \quad 
+  f(xy) \;=\; f(x)\odot f(y)$$
+  
+  
+  Consequently, the system $(S,\oplus,\odot)$, as the 
+  \PMlinkname{homomorphic image}{homomorphicimageofgroup} of 
+  the field   $(\mathbb{R},+,\cdot)$, also itself is a field.
+  
+  Baker [1] calls the numbers of the set $S$, i.e. $(-c,\,c)$, 
+  the {\it Einstein numbers}.\\
+  
+  
+\begin{thebibliography}{8}
+\bibitem{baker}{\sc G. A. Baker, Jr.}: ``Einstein numbers''. --\emph{Amer. Math. Monthly} \textbf{61} 
+(1954), 39--41.
+\bibitem{davis}{\sc H. T. Davis}: \emph{College algebra}. Prentice-Hall, N.Y. (1940), 351.
+\bibitem{gregor}{\sc T. Gregor \& J. Halu\v{s}ka}: \emph{Two-dimensional Einstein 
+numbers and associativity}.  
+\PMlinkexternal{arXiv}{http://arxiv.org/abs/1309.0660} (2013)
+\end{thebibliography}\\
+
+\end{document}

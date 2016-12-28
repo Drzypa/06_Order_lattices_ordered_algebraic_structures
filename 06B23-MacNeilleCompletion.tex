@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MacNeilleCompletion}
+\pmcreated{2013-03-22 16:05:27}
+\pmmodified{2013-03-22 16:05:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{MacNeille completion}
+\pmrecord{8}{38152}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06B23}
+\pmsynonym{Dedekind-MacNeille completion}{MacNeilleCompletion}
+\pmsynonym{normal completion}{MacNeilleCompletion}
+\pmrelated{DedekindCuts}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+In a first course on real analysis, one is generally introduced to the concept of a Dedekind cut.  It is a way of constructing the set of real numbers from the rationals.  This is a process commonly known as the completion of the rationals.  Three key features of this completion are:
+\begin{itemize}
+\item the rationals can be embedded in its completion (the reals)
+\item every subset with an upper bound has a least upper bound
+\item every subset with a lower bound has a greatest lower bound
+\end{itemize}
+
+If we extend the reals by adjoining $+\infty$ and $-\infty$ and define the appropriate ordering relations on this new extended set (the extended real numbers), then it is a set where every subset has a least upper bound and a greatest lower bound.
+
+When we deal with the rationals and the reals (and extended reals), we are working with linearly ordered sets.  So the next question is: can the procedure of a completion be generalized to an arbitrary poset?  In other words, if $P$ is a poset ordered by $\le$, does there exist another poset $Q$ ordered by $\le_Q$ such that 
+\begin{enumerate}
+\item $P$ can be embedded in $Q$ as a poset (so that $\le$ is compatible with $\le_Q$), and
+\item every subset of $Q$ has both a least upper bound and a greatest lower bound
+\end{enumerate}
+
+In 1937, MacNeille answered this question in the affirmative by the following construction:
+
+\begin{quote}
+Given a poset $P$ with order $\le$, define for every subset $A$ of $P$, two subsets of $P$ as follows: 
+$$A^u=\lbrace p\in P\mid a\le p\mbox{ for all }a\in A\rbrace\mbox{ and }A^{\ell}=\lbrace q\in P\mid q\le a\mbox{ for all }a\in A\rbrace.$$
+Then $M(P):=\lbrace A\in 2^P \mid (A^u)^{\ell}=A\rbrace$ ordered by the usual set inclusion is a poset satisfying conditions (1) and (2) above.
+\end{quote}
+
+This is known as the \emph{MacNeille completion} $M(P)$ of a poset $P$.  In $M(P)$, since lub and glb exist for any subset, $M(P)$ is a complete lattice.  So this process can be readily applied to any lattice, if we define a completion of a lattice to follow the two conditions above.
+
+\begin{thebibliography}{8}
+\bibitem{hmm} H. M. MacNeille, {\it Partially Ordered Sets}. Trans. Amer. Math. Soc. 42 (1937), pp 416-460
+\bibitem{dp} B. A. Davey, H. A. Priestley, {\it Introduction to Lattices and Order}, 2nd edition, Cambridge (2003)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

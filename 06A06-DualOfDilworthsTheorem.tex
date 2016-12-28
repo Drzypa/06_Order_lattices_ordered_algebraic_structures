@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualOfDilworthsTheorem}
+\pmcreated{2013-03-22 15:01:49}
+\pmmodified{2013-03-22 15:01:49}
+\pmowner{justice}{4961}
+\pmmodifier{justice}{4961}
+\pmtitle{dual of Dilworth's theorem}
+\pmrecord{7}{36740}
+\pmprivacy{1}
+\pmauthor{justice}{4961}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{06A06}
+\pmrelated{DilworthsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\begin{thm}
+Let $P$ be a poset of height $h$. Then $P$ can be partitioned into $h$ antichains and furthermore at least $h$ antichains are required.
+\end{thm}
+
+\begin{proof}
+Induction on $h$. If $h=1$, then no elements of $P$ are comparable, so $P$ is an antichain. Now suppose that $P$ has height $h\geq 2$ and that the theorem is true for $h-1$. Let $A_1$ be the set of maximal elements of $P$. Then $A_1$ is an antichain in $P$ and $P-A_1$ has height $h-1$ since we have removed precisely one element from every chain. Hence, $P-A_1$ can be paritioned into $h-1$ antichains $A_2,A_3,\dots A_h$. Now we have the partition $A_1\cup A_2\cup\dots\cup A_h$ of $P$ into $h$ antichains as desired.
+
+The necessity of $h$ antichains is trivial by the pigeonhole principle; since $P$ has height $h$, it has a chain of length $h$, and each element of this chain must be placed in a different antichain of our partition.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

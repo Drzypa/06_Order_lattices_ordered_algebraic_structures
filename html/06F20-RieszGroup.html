@@ -1,0 +1,144 @@
+<!DOCTYPE html><html>
+<head>
+<title>Riesz group</title>
+<!--Generated on Fri Feb  9 10:06:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Riesz group</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a po-group and <math id="p1.m2" class="ltx_Math" alttext="G^{+}" display="inline"><msup><mi>G</mi><mo>+</mo></msup></math> the positive cone of <math id="p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. The following are equivalent:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, as a poset, sastisfies the Riesz interpolation property;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.i2.p1.m1" class="ltx_Math" alttext="x,y_{1},y_{2}\in G^{+}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi>G</mi><mo>+</mo></msup></mrow></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="x\leq y_{1}y_{2}" display="inline"><mrow><mi>x</mi><mo>≤</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow></math>, then <math id="I1.i2.p1.m3" class="ltx_Math" alttext="x=z_{1}z_{2}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></mrow></math> with <math id="I1.i2.p1.m4" class="ltx_Math" alttext="z_{i}\leq y_{i}" display="inline"><mrow><msub><mi>z</mi><mi>i</mi></msub><mo>≤</mo><msub><mi>y</mi><mi>i</mi></msub></mrow></math> for some <math id="I1.i2.p1.m5" class="ltx_Math" alttext="z_{i}\in G^{+}" display="inline"><mrow><msub><mi>z</mi><mi>i</mi></msub><mo>∈</mo><msup><mi>G</mi><mo>+</mo></msup></mrow></math>, <math id="I1.i2.p1.m6" class="ltx_Math" alttext="i=1,2" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow></math>.
+</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">The second property above, put it plainly, says that any positive element that is bounded from above by a product of positive elements, can be “decomposed” as a product of positive elements. This property is known as the <em class="ltx_emph ltx_font_italic">Riesz decomposition property</em>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><math id="p2.m1" class="ltx_Math" alttext="(1\Rightarrow 2)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>⇒</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></math>. Given <math id="p2.m2" class="ltx_Math" alttext="x\leq y_{1}y_{2}" display="inline"><mrow><mi>x</mi><mo>≤</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow></math> and <math id="p2.m3" class="ltx_Math" alttext="e\leq x,y_{1},y_{2}" display="inline"><mrow><mi>e</mi><mo>≤</mo><mrow><mi>x</mi><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow></math>. Set <math id="p2.m4" class="ltx_Math" alttext="r=y_{1}^{-1}x" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><msubsup><mi>y</mi><mn>1</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mi>x</mi></mrow></mrow></math>. Then we have four inequalities, which can be abbreviated as <math id="p2.m5" class="ltx_Math" alttext="\{r,e\}\leq\{x,y_{2}\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>r</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></math>, where each of the elements in the first set is less than or equal to each of the elements in the second set. By the Riesz interpolation property, we can insert an element between the sets: <math id="p2.m6" class="ltx_Math" alttext="\{r,e\}\leq z_{2}\leq\{x,y_{2}\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>r</mi><mo>,</mo><mi>e</mi><mo stretchy="false">}</mo></mrow><mo>≤</mo><msub><mi>z</mi><mn>2</mn></msub><mo>≤</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></math>. From this it is clear that <math id="p2.m7" class="ltx_Math" alttext="e\leq z_{2}\leq y_{1}" display="inline"><mrow><mi>e</mi><mo>≤</mo><msub><mi>z</mi><mn>2</mn></msub><mo>≤</mo><msub><mi>y</mi><mn>1</mn></msub></mrow></math>. Set <math id="p2.m8" class="ltx_Math" alttext="z_{1}=xz_{2}^{-1}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><msubsup><mi>z</mi><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></mrow></math>. Since <math id="p2.m9" class="ltx_Math" alttext="z_{2}\leq x" display="inline"><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>≤</mo><mi>x</mi></mrow></math>, we have <math id="p2.m10" class="ltx_Math" alttext="e\leq xz_{2}^{-1}=z_{1}" display="inline"><mrow><mi>e</mi><mo>≤</mo><mrow><mi>x</mi><mo>⁢</mo><msubsup><mi>z</mi><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow><mo>=</mo><msub><mi>z</mi><mn>1</mn></msub></mrow></math>. Also, since <math id="p2.m11" class="ltx_Math" alttext="y_{1}^{-1}x=r\leq z_{2}" display="inline"><mrow><mrow><msubsup><mi>y</mi><mn>1</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mi>r</mi><mo>≤</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></math>, <math id="p2.m12" class="ltx_Math" alttext="z_{2}^{-1}\leq x^{-1}y_{1}" display="inline"><mrow><msubsup><mi>z</mi><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>≤</mo><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>y</mi><mn>1</mn></msub></mrow></mrow></math>, so that <math id="p2.m13" class="ltx_Math" alttext="z_{1}\leq x(x^{-1}y_{1})=y_{1}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>≤</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><math id="p3.m1" class="ltx_Math" alttext="(2\Rightarrow 1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⇒</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>. Suppose <math id="p3.m2" class="ltx_Math" alttext="\{a,b\}\leq\{c,d\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">{</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Set <math id="p3.m3" class="ltx_Math" alttext="x=a^{-1}c" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>c</mi></mrow></mrow></math>, <math id="p3.m4" class="ltx_Math" alttext="y_{1}=a^{-1}d" display="inline"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>d</mi></mrow></mrow></math> and <math id="p3.m5" class="ltx_Math" alttext="y_{2}=b^{-1}c" display="inline"><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>c</mi></mrow></mrow></math>. Then <math id="p3.m6" class="ltx_Math" alttext="x,y_{1},y_{2}\in G^{+}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi>G</mi><mo>+</mo></msup></mrow></math>. Since <math id="p3.m7" class="ltx_Math" alttext="e\leq db^{-1}" display="inline"><mrow><mi>e</mi><mo>≤</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>, we have <math id="p3.m8" class="ltx_Math" alttext="x=a^{-1}c=a^{-1}ec\leq a^{-1}(db^{-1})c=(a^{-1}d)(b^{-1}c)=y_{1}y_{2}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>c</mi></mrow><mo>≤</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow></math>. By the Riesz decomposition property, <math id="p3.m9" class="ltx_Math" alttext="a^{-1}c=x=z_{1}z_{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mi>x</mi><mo>=</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></mrow></math> for some <math id="p3.m10" class="ltx_Math" alttext="z_{1},z_{2}\in G" display="inline"><mrow><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>G</mi></mrow></math> with <math id="p3.m11" class="ltx_Math" alttext="e\leq z_{1}\leq y_{1}=a^{-1}d" display="inline"><mrow><mi>e</mi><mo>≤</mo><msub><mi>z</mi><mn>1</mn></msub><mo>≤</mo><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>d</mi></mrow></mrow></math> and <math id="p3.m12" class="ltx_Math" alttext="e\leq z_{2}\leq y_{2}=b^{-1}c" display="inline"><mrow><mi>e</mi><mo>≤</mo><msub><mi>z</mi><mn>2</mn></msub><mo>≤</mo><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>c</mi></mrow></mrow></math>. The decomposition equality can be rewritten as <math id="p3.m13" class="ltx_Math" alttext="c=az_{1}z_{2}" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></mrow></math>, and the last two inequalities can be rewritten as <math id="p3.m14" class="ltx_Math" alttext="az_{1}\leq d" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub></mrow><mo>≤</mo><mi>d</mi></mrow></math> and <math id="p3.m15" class="ltx_Math" alttext="bz_{2}\leq c" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>≤</mo><mi>c</mi></mrow></math>. Set <math id="p3.m16" class="ltx_Math" alttext="s=az_{1}" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub></mrow></mrow></math>, so we have <math id="p3.m17" class="ltx_Math" alttext="a\leq az_{1}=s\leq az_{1}z_{2}=c" display="inline"><mrow><mi>a</mi><mo>≤</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub></mrow><mo>=</mo><mi>s</mi><mo>≤</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>=</mo><mi>c</mi></mrow></math>. Furthermore, since <math id="p3.m18" class="ltx_Math" alttext="bz_{2}\leq c=az_{1}z_{2}" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>≤</mo><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></mrow></math>, we get <math id="p3.m19" class="ltx_Math" alttext="b\leq az_{1}=s" display="inline"><mrow><mi>b</mi><mo>≤</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub></mrow><mo>=</mo><mi>s</mi></mrow></math>. Finally from <math id="p3.m20" class="ltx_Math" alttext="z_{1}\leq a^{-1}d" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>≤</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>d</mi></mrow></mrow></math>, we have <math id="p3.m21" class="ltx_Math" alttext="s=az_{1}\leq d" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub></mrow><mo>≤</mo><mi>d</mi></mrow></math>. Gather all the inequalities, we have finally <math id="p3.m22" class="ltx_Math" alttext="\{a,b\}\leq s\leq\{c,d\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow><mo>≤</mo><mi>s</mi><mo>≤</mo><mrow><mo stretchy="false">{</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definitions</span>. Let <math id="p4.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a po-group.</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is called an <em class="ltx_emph ltx_font_italic">interpolation group</em> if <math id="I2.i1.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> satisfies one of the two equivalent conditions in the theorem above.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a <em class="ltx_emph ltx_font_italic">Riesz group</em> if <math id="I2.i2.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a directed interpolation group. By directed we mean that <math id="I2.i2.p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, as a poset, is a directed set.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is an <em class="ltx_emph ltx_font_italic">antilattice</em> if <math id="I2.i3.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a Riesz group with the property that if <math id="I2.i3.p1.m3" class="ltx_Math" alttext="a,b\in G" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>G</mi></mrow></math> have a greatest lower bound, then <math id="I2.i3.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I2.i3.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are comparable.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Any lattice-ordered group is an antilattice. Here is an interpolation group that is not an l-group. Let <math id="p5.m1" class="ltx_Math" alttext="G=\mathbb{Z}\times\mathbb{Z}" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mi>ℤ</mi><mo>×</mo><mi>ℤ</mi></mrow></mrow></math>. Define <math id="p5.m2" class="ltx_Math" alttext="(a,b)\leq(c,d)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math> iff <math id="p5.m3" class="ltx_Math" alttext="(c,d)-(a,b)=(0,n)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> for some non-negative integer <math id="p5.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. This order is a partial order. But <math id="p5.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is not a lattice, since <math id="p5.m6" class="ltx_Math" alttext="(1,0)\vee(0,0)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∨</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> does not exist. However, if any two elements in <math id="p5.m7" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> have either an upper bound or a lower bound, then the elements are in fact comparable. Therefore, <math id="p5.m8" class="ltx_Math" alttext="\{a,b\}\leq\{c,d\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">{</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></mrow></math> means that <math id="p5.m9" class="ltx_Math" alttext="a,b,c,d" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math> form a chain. So any element in the interval <math id="p5.m10" class="ltx_Math" alttext="[a\vee b,c\wedge d]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>∧</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow></math> “interpolates” <math id="p5.m11" class="ltx_Math" alttext="\{a,b\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></math> and <math id="p5.m12" class="ltx_Math" alttext="\{c,d\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow></math>. Note that <math id="p5.m13" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is not a Riesz group, for otherwise it would be a chain.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Riesz group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RieszGroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:09:18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:09:18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06F20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20F60</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Riesz decomposition property</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">interpolation group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">antilattice</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 10:06:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html><html>
+<head>
+<title>dual space of a Boolean algebra</title>
+<!--Generated on Fri Feb  9 10:03:22 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">dual space of a Boolean algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be a Boolean algebra, and <math id="p1.m2" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> the set of all maximal ideals of <math id="p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. In this entry, we will equip <math id="p1.m4" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> with a topology so it is a Boolean space.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. For any <math id="p2.m1" class="ltx_Math" alttext="a\in B" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>B</mi></mrow></math>, define <math id="p2.m2" class="ltx_Math" alttext="M(a):=\{M\in B^{*}\mid a\notin M\}" display="inline"><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>M</mi><mo>∈</mo><msup><mi>B</mi><mo>*</mo></msup></mrow><mo>∣</mo><mrow><mi>a</mi><mo>∉</mo><mi>M</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and <math id="p2.m3" class="ltx_Math" alttext="\mathcal{B}:=\{M(a)\mid a\in B\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mi>a</mi><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">It is know that in a Boolean algebra, maximal ideals and prime ideals coincide. From this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RepresentingABooleanLatticeByFieldOfSets</span>), we have the three following properties concerning <math id="p3.m1" class="ltx_Math" alttext="M(a)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="M(a)\cap M(b)=M(a\wedge b),\qquad M(a)\cup M(b)=M(a\vee b),\qquad B^{*}-M(a)=M%
+(a^{\prime})." display="block"><mrow><mrow><mrow><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∪</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msup><mi>B</mi><mo>*</mo></msup><mo>-</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore, if <math id="p3.m2" class="ltx_Math" alttext="M(a)=M(b)" display="inline"><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="p3.m3" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">From these properties, we see that <math id="p4.m1" class="ltx_Math" alttext="M(0)=\varnothing" display="inline"><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> and <math id="p4.m2" class="ltx_Math" alttext="M(1)=B^{*}" display="inline"><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>B</mi><mo>*</mo></msup></mrow></math>. As a result, we see that</p>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmprop1.p1.m1" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math><span class="ltx_text ltx_font_italic"> is a topological space, whose topology <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">T</mi></math> is generated by the basis <math id="Thmprop1.p1.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><math id="p5.m1" class="ltx_Math" alttext="\varnothing" display="inline"><mi mathvariant="normal">∅</mi></math> and <math id="p5.m2" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> are both open, as they are <math id="p5.m3" class="ltx_Math" alttext="M(0)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p5.m4" class="ltx_Math" alttext="M(1)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> respectively. Also, the intersection of open sets <math id="p5.m5" class="ltx_Math" alttext="M(a)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p5.m6" class="ltx_Math" alttext="M(b)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> is again open, since it is <math id="p5.m7" class="ltx_Math" alttext="M(a\wedge b)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. ∎</p>
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We may in fact treat <math id="p6.m1" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> as a subbasis for <math id="p6.m2" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math>, since finite intersections of elements of <math id="p6.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> remain in <math id="p6.m4" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>.</p>
+</div>
+<div id="Thmprop2" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 2</span>.</h6>
+<div id="Thmprop2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Each member of <math id="Thmprop2.p1.m1" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi></math> is closed, hence <math id="Thmprop2.p1.m2" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">T</mi></math> is generated by a basis of clopen sets. In other words, <math id="Thmprop2.p1.m3" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo mathvariant="normal">*</mo></msup></math> is zero-dimensional.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Each <math id="p7.m1" class="ltx_Math" alttext="M(a)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> is open, by definition, and closed, since it is the complement of the open set <math id="p7.m2" class="ltx_Math" alttext="M(a^{\prime})" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math>. ∎</p>
+</div>
+</div>
+<div id="Thmprop3" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 3</span>.</h6>
+<div id="Thmprop3.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmprop3.p1.m1" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math><span class="ltx_text ltx_font_italic"> is Hausdorff.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">If <math id="p8.m1" class="ltx_Math" alttext="M,N\in B^{*}" display="inline"><mrow><mrow><mi>M</mi><mo>,</mo><mi>N</mi></mrow><mo>∈</mo><msup><mi>B</mi><mo>*</mo></msup></mrow></math> such that <math id="p8.m2" class="ltx_Math" alttext="M\neq N" display="inline"><mrow><mi>M</mi><mo>≠</mo><mi>N</mi></mrow></math>, then there is some <math id="p8.m3" class="ltx_Math" alttext="a\in B" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>B</mi></mrow></math> such that <math id="p8.m4" class="ltx_Math" alttext="a\in M" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>M</mi></mrow></math> and <math id="p8.m5" class="ltx_Math" alttext="a\notin N" display="inline"><mrow><mi>a</mi><mo>∉</mo><mi>N</mi></mrow></math>. This means that <math id="p8.m6" class="ltx_Math" alttext="N\in M(a)" display="inline"><mrow><mi>N</mi><mo>∈</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p8.m7" class="ltx_Math" alttext="M\notin M(a)" display="inline"><mrow><mi>M</mi><mo>∉</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which means that <math id="p8.m8" class="ltx_Math" alttext="M\in B^{*}-M(a)=M(a^{\prime})" display="inline"><mrow><mi>M</mi><mo>∈</mo><mrow><msup><mi>B</mi><mo>*</mo></msup><mo>-</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Since <math id="p8.m9" class="ltx_Math" alttext="M(a)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p8.m10" class="ltx_Math" alttext="M(a^{\prime})" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> are open and disjoint, with <math id="p8.m11" class="ltx_Math" alttext="N\in M(a)" display="inline"><mrow><mi>N</mi><mo>∈</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p8.m12" class="ltx_Math" alttext="M\in M(a^{\prime})" display="inline"><mrow><mi>M</mi><mo>∈</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we see that <math id="p8.m13" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> is Hausdorff. ∎</p>
+</div>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Now, based on a topological fact, every zero-dimensional Hausdorff space is totally disconnected. Hence <math id="p9.m1" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> is totally disconnected.</p>
+</div>
+<div id="Thmprop4" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 4</span>.</h6>
+<div id="Thmprop4.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmprop4.p1.m1" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math><span class="ltx_text ltx_font_italic"> is compact.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Suppose <math id="p10.m1" class="ltx_Math" alttext="\{U_{i}\mid i\in I\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>U</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></math> is a collection of open sets whose union is <math id="p10.m2" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math>. Since each <math id="p10.m3" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math> is a union of elements of <math id="p10.m4" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>, we might as well assume that <math id="p10.m5" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> is covered by elements of <math id="p10.m6" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>. In other words, we may assume that each <math id="p10.m7" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math> is some <math id="p10.m8" class="ltx_Math" alttext="M(a_{i})\in\mathcal{B}" display="inline"><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Let <math id="p11.m1" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> be the ideal generated by the set <math id="p11.m2" class="ltx_Math" alttext="\{a_{i}\mid i\in I\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></math>. If <math id="p11.m3" class="ltx_Math" alttext="J\neq B" display="inline"><mrow><mi>J</mi><mo>≠</mo><mi>B</mi></mrow></math>, then <math id="p11.m4" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> can be extended to a maximal ideal <math id="p11.m5" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Since each <math id="p11.m6" class="ltx_Math" alttext="a_{i}\in M" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><mi>M</mi></mrow></math>, we see that <math id="p11.m7" class="ltx_Math" alttext="M\notin M(a_{i})" display="inline"><mrow><mi>M</mi><mo>∉</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so that <math id="p11.m8" class="ltx_Math" alttext="M\notin\bigcup\{M(a_{i})\mid i\in I\}=B^{*}" display="inline"><mrow><mi>M</mi><mo>∉</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">{</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>=</mo><msup><mi>B</mi><mo>*</mo></msup></mrow></math>, which is a contradiction. Therefore, <math id="p11.m9" class="ltx_Math" alttext="J=B" display="inline"><mrow><mi>J</mi><mo>=</mo><mi>B</mi></mrow></math>. In particular, <math id="p11.m10" class="ltx_Math" alttext="1\in J" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>J</mi></mrow></math>, which means that <math id="p11.m11" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> can be expressed as the join of a finite number of the <math id="p11.m12" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math>’s:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="1=\bigvee\{a_{i}\mid i\in K\}," display="block"><mrow><mrow><mn>1</mn><mo>=</mo><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>K</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p11.m13" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a finite subset of <math id="p11.m14" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>. As a result, we have</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\bigcup\{M(a_{i})\mid i\in K\}=M(\bigvee\{a_{i}\mid i\in K\})=M(1)=B^{*}." display="block"><mrow><mrow><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">{</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>K</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>K</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>B</mi><mo>*</mo></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So <math id="p11.m15" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> has a finite subcover, and hence is compact.
+∎</p>
+</div>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Collecting the last three results, we see that <math id="p12.m1" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> is a Boolean space.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. It can be shown that <math id="p13.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is isomorphic to the Boolean algebra of clopen sets in <math id="p13.m2" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math>. This is the famous Stone representation theorem.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">dual space of a Boolean algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DualSpaceOfABooleanAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:08:35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:08:35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06E05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03G05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06B20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03G10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06E20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">StoneRepresentationTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">MHStonesRepresentationTheorem</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 10:03:22 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

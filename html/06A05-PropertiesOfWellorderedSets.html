@@ -1,0 +1,354 @@
+<!DOCTYPE html><html>
+<head>
+<title>properties of well-ordered sets</title>
+<!--Generated on Fri Feb  9 09:50:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">properties of well-ordered sets</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The purpose of this entry is to collect properties of well-ordered
+sets. We denote all orderings uniformly by <math id="p1.m1" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math>. If you are
+interested in history, have a look at <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx1" title="" class="ltx_ref">C</a>]</cite>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The following properties are easy to see:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a totally ordered set such that for every subset
+<math id="I1.i1.p1.m2" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math> the set of all elements of <math id="I1.i1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> strictly greater than
+the elements of <math id="I1.i1.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="B_{&gt;}:=\{a\in A\setminus B\mid b\leq a\text{ for all }b\in B\}," display="block"><mrow><mrow><msub><mi>B</mi><mo>&gt;</mo></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow></mrow><mo>∣</mo><mrow><mi>b</mi><mo>≤</mo><mrow><mi>a</mi><mo>⁢</mo><mtext> for all </mtext><mo>⁢</mo><mi>b</mi></mrow><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is either empty or has a least element, then <math id="I1.i1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is well-ordered.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Every subset of a well-ordered set is well-ordered.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is well-ordered and <math id="I1.i3.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a poset such that there is a
+bijective order morphism <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\varphi\colon A\to B" display="inline"><mrow><mi>φ</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math>, then <math id="I1.i3.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is
+well-ordered.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Now we define an important ingredient for understanding the structure
+of well-ordered sets.</p>
+</div>
+<div id="Thmdefn1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span> (section).</h6>
+<div id="Thmdefn1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmdefn1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be well-ordered. Then for every <math id="Thmdefn1.p1.m2" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> we define the
+<em class="ltx_emph ltx_font_italic">section</em> of <math id="Thmdefn1.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\widehat{a}:=\{b\in A\mid b\leq a\}." display="block"><mrow><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>b</mi><mo>∈</mo><mi>A</mi></mrow><mo>∣</mo><mrow><mi>b</mi><mo>≤</mo><mi>a</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">A section is also known as an <em class="ltx_emph ltx_font_italic">initial segment</em>. We denote the set of all sections of <math id="Thmdefn1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> by <math id="Thmdefn1.p1.m5" class="ltx_Math" alttext="\widehat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math>. This set is
+ordered by inclusion.</p>
+</div>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a well-ordered set. Then the mapping <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="\widehat{\cdot}\colon A\to\widehat{A}" display="inline"><mrow><mover accent="true"><mo mathvariant="normal">⋅</mo><mo mathvariant="normal">^</mo></mover><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mover accent="true"><mi>A</mi><mo mathvariant="normal">^</mo></mover></mrow></mrow></math> defined by <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="a\mapsto\widehat{a}" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">↦</mo><mover accent="true"><mi>a</mi><mo mathvariant="normal">^</mo></mover></mrow></math> is a bijective order morphism.
+In particular, <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="\widehat{A}" display="inline"><mover accent="true"><mi>A</mi><mo mathvariant="normal">^</mo></mover></math> is well-ordered.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let <math id="p4.m1" class="ltx_Math" alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math> with <math id="p4.m2" class="ltx_Math" alttext="a\leq b" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow></math>. Then <math id="p4.m3" class="ltx_Math" alttext="\widehat{a}\subseteq\widehat{b}" display="inline"><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>⊆</mo><mover accent="true"><mi>b</mi><mo>^</mo></mover></mrow></math>, so
+<math id="p4.m4" class="ltx_Math" alttext="\widehat{\cdot}" display="inline"><mover accent="true"><mo>⋅</mo><mo>^</mo></mover></math> is an order morphism. Now assume that <math id="p4.m5" class="ltx_Math" alttext="\widehat{a}=\widehat{b}" display="inline"><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>=</mo><mover accent="true"><mi>b</mi><mo>^</mo></mover></mrow></math>. If
+<math id="p4.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> didn’t equal <math id="p4.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, we would have <math id="p4.m8" class="ltx_Math" alttext="b\notin\widehat{a}" display="inline"><mrow><mi>b</mi><mo>∉</mo><mover accent="true"><mi>a</mi><mo>^</mo></mover></mrow></math>, leading to a
+contradiction. Therefore <math id="p4.m9" class="ltx_Math" alttext="\widehat{\cdot}" display="inline"><mover accent="true"><mo>⋅</mo><mo>^</mo></mover></math> is injective. Now let
+<math id="p4.m10" class="ltx_Math" alttext="C\in\widehat{A}" display="inline"><mrow><mi>C</mi><mo>∈</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow></math>, then there exists a <math id="p4.m11" class="ltx_Math" alttext="c\in A" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="p4.m12" class="ltx_Math" alttext="\widehat{c}=C" display="inline"><mrow><mover accent="true"><mi>c</mi><mo>^</mo></mover><mo>=</mo><mi>C</mi></mrow></math>, so
+<math id="p4.m13" class="ltx_Math" alttext="\widehat{\cdot}" display="inline"><mover accent="true"><mo>⋅</mo><mo>^</mo></mover></math> is surjective.
+∎</p>
+</div>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be well-ordered sets and <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="\varphi\colon A\to B" display="inline"><mrow><mi>φ</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mi>B</mi></mrow></mrow></math> a
+bijective order morphism. Then there exists a bijective order morphism
+<math id="Thmthm2.p1.m4" class="ltx_Math" alttext="\widehat{\varphi}\colon\widehat{A}\to\widehat{B}" display="inline"><mrow><mover accent="true"><mi>φ</mi><mo mathvariant="normal">^</mo></mover><mo mathvariant="normal">:</mo><mrow><mover accent="true"><mi>A</mi><mo mathvariant="normal">^</mo></mover><mo mathvariant="normal">→</mo><mover accent="true"><mi>B</mi><mo mathvariant="normal">^</mo></mover></mrow></mrow></math> such that for all <math id="Thmthm2.p1.m5" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">∈</mo><mi>A</mi></mrow></math></span></p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\widehat{\varphi}(\widehat{a})=\widehat{\varphi(a)}." display="block"><mrow><mrow><mrow><mover accent="true"><mi>φ</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mover accent="true"><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>^</mo></mover></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Setting <math id="p5.m1" class="ltx_Math" alttext="\widehat{\varphi}(\widehat{a}):=\widehat{\varphi(a)}" display="inline"><mrow><mrow><mover accent="true"><mi>φ</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mover accent="true"><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>^</mo></mover></mrow></math> is well-defined by
+Theorem <a href="#Thmthm1" title="Theorem 1. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>. The rest of the theorem follows
+since <math id="p5.m2" class="ltx_Math" alttext="\widehat{\cdot}" display="inline"><mover accent="true"><mo>⋅</mo><mo>^</mo></mover></math> and <math id="p5.m3" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> are bijective order morphisms.
+∎</p>
+</div>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a well-ordered set and <math id="Thmthm3.p1.m2" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">∈</mo><mi>A</mi></mrow></math> such that there is an
+injective order morphism <math id="Thmthm3.p1.m3" class="ltx_Math" alttext="\varphi\colon A\to\widehat{a}" display="inline"><mrow><mi>φ</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mover accent="true"><mi>a</mi><mo mathvariant="normal">^</mo></mover></mrow></mrow></math>. Then <math id="Thmthm3.p1.m4" class="ltx_Math" alttext="A=\widehat{a}" display="inline"><mrow><mi>A</mi><mo mathvariant="normal">=</mo><mover accent="true"><mi>a</mi><mo mathvariant="normal">^</mo></mover></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The image of a section of <math id="p6.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> under <math id="p6.m2" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> has a maximal element
+which in turn defines a smaller section of <math id="p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. We may therefore
+define the following two monotonically decreasing sequences of sets:</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle B_{0}" display="inline"><msub><mi>B</mi><mn>0</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle:=\varphi(\widehat{a})," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle A_{0}" display="inline"><msub><mi>A</mi><mn>0</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m4" class="ltx_Math" alttext="\displaystyle:=\text{section defined by maximal element of
+}B_{0}," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mtext>section defined by maximal element of </mtext><mo>⁢</mo><msub><mi>B</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle:=\varphi(A_{n-1})," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m4" class="ltx_Math" alttext="\displaystyle:=\text{section defined by maximal element
+of }B_{n}." display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mtext>section defined by maximal element
+of </mtext><mo>⁢</mo><msub><mi>B</mi><mi>n</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now <math id="p6.m4" class="ltx_Math" alttext="\widehat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> is well-ordered, so the set defined by the elements of the
+sequence <math id="p6.m5" class="ltx_Math" alttext="(A_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> has a minimal element, that is <math id="p6.m6" class="ltx_Math" alttext="A_{N}=A_{N+1}" display="inline"><mrow><msub><mi>A</mi><mi>N</mi></msub><mo>=</mo><msub><mi>A</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math> and
+hence <math id="p6.m7" class="ltx_Math" alttext="B_{N}=B_{N+1}" display="inline"><mrow><msub><mi>B</mi><mi>N</mi></msub><mo>=</mo><msub><mi>B</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math> for some sufficiently large <math id="p6.m8" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>. Applying
+<math id="p6.m9" class="ltx_Math" alttext="\varphi^{-1}" display="inline"><msup><mi>φ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> <math id="p6.m10" class="ltx_Math" alttext="N+1" display="inline"><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></math> times to the latter equation yields <math id="p6.m11" class="ltx_Math" alttext="\widehat{a}=A_{0}" display="inline"><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub></mrow></math>,
+that is <math id="p6.m12" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is the maximal element of <math id="p6.m13" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and thus of <math id="p6.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm4.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="Thmthm4.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be well-ordered sets. Then there exists at most one
+bijective order morphism <math id="Thmthm4.p1.m3" class="ltx_Math" alttext="\varphi\colon A\to B" display="inline"><mrow><mi>φ</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mi>B</mi></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Let <math id="p7.m1" class="ltx_Math" alttext="\varphi,\psi\colon A\to B" display="inline"><mrow><mrow><mi>φ</mi><mo>,</mo><mi>ψ</mi></mrow><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> be two bijective order morphisms. Let
+<math id="p7.m2" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> and set <math id="p7.m3" class="ltx_Math" alttext="b:=\varphi(a)" display="inline"><mrow><mi>b</mi><mo>:=</mo><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p7.m4" class="ltx_Math" alttext="c:=\psi(a)" display="inline"><mrow><mi>c</mi><mo>:=</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then the
+restrictions <math id="p7.m5" class="ltx_Math" alttext="\left.\varphi\right|_{\widehat{a}}\colon\widehat{a}\to\widehat{b}" display="inline"><mrow><msub><mrow><mi>φ</mi><mo fence="true">|</mo></mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover></msub><mo>:</mo><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>→</mo><mover accent="true"><mi>b</mi><mo>^</mo></mover></mrow></mrow></math> and
+<math id="p7.m6" class="ltx_Math" alttext="\left.\psi\right|_{\widehat{a}}\colon\widehat{a}\to\widehat{c}" display="inline"><mrow><msub><mrow><mi>ψ</mi><mo fence="true">|</mo></mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover></msub><mo>:</mo><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>→</mo><mover accent="true"><mi>c</mi><mo>^</mo></mover></mrow></mrow></math> are bijective order
+morphisms, so the restriction of <math id="p7.m7" class="ltx_Math" alttext="\psi\varphi^{-1}" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><msup><mi>φ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> to <math id="p7.m8" class="ltx_Math" alttext="\widehat{b}" display="inline"><mover accent="true"><mi>b</mi><mo>^</mo></mover></math> is a
+bijective order morphism to <math id="p7.m9" class="ltx_Math" alttext="\widehat{c}" display="inline"><mover accent="true"><mi>c</mi><mo>^</mo></mover></math>. Now either <math id="p7.m10" class="ltx_Math" alttext="\widehat{b}\subseteq\widehat{c}" display="inline"><mrow><mover accent="true"><mi>b</mi><mo>^</mo></mover><mo>⊆</mo><mover accent="true"><mi>c</mi><mo>^</mo></mover></mrow></math>
+or <math id="p7.m11" class="ltx_Math" alttext="\widehat{c}\subseteq\widehat{b}" display="inline"><mrow><mover accent="true"><mi>c</mi><mo>^</mo></mover><mo>⊆</mo><mover accent="true"><mi>b</mi><mo>^</mo></mover></mrow></math>, so by Theorem <a href="#Thmthm3" title="Theorem 3. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>
+<math id="p7.m12" class="ltx_Math" alttext="\widehat{b}=\widehat{c}" display="inline"><mrow><mover accent="true"><mi>b</mi><mo>^</mo></mover><mo>=</mo><mover accent="true"><mi>c</mi><mo>^</mo></mover></mrow></math>, hence <math id="p7.m13" class="ltx_Math" alttext="b=c" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>c</mi></mrow></math> and thus <math id="p7.m14" class="ltx_Math" alttext="\varphi=\psi" display="inline"><mrow><mi>φ</mi><mo>=</mo><mi>ψ</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm5" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 5</span>.</h6>
+<div id="Thmthm5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="Thmthm5.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be well-ordered sets such that for every section
+<math id="Thmthm5.p1.m3" class="ltx_Math" alttext="\widehat{a}\in\widehat{A}" display="inline"><mrow><mover accent="true"><mi>a</mi><mo mathvariant="normal">^</mo></mover><mo mathvariant="normal">∈</mo><mover accent="true"><mi>A</mi><mo mathvariant="normal">^</mo></mover></mrow></math> there is a bijective order morphism to a section
+<math id="Thmthm5.p1.m4" class="ltx_Math" alttext="\widehat{b}\in\widehat{B}" display="inline"><mrow><mover accent="true"><mi>b</mi><mo mathvariant="normal">^</mo></mover><mo mathvariant="normal">∈</mo><mover accent="true"><mi>B</mi><mo mathvariant="normal">^</mo></mover></mrow></math> and vice-versa, then there is a bijective order
+morphism <math id="Thmthm5.p1.m5" class="ltx_Math" alttext="\varphi\colon A\to B" display="inline"><mrow><mi>φ</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mi>B</mi></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Let <math id="p8.m1" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> and let <math id="p8.m2" class="ltx_Math" alttext="\widehat{b}\in\widehat{B}" display="inline"><mrow><mover accent="true"><mi>b</mi><mo>^</mo></mover><mo>∈</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow></math> be a section such that there is a
+bijective order morphism <math id="p8.m3" class="ltx_Math" alttext="\psi_{a}\colon\widehat{a}\to\widehat{b}" display="inline"><mrow><msub><mi>ψ</mi><mi>a</mi></msub><mo>:</mo><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>→</mo><mover accent="true"><mi>b</mi><mo>^</mo></mover></mrow></mrow></math>. By
+Theorem <a href="#Thmthm3" title="Theorem 3. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>, <math id="p8.m4" class="ltx_Math" alttext="\widehat{b}" display="inline"><mover accent="true"><mi>b</mi><mo>^</mo></mover></math> is unique, and so is
+<math id="p8.m5" class="ltx_Math" alttext="\psi_{a}" display="inline"><msub><mi>ψ</mi><mi>a</mi></msub></math> by Theorem <a href="#Thmthm4" title="Theorem 4. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>. Defining
+<math id="p8.m6" class="ltx_Math" alttext="\varphi\colon A\to B" display="inline"><mrow><mi>φ</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> by setting <math id="p8.m7" class="ltx_Math" alttext="\varphi(a)=b" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math> gives therefore a
+well-defined (by Theorem <a href="#Thmthm1" title="Theorem 1. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) and injective order
+morphism. But <math id="p8.m8" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> is also surjective, since any <math id="p8.m9" class="ltx_Math" alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math> maps
+uniquely to <math id="p8.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> via <math id="p8.m11" class="ltx_Math" alttext="\widehat{b}\to\widehat{a}" display="inline"><mrow><mover accent="true"><mi>b</mi><mo>^</mo></mover><mo>→</mo><mover accent="true"><mi>a</mi><mo>^</mo></mover></mrow></math>, and back again by <math id="p8.m12" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm6" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 6</span>.</h6>
+<div id="Thmthm6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm6.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="Thmthm6.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be well-ordered sets. Then there is an injective order
+morphism <math id="Thmthm6.p1.m3" class="ltx_Math" alttext="\iota\colon A\to B" display="inline"><mrow><mi>ι</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mi>B</mi></mrow></mrow></math> or <math id="Thmthm6.p1.m4" class="ltx_Math" alttext="\iota\colon B\to A" display="inline"><mrow><mi>ι</mi><mo mathvariant="normal">:</mo><mrow><mi>B</mi><mo mathvariant="normal">→</mo><mi>A</mi></mrow></mrow></math>. If <math id="Thmthm6.p1.m5" class="ltx_Math" alttext="\iota" display="inline"><mi>ι</mi></math>
+cannot be chosen bijective, then it can at least be chosen such that
+its image is a section.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Let <math id="p9.m1" class="ltx_Math" alttext="\widehat{A}_{0}" display="inline"><msub><mover accent="true"><mi>A</mi><mo>^</mo></mover><mn>0</mn></msub></math> be the set of sections of <math id="p9.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> from which there is an
+injective order morphism to <math id="p9.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. If <math id="p9.m4" class="ltx_Math" alttext="\widehat{A}_{0}" display="inline"><msub><mover accent="true"><mi>A</mi><mo>^</mo></mover><mn>0</mn></msub></math> is the empty set, then
+<math id="p9.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> must be empty, since otherwise we could map the least element of
+<math id="p9.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to <math id="p9.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. If <math id="p9.m8" class="ltx_Math" alttext="\widehat{A}_{0}" display="inline"><msub><mover accent="true"><mi>A</mi><mo>^</mo></mover><mn>0</mn></msub></math> is not empty, we may consider the set
+<math id="p9.m9" class="ltx_Math" alttext="A_{0}:=\cap\widehat{A}_{0}" display="inline"><mrow><msub><mi>A</mi><mn>0</mn></msub><mo>:=</mo><mrow><mo>∩</mo><msub><mover accent="true"><mi>A</mi><mo>^</mo></mover><mn>0</mn></msub></mrow></mrow></math>. If <math id="p9.m10" class="ltx_Math" alttext="A_{0}=A" display="inline"><mrow><msub><mi>A</mi><mn>0</mn></msub><mo>=</mo><mi>A</mi></mrow></math>, nothing remains to be shown. Otherwise
+the set <math id="p9.m11" class="ltx_Math" alttext="A\setminus A_{0}" display="inline"><mrow><mi>A</mi><mo>∖</mo><msub><mi>A</mi><mn>0</mn></msub></mrow></math> is nonempty an hence has a least element
+<math id="p9.m12" class="ltx_Math" alttext="a_{0}\in A" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>∈</mo><mi>A</mi></mrow></math>. By construction, there is no injective order morphism from
+<math id="p9.m13" class="ltx_Math" alttext="\widehat{a}_{0}" display="inline"><msub><mover accent="true"><mi>a</mi><mo>^</mo></mover><mn>0</mn></msub></math> to <math id="p9.m14" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, but there is an injective order morphism from
+<math id="p9.m15" class="ltx_Math" alttext="\varphi_{a}\colon\widehat{a}\to B" display="inline"><mrow><msub><mi>φ</mi><mi>a</mi></msub><mo>:</mo><mrow><mover accent="true"><mi>a</mi><mo>^</mo></mover><mo>→</mo><mi>B</mi></mrow></mrow></math> for every element <math id="p9.m16" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> which is
+strictly smaller than <math id="p9.m17" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math>. Now assume there is an element <math id="p9.m18" class="ltx_Math" alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math>
+such that there is no injective order morphism from <math id="p9.m19" class="ltx_Math" alttext="\widehat{b}\to A" display="inline"><mrow><mover accent="true"><mi>b</mi><mo>^</mo></mover><mo>→</mo><mi>A</mi></mrow></math>. Then we can similarly construct a least element <math id="p9.m20" class="ltx_Math" alttext="b_{0}\in B" display="inline"><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>∈</mo><mi>B</mi></mrow></math> for
+which there is no injective order morphism <math id="p9.m21" class="ltx_Math" alttext="\widehat{b}_{0}\to A" display="inline"><mrow><msub><mover accent="true"><mi>b</mi><mo>^</mo></mover><mn>0</mn></msub><mo>→</mo><mi>A</mi></mrow></math>. Surely,
+<math id="p9.m22" class="ltx_Math" alttext="b_{0}" display="inline"><msub><mi>b</mi><mn>0</mn></msub></math> is greater than all the elements from the images of the
+functions <math id="p9.m23" class="ltx_Math" alttext="\varphi_{a}" display="inline"><msub><mi>φ</mi><mi>a</mi></msub></math>, but then there is a bijective order
+morphism from <math id="p9.m24" class="ltx_Math" alttext="\widehat{a}_{0}" display="inline"><msub><mover accent="true"><mi>a</mi><mo>^</mo></mover><mn>0</mn></msub></math> to <math id="p9.m25" class="ltx_Math" alttext="\widehat{b}_{0}" display="inline"><msub><mover accent="true"><mi>b</mi><mo>^</mo></mover><mn>0</mn></msub></math> by
+Theorem <a href="#Thmthm5" title="Theorem 5. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> which is a
+contradiction. Therefore, all sections of <math id="p9.m26" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> and <math id="p9.m27" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> itself
+map injectively and order-preserving to <math id="p9.m28" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm7" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 7</span>.</h6>
+<div id="Thmthm7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm7.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a well-ordered set and <math id="Thmthm7.p1.m2" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo mathvariant="normal">⊆</mo><mi>A</mi></mrow></math> a nonempty
+subset. Then there is a bijective order morphism from <math id="Thmthm7.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to one of
+the sets in <math id="Thmthm7.p1.m4" class="ltx_Math" alttext="\widehat{A}\cup\{A\}" display="inline"><mrow><mover accent="true"><mi>A</mi><mo mathvariant="normal">^</mo></mover><mo mathvariant="normal">∪</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">The set <math id="p10.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is well-ordered with respect to the order induced by
+<math id="p10.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Assume a bijective order morphism as stated by the theorem does
+not exist. Then, by virtue of Theorem <a href="#Thmthm6" title="Theorem 6. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>, there is
+an injective but not surjective order morphism <math id="p10.m3" class="ltx_Math" alttext="\iota\colon A\to B" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> whose
+image is a section <math id="p10.m4" class="ltx_Math" alttext="\widehat{b}\in\widehat{B}" display="inline"><mrow><mover accent="true"><mi>b</mi><mo>^</mo></mover><mo>∈</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow></math>. The element <math id="p10.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> defines a section
+in <math id="p10.m6" class="ltx_Math" alttext="\widehat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> which is identical to <math id="p10.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> by
+Theorem <a href="#Thmthm3" title="Theorem 3. ‣ properties of well-ordered sets" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>. Thus <math id="p10.m8" class="ltx_Math" alttext="\iota" display="inline"><mi>ι</mi></math> is surjective which is
+a contradiction.
+∎</p>
+</div>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bibx1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">C</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">G. Cantor</span>, Beiträge zur Begründung der
+transfiniten Mengenlehre (Zweiter Artikel), <em class="ltx_emph ltx_font_italic">Math. Ann.</em> 49,
+207–246 (1897).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p11" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">properties of well-ordered sets</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PropertiesOfWellorderedSets</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:23:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:23:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">initial segment</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">section</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 09:50:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

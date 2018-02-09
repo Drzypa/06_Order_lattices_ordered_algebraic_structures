@@ -1,0 +1,218 @@
+<!DOCTYPE html><html>
+<head>
+<title>convex subgroup</title>
+<!--Generated on Fri Feb  9 09:54:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">convex subgroup</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We begin this article with something more general. Let <math id="p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a poset. A subset <math id="p1.m2" class="ltx_Math" alttext="A\subseteq P" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>P</mi></mrow></math> is said to be <em class="ltx_emph ltx_font_italic">convex</em> if for any <math id="p1.m3" class="ltx_Math" alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math> with <math id="p1.m4" class="ltx_Math" alttext="a\leq b" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow></math>, the poset interval <math id="p1.m5" class="ltx_Math" alttext="[a,b]\subseteq A" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>A</mi></mrow></math> also. In other words, <math id="p1.m6" class="ltx_Math" alttext="c\in A" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>A</mi></mrow></math> for any <math id="p1.m7" class="ltx_Math" alttext="c\in P" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>P</mi></mrow></math> such that <math id="p1.m8" class="ltx_Math" alttext="a\leq c" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>c</mi></mrow></math> and <math id="p1.m9" class="ltx_Math" alttext="c\leq b" display="inline"><mrow><mi>c</mi><mo>≤</mo><mi>b</mi></mrow></math>. Examples of convex subsets are intervals themselves, antichains, whose intervals are singletons, and the empty set.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">One encounters convex sets most often in the study of partially ordered groups. A <em class="ltx_emph ltx_font_italic">convex subgroup</em> <math id="p2.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> of a po-group <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a subgroup of <math id="p2.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> that is a convex subset of the poset <math id="p2.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> at the same time. Since <math id="p2.m5" class="ltx_Math" alttext="e\in H" display="inline"><mrow><mi>e</mi><mo>∈</mo><mi>H</mi></mrow></math>, we have that <math id="p2.m6" class="ltx_Math" alttext="[e,a]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>e</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>H</mi></mrow></math> for any <math id="p2.m7" class="ltx_Math" alttext="e\leq a\in H" display="inline"><mrow><mi>e</mi><mo>≤</mo><mi>a</mi><mo>∈</mo><mi>H</mi></mrow></math>. Conversely, if a subgroup <math id="p2.m8" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> satisfies the property that <math id="p2.m9" class="ltx_Math" alttext="[e,a]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>e</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>H</mi></mrow></math> whenever <math id="p2.m10" class="ltx_Math" alttext="a\in H" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>H</mi></mrow></math>, then <math id="p2.m11" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is a convex subgroup: if <math id="p2.m12" class="ltx_Math" alttext="a,b\in H" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>H</mi></mrow></math>, then <math id="p2.m13" class="ltx_Math" alttext="a^{-1}b\in H" display="inline"><mrow><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>b</mi></mrow><mo>∈</mo><mi>H</mi></mrow></math>, so that <math id="p2.m14" class="ltx_Math" alttext="[e,a^{-1}b]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>e</mi><mo>,</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>H</mi></mrow></math>, which implies that <math id="p2.m15" class="ltx_Math" alttext="[a,b]=a[e,a^{-1}b]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>e</mi><mo>,</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mi>H</mi></mrow></math> as well.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For example, let <math id="p3.m1" class="ltx_Math" alttext="G=\mathbb{R}^{2}" display="inline"><mrow><mi>G</mi><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> be the po-group under the usual Cartesian ordering. <math id="p3.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and <math id="p3.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> are both convex, but these are trivial examples. Let us see what other convex subgroups <math id="p3.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> there are. Suppose <math id="p3.m5" class="ltx_Math" alttext="P=(a,b)\in H" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>H</mi></mrow></math> with <math id="p3.m6" class="ltx_Math" alttext="(a,b)\neq(0,0)=O" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>O</mi></mrow></math>. We divide this into several cases:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="ab&gt;0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. If <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a&gt;0" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="I1.i1.p1.m3" class="ltx_Math" alttext="b&gt;0" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></math> (<math id="I1.i1.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> in the first quadrant), so that <math id="I1.i1.p1.m5" class="ltx_Math" alttext="O\leq P" display="inline"><mrow><mi>O</mi><mo>≤</mo><mi>P</mi></mrow></math>, which means <math id="I1.i1.p1.m6" class="ltx_Math" alttext="[O,P]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mi>P</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>H</mi></mrow></math>. If <math id="I1.i1.p1.m7" class="ltx_Math" alttext="a&lt;0" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, then <math id="I1.i1.p1.m8" class="ltx_Math" alttext="b&lt;0" display="inline"><mrow><mi>b</mi><mo>&lt;</mo><mn>0</mn></mrow></math> (<math id="I1.i1.p1.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> in the third quandrant), so that <math id="I1.i1.p1.m10" class="ltx_Math" alttext="O\leq-P" display="inline"><mrow><mi>O</mi><mo>≤</mo><mrow><mo>-</mo><mi>P</mi></mrow></mrow></math>. In either case, <math id="I1.i1.p1.m11" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> contains a rectangle (<math id="I1.i1.p1.m12" class="ltx_Math" alttext="[O,P]" display="inline"><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mi>P</mi><mo stretchy="false">]</mo></mrow></math> or <math id="I1.i1.p1.m13" class="ltx_Math" alttext="[O,-P]" display="inline"><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mrow><mo>-</mo><mi>P</mi></mrow><mo stretchy="false">]</mo></mrow></math>) that generates <math id="I1.i1.p1.m14" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, so <math id="I1.i1.p1.m15" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">One of <math id="I1.i2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> or <math id="I1.i2.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is <math id="I1.i2.p1.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. Suppose <math id="I1.i2.p1.m4" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math> for now. Then either <math id="I1.i2.p1.m5" class="ltx_Math" alttext="0&lt;b" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>b</mi></mrow></math> so that <math id="I1.i2.p1.m6" class="ltx_Math" alttext="[O,P]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mi>P</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>H</mi></mrow></math> or <math id="I1.i2.p1.m7" class="ltx_Math" alttext="b&lt;0" display="inline"><mrow><mi>b</mi><mo>&lt;</mo><mn>0</mn></mrow></math> so that <math id="I1.i2.p1.m8" class="ltx_Math" alttext="[O,-P]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mrow><mo>-</mo><mi>P</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>H</mi></mrow></math>. In either case, <math id="I1.i2.p1.m9" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> contains a line segment on the <math id="I1.i2.p1.m10" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis. But this line segment generates the <math id="I1.i2.p1.m11" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis. So <math id="I1.i2.p1.m12" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis <math id="I1.i2.p1.m13" class="ltx_Math" alttext="\subseteq H" display="inline"><mrow><mi></mi><mo>⊆</mo><mi>H</mi></mrow></math>. If <math id="I1.i2.p1.m14" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is a subgroup of the <math id="I1.i2.p1.m15" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis, then <math id="I1.i2.p1.m16" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>=<math id="I1.i2.p1.m17" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis.</p>
+</div>
+<div id="I1.i2.p2" class="ltx_para">
+<p class="ltx_p">Otherwise, another point <math id="I1.i2.p2.m1" class="ltx_Math" alttext="Q=(c,d)\in H" display="inline"><mrow><mi>Q</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>H</mi></mrow></math> not on the <math id="I1.i2.p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis. We have the following subcases:</p>
+<ol id="I1.I1" class="ltx_enumerate">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="cd&gt;0" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="I1.I1.i1.p1.m2" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math> as in the previous case.</p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="cd&lt;0" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>, say <math id="I1.I1.i2.p1.m2" class="ltx_Math" alttext="d&lt;0" display="inline"><mrow><mi>d</mi><mo>&lt;</mo><mn>0</mn></mrow></math> (or <math id="I1.I1.i2.p1.m3" class="ltx_Math" alttext="0&lt;c" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>c</mi></mrow></math>), then for some positive integer <math id="I1.I1.i2.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="I1.I1.i2.p1.m5" class="ltx_Math" alttext="0&lt;d+nb" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mrow><mi>d</mi><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow></math>, so that <math id="I1.I1.i2.p1.m6" class="ltx_Math" alttext="O\leq Q+nP" display="inline"><mrow><mi>O</mi><mo>≤</mo><mrow><mi>Q</mi><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mi>P</mi></mrow></mrow></mrow></math>, and <math id="I1.I1.i2.p1.m7" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math> as well. On the other hand, if <math id="I1.I1.i2.p1.m8" class="ltx_Math" alttext="c&lt;0" display="inline"><mrow><mi>c</mi><mo>&lt;</mo><mn>0</mn></mrow></math> (or <math id="I1.I1.i2.p1.m9" class="ltx_Math" alttext="0&lt;d" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>d</mi></mrow></math>), then <math id="I1.I1.i2.p1.m10" class="ltx_Math" alttext="-Q" display="inline"><mrow><mo>-</mo><mi>Q</mi></mrow></math> returns us to the previous argument and <math id="I1.I1.i2.p1.m11" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math> again.</p>
+</div>
+</li>
+<li id="I1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.I1.i3.p1.m1" class="ltx_Math" alttext="d=0" display="inline"><mrow><mi>d</mi><mo>=</mo><mn>0</mn></mrow></math> (so <math id="I1.I1.i3.p1.m2" class="ltx_Math" alttext="c\neq 0" display="inline"><mrow><mi>c</mi><mo>≠</mo><mn>0</mn></mrow></math>), then either <math id="I1.I1.i3.p1.m3" class="ltx_Math" alttext="O\leq P+Q" display="inline"><mrow><mi>O</mi><mo>≤</mo><mrow><mi>P</mi><mo>+</mo><mi>Q</mi></mrow></mrow></math> (when <math id="I1.I1.i3.p1.m4" class="ltx_Math" alttext="0&lt;c" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>c</mi></mrow></math>) or <math id="I1.I1.i3.p1.m5" class="ltx_Math" alttext="O\leq P-Q" display="inline"><mrow><mi>O</mi><mo>≤</mo><mrow><mi>P</mi><mo>-</mo><mi>Q</mi></mrow></mrow></math> (when <math id="I1.I1.i3.p1.m6" class="ltx_Math" alttext="c&lt;0" display="inline"><mrow><mi>c</mi><mo>&lt;</mo><mn>0</mn></mrow></math>), so that <math id="I1.I1.i3.p1.m7" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math> once more.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="I1.i2.p3" class="ltx_para">
+<p class="ltx_p">A similar set of arguments shows that if <math id="I1.i2.p3.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> contains a segment of the <math id="I1.i2.p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis, then either <math id="I1.i2.p3.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the <math id="I1.i2.p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis or <math id="I1.i2.p3.m5" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math>. In conclusion, in the case when <math id="I1.i2.p3.m6" class="ltx_Math" alttext="ab=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, <math id="I1.i2.p3.m7" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is either one of the two axes, or the entire group.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="ab&lt;0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>. It is enough to assume that <math id="I1.i3.p1.m2" class="ltx_Math" alttext="0&lt;a" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi></mrow></math> and <math id="I1.i3.p1.m3" class="ltx_Math" alttext="b&lt;0" display="inline"><mrow><mi>b</mi><mo>&lt;</mo><mn>0</mn></mrow></math> (that <math id="I1.i3.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> lies in the fourth quadrant), for if <math id="I1.i3.p1.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> lies in the second quadrant, <math id="I1.i3.p1.m6" class="ltx_Math" alttext="-P" display="inline"><mrow><mo>-</mo><mi>P</mi></mrow></math> lies in the fourth.</p>
+</div>
+<div id="I1.i3.p2" class="ltx_para">
+<p class="ltx_p">Since <math id="I1.i3.p2.m1" class="ltx_Math" alttext="O,P\in H" display="inline"><mrow><mrow><mi>O</mi><mo>,</mo><mi>P</mi></mrow><mo>∈</mo><mi>H</mi></mrow></math>, <math id="I1.i3.p2.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> could be a subgroup of the line group <math id="I1.i3.p2.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> containing <math id="I1.i3.p2.m4" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> and <math id="I1.i3.p2.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. No two points on <math id="I1.i3.p2.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> are comparable, for if <math id="I1.i3.p2.m7" class="ltx_Math" alttext="(r,s)&lt;(t,u)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></math> on <math id="I1.i3.p2.m8" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, then the slope of <math id="I1.i3.p2.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is positive</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="0&lt;\frac{u-s}{t-r}," display="block"><mrow><mrow><mn>0</mn><mo>&lt;</mo><mfrac><mrow><mi>u</mi><mo>-</mo><mi>s</mi></mrow><mrow><mi>t</mi><mo>-</mo><mi>r</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">a contradiction. So <math id="I1.i3.p2.m10" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, and hence <math id="I1.i3.p2.m11" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>, is an antichaine. This means that <math id="I1.i3.p2.m12" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is convex.</p>
+</div>
+<div id="I1.i3.p3" class="ltx_para">
+<p class="ltx_p">Suppose now <math id="I1.i3.p3.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> contains a point <math id="I1.i3.p3.m2" class="ltx_Math" alttext="Q=(c,d)" display="inline"><mrow><mi>Q</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math> not on <math id="I1.i3.p3.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. We again break this down into subcases:</p>
+<ol id="I1.I2" class="ltx_enumerate">
+<li id="I1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I2.i1.p1.m1" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is in the first or third quandrant. Then <math id="I1.I2.i1.p1.m2" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math> as in the very first case above.</p>
+</div>
+</li>
+<li id="I1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I2.i2.p1.m1" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is on either of the axes. Then <math id="I1.I2.i2.p1.m2" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math> also, as in case 2(b) above.</p>
+</div>
+</li>
+<li id="I1.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I2.i3.p1.m1" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is in the second or fourth quadrant. It is enough to assume that <math id="I1.I2.i3.p1.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is in the same quadrant as <math id="I1.I2.i3.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> (fourth). So we have <math id="I1.I2.i3.p1.m4" class="ltx_Math" alttext="0&lt;c" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>c</mi></mrow></math> and <math id="I1.I2.i3.p1.m5" class="ltx_Math" alttext="d&lt;0" display="inline"><mrow><mi>d</mi><mo>&lt;</mo><mn>0</mn></mrow></math>. Since <math id="I1.I2.i3.p1.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> passes through <math id="I1.I2.i3.p1.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and not <math id="I1.I2.i3.p1.m8" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, we have that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{a}{c}\neq\frac{b}{d}." display="block"><mrow><mrow><mfrac><mi>a</mi><mi>c</mi></mfrac><mo>≠</mo><mfrac><mi>b</mi><mi>d</mi></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="I1.I2.i3.p1.m9" class="ltx_Math" alttext="0&lt;r=a/c" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>r</mi><mo>=</mo><mrow><mi>a</mi><mo>/</mo><mi>c</mi></mrow></mrow></math> and <math id="I1.I2.i3.p1.m10" class="ltx_Math" alttext="0&lt;s=b/d" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>s</mi><mo>=</mo><mrow><mi>b</mi><mo>/</mo><mi>d</mi></mrow></mrow></math> and assume <math id="I1.I2.i3.p1.m11" class="ltx_Math" alttext="r&lt;s" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mi>s</mi></mrow></math>. Then there is a rational number <math id="I1.I2.i3.p1.m12" class="ltx_Math" alttext="m/n" display="inline"><mrow><mi>m</mi><mo>/</mo><mi>n</mi></mrow></math> (with <math id="I1.I2.i3.p1.m13" class="ltx_Math" alttext="0&lt;m,n" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>) such that</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="r&lt;\frac{m}{n}&lt;s." display="block"><mrow><mrow><mi>r</mi><mo>&lt;</mo><mfrac><mi>m</mi><mi>n</mi></mfrac><mo>&lt;</mo><mi>s</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This means that <math id="I1.I2.i3.p1.m14" class="ltx_Math" alttext="na&lt;mc" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>a</mi></mrow><mo>&lt;</mo><mrow><mi>m</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></math> and <math id="I1.I2.i3.p1.m15" class="ltx_Math" alttext="nb&lt;md" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>b</mi></mrow><mo>&lt;</mo><mrow><mi>m</mi><mo>⁢</mo><mi>d</mi></mrow></mrow></math>, or <math id="I1.I2.i3.p1.m16" class="ltx_Math" alttext="nP&lt;mQ" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>P</mi></mrow><mo>&lt;</mo><mrow><mi>m</mi><mo>⁢</mo><mi>Q</mi></mrow></mrow></math>. But <math id="I1.I2.i3.p1.m17" class="ltx_Math" alttext="nP,mQ\in H" display="inline"><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>P</mi></mrow><mo>,</mo><mrow><mi>m</mi><mo>⁢</mo><mi>Q</mi></mrow></mrow><mo>∈</mo><mi>H</mi></mrow></math>, so is <math id="I1.I2.i3.p1.m18" class="ltx_Math" alttext="R=mQ-nP\in H" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>P</mi></mrow></mrow><mo>∈</mo><mi>H</mi></mrow></math>, which is in the first quadrant. This implies that <math id="I1.I2.i3.p1.m19" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math> too.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">In summary, if <math id="I1.i3.p3.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> contains a point in the second or fourth quadrant, then either <math id="I1.i3.p3.m5" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is a subgroup of a line with slope <math id="I1.i3.p3.m6" class="ltx_Math" alttext="&lt;0" display="inline"><mrow><mi></mi><mo>&lt;</mo><mn>0</mn></mrow></math>, or <math id="I1.i3.p3.m7" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">The three main cases above exhaust all convex subgroups of <math id="p3.m7" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> under the Cartesian ordering.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">If the Euclidean plane is equipped with the lexicographic ordering, then the story is quite different, but simpler. If <math id="p4.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is non-trivial, say <math id="p4.m2" class="ltx_Math" alttext="P=(a,b)\in H" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>H</mi></mrow></math>, <math id="p4.m3" class="ltx_Math" alttext="P\neq O" display="inline"><mrow><mi>P</mi><mo>≠</mo><mi>O</mi></mrow></math>. If <math id="p4.m4" class="ltx_Math" alttext="0&lt;a" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi></mrow></math>, then <math id="p4.m5" class="ltx_Math" alttext="(c,d)\leq(a,b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> for any <math id="p4.m6" class="ltx_Math" alttext="c&lt;a" display="inline"><mrow><mi>c</mi><mo>&lt;</mo><mi>a</mi></mrow></math> regardless of <math id="p4.m7" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. Choose <math id="p4.m8" class="ltx_Math" alttext="Q=(c,d)" display="inline"><mrow><mi>Q</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be in the first quadrant. Then <math id="p4.m9" class="ltx_Math" alttext="[O,Q]\subseteq H" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mi>Q</mi><mo stretchy="false">]</mo></mrow><mo>⊆</mo><mi>H</mi></mrow></math>, so that <math id="p4.m10" class="ltx_Math" alttext="H=G" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>G</mi></mrow></math>. If <math id="p4.m11" class="ltx_Math" alttext="a&lt;0" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, then <math id="p4.m12" class="ltx_Math" alttext="-P" display="inline"><mrow><mo>-</mo><mi>P</mi></mrow></math> takes us back to the previous argument. If <math id="p4.m13" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>, then either <math id="p4.m14" class="ltx_Math" alttext="[O,P]" display="inline"><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mi>P</mi><mo stretchy="false">]</mo></mrow></math> (when <math id="p4.m15" class="ltx_Math" alttext="0&lt;b" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>b</mi></mrow></math>), or <math id="p4.m16" class="ltx_Math" alttext="[O,-P]" display="inline"><mrow><mo stretchy="false">[</mo><mi>O</mi><mo>,</mo><mrow><mo>-</mo><mi>P</mi></mrow><mo stretchy="false">]</mo></mrow></math> (when <math id="p4.m17" class="ltx_Math" alttext="b&lt;0" display="inline"><mrow><mi>b</mi><mo>&lt;</mo><mn>0</mn></mrow></math>) is a positive interval on the <math id="p4.m18" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis. This implies that <math id="p4.m19" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is at least the <math id="p4.m20" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis. If <math id="p4.m21" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> contains no other points, then <math id="p4.m22" class="ltx_Math" alttext="H=y" display="inline"><mrow><mi>H</mi><mo>=</mo><mi>y</mi></mrow></math>-axis. In summary, the po-group <math id="p4.m23" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> with lexicographic order has the <math id="p4.m24" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis as the only non-trivial proper convex subgroup.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> G. Birkhoff <span class="ltx_text ltx_font_italic">Lattice Theory</span>, 3rd Edition, AMS Volume XXV, (1967).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">convex subgroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConvexSubgroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:04:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:04:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06F15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06F20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20F60</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">convex subset</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 09:54:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

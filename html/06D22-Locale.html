@@ -1,0 +1,330 @@
+<!DOCTYPE html><html>
+<head>
+<title>locale</title>
+<!--Generated on Fri Feb  9 10:01:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">locale</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Topology, in its most abstract sense, is the study of a family of subsets, called open sets, of some given set <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, when subject to certain conditions based purely on set-theoretic operations. Namely, these conditions are that the intersection of two open sets is an open set, union of open sets is an open set, and that the empty set and <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> are themselves open sets. One can thus think of a topology as a certain kind of a lattice <math id="p1.m3" class="ltx_Math" alttext="L(X)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> of subsets associated with the set <math id="p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and the study of a general topological space can be distilled further, to the study of this particular lattice <math id="p1.m5" class="ltx_Math" alttext="L(X)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>. In this setting, the basic elements under scrutiny are no longer “points” in <math id="p1.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, but elements of <math id="p1.m7" class="ltx_Math" alttext="L(X)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>. This shift in focus is the starting point of the so-called “pointless topology”, where the study of topology takes on a lattice-theoretic flavor.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Specifically, the lattice <math id="p2.m1" class="ltx_Math" alttext="L(X)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is an example of what is known as a locale. Formally, a <em class="ltx_emph ltx_font_italic">locale</em> is a complete lattice <math id="p2.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> that is meet infinitely distributive:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="x\wedge(\bigvee Y)=\bigvee(x\wedge Y)" display="block"><mrow><mrow><mi>x</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for any <math id="p2.m3" class="ltx_Math" alttext="Y\subseteq L" display="inline"><mrow><mi>Y</mi><mo>⊆</mo><mi>L</mi></mrow></math>, where <math id="p2.m4" class="ltx_Math" alttext="x\wedge Y:=\{x\wedge y\mid y\in Y\}" display="inline"><mrow><mrow><mi>x</mi><mo>∧</mo><mi>Y</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∧</mo><mi>y</mi></mrow><mo>∣</mo><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_framed_underline">A “pointless” proof</span>. To see that the lattice <math id="p3.m1" class="ltx_Math" alttext="L(X)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> of open sets of a topological space <math id="p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a locale, we first observe that <math id="p3.m3" class="ltx_Math" alttext="L(X)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a complete lattice, since arbitrary joins of open sets are open by definition, which is enough to ensure that arbitrary meets exist too (although they are not arbitrary intersections, they are interiors of the intersections). This means that <math id="p3.m4" class="ltx_Math" alttext="\bigvee Y" display="inline"><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mi>Y</mi></mrow></math> and <math id="p3.m5" class="ltx_Math" alttext="\bigvee(x\bigwedge Y)" display="inline"><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mi>Y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> are both open sets, and hence the expressions in the equality are at least meaningful at this point. Further, <math id="p3.m6" class="ltx_Math" alttext="\bigvee(x\wedge Y)=\bigcup(x\cap Y)\subseteq x\cap(\bigcup Y)=x\wedge(\bigvee Y)" display="inline"><mrow><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∩</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>x</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, because <math id="p3.m7" class="ltx_Math" alttext="x\cap y\subseteq x\cap(\bigcup Y)" display="inline"><mrow><mrow><mi>x</mi><mo>∩</mo><mi>y</mi></mrow><mo>⊆</mo><mrow><mi>x</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for individual <math id="p3.m8" class="ltx_Math" alttext="y\in Y" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></math>. So we are left with showing that <math id="p3.m9" class="ltx_Math" alttext="x\wedge(\bigvee Y)\subseteq\bigvee(x\wedge Y)" display="inline"><mrow><mrow><mi>x</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Again, this is true at an individual level:</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle x\cap y\subseteq\bigcup(x\cap Y)." display="inline"><mrow><mrow><mrow><mi>x</mi><mo>∩</mo><mi>y</mi></mrow><mo>⊆</mo><mstyle displaystyle="true"><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∩</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Let’s write <math id="p3.m10" class="ltx_Math" alttext="z=\bigcup(x\cap Y)" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∩</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then the expression above becomes <math id="p3.m11" class="ltx_Math" alttext="y\cap x\subseteq z" display="inline"><mrow><mrow><mi>y</mi><mo>∩</mo><mi>x</mi></mrow><mo>⊆</mo><mi>z</mi></mrow></math>, where <math id="p3.m12" class="ltx_Math" alttext="x,y,z" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></math> are all open sets. Put it another way,</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle y" display="inline"><mi>y</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m3" class="ltx_Math" alttext="\displaystyle(y\cap x)\cup(y-x)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∩</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E3.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E3.m3" class="ltx_Math" alttext="\displaystyle z\cup(y-x)" display="inline"><mrow><mi>z</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E4.m3" class="ltx_Math" alttext="\displaystyle z\cup(y\cap x^{c})" display="inline"><mrow><mi>z</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∩</mo><msup><mi>x</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E5.m3" class="ltx_Math" alttext="\displaystyle(z\cup y)\cap(z\cup x^{c})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><msup><mi>x</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E6.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E6.m3" class="ltx_Math" alttext="\displaystyle(z\cup y)\cap(z\cup x^{c})^{\circ}," display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><msup><mi>x</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p3.m13" class="ltx_Math" alttext="-" display="inline"><mo>-</mo></math> denotes the set difference operator, <math id="p3.m14" class="ltx_Math" alttext="{}^{c}" display="inline"><msup><mi></mi><mi>c</mi></msup></math> is the set complementation, and <math id="p3.m15" class="ltx_Math" alttext="{}^{\circ}" display="inline"><msup><mi></mi><mo>∘</mo></msup></math> the interior operator. (6) comes from the fact that <math id="p3.m16" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is open. Now, take the union of all <math id="p3.m17" class="ltx_Math" alttext="y\in Y" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></math>, and write this union <math id="p3.m18" class="ltx_Math" alttext="t:=\bigcup Y=\bigcup\{y\mid y\in Y\}" display="inline"><mrow><mi>t</mi><mo>:=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mi>Y</mi></mrow><mo>=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∣</mo><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>. Then</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E7.m1" class="ltx_Math" alttext="\displaystyle t" display="inline"><mi>t</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E7.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E7.m3" class="ltx_Math" alttext="\displaystyle(z\cup t)\cap(z\cup x^{c})^{\circ}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><msup><mi>x</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+<tbody id="S0.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E8.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E8.m3" class="ltx_Math" alttext="\displaystyle(z\cup t)\cap(z\cup x^{c})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><msup><mi>x</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+<tbody id="S0.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E9.m3" class="ltx_Math" alttext="\displaystyle z\cup(t\cap x^{c})." display="inline"><mrow><mrow><mi>z</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>∩</mo><msup><mi>x</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Taking the intersection with <math id="p3.m19" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> on both sides, we have</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E10.m1" class="ltx_Math" alttext="\displaystyle t\cap x" display="inline"><mrow><mi>t</mi><mo>∩</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E10.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E10.m3" class="ltx_Math" alttext="\displaystyle(z\cup(t\cap x^{c}))\cap x" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>∩</mo><msup><mi>x</mi><mi>c</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr></tbody>
+<tbody id="S0.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E11.m3" class="ltx_Math" alttext="\displaystyle(z\cap x)\cup((t-x)\cap x)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∩</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∩</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr></tbody>
+<tbody id="S0.E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E12.m3" class="ltx_Math" alttext="\displaystyle(z\cap x)\cup\varnothing" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∩</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mi mathvariant="normal">∅</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr></tbody>
+<tbody id="S0.E13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E13.m3" class="ltx_Math" alttext="\displaystyle z\cap x" display="inline"><mrow><mi>z</mi><mo>∩</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr></tbody>
+<tbody id="S0.E14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E14.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E14.m3" class="ltx_Math" alttext="\displaystyle z." display="inline"><mrow><mi>z</mi><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Substituting <math id="p3.m20" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and <math id="p3.m21" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> back to their original form, we have <math id="p3.m22" class="ltx_Math" alttext="x\cap(\bigcup Y)\subseteq\bigcup(x\cap Y)" display="inline"><mrow><mrow><mi>x</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∩</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which is what we wanted to prove.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Notice that in the proof above, no points of <math id="p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> are employed, and everything is done via basic set operations, as well as extra set operations, such as the interior operator.
+</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Another thing worthy of note is the following fact:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">A lattice is a locale iff it is a complete Brouwerian lattice (equivalently a complete Heyting algebra).</p>
+</blockquote>
+<p class="ltx_p">A sketch of proof goes as follows: if <math id="I1.i1.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a locale, then for any <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a,b\in L" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>L</mi></mrow></math>, the element <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\bigvee\{c\mid a\wedge c\leq b\}" display="inline"><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">{</mo><mi>c</mi><mo>∣</mo><mrow><mrow><mi>a</mi><mo>∧</mo><mi>c</mi></mrow><mo>≤</mo><mi>b</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is the relative pseudocomplement of <math id="I1.i1.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> in <math id="I1.i1.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. Conversely, if <math id="I1.i1.p1.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a Heyting algebra, then we can use the trick that for every <math id="I1.i1.p1.m7" class="ltx_Math" alttext="y\in Y" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></math>, <math id="I1.i1.p1.m8" class="ltx_Math" alttext="y\leq x\to\bigvee(x\wedge Y)" display="inline"><mrow><mi>y</mi><mo>≤</mo><mi>x</mi><mo>→</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, to show <math id="I1.i1.p1.m9" class="ltx_Math" alttext="x\wedge(\bigvee Y)\leq\bigvee(x\wedge Y)" display="inline"><mrow><mrow><mi>x</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Other examples of locales found in topology is the lattice of regular open sets in a topological space <math id="I1.i2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Complete Boolean algebras also provide examples of locales. But a locale need not be complete Boolean. The interval topology on the real line is such an example.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">locale homomorphism</em> <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is a lattice homomorphism between two locales such that arbitrary sups are preserved: <math id="I1.i4.p1.m2" class="ltx_Math" alttext="\phi(\bigvee_{i\in I}\{a_{i}\})=\bigvee_{i\in I}\{\phi(a_{i})\}" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><mrow><mo stretchy="false">{</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">A locale is also called a <em class="ltx_emph ltx_font_italic">frame</em>, and a frame homomorphism a locale homomorphism. However, P. T. Johnstone distinguishes the two names when they are considered as categories. The category <span class="ltx_text ltx_font_bold">Fra</span> of frames consists of locales (or frames) as objects, and locale homomorphisms as morphisms. On the other hand, the category <span class="ltx_text ltx_font_bold">Loc</span> of locales is defined as the opposite category of <span class="ltx_text ltx_font_bold">Fra</span>.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">In <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>, a frame and a locale are two distinct objects. A frame is defined as above. But a locale <math id="I1.i6.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a triple <math id="I1.i6.p1.m2" class="ltx_Math" alttext="(F,P,\models)" display="inline"><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>P</mi><mo>,</mo><mo>⊧</mo><mo stretchy="false">)</mo></mrow></math>, where <math id="I1.i6.p1.m3" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is a frame, <math id="I1.i6.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is the set of frame homomorphisms from <math id="I1.i6.p1.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> to <math id="I1.i6.p1.m6" class="ltx_Math" alttext="\{0,1\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></math>, the trivial frame (= the trivial Boolean algebra), and <math id="I1.i6.p1.m7" class="ltx_Math" alttext="\models" display="inline"><mo>⊧</mo></math> is a subset (relation) of <math id="I1.i6.p1.m8" class="ltx_Math" alttext="P\times F" display="inline"><mrow><mi>P</mi><mo>×</mo><mi>F</mi></mrow></math> given by <math id="I1.i6.p1.m9" class="ltx_Math" alttext="f\models a" display="inline"><mrow><mi>f</mi><mo>⊧</mo><mi>a</mi></mrow></math> iff <math id="I1.i6.p1.m10" class="ltx_Math" alttext="f(a)=1" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. For each <math id="I1.i6.p1.m11" class="ltx_Math" alttext="a\in F" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>F</mi></mrow></math>, let <math id="I1.i6.p1.m12" class="ltx_Math" alttext="U(a)=\{f\in P\mid f\models a\}" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>∈</mo><mi>P</mi></mrow><mo>∣</mo><mrow><mi>f</mi><mo>⊧</mo><mi>a</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. It is not hard to see that the collection of all sets of the form <math id="I1.i6.p1.m13" class="ltx_Math" alttext="U(a)" display="inline"><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> forms a topology on <math id="I1.i6.p1.m14" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. As a result, every frame can be viewed as a topology on some set!</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> F. Borceux, <span class="ltx_text ltx_font_italic">Handbook of Categorical Algebra 3: Categories of Sheaves</span>, Cambridge University Press (1994).
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, <span class="ltx_text ltx_font_italic">Continuous Lattices and Domains</span>, Cambridge University Press, Cambridge (2003).
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> P. T. Johnstone, <span class="ltx_text ltx_font_italic">The Art of Pointless Thinking: A Student’s Guide to the Category of Locales, Category Theory at Work (Bremen, 1990)</span>, pp 85-107, Res. Exp. Math., 18, Heldermann, Berlin (1991).
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock"> P. T. Johnstone, <span class="ltx_text ltx_font_italic">Stone Spaces</span>, Cambridge University Press, Cambridge (1982).
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock"> S. Vickers, <span class="ltx_text ltx_font_italic">Topology via Logic</span>, Cambridge University Press, Cambridge (1989).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">locale</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Locale</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:38:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:38:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06D22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">frame</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">frame homomorphism</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CompleteHeytingAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">locale homomorphism</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 10:01:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

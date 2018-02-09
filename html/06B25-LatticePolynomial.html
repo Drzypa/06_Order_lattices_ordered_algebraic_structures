@@ -1,0 +1,142 @@
+<!DOCTYPE html><html>
+<head>
+<title>lattice polynomial</title>
+<!--Generated on Fri Feb  9 09:57:04 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">lattice polynomial</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">lattice polynomial</em>, informally, is an expression involving a finite number of variables <math id="p1.m1" class="ltx_Math" alttext="x,y,z,\ldots" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math>, two symbols <math id="p1.m2" class="ltx_Math" alttext="\vee,\wedge" display="inline"><mrow><mo>∨</mo><mo>,</mo><mo>∧</mo></mrow></math>, and sometimes the parentheses <math id="p1.m3" class="ltx_Math" alttext="(,)" display="inline"><mrow><mo stretchy="false">(</mo><mo>,</mo><mo stretchy="false">)</mo></mrow></math> in a <em class="ltx_emph ltx_font_italic">meaningful manner</em>. Loosely speaking, whenever <math id="p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p1.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are lattice polynomials, the only lattice polynomials that can be formed from <math id="p1.m6" class="ltx_Math" alttext="p,q,\vee,\wedge" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi><mo>,</mo><mo>∨</mo><mo>,</mo><mo>∧</mo></mrow></math> are <math id="p1.m7" class="ltx_Math" alttext="p\vee q" display="inline"><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow></math> and <math id="p1.m8" class="ltx_Math" alttext="p\wedge q" display="inline"><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow></math>. We will explain formally what <em class="ltx_emph ltx_font_italic">meaningful manner</em> is a little later. Some examples of lattice polynomials are <math id="p1.m9" class="ltx_Math" alttext="x\vee(x\vee x)" display="inline"><mrow><mi>x</mi><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∨</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p1.m10" class="ltx_Math" alttext="(y\wedge x)\vee x" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∧</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∨</mo><mi>x</mi></mrow></math>, and <math id="p1.m11" class="ltx_Math" alttext="(x\vee y)\wedge(y\vee z)\wedge(z\vee x)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∨</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∨</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, while <math id="p1.m12" class="ltx_Math" alttext="\vee\wedge x" display="inline"><mrow><mo>∨</mo><mo>∧</mo><mi>x</mi></mrow></math>, <math id="p1.m13" class="ltx_Math" alttext="xy\wedge yz" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>∧</mo><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></math>, <math id="p1.m14" class="ltx_Math" alttext="z\vee)(" display="inline"><mrow><mi>z</mi><mo>∨</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo></mrow></math> are not lattice polynomials.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To formally define what a lattice polynomial is, we resort to model theory. To begin with, we have a countable set of variables <math id="p2.m1" class="ltx_Math" alttext="V=\{x,y,z,\ldots\}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow></math>, a set of binary function symbols <math id="p2.m2" class="ltx_Math" alttext="F=\{\vee,\wedge\}" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mo>∨</mo><mo>,</mo><mo>∧</mo><mo stretchy="false">}</mo></mrow></mrow></math>. We define pairwise disjoint sets <math id="p2.m3" class="ltx_Math" alttext="S_{0},S_{1},\ldots,S_{n},\ldots" display="inline"><mrow><msub><mi>S</mi><mn>0</mn></msub><mo>,</mo><msub><mi>S</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>S</mi><mi>n</mi></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> recursively, as follows:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="S_{0}=V" display="inline"><mrow><msub><mi>S</mi><mn>0</mn></msub><mo>=</mo><mi>V</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="S_{k+1}=\{(p\vee q),(p\wedge q)\mid p,q\in S_{k}\}\cup S_{k}" display="inline"><mrow><msub><mi>S</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mo>∈</mo><msub><mi>S</mi><mi>k</mi></msub></mrow><mo stretchy="false">}</mo></mrow><mo>∪</mo><msub><mi>S</mi><mi>k</mi></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Then we set <math id="p2.m4" class="ltx_Math" alttext="S=\bigcup_{i=0}^{\infty}S_{i}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><msubsup><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>S</mi><mi>i</mi></msub></mrow></mrow></math>. An element of <math id="p2.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is called a <em class="ltx_emph ltx_font_italic">lattice polynomial</em>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Note that in the above definition, <math id="p3.m1" class="ltx_Math" alttext="((x\vee y)\vee z)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∨</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></math> is a lattice polynomial while <math id="p3.m2" class="ltx_Math" alttext="(x\vee y\vee z)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∨</mo><mi>y</mi><mo>∨</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></math> is not, for any variables <math id="p3.m3" class="ltx_Math" alttext="x,y,z\in V" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>. To reduce the number of parentheses in a lattice polynomial, we typically identify <math id="p3.m4" class="ltx_Math" alttext="(p\vee q)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></math> with <math id="p3.m5" class="ltx_Math" alttext="p\vee q" display="inline"><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow></math> and <math id="p3.m6" class="ltx_Math" alttext="(p\wedge q)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></math> with <math id="p3.m7" class="ltx_Math" alttext="p\wedge q" display="inline"><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow></math>. In addition, since the meet and join operations are associative in any lattice, it is a common practice to further reduce the number of parentheses in a lattice polynomial by identifying both <math id="p3.m8" class="ltx_Math" alttext="(p\vee(q\vee r))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>∨</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="p3.m9" class="ltx_Math" alttext="((p\vee q)\vee r)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∨</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></math> with <math id="p3.m10" class="ltx_Math" alttext="p\vee q\vee r" display="inline"><mrow><mi>p</mi><mo>∨</mo><mi>q</mi><mo>∨</mo><mi>r</mi></mrow></math>, and <math id="p3.m11" class="ltx_Math" alttext="(p\wedge(q\wedge r))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>∧</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="p3.m12" class="ltx_Math" alttext="((p\wedge q)\wedge r)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></math> with <math id="p3.m13" class="ltx_Math" alttext="p\wedge q\wedge r" display="inline"><mrow><mi>p</mi><mo>∧</mo><mi>q</mi><mo>∧</mo><mi>r</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Another thing that can be said about the above construction of is that any given lattice polynomial can be constructed from <math id="p4.m1" class="ltx_Math" alttext="S_{0}" display="inline"><msub><mi>S</mi><mn>0</mn></msub></math> in a finite number of steps. If <math id="p4.m2" class="ltx_Math" alttext="p\in S_{n}-S_{n-1}" display="inline"><mrow><mi>p</mi><mo>∈</mo><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>-</mo><msub><mi>S</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></math>, <math id="p4.m3" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math>, then <math id="p4.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> can be constructed in exactly <math id="p4.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> steps. The minimum number of variables (in <math id="p4.m6" class="ltx_Math" alttext="S_{0}" display="inline"><msub><mi>S</mi><mn>0</mn></msub></math>) that is required to construct <math id="p4.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is called the <em class="ltx_emph ltx_font_italic">arity</em> of <math id="p4.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. For example, if <math id="p4.m9" class="ltx_Math" alttext="p=((x\vee y)\wedge x)" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> then the arity of <math id="p4.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is <math id="p4.m11" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>. If an <math id="p4.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary lattice polynomial <math id="p4.m13" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> can be constructed from <math id="p4.m14" class="ltx_Math" alttext="x_{1},\ldots,x_{n}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></math>, we often write <math id="p4.m15" class="ltx_Math" alttext="p=p(x_{1},\ldots,x_{n})" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">One more important number associated with a lattice polynomial <math id="p5.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is its <em class="ltx_emph ltx_font_italic">weight</em>, defined recursively as <math id="p5.m2" class="ltx_Math" alttext="w(p)=1" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> if <math id="p5.m3" class="ltx_Math" alttext="p\in S_{0}" display="inline"><mrow><mi>p</mi><mo>∈</mo><msub><mi>S</mi><mn>0</mn></msub></mrow></math>, and <math id="p5.m4" class="ltx_Math" alttext="w(p\vee q)=w(p\wedge q)=w(p)+w(q)" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Given any <math id="p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-ary lattice polynomial <math id="p6.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and any lattice <math id="p6.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, we can associate <math id="p6.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> with an <math id="p6.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-ary <em class="ltx_emph ltx_font_italic">lattice polynomial function</em> <math id="p6.m6" class="ltx_Math" alttext="f:L^{m}\to L" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>L</mi><mi>m</mi></msup><mo>→</mo><mi>L</mi></mrow></mrow></math> defined by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f(a_{1},\ldots,a_{m}):=p(a_{1},\ldots,a_{n}),\mbox{ where }m\geq n\mbox{ and }%
+a_{i}\in L." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mrow><mtext> where </mtext><mo>⁢</mo><mi>m</mi></mrow><mo>≥</mo><mrow><mi>n</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><msub><mi>a</mi><mi>i</mi></msub></mrow><mo>∈</mo><mi>L</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The expression <math id="p6.m7" class="ltx_Math" alttext="p(a_{1},\ldots,a_{n})" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the <em class="ltx_emph ltx_font_italic">evaluation</em> of <math id="p6.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> at <math id="p6.m9" class="ltx_Math" alttext="(a_{1},\ldots,a_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>. That is, we substitute each <math id="p6.m10" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> for <math id="p6.m11" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math>, and we interpret <math id="p6.m12" class="ltx_Math" alttext="\vee" display="inline"><mo>∨</mo></math> and <math id="p6.m13" class="ltx_Math" alttext="\wedge" display="inline"><mo>∧</mo></math> in <math id="p6.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> as the join and meet operations in <math id="p6.m15" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Two lattice polynomials <math id="p7.m1" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> of arities <math id="p7.m2" class="ltx_Math" alttext="m,n" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></math>, where <math id="p7.m3" class="ltx_Math" alttext="m\geq n" display="inline"><mrow><mi>m</mi><mo>≥</mo><mi>n</mi></mrow></math>, are said to be <em class="ltx_emph ltx_font_italic">equivalent</em> if their corresponding <math id="p7.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-ary lattice polynomial functions evaluate to the same values in any lattice. For example, <math id="p7.m5" class="ltx_Math" alttext="x\vee y" display="inline"><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow></math> and <math id="p7.m6" class="ltx_Math" alttext="y\vee x" display="inline"><mrow><mi>y</mi><mo>∨</mo><mi>x</mi></mrow></math> are equivalent. Similarly, <math id="p7.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="p7.m8" class="ltx_Math" alttext="x\vee x" display="inline"><mrow><mi>x</mi><mo>∨</mo><mi>x</mi></mrow></math>, <math id="p7.m9" class="ltx_Math" alttext="x\wedge x" display="inline"><mrow><mi>x</mi><mo>∧</mo><mi>x</mi></mrow></math>, and <math id="p7.m10" class="ltx_Math" alttext="x\vee(y\wedge x)" display="inline"><mrow><mi>x</mi><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∧</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> are equivalent lattice polynomials.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. Similarly, one can define a <em class="ltx_emph ltx_font_italic">Boolean polynomial</em> by enlarging the set <math id="p8.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> of function symbols to include the unary operator <math id="p8.m2" class="ltx_Math" alttext="{}^{\prime}" display="inline"><msup><mi></mi><mo>′</mo></msup></math>, and <math id="p8.m3" class="ltx_Math" alttext="S_{k+1}=\{(p\vee q),(p\wedge q),(p^{\prime})\mid p,q\in S_{k}\}\cup S_{k}" display="inline"><mrow><msub><mi>S</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mo>∈</mo><msub><mi>S</mi><mi>k</mi></msub></mrow><mo stretchy="false">}</mo></mrow><mo>∪</mo><msub><mi>S</mi><mi>k</mi></msub></mrow></mrow></math>. Then a Boolean polynomial is just an element of <math id="p8.m4" class="ltx_Math" alttext="S=\cup_{i=0}^{\infty}S_{i}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><msubsup><mo>∪</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>S</mi><mi>i</mi></msub></mrow></mrow></math>. The weight of a Boolean polynomial is similarly defined, with the additional <math id="p8.m5" class="ltx_Math" alttext="w(p^{\prime})=w(p)" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">lattice polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LatticePolynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:30:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:30:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06B25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lattice polynomial function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">equivalent lattice polynomials</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">weight of a lattice polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">arity of a lattice polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Boolean polynomial</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 09:57:04 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

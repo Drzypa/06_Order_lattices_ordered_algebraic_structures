@@ -1,0 +1,165 @@
+<!DOCTYPE html><html>
+<head>
+<title>graded poset</title>
+<!--Generated on Fri Feb  9 09:51:55 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">graded poset</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">graded poset</em> is a poset <math id="p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> that is equipped with a <em class="ltx_emph ltx_font_italic">rank function</em> <math id="p2.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>, which is a function from <math id="p2.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to <math id="p2.m4" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>, satisfying the following three conditions:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is constant on all minimal elements of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, usually with value <math id="I1.i1.p1.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> or <math id="I1.i1.p1.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is <em class="ltx_emph ltx_font_italic">isotone</em>, that is, if <math id="I1.i2.p1.m2" class="ltx_Math" alttext="a\leq b" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow></math>, then <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\rho(a)\leq\rho(b)" display="inline"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> preserves covering relations: if <math id="I1.i3.p1.m2" class="ltx_Math" alttext="a\prec b" display="inline"><mrow><mi>a</mi><mo>≺</mo><mi>b</mi></mrow></math>, then <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\rho(a)+1=\rho(b)" display="inline"><mrow><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Equivalently, a poset <math id="p3.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is graded if it admits a partition into
+maximal antichains <math id="p3.m2" class="ltx_Math" alttext="\{A_{n}\mid n\in\mathbb{N}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mi>n</mi></msub><mo>∣</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo stretchy="false">}</mo></mrow></math> such that
+for each <math id="p3.m3" class="ltx_Math" alttext="x\in A_{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math>,
+all of the elements covering <math id="p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> are in <math id="p3.m5" class="ltx_Math" alttext="A_{n+1}" display="inline"><msub><mi>A</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math> and all the elements
+covered by <math id="p3.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> are in <math id="p3.m7" class="ltx_Math" alttext="A_{n-1}" display="inline"><msub><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">A poset <math id="p4.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> <em class="ltx_emph ltx_font_italic">can be graded</em> if one can define a rank function <math id="p4.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> on <math id="p4.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> so <math id="p4.m4" class="ltx_Math" alttext="(P,\rho)" display="inline"><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow></math> is a graded poset. Below is a poset that can not be graded:</p>
+</div>
+<div id="p5" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\entrymodifiers={[o]}\xymatrix@!=1pt{&amp;&amp;\circ\ar@{-}[ld]\ar@{-}[rd]&amp;\\
+&amp;\ar@{-}[ld]&amp;&amp;\circ\ar@{-}[d]\\
+\circ\ar@{-}[rd]&amp;&amp;&amp;\ar@{-}[d]\\
+&amp;\ar@{-}[rd]&amp;&amp;\circ\ar@{-}[ld]\\
+&amp;&amp;\circ&amp;}" display="block"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\entrymodifiers</mtext></merror><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mrow><mi mathvariant="normal">@</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mn>1</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi></mrow><mo>∘</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror></mrow><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>l</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>r</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>l</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi></mrow><mo>∘</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror></mrow><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>∘</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror></mrow><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>r</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>r</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi></mrow><mo>∘</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror></mrow><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>l</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">&amp;</mi></mrow><mo>∘</mo><mi mathvariant="normal">&amp;</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Generalized rank functions</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">Since certain common posets such as the face lattice of a polytope are most naturally graded by dimension (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Dimension2</span>), the rank of a minimal element is sometimes required to be <math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">More generally, given a chain <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, one can define <em class="ltx_emph ltx_font_italic"><math id="S0.SSx1.p2.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>-graded posets</em>. A poset <math id="S0.SSx1.p2.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is <math id="S0.SSx1.p2.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>-graded provided that there is a poset map <math id="S0.SSx1.p2.m5" class="ltx_Math" alttext="\rho\colon P\to C" display="inline"><mrow><mi>ρ</mi><mo>:</mo><mrow><mi>P</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> that preserves covers and is constant on minimal elements of <math id="S0.SSx1.p2.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. Such a rank function is unique up to choice of the rank of minimal elements. In practice, however, the term graded is only used to indicate <math id="S0.SSx1.p2.m7" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>-grading, <math id="S0.SSx1.p2.m8" class="ltx_Math" alttext="\mathbb{N}\cup\{-1\}" display="inline"><mrow><mi>ℕ</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>-grading, or <math id="S0.SSx1.p2.m9" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>-grading.</p>
+</div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Maximal chains in graded posets</h2>
+
+<div id="S0.SSx2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SSx2.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a graded poset with rank function <math id="S0.SSx2.p1.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>. A chain <math id="S0.SSx2.p1.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in <math id="S0.SSx2.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is said to be a <em class="ltx_emph ltx_font_italic">saturated chain</em> provided that <math id="S0.SSx2.p1.m5" class="ltx_Math" alttext="\rho(C)=\rho(P)" display="inline"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. If <math id="S0.SSx2.p1.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is saturated in <math id="S0.SSx2.p1.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, then each cover relation in <math id="S0.SSx2.p1.m8" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is also a cover relation in <math id="S0.SSx2.p1.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>; thus a saturated chain is also a maximal chain.</p>
+</div>
+<div id="S0.SSx2.p2" class="ltx_para">
+<p class="ltx_p">It is a property of graded posets that all saturated chains have the same cardinality. As a partial converse, if <math id="S0.SSx2.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a finite bounded poset (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BoundedLattice</span>) and each maximal chain has the same cardinality, then <math id="S0.SSx2.p2.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is graded.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">graded poset</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GradedPoset</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:09:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:09:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06A06</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EulerianPoset</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">StarProduct</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HeightOfAnElementInAPoset</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rank function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">saturated chain</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 09:51:55 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

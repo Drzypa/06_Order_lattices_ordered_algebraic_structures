@@ -1,0 +1,216 @@
+<!DOCTYPE html><html>
+<head>
+<title>Eulerian poset</title>
+<!--Generated on Fri Feb  9 09:53:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Eulerian poset</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A graded poset <math id="p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is <span class="ltx_text ltx_font_italic">Eulerian</span> if for any <math id="p1.m2" class="ltx_Math" alttext="x\leq y" display="inline"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow></math> in <math id="p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, the
+Möbius function (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/MoebiusInversionFormula</span>)
+of the interval <math id="p1.m4" class="ltx_Math" alttext="[x,y]" display="inline"><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></math> is given by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mu_{P}(x,y)=(-1)^{\rho(y)-\rho(x)}," display="block"><mrow><mrow><mrow><msub><mi>μ</mi><mi>P</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m5" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is the rank function of <math id="p1.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. If <math id="p1.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is finite and
+graded with strictly
+positive rank, then we can equivalently and more simply say that <math id="p1.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is
+Eulerian if and only if each nontrivial interval of <math id="p1.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> has the same number of
+elements of even rank as odd rank.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">For example, the lattice (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Lattice</span>) <math id="p2.m1" class="ltx_Math" alttext="M_{3}" display="inline"><msub><mi>M</mi><mn>3</mn></msub></math> is not Eulerian, because it
+has 3 elements of rank 1 but only 2 elements of ranks 0 or 2.</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\xymatrix{&amp;\widehat{1}\ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\
+a\ar@{-}[dr]&amp;b\ar@{-}[d]&amp;c\ar@{-}[dl]\\
+&amp;\widehat{0}&amp;}" display="block"><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mover accent="true"><mn>1</mn><mo>^</mo></mover><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mover accent="true"><mn>0</mn><mo>^</mo></mover><mo>⁢</mo><mi mathvariant="normal">&amp;</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">On the other hand, the Boolean lattice <math id="p2.m2" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math> is always Eulerian.</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\xymatrix{&amp;\widehat{1}\ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\
+ab\ar@{-}[d]\ar@{-}[dr]&amp;ac\ar@{-}[dl]\ar@{-}[dr]&amp;bc\ar@{-}[dl]\ar@{-}[d]\\
+a\ar@{-}[dr]&amp;b\ar@{-}[d]&amp;c\ar@{-}[dl]\\
+&amp;\widehat{0}&amp;}" display="block"><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mover accent="true"><mn>1</mn><mo>^</mo></mover><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi>a</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mover accent="true"><mn>0</mn><mo>^</mo></mover><mo>⁢</mo><mi mathvariant="normal">&amp;</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Each interval of <math id="p2.m3" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math> is isomorphic to a smaller Boolean lattice, so
+we can give a proof by induction that <math id="p2.m4" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math> is Eulerian. Now <math id="p2.m5" class="ltx_Math" alttext="B_{0}" display="inline"><msub><mi>B</mi><mn>0</mn></msub></math> is
+a single point and so there is only one interval, which has Möbius
+function 1. So to show that <math id="p2.m6" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math> is Eulerian, we just need to show
+that the Möbius function of <math id="p2.m7" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math> is <math id="p2.m8" class="ltx_Math" alttext="(-1)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math>. Recall that by definition,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mu_{B_{n}}(B_{n})=-\sum_{S\subset\{1,\dots,n\}}\mu(\emptyset,S){}" display="block"><mrow><mrow><msub><mi>μ</mi><msub><mi>B</mi><mi>n</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>S</mi><mo>⊂</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow></munder><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(*)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <math id="p2.m9" class="ltx_Math" alttext="\sum_{S\subseteq\{1,\dots,n\}}\mu_{B_{n}}(\emptyset,S)=0" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mi>S</mi><mo>⊆</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow></msub><mrow><msub><mi>μ</mi><msub><mi>B</mi><mi>n</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. We can apply
+the binomial theorem to <math id="p2.m10" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> to see that
+<math id="p2.m11" class="ltx_Math" alttext="0=(-1+1)^{n}=\sum_{k=0}^{n}\binom{n}{k}(-1)^{k}" display="inline"><mrow><mn>0</mn><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow></mrow></math>
+and thus</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle(-1)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=-\sum_{k=0}^{n-1}\binom{n}{k}(-1)^{k}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tbody id="S0.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=-\sum_{S\subset\{1,\dots,n\}}\mu(\emptyset,S){}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>S</mi><mo>⊂</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow></munder></mstyle><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(**)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">It then follows from Equation <math id="p2.m12" class="ltx_Math" alttext="(*)" display="inline"><mrow><mo stretchy="false">(</mo><mo>*</mo><mo stretchy="false">)</mo></mrow></math> and Equation <math id="p2.m13" class="ltx_Math" alttext="(**)" display="inline"><mrow><mo stretchy="false">(</mo><mo>*</mo><mo>*</mo><mo stretchy="false">)</mo></mrow></math> that <math id="p2.m14" class="ltx_Math" alttext="\mu(B_{n})=(-1)^{n}" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Eulerian posets are generalizations of certain special posets, such as
+face lattices of polytopes.</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Eulerian posets of small rank</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">In this section we classify bounded Eulerian posets of rank less than 4.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">For <math id="Sx1.p2.m1" class="ltx_Math" alttext="n&lt;2" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mn>2</mn></mrow></math>, there is exactly one bounded poset of rank <math id="Sx1.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the chain,
+and it is Eulerian.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">A bounded poset of rank <math id="Sx1.p3.m1" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> is determined precisely by its number of
+coatoms. The ab-index of a rank <math id="Sx1.p3.m2" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> bounded Eulerian poset with <math id="Sx1.p3.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>
+coatoms is <math id="Sx1.p3.m4" class="ltx_Math" alttext="a+(r-1)b" display="inline"><mrow><mi>a</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>b</mi></mrow></mrow></math>, which is a cd-index if and only if <math id="Sx1.p3.m5" class="ltx_Math" alttext="r=2" display="inline"><mrow><mi>r</mi><mo>=</mo><mn>2</mn></mrow></math>.
+Since every Eulerian poset has a cd-index, this implies that every
+rank <math id="Sx1.p3.m6" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> bounded Eulerian poset has exactly two coatoms. Thus up to
+isomorphism <math id="Sx1.p3.m7" class="ltx_Math" alttext="B_{2}" display="inline"><msub><mi>B</mi><mn>2</mn></msub></math> is the only rank <math id="Sx1.p3.m8" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> bounded Eulerian poset.
+</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx1.p4.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a rank <math id="Sx1.p4.m2" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> bounded Eulerian poset. Since <math id="Sx1.p4.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> has as many
+elements of odd rank as even rank, it has exactly the same number of
+atoms as coatoms. Since every rank <math id="Sx1.p4.m4" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> interval in <math id="Sx1.p4.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a copy of
+<math id="Sx1.p4.m6" class="ltx_Math" alttext="B_{2}" display="inline"><msub><mi>B</mi><mn>2</mn></msub></math>, it follows that <math id="Sx1.p4.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is not a chain and so has <math id="Sx1.p4.m8" class="ltx_Math" alttext="n\geq 2" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow></math> atoms.
+Moreover, every atom is covered by exactly two coatoms, and every
+coatom covers exactly two atoms. That is, the Hasse diagram of the
+interior of <math id="Sx1.p4.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a 2-regular bipartite graph. This graph admits a
+decomposition into even cycles. In each cycle, half of the nodes are
+atoms and half are coatoms. The non-induced subposet of <math id="Sx1.p4.m10" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>
+consisting of the points on a cycle of length <math id="Sx1.p4.m11" class="ltx_Math" alttext="2k" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow></math> plus the minimum
+and maximum elements of <math id="Sx1.p4.m12" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is the face poset of a <math id="Sx1.p4.m13" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-gon. Hence <math id="Sx1.p4.m14" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>
+itself is the face poset of the disjoint union of one or more <math id="Sx1.p4.m15" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-gons
+for various <math id="Sx1.p4.m16" class="ltx_Math" alttext="k\geq 2" display="inline"><mrow><mi>k</mi><mo>≥</mo><mn>2</mn></mrow></math>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Stanley, R., <em class="ltx_emph ltx_font_italic">Enumerative Combinatorics</em>, vol. 1, 2nd ed., Cambridge
+University Press, Cambridge, 1996.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Eulerian poset</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EulerianPoset</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:08:16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:08:16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06A11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06A07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">GradedPoset</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 09:53:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

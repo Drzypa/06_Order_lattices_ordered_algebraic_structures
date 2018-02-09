@@ -1,0 +1,132 @@
+<!DOCTYPE html><html>
+<head>
+<title>atom</title>
+<!--Generated on Fri Feb  9 09:50:45 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">atom</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a poset, partially ordered by <math id="p1.m2" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math>. An element <math id="p1.m3" class="ltx_Math" alttext="a\in P" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>P</mi></mrow></math> is called an <em class="ltx_emph ltx_font_italic">atom</em> if it covers some minimal element of <math id="p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. As a result, an atom is never minimal. A poset <math id="p1.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is called <em class="ltx_emph ltx_font_italic">atomic</em> if for every element <math id="p1.m6" class="ltx_Math" alttext="p\in P" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>P</mi></mrow></math> that is not minimal has an atom <math id="p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> such that <math id="p1.m8" class="ltx_Math" alttext="a\leq p" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>p</mi></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span>.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a set and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="P=2^{A}" display="inline"><mrow><mi>P</mi><mo>=</mo><msup><mn>2</mn><mi>A</mi></msup></mrow></math> its power set. <math id="I1.i1.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a poset ordered by <math id="I1.i1.p1.m4" class="ltx_Math" alttext="\subseteq" display="inline"><mo>⊆</mo></math> with a unique minimal element <math id="I1.i1.p1.m5" class="ltx_Math" alttext="\varnothing" display="inline"><mi mathvariant="normal">∅</mi></math>. Thus, all singleton subsets <math id="I1.i1.p1.m6" class="ltx_Math" alttext="\{a\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>a</mi><mo stretchy="false">}</mo></mrow></math> of <math id="I1.i1.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are atoms in <math id="I1.i1.p1.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathbb{Z}^{+}" display="inline"><msup><mi>ℤ</mi><mo>+</mo></msup></math> is partially ordered if we define <math id="I1.i2.p1.m2" class="ltx_Math" alttext="a\leq b" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow></math> to mean that <math id="I1.i2.p1.m3" class="ltx_Math" alttext="a\mid b" display="inline"><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow></math>. Then <math id="I1.i2.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> is a minimal element and any prime number <math id="I1.i2.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is an atom.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark.</span> Given a lattice <math id="p3.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> with underlying poset <math id="p3.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, an element <math id="p3.m3" class="ltx_Math" alttext="a\in L" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>L</mi></mrow></math> is called an <em class="ltx_emph ltx_font_italic">atom</em> (of <math id="p3.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>) if it is an atom in <math id="p3.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. A lattice is a called an <em class="ltx_emph ltx_font_italic">atomic lattice</em> if its underlying poset is atomic. An <em class="ltx_emph ltx_font_italic">atomistic lattice</em> is an atomic lattice such that each element that is not minimal is a join of atoms. If <math id="p3.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is an atom in a semimodular lattice <math id="p3.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, and if <math id="p3.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is not under <math id="p3.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, then <math id="p3.m10" class="ltx_Math" alttext="a\vee x" display="inline"><mrow><mi>a</mi><mo>∨</mo><mi>x</mi></mrow></math> is an atom in any interval lattice <math id="p3.m11" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> where <math id="p3.m12" class="ltx_Math" alttext="x=\bigwedge I" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mi>I</mi></mrow></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span>.
+</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="P=2^{A}" display="inline"><mrow><mi>P</mi><mo>=</mo><msup><mn>2</mn><mi>A</mi></msup></mrow></math>, with the usual intersection and union as the lattice operations meet and join, is atomistic: every subset <math id="I2.i1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of <math id="I2.i1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the union of all the singleton subsets of <math id="I2.i1.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="\mathbb{Z}^{+}" display="inline"><msup><mi>ℤ</mi><mo>+</mo></msup></math>, partially ordered as above, with lattice binary operations defined by <math id="I2.i2.p1.m2" class="ltx_Math" alttext="a\wedge b=\operatorname{gcd}(a,b)" display="inline"><mrow><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and <math id="I2.i2.p1.m3" class="ltx_Math" alttext="a\vee b=\operatorname{lcm}(a,b)" display="inline"><mrow><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>lcm</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, is a lattice that is atomic, as we have seen earlier. But it is not atomistic: <math id="I2.i2.p1.m4" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math> is not a join of <math id="I2.i2.p1.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>’s; <math id="I2.i2.p1.m6" class="ltx_Math" alttext="36" display="inline"><mn>36</mn></math> is not a join of <math id="I2.i2.p1.m7" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> and <math id="I2.i2.p1.m8" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> are just two counterexamples.</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">atom</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Atom</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:20:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:20:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06A06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06B99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">atomic poset</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">atomic lattice</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">atomistic lattice</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">atomistic</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 09:50:45 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

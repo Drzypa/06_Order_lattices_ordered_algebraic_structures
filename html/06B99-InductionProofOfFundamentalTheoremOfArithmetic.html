@@ -1,0 +1,171 @@
+<!DOCTYPE html><html>
+<head>
+<title>induction proof of fundamental theorem of arithmetic</title>
+<!--Generated on Fri Feb  9 09:58:31 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">induction proof of fundamental theorem of arithmetic</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We present an induction proof by Zermelo for the
+fundamental theorem of arithmetic (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/FundamentalTheoremOfArithmetic</span>).
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Part 1.</span>  Every positive integer <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a product of prime numbers.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof.</span>  If <math id="p3.m1" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, it is the empty product of primes, and
+if <math id="p3.m2" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>, it is a prime number.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let then <math id="p4.m1" class="ltx_Math" alttext="n&gt;2" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>2</mn></mrow></math>.  Make the induction hypothesis that all positive
+integers <math id="p4.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> with  <math id="p4.m3" class="ltx_Math" alttext="1&lt;m&lt;n" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math>  are products of prime numbers. 
+If <math id="p4.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a prime number, the thing is ready.  Else, <math id="p4.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a
+product of smaller numbers; these are, by the induction hypothesis,
+products of prime numbers.  The proof is complete.
+<br class="ltx_break"></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Part 2.</span>  For any positive integer <math id="p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, its representation
+as product of prime numbers is unique up to the order of the
+prime factors.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof.</span>  The assertion is clear in the case that <math id="p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a
+prime number, especially when  <math id="p6.m2" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Let then  <math id="p7.m1" class="ltx_Math" alttext="n&gt;2" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>2</mn></mrow></math> and suppose that the assertion is true for
+all positive integers less than <math id="p7.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">If now <math id="p8.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a prime, we are ready.  Therefore let it be a
+composite number.  There is a least nontrivial factor <math id="p8.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> of <math id="p8.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.
+This <math id="p8.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> must be a prime.  Put  <math id="p8.m5" class="ltx_Math" alttext="n=pb" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math>  where  b is a
+positive integer.  By the induction hypothesis, <math id="p8.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> has a
+unique prime factor decomposition.  Thus <math id="p8.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> has a unique prime
+decomposition containing the prime factor <math id="p8.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Now we will show that <math id="p9.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> cannot have other prime decompositions. 
+Make the antithesis that <math id="p9.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> has a different prime decomposition;
+let <math id="p9.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> be the least prime factor in it.  Now we have  <math id="p9.m4" class="ltx_Math" alttext="p&lt;q" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi>q</mi></mrow></math> 
+and  <math id="p9.m5" class="ltx_Math" alttext="n=qc" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>q</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></math>  where  <math id="p9.m6" class="ltx_Math" alttext="c\in\mathbb{Z}_{+}" display="inline"><mrow><mi>c</mi><mo>∈</mo><msub><mi>ℤ</mi><mo>+</mo></msub></mrow></math>  and  <math id="p9.m7" class="ltx_Math" alttext="c&lt;n" display="inline"><mrow><mi>c</mi><mo>&lt;</mo><mi>n</mi></mrow></math> 
+with  <math id="p9.m8" class="ltx_Math" alttext="p\nmid c" display="inline"><mrow><mi>p</mi><mo>∤</mo><mi>c</mi></mrow></math>.  Then</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle n_{0}\;:=\;n-pc=\begin{cases}pb-pc=p(b-c)\\
+qc-pc=(q-p)c\end{cases}" display="inline"><mrow><mpadded width="+2.8pt"><msub><mi>n</mi><mn>0</mn></msub></mpadded><mo rspace="5.3pt">:=</mo><mrow><mi>n</mi><mo>-</mo><mrow><mi>p</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>b</mi></mrow><mo>-</mo><mrow><mi>p</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mi>q</mi><mo>⁢</mo><mi>c</mi></mrow><mo>-</mo><mrow><mi>p</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></mrow></mtd><mtd></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a positive integer less than <math id="p9.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.  Since  <math id="p9.m10" class="ltx_Math" alttext="p\mid n_{0}" display="inline"><mrow><mi>p</mi><mo>∣</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></math>, the
+induction hypothesis implies that the prime <math id="p9.m11" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is in the prime
+decomposition of <math id="p9.m12" class="ltx_Math" alttext="(q-p)c" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></math> and thus also at least of <math id="p9.m13" class="ltx_Math" alttext="q\!-\!p" display="inline"><mrow><mpadded width="-1.7pt"><mi>q</mi></mpadded><mo rspace="0.8pt">-</mo><mi>p</mi></mrow></math>
+or <math id="p9.m14" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.  But we know that  <math id="p9.m15" class="ltx_Math" alttext="p\nmid c" display="inline"><mrow><mi>p</mi><mo>∤</mo><mi>c</mi></mrow></math>, whence  <math id="p9.m16" class="ltx_Math" alttext="p\mid q-p" display="inline"><mrow><mi>p</mi><mo>∣</mo><mi>q</mi><mo>-</mo><mi>p</mi></mrow></math>. 
+Thus we would get  <math id="p9.m17" class="ltx_Math" alttext="p\mid q\!-\!p\!+\!p=q" display="inline"><mrow><mi>p</mi><mo>∣</mo><mpadded width="-1.7pt"><mi>q</mi></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">+</mo><mi>p</mi><mo>=</mo><mi>q</mi></mrow></math>.  Because both <math id="p9.m18" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>
+and <math id="p9.m19" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are primes, it would follow that <math id="p9.m20" class="ltx_Math" alttext="p=q" display="inline"><mrow><mi>p</mi><mo>=</mo><mi>q</mi></mrow></math>.  This
+contradicts the fact that  <math id="p9.m21" class="ltx_Math" alttext="p&lt;q" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi>q</mi></mrow></math>.  Consequently, our
+antithesis is wrong.  Accordingly, <math id="p9.m22" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> has only one prime
+decomposition, and the induction proof is complete.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">Esa V. Vesalainen</span>: “Zermelo ja aritmetiikan
+peruslause”. <math id="bib.bib1.m1" class="ltx_Math" alttext="-" display="inline"><mo>-</mo></math> <span class="ltx_text ltx_font_italic">Solmu</span> <span class="ltx_text ltx_font_bold">1</span> (2014).
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">Ernst Zermelo</span>: <span class="ltx_text ltx_font_italic">Elementare
+Betrachtungen zur Theorie der Primzahlen</span>.  <math id="bib.bib2.m1" class="ltx_Math" alttext="-" display="inline"><mo>-</mo></math> Wissenschaftliche Gesellschaft zu
+Göttingen (1934). English translation in:
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> H.-D. Ebbinghaus &amp; A. Kanamori (eds.): <span class="ltx_text ltx_font_italic">Ernst Zermelo. Collected
+Works. Volume I. Set Theory</span>, Miscellanea, Springer (2010). Ernst Zermelo: “Elementary
+considerations concerning the theory of prime numbers” 576<math id="bib.bib3.m1" class="ltx_Math" alttext="-" display="inline"><mo>-</mo></math>581.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">induction proof of fundamental theorem of arithmetic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">InductionProofOfFundamentalTheoremOfArithmetic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-04-08 7:32:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-04-08 7:32:53</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Proof</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 09:58:31 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

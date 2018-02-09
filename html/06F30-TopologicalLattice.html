@@ -1,0 +1,160 @@
+<!DOCTYPE html><html>
+<head>
+<title>topological lattice</title>
+<!--Generated on Fri Feb  9 10:06:57 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">topological lattice</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">topological lattice</em> is a lattice <math id="p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> equipped with a topology <math id="p1.m2" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math> such that the meet and join operations from <math id="p1.m3" class="ltx_Math" alttext="L\times L" display="inline"><mrow><mi>L</mi><mo>×</mo><mi>L</mi></mrow></math> (with the product topology) to <math id="p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> are continuous.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(x_{i})_{i\in I}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub></math> be a net in <math id="p2.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. We say that <math id="p2.m3" class="ltx_Math" alttext="(x_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math> converges to <math id="p2.m4" class="ltx_Math" alttext="x\in L" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>L</mi></mrow></math> if <math id="p2.m5" class="ltx_Math" alttext="(x_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math> is eventually in any open neighborhood of <math id="p2.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and we write <math id="p2.m7" class="ltx_Math" alttext="x_{i}\to x" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>→</mo><mi>x</mi></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="(x_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="(y_{j})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></math> are nets, indexed by <math id="I1.i1.p1.m3" class="ltx_Math" alttext="I,J" display="inline"><mrow><mi>I</mi><mo>,</mo><mi>J</mi></mrow></math> respectively, then <math id="I1.i1.p1.m4" class="ltx_Math" alttext="(x_{i}\wedge y_{j})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="I1.i1.p1.m5" class="ltx_Math" alttext="(x_{i}\vee y_{j})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∨</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math> are nets, both indexed by <math id="I1.i1.p1.m6" class="ltx_Math" alttext="I\times J" display="inline"><mrow><mi>I</mi><mo>×</mo><mi>J</mi></mrow></math>. This is clear, and is stated in preparation for the proposition below.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="x_{i}\to x" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>→</mo><mi>x</mi></mrow></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="y_{j}\to y" display="inline"><mrow><msub><mi>y</mi><mi>j</mi></msub><mo>→</mo><mi>y</mi></mrow></math>, then <math id="I1.i2.p1.m3" class="ltx_Math" alttext="x_{i}\wedge y_{j}\to x\wedge y" display="inline"><mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo>→</mo><mrow><mi>x</mi><mo>∧</mo><mi>y</mi></mrow></mrow></math> and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="x_{i}\vee y_{j}\to x\vee y" display="inline"><mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∨</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo>→</mo><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="I1.i2.p2" class="ltx_para">
+<p class="ltx_p">Let’s show the first convergence, and the other one follows similarly. The function <math id="I1.i2.p2.m1" class="ltx_Math" alttext="f:x\mapsto(x,y)\mapsto x\wedge y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>x</mi><mo>↦</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><mi>x</mi><mo>∧</mo><mi>y</mi></mrow></mrow></mrow></math> is a continuous function, being the composition of two continuous functions. If <math id="I1.i2.p2.m2" class="ltx_Math" alttext="x\wedge y\in U" display="inline"><mrow><mrow><mi>x</mi><mo>∧</mo><mi>y</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math> is open, then <math id="I1.i2.p2.m3" class="ltx_Math" alttext="x\in f^{-1}(U)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is open. As <math id="I1.i2.p2.m4" class="ltx_Math" alttext="x_{i}\to x" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>→</mo><mi>x</mi></mrow></math>, there is an <math id="I1.i2.p2.m5" class="ltx_Math" alttext="i_{0}\in I" display="inline"><mrow><msub><mi>i</mi><mn>0</mn></msub><mo>∈</mo><mi>I</mi></mrow></math> such that <math id="I1.i2.p2.m6" class="ltx_Math" alttext="x_{i}\in f^{-1}(U)" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∈</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="I1.i2.p2.m7" class="ltx_Math" alttext="i\geq i_{0}" display="inline"><mrow><mi>i</mi><mo>≥</mo><msub><mi>i</mi><mn>0</mn></msub></mrow></math>, which means that <math id="I1.i2.p2.m8" class="ltx_Math" alttext="x_{i}\wedge y=f(x_{i})\in U" display="inline"><mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>U</mi></mrow></math>. By the same token, for each <math id="I1.i2.p2.m9" class="ltx_Math" alttext="i\in I" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></math>, the function <math id="I1.i2.p2.m10" class="ltx_Math" alttext="g_{i}:y\mapsto(x_{i},y)\mapsto x_{i}\wedge y" display="inline"><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>:</mo><mrow><mi>y</mi><mo>↦</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><mi>y</mi></mrow></mrow></mrow></math> is a continuous function. Since <math id="I1.i2.p2.m11" class="ltx_Math" alttext="x_{i}\wedge y\in U" display="inline"><mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><mi>y</mi></mrow><mo>∈</mo><mi>U</mi></mrow></math> is open, <math id="I1.i2.p2.m12" class="ltx_Math" alttext="y\in g^{-1}(U)" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is open. As <math id="I1.i2.p2.m13" class="ltx_Math" alttext="y_{j}\to y" display="inline"><mrow><msub><mi>y</mi><mi>j</mi></msub><mo>→</mo><mi>y</mi></mrow></math>, there is a <math id="I1.i2.p2.m14" class="ltx_Math" alttext="j_{0}\in J" display="inline"><mrow><msub><mi>j</mi><mn>0</mn></msub><mo>∈</mo><mi>J</mi></mrow></math> such that <math id="I1.i2.p2.m15" class="ltx_Math" alttext="y_{j}\in g^{-1}(U)" display="inline"><mrow><msub><mi>y</mi><mi>j</mi></msub><mo>∈</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="I1.i2.p2.m16" class="ltx_Math" alttext="j\geq j_{0}" display="inline"><mrow><mi>j</mi><mo>≥</mo><msub><mi>j</mi><mn>0</mn></msub></mrow></math>, or <math id="I1.i2.p2.m17" class="ltx_Math" alttext="x_{i}\wedge y_{j}=g_{i}(y_{j})\in U" display="inline"><mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>U</mi></mrow></math>, for all <math id="I1.i2.p2.m18" class="ltx_Math" alttext="i\geq i_{0}" display="inline"><mrow><mi>i</mi><mo>≥</mo><msub><mi>i</mi><mn>0</mn></msub></mrow></math> and <math id="I1.i2.p2.m19" class="ltx_Math" alttext="j\geq j_{0}" display="inline"><mrow><mi>j</mi><mo>≥</mo><msub><mi>j</mi><mn>0</mn></msub></mrow></math>. Hence <math id="I1.i2.p2.m20" class="ltx_Math" alttext="x_{i}\wedge y_{j}\to x\wedge y" display="inline"><mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo>→</mo><mrow><mi>x</mi><mo>∧</mo><mi>y</mi></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For any net <math id="I1.i3.p1.m1" class="ltx_Math" alttext="(x_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math>, the set <math id="I1.i3.p1.m2" class="ltx_Math" alttext="A=\{a\in L\mid x_{i}\to a\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>a</mi><mo>∈</mo><mi>L</mi></mrow><mo>∣</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>→</mo><mi>a</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is a sublattice of <math id="I1.i3.p1.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="I1.i3.p2" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i3.p2.m1" class="ltx_Math" alttext="a,b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, then <math id="I1.i3.p2.m2" class="ltx_Math" alttext="x_{i}=x_{i}\wedge x_{i}\to a\wedge b" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>∧</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>→</mo><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow></mrow></math>. So <math id="I1.i3.p2.m3" class="ltx_Math" alttext="a\wedge b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>. Similarly <math id="I1.i3.p2.m4" class="ltx_Math" alttext="a\vee b\in A" display="inline"><mrow><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">There are two approaches to finding examples of topological lattices. One way is to start with a topological space <math id="p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> such that <math id="p4.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is partially ordered, then find two continuous binary operations on <math id="p4.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to form the meet and join operations of a lattice. The real numbers <math id="p4.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, with operations defined by <math id="p4.m5" class="ltx_Math" alttext="a\wedge b=\operatorname{inf}\{a,b\}" display="inline"><mrow><mrow><mi>a</mi><mo>∧</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>inf</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> and <math id="p4.m6" class="ltx_Math" alttext="a\vee b=\operatorname{sup}\{a,b\}" display="inline"><mrow><mrow><mi>a</mi><mo>∨</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>sup</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, is one such an example. This can be easily generalized to the space of real-valued continuous functions, since, given any two real-valued continuous functions <math id="p4.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p4.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f\vee g:=\max(f,g)\mbox{ and }f\wedge g:=\min(f,g)" display="block"><mrow><mrow><mi>f</mi><mo>∨</mo><mi>g</mi></mrow><mo>:=</mo><mrow><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>f</mi></mrow><mo>∧</mo><mi>g</mi></mrow><mo>:=</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are well-defined real-valued continuous functions as well (in fact, it is enough to say that for any continuous function <math id="p4.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, its absolute value <math id="p4.m10" class="ltx_Math" alttext="|f|" display="inline"><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow></math> is also continuous, so that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\max(f,0)=\frac{1}{2}(f+|f|)," display="block"><mrow><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and thus</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\max(f,g)=\max(f-g,0)+g\mbox{ and }\min(f,g)=f+g-\max(f,g)" display="block"><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>-</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are both continuous as well).</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The second approach is to start with a general lattice <math id="p5.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> and define a topology <math id="p5.m2" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math> on the subsets of the underlying set of <math id="p5.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, with the hope that both <math id="p5.m4" class="ltx_Math" alttext="\vee" display="inline"><mo>∨</mo></math> and <math id="p5.m5" class="ltx_Math" alttext="\wedge" display="inline"><mo>∧</mo></math> are continuous under <math id="p5.m6" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math>. The obvious example using this second approach is to take the discrete topology of the underlying set. Another way is to impose conditions, such as requiring that the lattice be meet and join continuous. Of course, finding a topology on the underlying set of a lattice may not guarantee a topological lattice.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">topological lattice</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TopologicalLattice</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:47:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:47:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06F30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06B30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54H12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">OrderedVectorSpace</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 10:06:57 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
